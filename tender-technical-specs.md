@@ -49,7 +49,7 @@ reV 在风电宏观选址中的技术特点主要体现在以下方面：
 根据仓库根目录的 `CITATION.cff`：
 
 - 软件名称：reV
-- 当前仓库标注版本：0.14.5
+- 当前仓库标注版本：0.15.0
 - 许可证：BSD-3-Clause
 - 代码仓库：<https://github.com/NatLabRockies/reV>
 - 软件 DOI：10.5281/zenodo.4501716
@@ -165,13 +165,40 @@ reV 的标准计算流程通常由 7 个阶段组成：
 
 #### 4.3.3 内部处理流程
 
-`generation` 的核心处理流程可概括为：
+`generation` 的核心处理流程可概括为以下步骤：
 
-1. 读取项目点表，获得待计算资源点 `gid` 与对应的 SAM 配置名。
-2. 从 HDF5 风资源文件中提取每个 `gid` 对应的风速、风向、温度、压力等时间序列。
-3. 将时序资源数据送入 PySAM 的风电模型。
-4. 结合功率曲线、尾流模型、损失率和成本参数，计算每个站点的发电输出及经济性指标。
-5. 将结果写入 HDF5 输出文件，并支持分布式收集。
+**步骤一：项目点解析**
+
+读取 `project_points.csv`，获得待计算资源点 `gid` 列表及对应的 SAM 配置名称。每个 `gid` 映射到风资源 HDF5 中的一个空间网格点。
+
+**步骤二：多高度风资源提取**
+
+从 WTK HDF5 文件中，依据 SAM 配置中的 `wind_turbine_hub_ht`，提取对应高度层（或相邻高度层以备插值）的时间序列数据，包括风速（m/s）、风向（°）、气温（K 或 °C）及大气压（Pa）。数据维度为 `[time, site]`，时间步通常为小时级（8760 步/年）或更高分辨率（如 5 分钟级）。
+
+**步骤三：风廓线高度外推**
+
+若 WTK 中存储的标准高度与轮毂高度不完全一致，reV 通过 SAM 的内部幂律风廓线模型进行高度外推，外推使用 SAM 配置中的 `wind_resource_shear`（幂律剪切指数 $\alpha$）：
+
+$$
+v_h = v_{ref} \cdot \left(\frac{h}{h_{ref}}\right)^\alpha
+$$
+
+其中 $v_h$ 为轮毂高度 $h$ 处的风速，$v_{ref}$ 为参考高度 $h_{ref}$ 处的已知风速，$\alpha$ 为地表粗糙度相关的剪切指数（中性大气稳定度典型值约为 0.14–0.20）。
+
+**步骤四：资源数据注入 SAM**
+
+reV 将提取的时序数据按 SAM 规定格式组装：资源矩阵字段顺序为 `[temperature, pressure, windspeed, winddirection]`，高度字段统一设为轮毂高度。`wind_resource_model_choice = 0` 表示标准时序模式，SAM 直接读取该矩阵逐时驱动风机模型。
+
+**步骤五：PySAM 风电模型仿真**
+
+将完整 SAM 配置注入 `PySAM.Windpower` 模块并执行计算。SAM 在每个时间步执行以下核心计算：
+- 根据气压和气温计算实际空气密度，并对功率曲线进行空气密度修正；
+- 将校正后的风速映射到修正后的功率曲线，得到该时步机组输出；
+- 若配置了多机位布局（`wind_farm_xCoordinates/yCoordinates`），还会执行尾流模型计算，对下游机位风速进行折减。
+
+**步骤六：结果收集**
+
+计算完毕后，将站点级时序及标量输出写入 HDF5 输出文件。分布式运行时，每个 worker 负责一批站点，由后续 `collect` 阶段合并。
 
 #### 4.3.4 生成阶段关键输出
 
@@ -232,7 +259,7 @@ reV 的标准计算流程通常由 7 个阶段组成：
   "lcoe_dset": "lcoe_fcr-means",
   "power_density": 31.5,
   "resolution": 64,
-  "tm_dset": "techmap_nsrdb"
+  "tm_dset": "techmap_wtk"
 }
 ```
 
@@ -374,24 +401,32 @@ gid,config
 
 风电站模型的基础参数由 SAM JSON 给出。仓库示例 `examples/batched_execution/sam_configs/turbine.json` 包含如下核心字段：
 
-- `system_capacity`
-- `weibull_k_factor`
-- `weibull_wind_speed`
-- `wind_farm_losses_percent`
-- `wind_farm_wake_model`
-- `wind_farm_xCoordinates`
-- `wind_farm_yCoordinates`
-- `wind_resource_shear`
-- `wind_turbine_hub_ht`
-- `wind_turbine_powercurve_powerout`
-- `wind_turbine_powercurve_windspeeds`
+**资源与模型控制**
 
-其中：
+- `wind_resource_model_choice`：资源输入模式。`0` 表示时序风资源文件模式（标准 WTK 模式）；`1` 表示韦伯分布模式（仅在无时序资源时使用）；`2` 表示风向-风速联合概率分布模式。reV 标准流程使用 `0`，由 `generation` 模块自动注入 WTK 时序数据。
+- `weibull_k_factor`：韦伯分布形状参数（仅当 `wind_resource_model_choice = 1` 时生效）。
+- `weibull_reference_height`：韦伯分布参考高度（m），同上，仅在分布模式下有意义。
+- `weibull_wind_speed`：韦伯分布尺度参数/参考风速（m/s），同上。
 
-- 功率曲线定义风速到功率输出的映射关系
-- `wind_farm_wake_model` 定义尾流损失模型
-- `x/yCoordinates` 定义机组布局
-- `system_capacity` 给出电站总装机容量
+**风轮与机组参数**
+
+- `wind_turbine_hub_ht`：轮毂高度（m）。reV 使用该值确定从 WTK 提取哪个高度层的风速，并由 SAM 内部根据剪切指数插值到精确轮毂高度。
+- `wind_turbine_powercurve_windspeeds`：风速-功率曲线的风速采样点（m/s），通常以 0.25 m/s 为步长。
+- `wind_turbine_powercurve_powerout`：与上述风速对应的机组输出功率（kW），定义切入、额定、切出区间。
+- `wind_turbine_max_cp`：最大风能利用系数 $C_{p,max}$，供 SAM 内部特性计算使用。
+- `wind_turbine_rotor_diameter`：风轮直径（m），影响机间距约束和尾流计算。
+- `wind_resource_shear`：风剪切指数 $\alpha$，用于幂律风廓线插值（典型值 0.14，对应中性大气稳定度）。
+- `wind_resource_turbulence_coeff`：湍流强度系数，用于部分尾流模型（典型值 0.10）。
+
+**风场参数**
+
+- `system_capacity`：风场总装机容量（kW）。若未显式指定，SAM 会从功率曲线自动推断单台额定功率再乘机位数。
+- `wind_farm_xCoordinates`：各机位相对坐标 X（m），与 Y 坐标共同定义机组阵列布局，用于尾流计算。
+- `wind_farm_yCoordinates`：各机位相对坐标 Y（m）。
+- `wind_farm_wake_model`：尾流模型选项。`0` = 无尾流损失；`1` = 简单尾流（Simple/Top-Hat 模型）；`2` = 园区尾流（Park/WAsP 模型）；`3` = 涡扩散模型（Eddy Viscosity）。bespoke 模式通常采用 `2`。
+- `wind_farm_losses_percent`：综合系统损失率（%），涵盖集电线路、可用率、结冰等其他损失，作为额外折减施加于整场发电量。
+
+**注意**：`wind_farm_losses_percent` 在新版 PySAM（>2.1.0）中已更名为 `turb_generic_loss`，reV 内部的 `PySAMVersionChecker` 会自动检测并映射该字段，业务系统无需单独处理。
 
 ### 5.4 排除层 HDF5
 
@@ -650,27 +685,76 @@ $$
 
 ### 7.5 发电模拟与功率曲线计算
 
-风电 generation 阶段由 PySAM 风电模型驱动，核心思想是将时序风资源映射为时序发电功率。输入包括：
+风电 generation 阶段由 PySAM 的 `Windpower` 模块驱动，完整计算逻辑如下。
 
-- 风速时序
-- 风向时序
-- 温度和压力
-- 功率曲线
-- 尾流模型
-- 损失率参数
+#### 7.5.1 风廓线高度外推
 
-功率曲线本质上定义了：
+WTK 通常存储多个标准高度层（如 40 m、80 m、100 m、120 m、160 m、200 m）的风速。当轮毂高度与存储高度不完全对应时，SAM 内部采用**幂律风廓线**（Power Law Wind Profile）进行高度插值：
 
 $$
-P_t = f(v_t)
+v_h = v_{ref} \cdot \left(\frac{h}{h_{ref}}\right)^\alpha
 $$
 
 其中：
+- $v_h$：目标高度 $h$（轮毂高度）处风速（m/s）
+- $v_{ref}$：参考高度 $h_{ref}$ 处已知风速（m/s）
+- $\alpha$：剪切指数（SAM 配置中 `wind_resource_shear`），典型范围 0.10–0.25，中性大气约为 0.14
 
-- $v_t$ 为时刻 $t$ 的有效风速
-- $P_t$ 为该时刻机组或电站输出功率
+对于温度和气压，SAM 也按对应的大气模型外推至轮毂高度，以用于空气密度修正。
 
-在尾流损失和其他损失作用下，有效功率会进一步折减。不同尾流模型的差异，决定了风机阵列布局和功率输出之间的耦合程度。
+#### 7.5.2 空气密度修正
+
+标准功率曲线基于标准大气密度（$\rho_0 = 1.225$ kg/m³）建立。实际运行中，空气密度随海拔和温度变化，影响风轮捕获功率。SAM 将实际空气密度 $\rho$ 代入功率系数方程作等效风速修正：
+
+$$
+v_{eq} = v \cdot \left(\frac{\rho}{\rho_0}\right)^{1/3}
+$$
+
+等效风速 $v_{eq}$ 再映射回标准功率曲线，从而获得密度修正后的机组输出功率。
+
+#### 7.5.3 功率曲线映射
+
+功率曲线定义了风速到单台机组额定工况输出功率的映射关系 $P = f(v)$，分为三个工作区间：
+
+| 区间 | 风速范围 | 特征 |
+|---|---|---|
+| 切入前 | $v < v_{ci}$ | 风速不足，机组不发电，$P = 0$ |
+| 工作区 | $v_{ci} \leq v \leq v_r$ | 功率随风速近似三次方增长，$P \propto v^3$ |
+| 额定区 | $v_r < v \leq v_{co}$ | 机组限功率运行，$P = P_r$（额定功率） |
+| 切出后 | $v > v_{co}$ | 安全保护停机，$P = 0$ |
+
+$v_{ci}$、$v_r$、$v_{co}$ 分别为切入、额定和切出风速，从 `wind_turbine_powercurve_windspeeds` 和 `wind_turbine_powercurve_powerout` 字段中读出，SAM 对中间风速采用线性插值。
+
+#### 7.5.4 尾流损失计算
+
+当风场布局涉及多台机组（`wind_farm_xCoordinates/yCoordinates` 包含多个坐标）时，SAM 依据 `wind_farm_wake_model` 选项对下游机组进行尾流损失计算：
+
+- **0（无尾流）**：不计尾流，每台机组均按自由来流风速运行，适用于机位间距极大或宏观快速估算。
+- **1（简单尾流 / Top-Hat 模型）**：假设尾流为均匀速度亏损的圆锥形区域（线性扩展），每台机组叠加所有上游尾流影响，计算简单、速度快。
+- **2（园区尾流 / Park / WAsP 模型）**：基于 Jensen（1983）尾流模型，尾流半径线性增长，速度亏损满足质量守恒。该模型在宏观选址和供应曲线分析中最为常用，reV 的 bespoke 优化模式也默认使用此模型：
+
+$$
+\frac{\Delta v}{v_0} = \left(1 - \sqrt{1 - C_T}\right) \cdot \left(\frac{r_0}{r_0 + k d}\right)^2
+$$
+
+其中 $C_T$ 为推力系数，$k$ 为尾流扩张系数（与湍流强度 `wind_resource_turbulence_coeff` 相关），$d$ 为机间距，$r_0$ 为风轮半径。
+
+整场输出功率为所有机位功率之和：
+
+$$
+P_{total} = \sum_{j=1}^{N} f\left(v_j^{eff}\right)
+$$
+
+其中 $v_j^{eff}$ 为第 $j$ 台机组经尾流修正后的有效风速。
+
+#### 7.5.5 综合损失折减
+
+`wind_farm_losses_percent`（新版 PySAM 中为 `turb_generic_loss`）作为综合折减系数，对以上计算所得整场发电量作最终缩放，涵盖：
+
+- 集电线路电气损失
+- 机组可用率损失
+- 低温/结冰期损失
+- 控制与并网损失
 
 ### 7.6 年发电量与容量因子计算
 
@@ -690,25 +774,36 @@ $$
 
 ### 7.7 场址级 LCOE 计算
 
-源码 `reV.econ.utilities.lcoe_fcr` 明确给出了固定费率法 LCOE 公式：
+源码 `reV.econ.utilities.lcoe_fcr` 明确给出了固定费率法（Fixed Charge Rate Method）LCOE 公式：
 
 $$
 LCOE = \left(\frac{FCR \times CAPEX + FOC}{AEP} + VOC\right) \times 1000
 $$
 
-其中：
+各参数的**单位定义**如下（严格遵守 `reV/econ/utilities.py` 中的注释）：
 
-- $FCR$：固定费率
-- $CAPEX$：资本性支出
-- $FOC$：固定运维成本
-- $VOC$：可变运维成本，单位通常为 $/kWh$
-- $AEP$：年发电量，单位通常为 kWh
+| 参数 | 含义 | 单位 |
+|---|---|---|
+| $FCR$ | 固定费率（资本回收率） | 无量纲，如 0.096 |
+| $CAPEX$ | 总资本性支出 | \$ |
+| $FOC$ | 年固定运维成本 | \$/年 |
+| $AEP$ | 年发电量 | kWh |
+| $VOC$ | 可变运维成本 | \$/kWh |
 
-乘以 1000 的原因，是将结果从 $/kWh$ 转换为 $/MWh$。
+公式中 `(FCR × CAPEX + FOC) / AEP` 的中间结果单位为 `$/kWh`，加上 `VOC`（`$/kWh`）后，乘以 1000 将整体结果从 `$/kWh` 换算为 `$/MWh`，即最终输出的 LCOE 单位为 **\$/MWh**。
 
-供应曲线聚合后的场址级 LCOE 标准字段为：
+**关于 AEP 的计算方式**：在供应曲线聚合阶段，若启用 LCOE 重算（`recalc_lcoe = True`），AEP 由以下表达式推导：
 
-- `lcoe_site_usd_per_mwh`
+$$
+AEP = Capacity_{kW} \times CF \times 8760
+$$
+
+其中 $Capacity_{kW}$ 来自 SAM 配置的 `system_capacity`（kW），$CF$ 为多年均值容量因子（`cf_mean-means`）。用多年均值 CF 重算 LCOE 可避免单年异常导致系统性偏差，这也是实际项目中推荐启用该选项的原因。
+
+供应曲线聚合后的标准输出字段为：
+
+- `lcoe_site_usd_per_mwh`（供应曲线点加权平均 LCOE）
+- `mean_lcoe`（源码内部中间量，供 `SupplyCurve` 阶段读取）
 
 ### 7.8 输电成本 LCOT 计算
 
@@ -741,54 +836,92 @@ $$
 
 `SupplyCurve` 支持竞争式和非竞争式两类接入逻辑：
 
-- 非竞争式：每个供应曲线点都可独立选择最优接入方案，不考虑其他点已占用容量。
-- 竞争式：系统跟踪输电设施剩余容量，前面接入的项目会挤占后续候选点的可用接入空间。
+#### 非竞争式（Non-Competitive）
 
-对真实投资排序而言，竞争式结果通常更接近工程实践，因为输电资源本身也是稀缺的。
+每个供应曲线点独立选择全口径 LCOE（`lcoe_all_in_usd_per_mwh`）最低的输电接入方案，不考虑其他点是否已占用同一输电设施的容量。输出结果按全口径 LCOE 升序排列，形成理论最优供应曲线。此模式适合初步筛选和资源潜力评估。
+
+#### 竞争式（Competitive）
+
+系统以全口径 LCOE 为排序键，从优到劣逐一处理供应曲线点：
+
+1. 对当前候选点，在满足可用容量约束的输电设施中选择接入成本最低的方案；
+2. 将该方案占用的容量从对应输电设施的剩余容量中扣除；
+3. 对后续候选点，仅允许接入剩余容量大于其装机规模的输电设施。
+
+这种贪心策略模拟了真实世界中先接入者优先占用输电资源（PPA 和并网协议）的竞争格局，通常导致靠后排序的候选点只能接入更远或更高成本的输电方案，全口径 LCOE 因此上升，最终供应曲线斜率随开发规模增大而逐渐抬升——这也是"供应曲线"这一术语的经济学含义所在。
+
+`available_capacity` 参数（`transmission_costs` 中的键）控制输电设施可被外部接入的容量比例，用于预留冗余或表达已有接入协议。
 
 ### 7.10 Bespoke 布局优化算法
 
-`bespoke` 模块采用三阶段优化路径：
+`bespoke` 模块采用三阶段优化路径，将排除层约束与风资源时序仿真深度耦合，直接在供应曲线点分辨率上完成机位布局与经济性评估的联合优化。
 
-#### 第一阶段：将可建设像元转为几何多边形
+#### 第一阶段：可建设区域多边形化
 
-对包含掩膜中的每个有效像元构造多边形，并通过并集操作形成可建设区域。随后根据最小机间距的一半对边界做退让，得到可用于放置风机的 `packing_polygons`。
+对包含掩膜中的每个有效像元构造矩形多边形，并通过 Shapely 的 `unary_union` 操作将像元合并为一个或多个连通的可建设区域多边形。随后以**最小机间距的一半**对多边形内边界做缓冲退让（Minkowski 侵蚀），生成 `packing_polygons`——即实际允许放置风机轮毂的有效区域，确保边界处的机组与排除区的安全距离满足约束。
 
-#### 第二阶段：生成候选风机位置
+#### 第二阶段：候选风机位置生成
 
-系统在多边形内部进行类似圆填充的贪心布局，生成满足最小机间距约束的候选点。若候选点过多，则逐步扩大间距，直到候选规模收敛到可优化范围内。
+系统在 `packing_polygons` 内部采用**六边形紧密堆积**方式生成满足最小机间距约束的候选点集合，模拟蜂窝式最密排列。若候选点数量超过优化算法可高效处理的上限，系统以迭代方式逐步加大点间距，直到候选数量收敛到可优化规模（通常几十到几百个候选位）。
 
-#### 第三阶段：遗传算法优化
+#### 第三阶段：差分进化优化
 
-系统以二进制染色体表示风机是否入选：
+系统以**二进制布局向量** $\mathbf{b} \in \{0,1\}^N$ 作为决策变量，表示 $N$ 个候选位是否实际安装风机：
 
-- 1：保留该候选风机
-- 0：不保留该候选风机
+$$
+\mathbf{b} = [b_1, b_2, \ldots, b_N], \quad b_i \in \{0, 1\}
+$$
 
-每条染色体对应一个风电场布局方案。系统对该方案执行发电与成本计算，并以目标函数值作为适应度。
+每个候选布局方案 $\mathbf{b}$ 对应一次完整的 PySAM 风场仿真和成本评估，计算目标函数值（适应度）。reV 内部默认调用 **scipy 差分进化（Differential Evolution）** 求解器驱动优化：
 
-仓库示例中给出的目标函数示意为：
+- **目标函数**：用户通过字符串表达式在配置中定义，由系统在每次仿真后求值。仓库测试中的真实示例：
 
 ```python
-objective_function = "cost / aep"
+objective_function = (
+    "(0.0975 * capital_cost + fixed_operating_cost) / aep "
+    "+ variable_operating_cost"
+)
 ```
 
-工程中可扩展为：
+  其结构即 LCOE 的简化形式，也可替换为 AEP 最大化、单位面积能量密度最大化等任意可计算表达式。
 
-- LCOE 最小化
-- 单位 MW 成本最小化
-- 集电线路长度最小化
-- 单位面积能量密度最大化
+- **成本函数**：资本成本和固定运维成本可表示为装机容量的函数，实现规模经济效应建模：
+
+```python
+capital_cost_function = (
+    "140 * system_capacity "
+    "* exp(-system_capacity / 1e5 * 0.1 + (1 - 0.1))"
+)
+```
+
+- **约束处理**：机间距约束已通过第一/第二阶段的几何操作隐式保证，优化阶段无需额外罚函数。
+
+**优化收敛**：最大迭代代数和种群规模可通过配置控制；当目标函数改善低于设定阈值时提前终止，返回目标函数值最优的布局向量及对应完整仿真结果。
 
 ### 7.11 代表性曲线提取算法
 
-在 `rep-profiles` 中，示例配置使用 `rep_method = "meanoid"` 和 `err_method = "rmse"`。这意味着系统会在某区域、某资源等级下，从多个时序曲线中选出对整体误差最小的一组代表曲线。
+`rep-profiles` 在各（区域、资源等级）组合下，从属于该组的所有供应曲线点对应时序发电曲线中，选出 $n$ 条最具代表性的曲线。示例配置采用 `rep_method = "meanoid"`、`err_method = "rmse"`。
 
-该算法的优点在于：
+#### Meanoid 算法流程
 
-- 能保留真实时间序列形态
-- 便于区域聚合分析
-- 可直接服务于电网与市场模型
+1. **均值曲线计算**：对组内全部时序计算逐时均值，得到"组均值曲线" $\bar{\mathbf{p}}$。
+
+2. **误差度量**：以 `err_method`（通常为 RMSE）衡量各候选时序与均值曲线的相似度：
+
+$$
+RMSE_i = \sqrt{\frac{1}{T} \sum_{t=1}^{T} (p_{i,t} - \bar{p}_t)^2}
+$$
+
+3. **代表曲线选取**：选择 RMSE 最小的 $n$ 条时序曲线（`n_profiles` 参数控制），使得选出的曲线在整体形态上最接近组内真实均值水平。
+
+**Meanoid 与 Medoid 的区别**：Medoid 从数据集中选出与其他所有样本平均距离最小的实际样本；Meanoid 以虚拟均值曲线作为参考目标，因此选出的曲线在对均值曲线的均方误差意义上更优，但不等于 Medoid 选出的中位数曲线。两者均保留了真实时间序列形态，优于人工合成"平均日"曲线。
+
+`reg_cols` 参数（如 `["reeds_region", "res_class"]`）定义分组维度，不同区域和资源等级的代表曲线独立提取，支持分区电网消纳建模。代表曲线的典型下游用途包括：
+
+- 短期/季节性电力平衡分析（电网消纳仿真）
+- 多能互补系统协同优化
+- 电力市场收益测算与合同谈判支持
+- 储能配置容量研究
 
 ## 8. 关键数据结构说明
 
@@ -960,7 +1093,7 @@ README 中给出的典型运行规模为：
 ### 11.3 论文与技术报告
 
 - `73067.pdf`
-- README 中引用的 reV technical report：<https://www.nlr.gov/docs/fy19osti/73067.pdf>
+- README 中引用的 reV technical report：<https://www.nrel.gov/docs/fy19osti/73067.pdf>
 
 ### 11.4 其他在线资源
 
