@@ -1,9 +1,13 @@
-# 风电场宏观选址系统后端设计文档
+#  风电场宏观选址系统后端设计文档
 
 **文档编号**：REV-BACKEND-DESIGN-001  
+
 **版本**：v1.0  
+
 **设计级别**：介于概要设计与详细设计之间（含接口签名，不含完整代码实现）  
+
 **适用对象**：后端开发工程师、架构评审人员  
+
 **关联文档**：`rev风电场宏观选址投标书技术说明.md`（算法原理背景）
 
 ---
@@ -32,6 +36,7 @@
 本文档描述以 **reV 0.15.0** 为计算引擎的风电场宏观选址系统**后端原型**的工程设计。阅读本文档的前提是已了解 reV 各计算模块的功能语义（参见关联文档《投标书技术说明》）。
 
 本文不重复算法原理，而专注于：
+
 - 系统如何与 reV 集成（边界划分）
 - 数据应以何种结构持久化
 - 各业务逻辑模块的接口规约
@@ -41,7 +46,7 @@
 ### 1.2 设计层次定义
 
 | 层次 | 含义 | 本文对应 |
-|---|---|---|
+| --- | --- | --- |
 | 概要设计 | 系统分层、模块划分、技术选型 | 第 2、3 节 |
 | 详细设计 | 类/方法签名、字段表、接口规约、状态机 | 第 4–10 节 |
 | 实现级 | 具体代码、SQL DDL、完整 OpenAPI YAML | **不在本文范围** |
@@ -49,6 +54,7 @@
 ### 1.3 范围声明
 
 **本文覆盖**：
+
 - 后端 REST API 服务（FastAPI）
 - 异步任务调度（Celery + Redis）
 - 数据持久化（PostgreSQL + PostGIS）
@@ -57,6 +63,7 @@
 - 对象存储接口（MinIO）
 
 **本文不覆盖**：
+
 - 前端 / 地图可视化
 - HPC 集群运维与 SLURM 脚本
 - reV 算法内部实现
@@ -69,25 +76,25 @@
 ### 2.1 职责矩阵
 
 | 能力项 | reV 负责 | 业务系统负责 |
-|---|:---:|:---:|
-| 数值天气预报数据读取（NSRDB/WTK HDF5） | ✓ | |
-| SAM 模型调用（发电量计算） | ✓ | |
-| 尾流损耗、计划性损耗建模 | ✓ | |
-| 排除区域栅格叠加（H5 exclusions） | ✓ | |
-| 供应曲线聚合与竞争性排序 | ✓ | |
-| 技术图谱（techmap）生成 | ✓ | |
-| 代表性曲线聚类 | ✓ | |
-| config_*.json 文件构造 | | ✓ |
-| project_points.csv 构造 | | ✓ |
-| 场景参数管理（用户输入到配置的映射） | | ✓ |
-| 任务状态追踪与日志回收 | | ✓ |
-| 结果 HDF5/CSV 解析入库 | | ✓ |
-| REST API 暴露 | | ✓ |
-| 风机参数库管理 | | ✓ |
-| 排除层元数据管理 | | ✓ |
-| 输电网络版本管理 | | ✓ |
-| 用户 / 权限管理 | | ✓（可选）|
-| 前端地图可视化 | | ✓（不在本文）|
+| --- | --- | --- |
+| 数值天气预报数据读取（NSRDB/WTK HDF5） | ✓ |  |
+| SAM 模型调用（发电量计算） | ✓ |  |
+| 尾流损耗、计划性损耗建模 | ✓ |  |
+| 排除区域栅格叠加（H5 exclusions） | ✓ |  |
+| 供应曲线聚合与竞争性排序 | ✓ |  |
+| 技术图谱（techmap）生成 | ✓ |  |
+| 代表性曲线聚类 | ✓ |  |
+| config_*.json 文件构造 |  | ✓ |
+| project_points.csv 构造 |  | ✓ |
+| 场景参数管理（用户输入到配置的映射） |  | ✓ |
+| 任务状态追踪与日志回收 |  | ✓ |
+| 结果 HDF5/CSV 解析入库 |  | ✓ |
+| REST API 暴露 |  | ✓ |
+| 风机参数库管理 |  | ✓ |
+| 排除层元数据管理 |  | ✓ |
+| 输电网络版本管理 |  | ✓ |
+| 用户 / 权限管理 |  | ✓（可选） |
+| 前端地图可视化 |  | ✓（不在本文） |
 
 ### 2.2 集成方式
 
@@ -101,6 +108,7 @@
 ```
 
 reV 不以 Python 库直接 import 拆分调用；这样可以：
+
 1. 保持 reV 版本与业务系统解耦
 2. 利用 Celery worker 进行进程级隔离
 3. 直接复用 reV CLI 的日志和错误处理
@@ -151,7 +159,7 @@ reV 不以 Python 库直接 import 拆分调用；这样可以：
 ### 3.2 技术选型
 
 | 组件 | 选型 | 版本约束 | 选型理由 |
-|---|---|---|---|
+| --- | --- | --- | --- |
 | Web框架 | FastAPI | ≥0.110 | 原生异步、Pydantic v2、自动 OpenAPI 文档 |
 | 异步任务 | Celery | ≥5.3 | 成熟的 Python 任务队列，支持任务链、重试、ETA |
 | 消息代理 | Redis | ≥7.0 | 轻量，同时作为 Celery broker 和结果后端 |
@@ -199,6 +207,7 @@ reV 不以 Python 库直接 import 拆分调用；这样可以：
    → ResultQueryService.query_sc_points(job_id, filters, page)
    → 返回分页 GeoJSON
 ```
+
 ---
 
 ## 4. 数据模型设计
@@ -210,7 +219,7 @@ reV 不以 Python 库直接 import 拆分调用；这样可以：
 描述一份可供分析使用的气候/风资源数据集（WTK HDF5 文件集合）。
 
 | 字段 | 类型 | 说明 |
-|---|---|---|
+| --- | --- | --- |
 | `dataset_id` | UUID PK | 主键 |
 | `name` | VARCHAR(128) | 用户命名，如 "WTK-CONUS-2012" |
 | `technology` | ENUM | `windpower` / `pvwattsv8` |
@@ -231,7 +240,7 @@ reV 不以 Python 库直接 import 拆分调用；这样可以：
 描述一种风机型号的完整 SAM-compatible 参数集合。
 
 | 字段 | 类型 | 说明 |
-|---|---|---|
+| --- | --- | --- |
 | `template_id` | UUID PK | 主键 |
 | `name` | VARCHAR(128) | 如 "GE-2.8-127" |
 | `version` | VARCHAR(32) | 版本标签 |
@@ -255,7 +264,7 @@ reV 不以 Python 库直接 import 拆分调用；这样可以：
 描述一个物理排除图层（对应 reV exclusions HDF5 文件中的一个 dataset）。
 
 | 字段 | 类型 | 说明 |
-|---|---|---|
+| --- | --- | --- |
 | `layer_id` | UUID PK | 主键 |
 | `name` | VARCHAR(128) | 如 "slope_pct"、"protected_areas" |
 | `dataset_name` | VARCHAR(256) | HDF5 文件中 dataset 的路径键 |
@@ -270,7 +279,7 @@ reV 不以 Python 库直接 import 拆分调用；这样可以：
 描述一条应用于某图层的具体排除/权重规则，对应 `reV.supply_curve.exclusions` 的参数。
 
 | 字段 | 类型 | 说明 |
-|---|---|---|
+| --- | --- | --- |
 | `rule_id` | UUID PK | 主键 |
 | `layer_id` | UUID FK → ExclusionLayer | 关联图层 |
 | `scenario_id` | UUID FK → Scenario | 规则属于哪个场景 |
@@ -290,7 +299,7 @@ reV 不以 Python 库直接 import 拆分调用；这样可以：
 ### 4.5 TransmissionNetwork（输电网络版本）
 
 | 字段 | 类型 | 说明 |
-|---|---|---|
+| --- | --- | --- |
 | `network_id` | UUID PK | 主键 |
 | `name` | VARCHAR(128) | 如 "CONUS-2023-Q1" |
 | `version` | VARCHAR(32) | 版本标签 |
@@ -306,7 +315,7 @@ reV 不以 Python 库直接 import 拆分调用；这样可以：
 一次完整的宏观选址分析参数集合，是创建 Job 的模板。
 
 | 字段 | 类型 | 说明 |
-|---|---|---|
+| --- | --- | --- |
 | `scenario_id` | UUID PK | 主键 |
 | `name` | VARCHAR(256) | 用户命名 |
 | `dataset_id` | UUID FK → Dataset | 所用风资源数据集 |
@@ -317,7 +326,7 @@ reV 不以 Python 库直接 import 拆分调用；这样可以：
 | `resolution` | INT | SC 聚合分辨率（像元数），如 64 |
 | `fixed_charge_rate` | FLOAT | 固定电荷率，用于 LCOE 计算，如 0.096 |
 | `output_request` | VARCHAR[] | Generation 输出字段列表，如 `["cf_mean", "annual_energy"]` |
-| `econ_enabled` | BOOL | 是否运行 econ 模块（单次所有者 LCOE）|
+| `econ_enabled` | BOOL | 是否运行 econ 模块（单次所有者 LCOE） |
 | `rep_profiles_enabled` | BOOL | 是否运行代表性曲线提取 |
 | `created_by` | VARCHAR(128) NULL | 创建者 |
 | `created_at` | TIMESTAMPTZ | 创建时间 |
@@ -331,7 +340,7 @@ reV 不以 Python 库直接 import 拆分调用；这样可以：
 一次 reV pipeline 的执行实例。
 
 | 字段 | 类型 | 说明 |
-|---|---|---|
+| --- | --- | --- |
 | `job_id` | UUID PK | 主键 |
 | `scenario_id` | UUID FK → Scenario | 来源场景 |
 | `status` | ENUM | `PENDING` / `QUEUED` / `RUNNING` / `SUCCESS` / `FAILED` / `RETRYING` |
@@ -350,7 +359,7 @@ reV 不以 Python 库直接 import 拆分调用；这样可以：
 Job 中每个 reV pipeline 步骤的执行记录。
 
 | 字段 | 类型 | 说明 |
-|---|---|---|
+| --- | --- | --- |
 | `step_id` | UUID PK | 主键 |
 | `job_id` | UUID FK → Job | 所属任务 |
 | `step_name` | VARCHAR(64) | 如 `generation`, `collect`, `supply-curve` |
@@ -368,7 +377,7 @@ Job 中每个 reV pipeline 步骤的执行记录。
 supply-curve CSV 解析后的结构化结果，每行对应一个 SC 格网点。
 
 | 字段 | 类型 | 说明 |
-|---|---|---|
+| --- | --- | --- |
 | `sc_point_id` | BIGSERIAL PK | 主键 |
 | `job_id` | UUID FK → Job | 来源任务 |
 | `sc_gid` | INT | reV 原始 sc_point_gid |
@@ -391,7 +400,7 @@ supply-curve CSV 解析后的结构化结果，每行对应一个 SC 格网点�
 ### 4.10 RepProfile（代表性曲线）
 
 | 字段 | 类型 | 说明 |
-|---|---|---|
+| --- | --- | --- |
 | `profile_id` | UUID PK | 主键 |
 | `job_id` | UUID FK → Job | 来源任务 |
 | `region_key` | VARCHAR(128) | 区域标识，如行政区划编码 |
@@ -645,13 +654,14 @@ class ResultQueryService:
 #### Dataset
 
 | Method | Path | 说明 |
-|---|---|---|
+| --- | --- | --- |
 | GET | `/datasets` | 列出所有数据集，可选 `?technology=windpower` 过滤 |
 | POST | `/datasets` | 创建新数据集 |
 | GET | `/datasets/{id}` | 获取单条数据集 |
 | DELETE | `/datasets/{id}` | 软删除（将 status 设为 retired） |
 
 **POST /datasets 请求体（关键字段）**：
+
 ```json
 {
   "name": "WTK-CONUS-2012-2014",
@@ -666,7 +676,7 @@ class ResultQueryService:
 #### TurbineTemplate
 
 | Method | Path | 说明 |
-|---|---|---|
+| --- | --- | --- |
 | GET | `/turbine-templates` | 列出所有风机模板 |
 | POST | `/turbine-templates` | 创建新模板 |
 | GET | `/turbine-templates/{id}` | 获取单条模板 |
@@ -674,6 +684,7 @@ class ResultQueryService:
 | POST | `/turbine-templates/{id}/validate` | 校验功率曲线，返回 `{"valid": true, "issues": []}` |
 
 **POST /turbine-templates 请求体（关键字段）**：
+
 ```json
 {
   "name": "GE-2.8-127",
@@ -693,7 +704,7 @@ class ResultQueryService:
 #### ExclusionLayer
 
 | Method | Path | 说明 |
-|---|---|---|
+| --- | --- | --- |
 | GET | `/exclusion-layers` | 列出所有排除图层 |
 | POST | `/exclusion-layers` | 注册新排除图层 |
 | GET | `/exclusion-layers/{id}` | 获取图层元数据 |
@@ -701,7 +712,7 @@ class ResultQueryService:
 #### TransmissionNetwork
 
 | Method | Path | 说明 |
-|---|---|---|
+| --- | --- | --- |
 | GET | `/transmission-networks` | 列出所有输电网络版本 |
 | POST | `/transmission-networks` | 注册新版本 |
 | GET | `/transmission-networks/{id}` | 获取详情 |
@@ -711,7 +722,7 @@ class ResultQueryService:
 ### 6.2 场景接口
 
 | Method | Path | 说明 |
-|---|---|---|
+| --- | --- | --- |
 | GET | `/scenarios` | 分页列出场景 |
 | POST | `/scenarios` | 创建新场景（含排除规则列表） |
 | GET | `/scenarios/{id}` | 获取场景详情 |
@@ -719,6 +730,7 @@ class ResultQueryService:
 | POST | `/scenarios/{id}/validate` | 前置校验，返回 `{"valid": bool, "issues": [str]}` |
 
 **POST /scenarios 请求体**：
+
 ```json
 {
   "name": "华北平原 2012-2014 基准场景",
@@ -746,7 +758,7 @@ class ResultQueryService:
 ### 6.3 任务接口
 
 | Method | Path | 说明 |
-|---|---|---|
+| --- | --- | --- |
 | POST | `/jobs` | 提交新任务，body: `{"scenario_id": "..."}` |
 | GET | `/jobs` | 分页列出任务，`?scenario_id=...&status=...` |
 | GET | `/jobs/{id}` | 获取任务状态和元数据 |
@@ -756,6 +768,7 @@ class ResultQueryService:
 | GET | `/jobs/{id}/steps/{step_name}/log` | 获取步骤日志尾部，`?lines=200` |
 
 **GET /jobs/{id} 响应体**：
+
 ```json
 {
   "job_id": "...",
@@ -778,7 +791,7 @@ class ResultQueryService:
 ### 6.4 结果接口
 
 | Method | Path | 说明 |
-|---|---|---|
+| --- | --- | --- |
 | GET | `/jobs/{id}/summary` | 统计摘要（总装机、平均 CF、P50 LCOE 等） |
 | GET | `/jobs/{id}/supply-curve` | 分页 GeoJSON，支持过滤参数 |
 | GET | `/jobs/{id}/supply-curve/export` | 流式下载完整 CSV |
@@ -788,6 +801,7 @@ class ResultQueryService:
 **GET /jobs/{id}/supply-curve 查询参数**：`min_cf`, `max_lcoe`, `bbox`（min_lon,min_lat,max_lon,max_lat）, `page`, `page_size`
 
 **GET /jobs/{id}/summary 响应体**：
+
 ```json
 {
   "job_id": "...",
@@ -888,14 +902,14 @@ gid,latitude,longitude,hub_height
 ```
 
 | config_gen 字段 | 数据来源 | 说明 |
-|---|---|---|
-| `technology` | 固定值 `"windpower"` | |
+| --- | --- | --- |
+| `technology` | 固定值 `"windpower"` |  |
 | `project_points` | `"PIPELINE"` 占位，前一步输出 | 由 pipeline 解析注入 |
 | `sam_files.windpower` | 生成的 sam_windpower.json 路径 | 见 7.4 节 |
 | `resource_file` | `Dataset.path_pattern`，`{year}` 占位 | reV 自动按年展开 |
-| `output_request` | `Scenario.output_request` | |
-| `analysis_years` | `Scenario.analysis_years` | |
-| `execution_control.max_workers` | 系统配置或默认 4 | |
+| `output_request` | `Scenario.output_request` |  |
+| `analysis_years` | `Scenario.analysis_years` |  |
+| `execution_control.max_workers` | 系统配置或默认 4 |  |
 
 ---
 
@@ -904,7 +918,7 @@ gid,latitude,longitude,hub_height
 SAM 风电配置由 `TurbineTemplateService.render_sam_config()` 生成：
 
 | SAM 字段 | TurbineTemplate 字段 | 说明 |
-|---|---|---|
+| --- | --- | --- |
 | `system_capacity` | `system_capacity_kw` | 单机容量（kW） |
 | `wind_turbine_hub_ht` | `hub_height_m` | 轮毂高度（m） |
 | `wind_turbine_rotor_diameter` | `rotor_diameter_m` | 风轮直径（m） |
@@ -937,15 +951,16 @@ SAM 风电配置由 `TurbineTemplateService.render_sam_config()` 生成：
 ```
 
 | config_sa 字段 | 数据来源 | 说明 |
-|---|---|---|
+| --- | --- | --- |
 | `gen_fpath` | `"PIPELINE"` | collect 步骤输出的多年 HDF5 路径 |
 | `tm_dset` | 固定 `"techmap_wtk"` | WTK 技术图谱 dataset 名称 |
-| `excl_fpath` | `ExclusionLayer.h5_fpath`（所有规则同文件） | |
+| `excl_fpath` | `ExclusionLayer.h5_fpath`（所有规则同文件） |  |
 | `excl_dict` | `ExclusionService.render_exclusion_config()` 输出 | 规则列表 → 字典 |
 | `resolution` | `Scenario.resolution` | 聚合分辨率（像元数） |
 | `power_density` | `Scenario.power_density_mw_km2` | 装机密度（MW/km²） |
 
 **excl_dict 生成示例**（来自 ExclusionService.render_exclusion_config）：
+
 ```json
 {
   "slope_pct": {
@@ -976,7 +991,7 @@ SAM 风电配置由 `TurbineTemplateService.render_sam_config()` 生成：
 ```
 
 | config_sc 字段 | 数据来源 | 说明 |
-|---|---|---|
+| --- | --- | --- |
 | `sc_points` | `"PIPELINE"` | supply-curve-aggregation 输出的聚合点 CSV |
 | `trans_table` | `TransmissionNetwork.trans_table_fpath` | 输电线路表路径 |
 | `fixed_charge_rate` | `Scenario.fixed_charge_rate` | 固定电荷率（用于 LCOT 计算） |
@@ -991,6 +1006,7 @@ config_pipeline.json 控制各步骤的执行顺序和上下游数据传递。
 **PIPELINE 字段说明**：在对应 config 中将输入路径设置为字符串 `"PIPELINE"` 时，reV pipeline 会自动将上一步骤的输出文件路径注入该字段。
 
 **config_pipeline.json 结构**：
+
 ```json
 {
   "pipeline": [
@@ -1005,6 +1021,7 @@ config_pipeline.json 控制各步骤的执行顺序和上下游数据传递。
 ```
 
 **步骤启用逻辑**：
+
 - 如果 `Scenario.econ_enabled=True`，在 generation 后插入 `econ` 步骤。
 - 如果 `Scenario.rep_profiles_enabled=False`，从 pipeline 列表中去除 `rep-profiles`。
 - `collect` 步骤：当 `len(analysis_years) > 1` 时启用，单年数据直接跳过。
@@ -1051,7 +1068,7 @@ ConfigGeneratorService.generate_all() 内部的生成顺序：
 **状态转换说明**：
 
 | 状态 | 触发条件 |
-|---|---|
+| --- | --- |
 | PENDING | Job 记录刚创建，ConfigGenerator 未运行或运行中 |
 | QUEUED | ConfigGenerator 完成，Celery task 已入队 |
 | RUNNING | Celery worker 开始执行 `reV pipeline` subprocess |
@@ -1079,6 +1096,7 @@ pipeline.apply_async()
 ```
 
 **run_pipeline(job_id)**：
+
 1. 更新 Job status → RUNNING
 2. 启动 subprocess：`reV pipeline -c {job_dir}/configs/config_pipeline.json`
 3. 实时 tail stdout/stderr，匹配步骤完成标记，更新 JobStep 状态
@@ -1087,6 +1105,7 @@ pipeline.apply_async()
    - 非零 → 更新 Job status=FAILED, error_msg，中断 chain
 
 **parse_results(job_id)**：
+
 1. 调用 `ResultParserService.parse(job_id)`
 2. 成功 → 更新 Job status=SUCCESS
 3. 异常 → 更新 Job status=FAILED, error_msg
@@ -1127,6 +1146,7 @@ def run_rev_pipeline(config_path, log_path):
 ```
 
 **重要约束**：
+
 - 不使用 `shell=True`（避免命令注入）
 - 不将用户输入直接插入命令字符串；所有路径从数据库读取，并在生成时做路径合法性校验
 - 超时控制：设置 Celery task soft_time_limit（如 6h），超时后发送 SIGTERM，更新 Job status=FAILED
@@ -1148,7 +1168,7 @@ API `GET /jobs/{id}/steps/{step_name}/log?lines=200` 由 `JobStatusService.read_
 reV supply-curve 模块输出的 `_sc.csv` 标准列到 `ScPoint` DB 字段的映射：
 
 | reV CSV 列名 | ScPoint 字段 | 类型 | 单位 |
-|---|---|---|---|
+| --- | --- | --- | --- |
 | `sc_point_gid` | `sc_gid` | INT | — |
 | `latitude` | `latitude` | DOUBLE | 度 |
 | `longitude` | `longitude` | DOUBLE | 度 |
@@ -1191,6 +1211,7 @@ class ScPointSchema(BaseModel):
 ### 9.2 代表性曲线存储策略
 
 rep-profiles 输出为一个 HDF5 文件（`_rep_profiles.h5`），包含：
+
 - `profiles` dataset：shape `(n_regions × n_res_classes, 8760)`，float32
 - `meta` dataset：每行对应一条曲线的区域/等级元数据
 
@@ -1205,9 +1226,9 @@ rep-profiles 输出为一个 HDF5 文件（`_rep_profiles.h5`），包含：
 解析完成后执行以下验证，失败时记录告警日志（不回滚已入库数据，但可标记 Job 为 `SUCCESS_WITH_WARNINGS`）：
 
 | 验证项 | 说明 |
-|---|---|
+| --- | --- |
 | ScPoint 行数 > 0 | 供应曲线点不为空 |
-| mean(capacity_factor_ac) > 0.05 | 平均容量因子合理（>5%）|
+| mean(capacity_factor_ac) > 0.05 | 平均容量因子合理（>5%） |
 | 核心指标字段无 NaN | lcoe / capacity / cf 三列无空值 |
 | lcoe_all_in >= lcoe_site | 全成本 LCOE 不低于场址 LCOE |
 | 点数量与预期格网密度偏差 < 30% | 偏差超过阈值触发告警 |
@@ -1219,7 +1240,7 @@ rep-profiles 输出为一个 HDF5 文件（`_rep_profiles.h5`），包含：
 ### 10.1 校验时机
 
 | 时机 | 模块 | 校验内容 |
-|---|---|---|
+| --- | --- | --- |
 | POST /datasets | DatasetService.create | path_pattern 格式是否含 `{year}` 占位符 |
 | POST /turbine-templates | TurbineTemplateService.validate_power_curve | 功率曲线长度匹配、切出风速处出力归零 |
 | POST /scenarios | ScenarioService.validate | analysis_years 是 Dataset.analysis_years 子集 |
@@ -1230,11 +1251,13 @@ rep-profiles 输出为一个 HDF5 文件（`_rep_profiles.h5`），包含：
 ### 10.2 校验检查项清单
 
 **Dataset 校验**：
+
 - `path_pattern` 包含 `{year}` 且路径合法（无 `..` 等路径穿越）
 - `analysis_years` 非空，年份范围 1900–2100
 - `crs` 格式为 `EPSG:XXXX`
 
 **TurbineTemplate 校验**：
+
 - `power_curve_json` 两个数组长度相同
 - 风速序列严格单调递增
 - 切出风速（数组末尾第二个风速）处出力应为 0 或接近 0（不超过额定功率的 1%）
@@ -1242,6 +1265,7 @@ rep-profiles 输出为一个 HDF5 文件（`_rep_profiles.h5`），包含：
 - `losses_pct` 在 [0, 50] 范围内
 
 **Scenario 校验**：
+
 - `analysis_years` 是 `Dataset.analysis_years` 的子集
 - `power_density_mw_km2` 在 (0.1, 20) 范围内
 - `resolution` 在 {32, 64, 128} 枚举中
@@ -1249,6 +1273,7 @@ rep-profiles 输出为一个 HDF5 文件（`_rep_profiles.h5`），包含：
 - `output_request` 中的字段名在 reV 已知输出字段白名单内
 
 **ExclusionRule 校验**：
+
 - `rule_type=range` 时 `inclusion_range_min < inclusion_range_max`
 - `weight` 在 [0, 1] 范围内
 - 关联 `ExclusionLayer.h5_fpath` 文件存在
@@ -1307,7 +1332,7 @@ services:
 ### 11.2 生产部署最小化需求
 
 | 组件 | 最低规格 | 说明 |
-|---|---|---|
+| --- | --- | --- |
 | API 服务 | 2 vCPU / 4 GB RAM | FastAPI + Uvicorn |
 | Celery Worker | 8 vCPU / 32 GB RAM | reV generation 内存密集 |
 | PostgreSQL | 4 vCPU / 16 GB RAM | ScPoint 表可能有百万行级别 |
@@ -1339,6 +1364,7 @@ services:
 目标：能够对单年数据的单个区域执行一次完整的 reV pipeline 并查看结果。
 
 **必须实现**：
+
 - [ ] PostgreSQL schema 迁移（Dataset / TurbineTemplate / Scenario / Job / JobStep / ScPoint）
 - [ ] DatasetService、TurbineTemplateService、ScenarioService 的 CRUD
 - [ ] ConfigGeneratorService（generation + supply-curve-aggregation + supply-curve）
@@ -1356,6 +1382,7 @@ services:
 目标：支持多年分析、排除规则、输电成本、异步任务执行。
 
 **新增实现**：
+
 - [ ] Celery + Redis 异步任务队列
 - [ ] 多年数据支持（collect 步骤 + multi-year 聚合）
 - [ ] ExclusionService 及排除规则管理
@@ -1375,6 +1402,7 @@ services:
 目标：提升可靠性、可观测性和可扩展性。
 
 **可选增强**：
+
 - [ ] RepProfile 支持（rep-profiles 步骤 + MinIO）
 - [ ] 场景对比接口（并排展示多个 job 的供应曲线摘要）
 - [ ] 输入数据预校验（HDF5 格式验证、坐标完整性）
