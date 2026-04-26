@@ -1,4 +1,4 @@
-# reV风电场宏观选址投标书技术说明
+# reV风电场宏观选址投标书技术说明
 
 ## 1. 编制说明
 
@@ -192,6 +192,7 @@ reV 将提取的时序数据按 SAM 规定格式组装：资源矩阵字段顺�
 **步骤五：PySAM 风电模型仿真**
 
 将完整 SAM 配置注入 `PySAM.Windpower` 模块并执行计算。SAM 在每个时间步执行以下核心计算：
+
 - 根据气压和气温计算实际空气密度，并对功率曲线进行空气密度修正；
 - 将校正后的风速映射到修正后的功率曲线，得到该时步机组输出；
 - 若配置了多机位布局（`wind_farm_xCoordinates/yCoordinates`），还会执行尾流模型计算，对下游机位风速进行折减。
@@ -696,6 +697,7 @@ v_h = v_{ref} \cdot \left(\frac{h}{h_{ref}}\right)^\alpha
 $$
 
 其中：
+
 - $v_h$：目标高度 $h$（轮毂高度）处风速（m/s）
 - $v_{ref}$：参考高度 $h_{ref}$ 处已知风速（m/s）
 - $\alpha$：剪切指数（SAM 配置中 `wind_resource_shear`），典型范围 0.10–0.25，中性大气约为 0.14
@@ -717,7 +719,7 @@ $$
 功率曲线定义了风速到单台机组额定工况输出功率的映射关系 $P = f(v)$，分为三个工作区间：
 
 | 区间 | 风速范围 | 特征 |
-|---|---|---|
+| --- | --- | --- |
 | 切入前 | $v < v_{ci}$ | 风速不足，机组不发电，$P = 0$ |
 | 工作区 | $v_{ci} \leq v \leq v_r$ | 功率随风速近似三次方增长，$P \propto v^3$ |
 | 额定区 | $v_r < v \leq v_{co}$ | 机组限功率运行，$P = P_r$（额定功率） |
@@ -783,7 +785,7 @@ $$
 各参数的**单位定义**如下（严格遵守 `reV/econ/utilities.py` 中的注释）：
 
 | 参数 | 含义 | 单位 |
-|---|---|---|
+| --- | --- | --- |
 | $FCR$ | 固定费率（资本回收率） | 无量纲，如 0.096 |
 | $CAPEX$ | 总资本性支出 | \$ |
 | $FOC$ | 年固定运维成本 | \$/年 |
@@ -905,7 +907,6 @@ capital_cost_function = (
 #### Meanoid 算法流程
 
 1. **均值曲线计算**：对组内全部时序计算逐时均值，得到"组均值曲线" $\bar{\mathbf{p}}$。
-
 2. **误差度量**：以 `err_method`（通常为 RMSE）衡量各候选时序与均值曲线的相似度：
 
 $$
@@ -1077,7 +1078,7 @@ README 中给出的典型运行规模为：
 - `reV/supply_curve/points.py`
 - `reV/supply_curve/supply_curve.py`
 - `reV/econ/utilities.py`
-- `reV/utilities/__init__.py`
+- `reV/utilities/__i__nit__.__py`
 - `examples/batched_execution/`
 - `examples/full_pipeline_execution/`
 - `examples/bespoke_wind_plants/single_run.py`
