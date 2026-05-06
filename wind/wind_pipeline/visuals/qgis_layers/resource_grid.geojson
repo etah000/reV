@@ -1,0 +1,8405 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "gid": 0,
+        "latitude": 41.96363830566406,
+        "longitude": -71.79364013671875,
+        "country": "United States",
+        "state": "RI",
+        "county": "Providence",
+        "timezone": -5,
+        "elevation": 202,
+        "offshore": 0,
+        "in_project_points": 1
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -71.794037,
+              41.961416
+            ],
+            [
+              -71.793274,
+              41.961416
+            ],
+            [
+              -71.793274,
+              41.964195000000004
+            ],
+            [
+              -71.794037,
+              41.964195000000004
+            ],
+            [
+              -71.794037,
+              41.961416
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "gid": 1,
+        "latitude": 41.981380462646484,
+        "longitude": -71.78619384765625,
+        "country": "United States",
+        "state": "RI",
+        "county": "Providence",
+        "timezone": -5,
+        "elevation": 178,
+        "offshore": 0,
+        "in_project_points": 1
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -71.7866515,
+              41.979158
+            ],
+            [
+              -71.786087,
+              41.979158
+            ],
+            [
+              -71.786087,
+              41.981937
+            ],
+            [
+              -71.7866515,
+              41.981937
+            ],
+            [
+              -71.7866515,
+              41.979158
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "gid": 2,
+        "latitude": 41.9991340637207,
+        "longitude": -71.77874755859375,
+        "country": "United States",
+        "state": "RI",
+        "county": "Providence",
+        "timezone": -5,
+        "elevation": 174,
+        "offshore": 0,
+        "in_project_points": 1
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -71.77925149999999,
+              41.9969025
+            ],
+            [
+              -71.778656,
+              41.9969025
+            ],
+            [
+              -71.778656,
+              41.9996855
+            ],
+            [
+              -71.77925149999999,
+              41.9996855
+            ],
+            [
+              -71.77925149999999,
+              41.9969025
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "gid": 3,
+        "latitude": 41.90486526489258,
+        "longitude": -71.7921142578125,
+        "country": "United States",
+        "state": "RI",
+        "county": "Providence",
+        "timezone": -5,
+        "elevation": 195,
+        "offshore": 0,
+        "in_project_points": 1
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -71.79251099999999,
+              41.902645
+            ],
+            [
+              -71.79186999999999,
+              41.902645
+            ],
+            [
+              -71.79186999999999,
+              41.90542
+            ],
+            [
+              -71.79251099999999,
+              41.90542
+            ],
+            [
+              -71.79251099999999,
+              41.902645
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "gid": 4,
+        "latitude": 41.922607421875,
+        "longitude": -71.78466796875,
+        "country": "United States",
+        "state": "RI",
+        "county": "Providence",
+        "timezone": -5,
+        "elevation": 201,
+        "offshore": 0,
+        "in_project_points": 1
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -71.78512549999999,
+              41.920383
+            ],
+            [
+              -71.7845765,
+              41.920383
+            ],
+            [
+              -71.7845765,
+              41.9231585
+            ],
+            [
+              -71.78512549999999,
+              41.9231585
+            ],
+            [
+              -71.78512549999999,
+              41.920383
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "gid": 5,
+        "latitude": 41.94035339355469,
+        "longitude": -71.7772216796875,
+        "country": "United States",
+        "state": "RI",
+        "county": "Providence",
+        "timezone": -5,
+        "elevation": 170,
+        "offshore": 0,
+        "in_project_points": 1
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -71.7777405,
+              41.9381275
+            ],
+            [
+              -71.77714549999999,
+              41.9381275
+            ],
+            [
+              -71.77714549999999,
+              41.9409045
+            ],
+            [
+              -71.7777405,
+              41.9409045
+            ],
+            [
+              -71.7777405,
+              41.9381275
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "gid": 6,
+        "latitude": 41.95810317993164,
+        "longitude": -71.769775390625,
+        "country": "United States",
+        "state": "RI",
+        "county": "Providence",
+        "timezone": -5,
+        "elevation": 187,
+        "offshore": 0,
+        "in_project_points": 1
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -71.770355,
+              41.955869500000006
+            ],
+            [
+              -71.769714,
+              41.955869500000006
+            ],
+            [
+              -71.769714,
+              41.958648499999995
+            ],
+            [
+              -71.770355,
+              41.958648499999995
+            ],
+            [
+              -71.770355,
+              41.955869500000006
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "gid": 7,
+        "latitude": 41.97584915161133,
+        "longitude": -71.7623291015625,
+        "country": "United States",
+        "state": "RI",
+        "county": "Providence",
+        "timezone": -5,
+        "elevation": 208,
+        "offshore": 0,
+        "in_project_points": 1
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -71.7629545,
+              41.973609999999994
+            ],
+            [
+              -71.7622835,
+              41.973609999999994
+            ],
+            [
+              -71.7622835,
+              41.9763925
+            ],
+            [
+              -71.7629545,
+              41.9763925
+            ],
+            [
+              -71.7629545,
+              41.973609999999994
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "gid": 8,
+        "latitude": 41.99358367919922,
+        "longitude": -71.75485229492188,
+        "country": "United States",
+        "state": "RI",
+        "county": "Providence",
+        "timezone": -5,
+        "elevation": 180,
+        "offshore": 0,
+        "in_project_points": 1
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -71.755539,
+              41.9913465
+            ],
+            [
+              -71.75483700000001,
+              41.9913465
+            ],
+            [
+              -71.75483700000001,
+              41.9941275
+            ],
+            [
+              -71.755539,
+              41.9941275
+            ],
+            [
+              -71.755539,
+              41.9913465
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "gid": 9,
+        "latitude": 41.84608459472656,
+        "longitude": -71.79058837890625,
+        "country": "United States",
+        "state": "RI",
+        "county": "Providence",
+        "timezone": -5,
+        "elevation": 220,
+        "offshore": 0,
+        "in_project_points": 1
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -71.791,
+              41.8438645
+            ],
+            [
+              -71.79046600000001,
+              41.8438645
+            ],
+            [
+              -71.79046600000001,
+              41.8466435
+            ],
+            [
+              -71.791,
+              41.8466435
+            ],
+            [
+              -71.791,
+              41.8438645
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "gid": 10,
+        "latitude": 41.86383056640625,
+        "longitude": -71.78314208984375,
+        "country": "United States",
+        "state": "RI",
+        "county": "Providence",
+        "timezone": -5,
+        "elevation": 226,
+        "offshore": 0,
+        "in_project_points": 1
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -71.783615,
+              41.8616085
+            ],
+            [
+              -71.7830505,
+              41.8616085
+            ],
+            [
+              -71.7830505,
+              41.864385999999996
+            ],
+            [
+              -71.783615,
+              41.864385999999996
+            ],
+            [
+              -71.783615,
+              41.8616085
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "gid": 11,
+        "latitude": 41.88158416748047,
+        "longitude": -71.77569580078125,
+        "country": "United States",
+        "state": "RI",
+        "county": "Providence",
+        "timezone": -5,
+        "elevation": 197,
+        "offshore": 0,
+        "in_project_points": 1
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -71.77623,
+              41.8793505
+            ],
+            [
+              -71.775635,
+              41.8793505
+            ],
+            [
+              -71.775635,
+              41.8821315
+            ],
+            [
+              -71.77623,
+              41.8821315
+            ],
+            [
+              -71.77623,
+              41.8793505
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "gid": 12,
+        "latitude": 41.899330139160156,
+        "longitude": -71.76824951171875,
+        "country": "United States",
+        "state": "RI",
+        "county": "Providence",
+        "timezone": -5,
+        "elevation": 230,
+        "offshore": 0,
+        "in_project_points": 1
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -71.768845,
+              41.8970925
+            ],
+            [
+              -71.768204,
+              41.8970925
+            ],
+            [
+              -71.768204,
+              41.8998775
+            ],
+            [
+              -71.768845,
+              41.8998775
+            ],
+            [
+              -71.768845,
+              41.8970925
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "gid": 13,
+        "latitude": 41.91707229614258,
+        "longitude": -71.76080322265625,
+        "country": "United States",
+        "state": "RI",
+        "county": "Providence",
+        "timezone": -5,
+        "elevation": 229,
+        "offshore": 0,
+        "in_project_points": 1
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -71.761444,
+              41.914835
+            ],
+            [
+              -71.7607725,
+              41.914835
+            ],
+            [
+              -71.7607725,
+              41.9176155
+            ],
+            [
+              -71.761444,
+              41.9176155
+            ],
+            [
+              -71.761444,
+              41.914835
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "gid": 14,
+        "latitude": 41.9348030090332,
+        "longitude": -71.75335693359375,
+        "country": "United States",
+        "state": "RI",
+        "county": "Providence",
+        "timezone": -5,
+        "elevation": 194,
+        "offshore": 0,
+        "in_project_points": 1
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -71.754059,
+              41.932567500000005
+            ],
+            [
+              -71.7533415,
+              41.932567500000005
+            ],
+            [
+              -71.7533415,
+              41.9353525
+            ],
+            [
+              -71.754059,
+              41.9353525
+            ],
+            [
+              -71.754059,
+              41.932567500000005
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "gid": 15,
+        "latitude": 41.95256042480469,
+        "longitude": -71.74591064453125,
+        "country": "United States",
+        "state": "RI",
+        "county": "Providence",
+        "timezone": -5,
+        "elevation": 206,
+        "offshore": 0,
+        "in_project_points": 1
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -71.7466585,
+              41.9503135
+            ],
+            [
+              -71.74517850000001,
+              41.9503135
+            ],
+            [
+              -71.74517850000001,
+              41.953098
+            ],
+            [
+              -71.7466585,
+              41.953098
+            ],
+            [
+              -71.7466585,
+              41.9503135
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "gid": 16,
+        "latitude": 41.970298767089844,
+        "longitude": -71.73846435546875,
+        "country": "United States",
+        "state": "RI",
+        "county": "Providence",
+        "timezone": -5,
+        "elevation": 183,
+        "offshore": 0,
+        "in_project_points": 1
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -71.7384795,
+              41.968053999999995
+            ],
+            [
+              -71.73777749999999,
+              41.968053999999995
+            ],
+            [
+              -71.73777749999999,
+              41.970834999999994
+            ],
+            [
+              -71.7384795,
+              41.970834999999994
+            ],
+            [
+              -71.7384795,
+              41.968053999999995
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "gid": 17,
+        "latitude": 41.98804473876953,
+        "longitude": -71.73098754882812,
+        "country": "United States",
+        "state": "RI",
+        "county": "Providence",
+        "timezone": -5,
+        "elevation": 143,
+        "offshore": 0,
+        "in_project_points": 1
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -71.731766,
+              41.985794
+            ],
+            [
+              -71.730347,
+              41.985794
+            ],
+            [
+              -71.730347,
+              41.988577
+            ],
+            [
+              -71.731766,
+              41.988577
+            ],
+            [
+              -71.731766,
+              41.985794
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "gid": 18,
+        "latitude": 42.005794525146484,
+        "longitude": -71.7235107421875,
+        "country": "United States",
+        "state": "RI",
+        "county": "Providence",
+        "timezone": -5,
+        "elevation": 194,
+        "offshore": 0,
+        "in_project_points": 1
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -71.7243045,
+              42.003536499999996
+            ],
+            [
+              -71.722916,
+              42.003536499999996
+            ],
+            [
+              -71.722916,
+              42.006322999999995
+            ],
+            [
+              -71.7243045,
+              42.006322999999995
+            ],
+            [
+              -71.7243045,
+              42.003536499999996
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "gid": 19,
+        "latitude": 41.787315368652344,
+        "longitude": -71.78903198242188,
+        "country": "United States",
+        "state": "RI",
+        "county": "Providence",
+        "timezone": -5,
+        "elevation": 183,
+        "offshore": 0,
+        "in_project_points": 1
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -71.78947450000001,
+              41.7845495
+            ],
+            [
+              -71.7888185,
+              41.7845495
+            ],
+            [
+              -71.7888185,
+              41.787876
+            ],
+            [
+              -71.78947450000001,
+              41.787876
+            ],
+            [
+              -71.78947450000001,
+              41.7845495
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "gid": 20,
+        "latitude": 41.80507278442383,
+        "longitude": -71.7816162109375,
+        "country": "United States",
+        "state": "RI",
+        "county": "Providence",
+        "timezone": -5,
+        "elevation": 157,
+        "offshore": 0,
+        "in_project_points": 1
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -71.7821045,
+              41.8023015
+            ],
+            [
+              -71.78143299999999,
+              41.8023015
+            ],
+            [
+              -71.78143299999999,
+              41.8056205
+            ],
+            [
+              -71.7821045,
+              41.8056205
+            ],
+            [
+              -71.7821045,
+              41.8023015
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "gid": 21,
+        "latitude": 41.82280731201172,
+        "longitude": -71.774169921875,
+        "country": "United States",
+        "state": "RI",
+        "county": "Providence",
+        "timezone": -5,
+        "elevation": 197,
+        "offshore": 0,
+        "in_project_points": 1
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -71.7747195,
+              41.820036
+            ],
+            [
+              -71.774048,
+              41.820036
+            ],
+            [
+              -71.774048,
+              41.8233605
+            ],
+            [
+              -71.7747195,
+              41.8233605
+            ],
+            [
+              -71.7747195,
+              41.820036
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "gid": 22,
+        "latitude": 41.84054946899414,
+        "longitude": -71.76675415039062,
+        "country": "United States",
+        "state": "RI",
+        "county": "Providence",
+        "timezone": -5,
+        "elevation": 204,
+        "offshore": 0,
+        "in_project_points": 1
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -71.767395,
+              41.83778
+            ],
+            [
+              -71.7666475,
+              41.83778
+            ],
+            [
+              -71.7666475,
+              41.841096500000006
+            ],
+            [
+              -71.767395,
+              41.841096500000006
+            ],
+            [
+              -71.767395,
+              41.83778
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "gid": 23,
+        "latitude": 41.85829162597656,
+        "longitude": -71.75930786132812,
+        "country": "United States",
+        "state": "RI",
+        "county": "Providence",
+        "timezone": -5,
+        "elevation": 225,
+        "offshore": 0,
+        "in_project_points": 1
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -71.7599945,
+              41.8555165
+            ],
+            [
+              -71.759247,
+              41.8555165
+            ],
+            [
+              -71.759247,
+              41.858839
+            ],
+            [
+              -71.7599945,
+              41.858839
+            ],
+            [
+              -71.7599945,
+              41.8555165
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "gid": 24,
+        "latitude": 41.87603759765625,
+        "longitude": -71.75186157226562,
+        "country": "United States",
+        "state": "RI",
+        "county": "Providence",
+        "timezone": -5,
+        "elevation": 210,
+        "offshore": 0,
+        "in_project_points": 1
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -71.752579,
+              41.873264500000005
+            ],
+            [
+              -71.7518465,
+              41.873264500000005
+            ],
+            [
+              -71.7518465,
+              41.876577499999996
+            ],
+            [
+              -71.752579,
+              41.876577499999996
+            ],
+            [
+              -71.752579,
+              41.873264500000005
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "gid": 25,
+        "latitude": 41.893775939941406,
+        "longitude": -71.74441528320312,
+        "country": "United States",
+        "state": "RI",
+        "county": "Providence",
+        "timezone": -5,
+        "elevation": 224,
+        "offshore": 0,
+        "in_project_points": 1
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -71.74443049999999,
+              41.8910025
+            ],
+            [
+              -71.743698,
+              41.8910025
+            ],
+            [
+              -71.743698,
+              41.894315500000005
+            ],
+            [
+              -71.74443049999999,
+              41.894315500000005
+            ],
+            [
+              -71.74443049999999,
+              41.8910025
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "gid": 26,
+        "latitude": 41.911521911621094,
+        "longitude": -71.73696899414062,
+        "country": "United States",
+        "state": "RI",
+        "county": "Providence",
+        "timezone": -5,
+        "elevation": 206,
+        "offshore": 0,
+        "in_project_points": 1
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -71.73703,
+              41.9087485
+            ],
+            [
+              -71.7362975,
+              41.9087485
+            ],
+            [
+              -71.7362975,
+              41.91206
+            ],
+            [
+              -71.73703,
+              41.91206
+            ],
+            [
+              -71.73703,
+              41.9087485
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "gid": 27,
+        "latitude": 41.92927169799805,
+        "longitude": -71.7294921875,
+        "country": "United States",
+        "state": "RI",
+        "county": "Providence",
+        "timezone": -5,
+        "elevation": 234,
+        "offshore": 0,
+        "in_project_points": 1
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -71.729599,
+              41.926491
+            ],
+            [
+              -71.7288665,
+              41.926491
+            ],
+            [
+              -71.7288665,
+              41.929801999999995
+            ],
+            [
+              -71.729599,
+              41.929801999999995
+            ],
+            [
+              -71.729599,
+              41.926491
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "gid": 28,
+        "latitude": 41.94700622558594,
+        "longitude": -71.7220458984375,
+        "country": "United States",
+        "state": "RI",
+        "county": "Providence",
+        "timezone": -5,
+        "elevation": 203,
+        "offshore": 0,
+        "in_project_points": 1
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -71.7221835,
+              41.944231
+            ],
+            [
+              -71.72146599999999,
+              41.944231
+            ],
+            [
+              -71.72146599999999,
+              41.9475365
+            ],
+            [
+              -71.7221835,
+              41.9475365
+            ],
+            [
+              -71.7221835,
+              41.944231
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "gid": 29,
+        "latitude": 41.964752197265625,
+        "longitude": -71.714599609375,
+        "country": "United States",
+        "state": "RI",
+        "county": "Providence",
+        "timezone": -5,
+        "elevation": 163,
+        "offshore": 0,
+        "in_project_points": 1
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -71.7161255,
+              41.964195000000004
+            ],
+            [
+              -71.7140505,
+              41.964195000000004
+            ],
+            [
+              -71.7140505,
+              41.9652805
+            ],
+            [
+              -71.7161255,
+              41.9652805
+            ],
+            [
+              -71.7161255,
+              41.964195000000004
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "gid": 30,
+        "latitude": 41.98249435424805,
+        "longitude": -71.70712280273438,
+        "country": "United States",
+        "state": "RI",
+        "county": "Providence",
+        "timezone": -5,
+        "elevation": 162,
+        "offshore": 0,
+        "in_project_points": 1
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -71.708664,
+              41.981937
+            ],
+            [
+              -71.70661949999999,
+              41.981937
+            ],
+            [
+              -71.70661949999999,
+              41.9830185
+            ],
+            [
+              -71.708664,
+              41.9830185
+            ],
+            [
+              -71.708664,
+              41.981937
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "gid": 31,
+        "latitude": 42.00023651123047,
+        "longitude": -71.69964599609375,
+        "country": "United States",
+        "state": "RI",
+        "county": "Providence",
+        "timezone": -5,
+        "elevation": 135,
+        "offshore": 0,
+        "in_project_points": 1
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -71.7012025,
+              41.9996855
+            ],
+            [
+              -71.69918799999999,
+              41.9996855
+            ],
+            [
+              -71.69918799999999,
+              42.0007575
+            ],
+            [
+              -71.7012025,
+              42.0007575
+            ],
+            [
+              -71.7012025,
+              41.9996855
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "gid": 32,
+        "latitude": 41.728553771972656,
+        "longitude": -71.78750610351562,
+        "country": "United States",
+        "state": "RI",
+        "county": "Providence",
+        "timezone": -5,
+        "elevation": 172,
+        "offshore": 0,
+        "in_project_points": 1
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -71.7880555,
+              41.725788
+            ],
+            [
+              -71.7873075,
+              41.725788
+            ],
+            [
+              -71.7873075,
+              41.731884
+            ],
+            [
+              -71.7880555,
+              41.731884
+            ],
+            [
+              -71.7880555,
+              41.725788
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "gid": 33,
+        "latitude": 41.74630355834961,
+        "longitude": -71.78009033203125,
+        "country": "United States",
+        "state": "RI",
+        "county": "Providence",
+        "timezone": -5,
+        "elevation": 171,
+        "offshore": 0,
+        "in_project_points": 1
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -71.78067,
+              41.7435325
+            ],
+            [
+              -71.7799225,
+              41.7435325
+            ],
+            [
+              -71.7799225,
+              41.749629999999996
+            ],
+            [
+              -71.78067,
+              41.749629999999996
+            ],
+            [
+              -71.78067,
+              41.7435325
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "gid": 34,
+        "latitude": 41.76404571533203,
+        "longitude": -71.77267456054688,
+        "country": "United States",
+        "state": "RI",
+        "county": "Providence",
+        "timezone": -5,
+        "elevation": 176,
+        "offshore": 0,
+        "in_project_points": 1
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -71.7733005,
+              41.7612745
+            ],
+            [
+              -71.7725375,
+              41.7612745
+            ],
+            [
+              -71.7725375,
+              41.7673685
+            ],
+            [
+              -71.7733005,
+              41.7673685
+            ],
+            [
+              -71.7733005,
+              41.7612745
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "gid": 35,
+        "latitude": 41.78178405761719,
+        "longitude": -71.7652587890625,
+        "country": "United States",
+        "state": "RI",
+        "county": "Providence",
+        "timezone": -5,
+        "elevation": 172,
+        "offshore": 0,
+        "in_project_points": 1
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -71.7659,
+              41.7790125
+            ],
+            [
+              -71.76516749999999,
+              41.7790125
+            ],
+            [
+              -71.76516749999999,
+              41.7845495
+            ],
+            [
+              -71.7659,
+              41.7845495
+            ],
+            [
+              -71.7659,
+              41.7790125
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "gid": 36,
+        "latitude": 41.799530029296875,
+        "longitude": -71.7578125,
+        "country": "United States",
+        "state": "RI",
+        "county": "Providence",
+        "timezone": -5,
+        "elevation": 195,
+        "offshore": 0,
+        "in_project_points": 1
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -71.758499,
+              41.796755
+            ],
+            [
+              -71.757751,
+              41.796755
+            ],
+            [
+              -71.757751,
+              41.8023015
+            ],
+            [
+              -71.758499,
+              41.8023015
+            ],
+            [
+              -71.758499,
+              41.796755
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "gid": 37,
+        "latitude": 41.817264556884766,
+        "longitude": -71.7503662109375,
+        "country": "United States",
+        "state": "RI",
+        "county": "Providence",
+        "timezone": -5,
+        "elevation": 193,
+        "offshore": 0,
+        "in_project_points": 1
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -71.7510985,
+              41.8144935
+            ],
+            [
+              -71.7496335,
+              41.8144935
+            ],
+            [
+              -71.7496335,
+              41.820036
+            ],
+            [
+              -71.7510985,
+              41.820036
+            ],
+            [
+              -71.7510985,
+              41.8144935
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "gid": 38,
+        "latitude": 41.83501052856445,
+        "longitude": -71.742919921875,
+        "country": "United States",
+        "state": "RI",
+        "county": "Providence",
+        "timezone": -5,
+        "elevation": 181,
+        "offshore": 0,
+        "in_project_points": 1
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -71.7429505,
+              41.832235499999996
+            ],
+            [
+              -71.74221800000001,
+              41.832235499999996
+            ],
+            [
+              -71.74221800000001,
+              41.83778
+            ],
+            [
+              -71.7429505,
+              41.83778
+            ],
+            [
+              -71.7429505,
+              41.832235499999996
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "gid": 39,
+        "latitude": 41.85274124145508,
+        "longitude": -71.7354736328125,
+        "country": "United States",
+        "state": "RI",
+        "county": "Providence",
+        "timezone": -5,
+        "elevation": 168,
+        "offshore": 0,
+        "in_project_points": 1
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -71.73554999999999,
+              41.8499715
+            ],
+            [
+              -71.73481749999999,
+              41.8499715
+            ],
+            [
+              -71.73481749999999,
+              41.8555165
+            ],
+            [
+              -71.73554999999999,
+              41.8555165
+            ],
+            [
+              -71.73554999999999,
+              41.8499715
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "gid": 40,
+        "latitude": 41.87049102783203,
+        "longitude": -71.72802734375,
+        "country": "United States",
+        "state": "RI",
+        "county": "Providence",
+        "timezone": -5,
+        "elevation": 212,
+        "offshore": 0,
+        "in_project_points": 1
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -71.728134,
+              41.867716
+            ],
+            [
+              -71.727417,
+              41.867716
+            ],
+            [
+              -71.727417,
+              41.873264500000005
+            ],
+            [
+              -71.728134,
+              41.873264500000005
+            ],
+            [
+              -71.728134,
+              41.867716
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "gid": 41,
+        "latitude": 41.88822937011719,
+        "longitude": -71.7205810546875,
+        "country": "United States",
+        "state": "RI",
+        "county": "Providence",
+        "timezone": -5,
+        "elevation": 199,
+        "offshore": 0,
+        "in_project_points": 1
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -71.7207335,
+              41.885454
+            ],
+            [
+              -71.720001,
+              41.885454
+            ],
+            [
+              -71.720001,
+              41.8910025
+            ],
+            [
+              -71.7207335,
+              41.8910025
+            ],
+            [
+              -71.7207335,
+              41.885454
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "gid": 42,
+        "latitude": 41.905975341796875,
+        "longitude": -71.713134765625,
+        "country": "United States",
+        "state": "RI",
+        "county": "Providence",
+        "timezone": -5,
+        "elevation": 200,
+        "offshore": 0,
+        "in_project_points": 1
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -71.71331799999999,
+              41.90542
+            ],
+            [
+              -71.71258549999999,
+              41.90542
+            ],
+            [
+              -71.71258549999999,
+              41.9087485
+            ],
+            [
+              -71.71331799999999,
+              41.9087485
+            ],
+            [
+              -71.71331799999999,
+              41.90542
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "gid": 43,
+        "latitude": 41.923709869384766,
+        "longitude": -71.70565795898438,
+        "country": "United States",
+        "state": "RI",
+        "county": "Providence",
+        "timezone": -5,
+        "elevation": 164,
+        "offshore": 0,
+        "in_project_points": 1
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -71.70588699999999,
+              41.9231585
+            ],
+            [
+              -71.70515449999999,
+              41.9231585
+            ],
+            [
+              -71.70515449999999,
+              41.926491
+            ],
+            [
+              -71.70588699999999,
+              41.926491
+            ],
+            [
+              -71.70588699999999,
+              41.9231585
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "gid": 44,
+        "latitude": 41.94145584106445,
+        "longitude": -71.69818115234375,
+        "country": "United States",
+        "state": "RI",
+        "county": "Providence",
+        "timezone": -5,
+        "elevation": 172,
+        "offshore": 0,
+        "in_project_points": 1
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -71.6984555,
+              41.9409045
+            ],
+            [
+              -71.6977385,
+              41.9409045
+            ],
+            [
+              -71.6977385,
+              41.944231
+            ],
+            [
+              -71.6984555,
+              41.944231
+            ],
+            [
+              -71.6984555,
+              41.9409045
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "gid": 45,
+        "latitude": 41.95919418334961,
+        "longitude": -71.69073486328125,
+        "country": "United States",
+        "state": "RI",
+        "county": "Providence",
+        "timezone": -5,
+        "elevation": 149,
+        "offshore": 0,
+        "in_project_points": 1
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -71.691025,
+              41.958648499999995
+            ],
+            [
+              -71.6903075,
+              41.958648499999995
+            ],
+            [
+              -71.6903075,
+              41.961416
+            ],
+            [
+              -71.691025,
+              41.961416
+            ],
+            [
+              -71.691025,
+              41.958648499999995
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "gid": 46,
+        "latitude": 41.97693634033203,
+        "longitude": -71.68325805664062,
+        "country": "United States",
+        "state": "RI",
+        "county": "Providence",
+        "timezone": -5,
+        "elevation": 131,
+        "offshore": 0,
+        "in_project_points": 1
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -71.685562,
+              41.9763925
+            ],
+            [
+              -71.68287649999999,
+              41.9763925
+            ],
+            [
+              -71.68287649999999,
+              41.979158
+            ],
+            [
+              -71.685562,
+              41.979158
+            ],
+            [
+              -71.685562,
+              41.9763925
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "gid": 47,
+        "latitude": 41.99467086791992,
+        "longitude": -71.67578125,
+        "country": "United States",
+        "state": "RI",
+        "county": "Providence",
+        "timezone": -5,
+        "elevation": 112,
+        "offshore": 0,
+        "in_project_points": 1
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -71.6781005,
+              41.9941275
+            ],
+            [
+              -71.6754455,
+              41.9941275
+            ],
+            [
+              -71.6754455,
+              41.9969025
+            ],
+            [
+              -71.6781005,
+              41.9969025
+            ],
+            [
+              -71.6781005,
+              41.9941275
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "gid": 48,
+        "latitude": 41.669795989990234,
+        "longitude": -71.78598022460938,
+        "country": "United States",
+        "state": "RI",
+        "county": "Kent",
+        "timezone": -5,
+        "elevation": 117,
+        "offshore": 0,
+        "in_project_points": 1
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -71.786087,
+              41.6670265
+            ],
+            [
+              -71.7857815,
+              41.6670265
+            ],
+            [
+              -71.7857815,
+              41.6758975
+            ],
+            [
+              -71.786087,
+              41.6758975
+            ],
+            [
+              -71.786087,
+              41.6670265
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "gid": 49,
+        "latitude": 41.68754196166992,
+        "longitude": -71.778564453125,
+        "country": "United States",
+        "state": "RI",
+        "county": "Kent",
+        "timezone": -5,
+        "elevation": 133,
+        "offshore": 0,
+        "in_project_points": 1
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -71.778656,
+              41.6847705
+            ],
+            [
+              -71.7784115,
+              41.6847705
+            ],
+            [
+              -71.7784115,
+              41.69364
+            ],
+            [
+              -71.778656,
+              41.69364
+            ],
+            [
+              -71.778656,
+              41.6847705
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "gid": 50,
+        "latitude": 41.70528030395508,
+        "longitude": -71.77117919921875,
+        "country": "United States",
+        "state": "RI",
+        "county": "Kent",
+        "timezone": -5,
+        "elevation": 115,
+        "offshore": 0,
+        "in_project_points": 1
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -71.77178950000001,
+              41.702509000000006
+            ],
+            [
+              -71.771057,
+              41.702509000000006
+            ],
+            [
+              -71.771057,
+              41.711376
+            ],
+            [
+              -71.77178950000001,
+              41.711376
+            ],
+            [
+              -71.77178950000001,
+              41.702509000000006
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "gid": 51,
+        "latitude": 41.7230224609375,
+        "longitude": -71.76373291015625,
+        "country": "United States",
+        "state": "RI",
+        "county": "Kent",
+        "timezone": -5,
+        "elevation": 145,
+        "offshore": 0,
+        "in_project_points": 1
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -71.7644045,
+              41.720247
+            ],
+            [
+              -71.7636565,
+              41.720247
+            ],
+            [
+              -71.7636565,
+              41.725788
+            ],
+            [
+              -71.7644045,
+              41.725788
+            ],
+            [
+              -71.7644045,
+              41.720247
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "gid": 52,
+        "latitude": 41.740760803222656,
+        "longitude": -71.75631713867188,
+        "country": "United States",
+        "state": "RI",
+        "county": "Providence",
+        "timezone": -5,
+        "elevation": 150,
+        "offshore": 0,
+        "in_project_points": 1
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -71.7570035,
+              41.7379875
+            ],
+            [
+              -71.7562715,
+              41.7379875
+            ],
+            [
+              -71.7562715,
+              41.7435325
+            ],
+            [
+              -71.7570035,
+              41.7435325
+            ],
+            [
+              -71.7570035,
+              41.7379875
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "gid": 53,
+        "latitude": 41.75850296020508,
+        "longitude": -71.7489013671875,
+        "country": "United States",
+        "state": "RI",
+        "county": "Providence",
+        "timezone": -5,
+        "elevation": 154,
+        "offshore": 0,
+        "in_project_points": 1
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -71.7496335,
+              41.7557295
+            ],
+            [
+              -71.748886,
+              41.7557295
+            ],
+            [
+              -71.748886,
+              41.7612745
+            ],
+            [
+              -71.7496335,
+              41.7612745
+            ],
+            [
+              -71.7496335,
+              41.7557295
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "gid": 54,
+        "latitude": 41.776241302490234,
+        "longitude": -71.741455078125,
+        "country": "United States",
+        "state": "RI",
+        "county": "Providence",
+        "timezone": -5,
+        "elevation": 166,
+        "offshore": 0,
+        "in_project_points": 1
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -71.74148550000001,
+              41.773466
+            ],
+            [
+              -71.740753,
+              41.773466
+            ],
+            [
+              -71.740753,
+              41.7790125
+            ],
+            [
+              -71.74148550000001,
+              41.7790125
+            ],
+            [
+              -71.74148550000001,
+              41.773466
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "gid": 55,
+        "latitude": 41.79397964477539,
+        "longitude": -71.7340087890625,
+        "country": "United States",
+        "state": "RI",
+        "county": "Providence",
+        "timezone": -5,
+        "elevation": 203,
+        "offshore": 0,
+        "in_project_points": 1
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -71.734085,
+              41.791208499999996
+            ],
+            [
+              -71.733353,
+              41.791208499999996
+            ],
+            [
+              -71.733353,
+              41.796755
+            ],
+            [
+              -71.734085,
+              41.796755
+            ],
+            [
+              -71.734085,
+              41.791208499999996
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "gid": 56,
+        "latitude": 41.81172180175781,
+        "longitude": -71.7265625,
+        "country": "United States",
+        "state": "RI",
+        "county": "Providence",
+        "timezone": -5,
+        "elevation": 161,
+        "offshore": 0,
+        "in_project_points": 1
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -71.7266845,
+              41.808945
+            ],
+            [
+              -71.725952,
+              41.808945
+            ],
+            [
+              -71.725952,
+              41.8144935
+            ],
+            [
+              -71.7266845,
+              41.8144935
+            ],
+            [
+              -71.7266845,
+              41.808945
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "gid": 57,
+        "latitude": 41.82946014404297,
+        "longitude": -71.7191162109375,
+        "country": "United States",
+        "state": "RI",
+        "county": "Providence",
+        "timezone": -5,
+        "elevation": 151,
+        "offshore": 0,
+        "in_project_points": 1
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -71.7192685,
+              41.826687
+            ],
+            [
+              -71.71855149999999,
+              41.826687
+            ],
+            [
+              -71.71855149999999,
+              41.832235499999996
+            ],
+            [
+              -71.7192685,
+              41.832235499999996
+            ],
+            [
+              -71.7192685,
+              41.826687
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "gid": 58,
+        "latitude": 41.84720230102539,
+        "longitude": -71.711669921875,
+        "country": "United States",
+        "state": "RI",
+        "county": "Providence",
+        "timezone": -5,
+        "elevation": 123,
+        "offshore": 0,
+        "in_project_points": 1
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -71.71185299999999,
+              41.8466435
+            ],
+            [
+              -71.711151,
+              41.8466435
+            ],
+            [
+              -71.711151,
+              41.8499715
+            ],
+            [
+              -71.71185299999999,
+              41.8499715
+            ],
+            [
+              -71.71185299999999,
+              41.8466435
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "gid": 59,
+        "latitude": 41.86494064331055,
+        "longitude": -71.7042236328125,
+        "country": "United States",
+        "state": "RI",
+        "county": "Providence",
+        "timezone": -5,
+        "elevation": 173,
+        "offshore": 0,
+        "in_project_points": 1
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -71.7044375,
+              41.864385999999996
+            ],
+            [
+              -71.7037355,
+              41.864385999999996
+            ],
+            [
+              -71.7037355,
+              41.867716
+            ],
+            [
+              -71.7044375,
+              41.867716
+            ],
+            [
+              -71.7044375,
+              41.864385999999996
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "gid": 60,
+        "latitude": 41.8826789855957,
+        "longitude": -71.69674682617188,
+        "country": "United States",
+        "state": "RI",
+        "county": "Providence",
+        "timezone": -5,
+        "elevation": 170,
+        "offshore": 0,
+        "in_project_points": 1
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -71.6970215,
+              41.8821315
+            ],
+            [
+              -71.6963045,
+              41.8821315
+            ],
+            [
+              -71.6963045,
+              41.885454
+            ],
+            [
+              -71.6970215,
+              41.885454
+            ],
+            [
+              -71.6970215,
+              41.8821315
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "gid": 61,
+        "latitude": 41.90042495727539,
+        "longitude": -71.68930053710938,
+        "country": "United States",
+        "state": "RI",
+        "county": "Providence",
+        "timezone": -5,
+        "elevation": 150,
+        "offshore": 0,
+        "in_project_points": 1
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -71.68959050000001,
+              41.8998775
+            ],
+            [
+              -71.688889,
+              41.8998775
+            ],
+            [
+              -71.688889,
+              41.902645
+            ],
+            [
+              -71.68959050000001,
+              41.902645
+            ],
+            [
+              -71.68959050000001,
+              41.8998775
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "gid": 62,
+        "latitude": 41.91815948486328,
+        "longitude": -71.68182373046875,
+        "country": "United States",
+        "state": "RI",
+        "county": "Providence",
+        "timezone": -5,
+        "elevation": 147,
+        "offshore": 0,
+        "in_project_points": 1
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -71.68215950000001,
+              41.9176155
+            ],
+            [
+              -71.6814575,
+              41.9176155
+            ],
+            [
+              -71.6814575,
+              41.920383
+            ],
+            [
+              -71.68215950000001,
+              41.920383
+            ],
+            [
+              -71.68215950000001,
+              41.9176155
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "gid": 63,
+        "latitude": 41.9359016418457,
+        "longitude": -71.67434692382812,
+        "country": "United States",
+        "state": "RI",
+        "county": "Providence",
+        "timezone": -5,
+        "elevation": 161,
+        "offshore": 0,
+        "in_project_points": 1
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -71.6747285,
+              41.9353525
+            ],
+            [
+              -71.6740265,
+              41.9353525
+            ],
+            [
+              -71.6740265,
+              41.9381275
+            ],
+            [
+              -71.6747285,
+              41.9381275
+            ],
+            [
+              -71.6747285,
+              41.9353525
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "gid": 64,
+        "latitude": 41.953636169433594,
+        "longitude": -71.6668701171875,
+        "country": "United States",
+        "state": "RI",
+        "county": "Providence",
+        "timezone": -5,
+        "elevation": 149,
+        "offshore": 0,
+        "in_project_points": 1
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -71.6672975,
+              41.953098
+            ],
+            [
+              -71.6665955,
+              41.953098
+            ],
+            [
+              -71.6665955,
+              41.955869500000006
+            ],
+            [
+              -71.6672975,
+              41.955869500000006
+            ],
+            [
+              -71.6672975,
+              41.953098
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "gid": 65,
+        "latitude": 41.971370697021484,
+        "longitude": -71.65939331054688,
+        "country": "United States",
+        "state": "RI",
+        "county": "Providence",
+        "timezone": -5,
+        "elevation": 127,
+        "offshore": 0,
+        "in_project_points": 1
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -71.659851,
+              41.970834999999994
+            ],
+            [
+              -71.6591645,
+              41.970834999999994
+            ],
+            [
+              -71.6591645,
+              41.973609999999994
+            ],
+            [
+              -71.659851,
+              41.973609999999994
+            ],
+            [
+              -71.659851,
+              41.970834999999994
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "gid": 66,
+        "latitude": 41.98910903930664,
+        "longitude": -71.65191650390625,
+        "country": "United States",
+        "state": "RI",
+        "county": "Providence",
+        "timezone": -5,
+        "elevation": 129,
+        "offshore": 0,
+        "in_project_points": 1
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -71.6549535,
+              41.988577
+            ],
+            [
+              -71.6517185,
+              41.988577
+            ],
+            [
+              -71.6517185,
+              41.9913465
+            ],
+            [
+              -71.6549535,
+              41.9913465
+            ],
+            [
+              -71.6549535,
+              41.988577
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "gid": 67,
+        "latitude": 42.00685119628906,
+        "longitude": -71.6444091796875,
+        "country": "United States",
+        "state": "RI",
+        "county": "Providence",
+        "timezone": -5,
+        "elevation": 133,
+        "offshore": 0,
+        "in_project_points": 1
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -71.64746099999999,
+              42.006322999999995
+            ],
+            [
+              -71.6442565,
+              42.006322999999995
+            ],
+            [
+              -71.6442565,
+              42.007379
+            ],
+            [
+              -71.64746099999999,
+              42.007379
+            ],
+            [
+              -71.64746099999999,
+              42.006322999999995
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "gid": 68,
+        "latitude": 41.61103820800781,
+        "longitude": -71.78448486328125,
+        "country": "United States",
+        "state": "RI",
+        "county": "Kent",
+        "timezone": -5,
+        "elevation": 151,
+        "offshore": 0,
+        "in_project_points": 1
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -71.7845765,
+              41.6082705
+            ],
+            [
+              -71.7843935,
+              41.6082705
+            ],
+            [
+              -71.7843935,
+              41.6171415
+            ],
+            [
+              -71.7845765,
+              41.6171415
+            ],
+            [
+              -71.7845765,
+              41.6082705
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "gid": 69,
+        "latitude": 41.62879180908203,
+        "longitude": -71.77706909179688,
+        "country": "United States",
+        "state": "RI",
+        "county": "Kent",
+        "timezone": -5,
+        "elevation": 132,
+        "offshore": 0,
+        "in_project_points": 1
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -71.77714549999999,
+              41.6260185
+            ],
+            [
+              -71.776993,
+              41.6260185
+            ],
+            [
+              -71.776993,
+              41.634888000000004
+            ],
+            [
+              -71.77714549999999,
+              41.634888000000004
+            ],
+            [
+              -71.77714549999999,
+              41.6260185
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "gid": 70,
+        "latitude": 41.64651870727539,
+        "longitude": -71.7696533203125,
+        "country": "United States",
+        "state": "RI",
+        "county": "Kent",
+        "timezone": -5,
+        "elevation": 118,
+        "offshore": 0,
+        "in_project_points": 1
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -71.769714,
+              41.6437515
+            ],
+            [
+              -71.7695465,
+              41.6437515
+            ],
+            [
+              -71.7695465,
+              41.6526185
+            ],
+            [
+              -71.769714,
+              41.6526185
+            ],
+            [
+              -71.769714,
+              41.6437515
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "gid": 71,
+        "latitude": 41.66425704956055,
+        "longitude": -71.76223754882812,
+        "country": "United States",
+        "state": "RI",
+        "county": "Kent",
+        "timezone": -5,
+        "elevation": 117,
+        "offshore": 0,
+        "in_project_points": 1
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -71.7622835,
+              41.6614875
+            ],
+            [
+              -71.76216149999999,
+              41.6614875
+            ],
+            [
+              -71.76216149999999,
+              41.6670265
+            ],
+            [
+              -71.7622835,
+              41.6670265
+            ],
+            [
+              -71.7622835,
+              41.6614875
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "gid": 72,
+        "latitude": 41.68199920654297,
+        "longitude": -71.75482177734375,
+        "country": "United States",
+        "state": "RI",
+        "county": "Kent",
+        "timezone": -5,
+        "elevation": 144,
+        "offshore": 0,
+        "in_project_points": 1
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -71.75483700000001,
+              41.6758975
+            ],
+            [
+              -71.75479150000001,
+              41.6758975
+            ],
+            [
+              -71.75479150000001,
+              41.6847705
+            ],
+            [
+              -71.75483700000001,
+              41.6847705
+            ],
+            [
+              -71.75483700000001,
+              41.6758975
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "gid": 73,
+        "latitude": 41.699737548828125,
+        "longitude": -71.74740600585938,
+        "country": "United States",
+        "state": "RI",
+        "county": "Kent",
+        "timezone": -5,
+        "elevation": 160,
+        "offshore": 0,
+        "in_project_points": 1
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -71.7481385,
+              41.69364
+            ],
+            [
+              -71.7466585,
+              41.69364
+            ],
+            [
+              -71.7466585,
+              41.702509000000006
+            ],
+            [
+              -71.7481385,
+              41.702509000000006
+            ],
+            [
+              -71.7481385,
+              41.69364
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "gid": 74,
+        "latitude": 41.717472076416016,
+        "longitude": -71.739990234375,
+        "country": "United States",
+        "state": "RI",
+        "county": "Kent",
+        "timezone": -5,
+        "elevation": 142,
+        "offshore": 0,
+        "in_project_points": 1
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -71.7400205,
+              41.711376
+            ],
+            [
+              -71.7392425,
+              41.711376
+            ],
+            [
+              -71.7392425,
+              41.720247
+            ],
+            [
+              -71.7400205,
+              41.720247
+            ],
+            [
+              -71.7400205,
+              41.711376
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "gid": 75,
+        "latitude": 41.73521423339844,
+        "longitude": -71.7325439453125,
+        "country": "United States",
+        "state": "RI",
+        "county": "Providence",
+        "timezone": -5,
+        "elevation": 160,
+        "offshore": 0,
+        "in_project_points": 1
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -71.7326205,
+              41.731884
+            ],
+            [
+              -71.731766,
+              41.731884
+            ],
+            [
+              -71.731766,
+              41.7379875
+            ],
+            [
+              -71.7326205,
+              41.7379875
+            ],
+            [
+              -71.7326205,
+              41.731884
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "gid": 76,
+        "latitude": 41.75295639038086,
+        "longitude": -71.72509765625,
+        "country": "United States",
+        "state": "RI",
+        "county": "Providence",
+        "timezone": -5,
+        "elevation": 165,
+        "offshore": 0,
+        "in_project_points": 1
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -71.72522000000001,
+              41.749629999999996
+            ],
+            [
+              -71.7243045,
+              41.749629999999996
+            ],
+            [
+              -71.7243045,
+              41.7557295
+            ],
+            [
+              -71.72522000000001,
+              41.7557295
+            ],
+            [
+              -71.72522000000001,
+              41.749629999999996
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "gid": 77,
+        "latitude": 41.77069091796875,
+        "longitude": -71.7176513671875,
+        "country": "United States",
+        "state": "RI",
+        "county": "Providence",
+        "timezone": -5,
+        "elevation": 195,
+        "offshore": 0,
+        "in_project_points": 1
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -71.71781899999999,
+              41.7673685
+            ],
+            [
+              -71.7161255,
+              41.7673685
+            ],
+            [
+              -71.7161255,
+              41.773466
+            ],
+            [
+              -71.71781899999999,
+              41.773466
+            ],
+            [
+              -71.71781899999999,
+              41.7673685
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "gid": 78,
+        "latitude": 41.78843688964844,
+        "longitude": -71.710205078125,
+        "country": "United States",
+        "state": "RI",
+        "county": "Providence",
+        "timezone": -5,
+        "elevation": 202,
+        "offshore": 0,
+        "in_project_points": 1
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -71.7104185,
+              41.787876
+            ],
+            [
+              -71.708664,
+              41.787876
+            ],
+            [
+              -71.708664,
+              41.791208499999996
+            ],
+            [
+              -71.7104185,
+              41.791208499999996
+            ],
+            [
+              -71.7104185,
+              41.787876
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "gid": 79,
+        "latitude": 41.80616760253906,
+        "longitude": -71.7027587890625,
+        "country": "United States",
+        "state": "RI",
+        "county": "Providence",
+        "timezone": -5,
+        "elevation": 150,
+        "offshore": 0,
+        "in_project_points": 1
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -71.703003,
+              41.8056205
+            ],
+            [
+              -71.7012025,
+              41.8056205
+            ],
+            [
+              -71.7012025,
+              41.808945
+            ],
+            [
+              -71.703003,
+              41.808945
+            ],
+            [
+              -71.703003,
+              41.8056205
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "gid": 80,
+        "latitude": 41.82391357421875,
+        "longitude": -71.6953125,
+        "country": "United States",
+        "state": "RI",
+        "county": "Providence",
+        "timezone": -5,
+        "elevation": 145,
+        "offshore": 0,
+        "in_project_points": 1
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -71.695587,
+              41.8233605
+            ],
+            [
+              -71.6933135,
+              41.8233605
+            ],
+            [
+              -71.6933135,
+              41.826687
+            ],
+            [
+              -71.695587,
+              41.826687
+            ],
+            [
+              -71.695587,
+              41.8233605
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "gid": 81,
+        "latitude": 41.841644287109375,
+        "longitude": -71.6878662109375,
+        "country": "United States",
+        "state": "RI",
+        "county": "Providence",
+        "timezone": -5,
+        "elevation": 134,
+        "offshore": 0,
+        "in_project_points": 1
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -71.68817150000001,
+              41.841096500000006
+            ],
+            [
+              -71.685562,
+              41.841096500000006
+            ],
+            [
+              -71.685562,
+              41.8438645
+            ],
+            [
+              -71.68817150000001,
+              41.8438645
+            ],
+            [
+              -71.68817150000001,
+              41.841096500000006
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "gid": 82,
+        "latitude": 41.8593864440918,
+        "longitude": -71.680419921875,
+        "country": "United States",
+        "state": "RI",
+        "county": "Providence",
+        "timezone": -5,
+        "elevation": 155,
+        "offshore": 0,
+        "in_project_points": 1
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -71.6807555,
+              41.858839
+            ],
+            [
+              -71.6781005,
+              41.858839
+            ],
+            [
+              -71.6781005,
+              41.8616085
+            ],
+            [
+              -71.6807555,
+              41.8616085
+            ],
+            [
+              -71.6807555,
+              41.858839
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "gid": 83,
+        "latitude": 41.87711715698242,
+        "longitude": -71.67294311523438,
+        "country": "United States",
+        "state": "RI",
+        "county": "Providence",
+        "timezone": -5,
+        "elevation": 188,
+        "offshore": 0,
+        "in_project_points": 1
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -71.6733245,
+              41.876577499999996
+            ],
+            [
+              -71.670334,
+              41.876577499999996
+            ],
+            [
+              -71.670334,
+              41.8793505
+            ],
+            [
+              -71.6733245,
+              41.8793505
+            ],
+            [
+              -71.6733245,
+              41.876577499999996
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "gid": 84,
+        "latitude": 41.89485549926758,
+        "longitude": -71.66546630859375,
+        "country": "United States",
+        "state": "RI",
+        "county": "Providence",
+        "timezone": -5,
+        "elevation": 176,
+        "offshore": 0,
+        "in_project_points": 1
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -71.6658935,
+              41.894315500000005
+            ],
+            [
+              -71.6628875,
+              41.894315500000005
+            ],
+            [
+              -71.6628875,
+              41.8970925
+            ],
+            [
+              -71.6658935,
+              41.8970925
+            ],
+            [
+              -71.6658935,
+              41.894315500000005
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "gid": 85,
+        "latitude": 41.91259765625,
+        "longitude": -71.65798950195312,
+        "country": "United States",
+        "state": "RI",
+        "county": "Providence",
+        "timezone": -5,
+        "elevation": 174,
+        "offshore": 0,
+        "in_project_points": 1
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -71.658463,
+              41.91206
+            ],
+            [
+              -71.6549535,
+              41.91206
+            ],
+            [
+              -71.6549535,
+              41.914835
+            ],
+            [
+              -71.658463,
+              41.914835
+            ],
+            [
+              -71.658463,
+              41.91206
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "gid": 86,
+        "latitude": 41.93033218383789,
+        "longitude": -71.6505126953125,
+        "country": "United States",
+        "state": "RI",
+        "county": "Providence",
+        "timezone": -5,
+        "elevation": 146,
+        "offshore": 0,
+        "in_project_points": 1
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -71.6510165,
+              41.929801999999995
+            ],
+            [
+              -71.64746099999999,
+              41.929801999999995
+            ],
+            [
+              -71.64746099999999,
+              41.932567500000005
+            ],
+            [
+              -71.6510165,
+              41.932567500000005
+            ],
+            [
+              -71.6510165,
+              41.929801999999995
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "gid": 87,
+        "latitude": 41.94806671142578,
+        "longitude": -71.64300537109375,
+        "country": "United States",
+        "state": "RI",
+        "county": "Providence",
+        "timezone": -5,
+        "elevation": 141,
+        "offshore": 0,
+        "in_project_points": 1
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -71.6435545,
+              41.9475365
+            ],
+            [
+              -71.6398465,
+              41.9475365
+            ],
+            [
+              -71.6398465,
+              41.9503135
+            ],
+            [
+              -71.6435545,
+              41.9503135
+            ],
+            [
+              -71.6435545,
+              41.9475365
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "gid": 88,
+        "latitude": 41.9658088684082,
+        "longitude": -71.63552856445312,
+        "country": "United States",
+        "state": "RI",
+        "county": "Providence",
+        "timezone": -5,
+        "elevation": 104,
+        "offshore": 0,
+        "in_project_points": 1
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -71.6361085,
+              41.9652805
+            ],
+            [
+              -71.6317905,
+              41.9652805
+            ],
+            [
+              -71.6317905,
+              41.968053999999995
+            ],
+            [
+              -71.6361085,
+              41.968053999999995
+            ],
+            [
+              -71.6361085,
+              41.9652805
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "gid": 89,
+        "latitude": 41.983543395996094,
+        "longitude": -71.6280517578125,
+        "country": "United States",
+        "state": "RI",
+        "county": "Providence",
+        "timezone": -5,
+        "elevation": 102,
+        "offshore": 0,
+        "in_project_points": 1
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -71.6317905,
+              41.9830185
+            ],
+            [
+              -71.624298,
+              41.9830185
+            ],
+            [
+              -71.624298,
+              41.985794
+            ],
+            [
+              -71.6317905,
+              41.985794
+            ],
+            [
+              -71.6317905,
+              41.9830185
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "gid": 90,
+        "latitude": 42.001277923583984,
+        "longitude": -71.62054443359375,
+        "country": "United States",
+        "state": "RI",
+        "county": "Providence",
+        "timezone": -5,
+        "elevation": 94,
+        "offshore": 0,
+        "in_project_points": 1
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -71.624298,
+              42.0007575
+            ],
+            [
+              -71.61679,
+              42.0007575
+            ],
+            [
+              -71.61679,
+              42.003536499999996
+            ],
+            [
+              -71.624298,
+              42.003536499999996
+            ],
+            [
+              -71.624298,
+              42.0007575
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "gid": 91,
+        "latitude": 41.30393600463867,
+        "longitude": -71.88604736328125,
+        "country": "None",
+        "state": "None",
+        "county": "None",
+        "timezone": -5,
+        "elevation": 0,
+        "offshore": 1,
+        "in_project_points": 1
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -71.88970900000001,
+              41.3023185
+            ],
+            [
+              -71.882385,
+              41.3023185
+            ],
+            [
+              -71.882385,
+              41.304531
+            ],
+            [
+              -71.88970900000001,
+              41.304531
+            ],
+            [
+              -71.88970900000001,
+              41.3023185
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "gid": 92,
+        "latitude": 41.321685791015625,
+        "longitude": -71.87872314453125,
+        "country": "None",
+        "state": "None",
+        "county": "None",
+        "timezone": -5,
+        "elevation": 0,
+        "offshore": 1,
+        "in_project_points": 1
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -71.882385,
+              41.320057
+            ],
+            [
+              -71.8742675,
+              41.320057
+            ],
+            [
+              -71.8742675,
+              41.3222715
+            ],
+            [
+              -71.882385,
+              41.3222715
+            ],
+            [
+              -71.882385,
+              41.320057
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "gid": 93,
+        "latitude": 41.41038513183594,
+        "longitude": -71.84197998046875,
+        "country": "United States",
+        "state": "CT",
+        "county": "New London",
+        "timezone": -5,
+        "elevation": 46,
+        "offshore": 0,
+        "in_project_points": 1
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -71.8440855,
+              41.3793545
+            ],
+            [
+              -71.8404085,
+              41.3793545
+            ],
+            [
+              -71.8404085,
+              41.4724675
+            ],
+            [
+              -71.8440855,
+              41.4724675
+            ],
+            [
+              -71.8440855,
+              41.3793545
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "gid": 94,
+        "latitude": 41.534549713134766,
+        "longitude": -71.79034423828125,
+        "country": "United States",
+        "state": "RI",
+        "county": "Washington",
+        "timezone": -5,
+        "elevation": 130,
+        "offshore": 0,
+        "in_project_points": 1
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -71.79046600000001,
+              41.4724675
+            ],
+            [
+              -71.7902375,
+              41.4724675
+            ],
+            [
+              -71.7902375,
+              41.543417000000005
+            ],
+            [
+              -71.79046600000001,
+              41.543417000000005
+            ],
+            [
+              -71.79046600000001,
+              41.4724675
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "gid": 95,
+        "latitude": 41.552284240722656,
+        "longitude": -71.782958984375,
+        "country": "United States",
+        "state": "RI",
+        "county": "Washington",
+        "timezone": -5,
+        "elevation": 138,
+        "offshore": 0,
+        "in_project_points": 1
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -71.7830505,
+              41.543417000000005
+            ],
+            [
+              -71.78286750000001,
+              41.543417000000005
+            ],
+            [
+              -71.78286750000001,
+              41.561155
+            ],
+            [
+              -71.7830505,
+              41.561155
+            ],
+            [
+              -71.7830505,
+              41.543417000000005
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "gid": 96,
+        "latitude": 41.57002639770508,
+        "longitude": -71.77557373046875,
+        "country": "United States",
+        "state": "RI",
+        "county": "Washington",
+        "timezone": -5,
+        "elevation": 134,
+        "offshore": 0,
+        "in_project_points": 1
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -71.775635,
+              41.561155
+            ],
+            [
+              -71.7754975,
+              41.561155
+            ],
+            [
+              -71.7754975,
+              41.5788975
+            ],
+            [
+              -71.775635,
+              41.5788975
+            ],
+            [
+              -71.775635,
+              41.561155
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "gid": 97,
+        "latitude": 41.5877685546875,
+        "longitude": -71.76815795898438,
+        "country": "United States",
+        "state": "RI",
+        "county": "Washington",
+        "timezone": -5,
+        "elevation": 128,
+        "offshore": 0,
+        "in_project_points": 1
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -71.768204,
+              41.5788975
+            ],
+            [
+              -71.768097,
+              41.5788975
+            ],
+            [
+              -71.768097,
+              41.596636000000004
+            ],
+            [
+              -71.768204,
+              41.596636000000004
+            ],
+            [
+              -71.768204,
+              41.5788975
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "gid": 98,
+        "latitude": 41.60550308227539,
+        "longitude": -71.7607421875,
+        "country": "United States",
+        "state": "RI",
+        "county": "Kent",
+        "timezone": -5,
+        "elevation": 122,
+        "offshore": 0,
+        "in_project_points": 1
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -71.7607725,
+              41.596636000000004
+            ],
+            [
+              -71.7607115,
+              41.596636000000004
+            ],
+            [
+              -71.7607115,
+              41.6082705
+            ],
+            [
+              -71.7607725,
+              41.6082705
+            ],
+            [
+              -71.7607725,
+              41.596636000000004
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "gid": 99,
+        "latitude": 41.62324523925781,
+        "longitude": -71.75332641601562,
+        "country": "United States",
+        "state": "RI",
+        "county": "Kent",
+        "timezone": -5,
+        "elevation": 146,
+        "offshore": 0,
+        "in_project_points": 1
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -71.7533415,
+              41.6171415
+            ],
+            [
+              -71.753311,
+              41.6171415
+            ],
+            [
+              -71.753311,
+              41.6260185
+            ],
+            [
+              -71.7533415,
+              41.6260185
+            ],
+            [
+              -71.7533415,
+              41.6171415
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "gid": 100,
+        "latitude": 41.64098358154297,
+        "longitude": -71.74591064453125,
+        "country": "United States",
+        "state": "RI",
+        "county": "Kent",
+        "timezone": -5,
+        "elevation": 133,
+        "offshore": 0,
+        "in_project_points": 0
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -71.7466585,
+              41.634888000000004
+            ],
+            [
+              -71.74517850000001,
+              41.634888000000004
+            ],
+            [
+              -71.74517850000001,
+              41.6437515
+            ],
+            [
+              -71.7466585,
+              41.6437515
+            ],
+            [
+              -71.7466585,
+              41.634888000000004
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "gid": 101,
+        "latitude": 41.65871810913086,
+        "longitude": -71.73849487304688,
+        "country": "United States",
+        "state": "RI",
+        "county": "Kent",
+        "timezone": -5,
+        "elevation": 132,
+        "offshore": 0,
+        "in_project_points": 0
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -71.7392425,
+              41.6526185
+            ],
+            [
+              -71.7384795,
+              41.6526185
+            ],
+            [
+              -71.7384795,
+              41.6614875
+            ],
+            [
+              -71.7392425,
+              41.6614875
+            ],
+            [
+              -71.7392425,
+              41.6526185
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "gid": 102,
+        "latitude": 41.28068923950195,
+        "longitude": -71.86981201171875,
+        "country": "None",
+        "state": "None",
+        "county": "None",
+        "timezone": -5,
+        "elevation": 0,
+        "offshore": 1,
+        "in_project_points": 0
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -71.8742675,
+              41.2790545
+            ],
+            [
+              -71.8661345,
+              41.2790545
+            ],
+            [
+              -71.8661345,
+              41.281276500000004
+            ],
+            [
+              -71.8742675,
+              41.281276500000004
+            ],
+            [
+              -71.8742675,
+              41.2790545
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "gid": 103,
+        "latitude": 41.298423767089844,
+        "longitude": -71.86245727539062,
+        "country": "None",
+        "state": "None",
+        "county": "None",
+        "timezone": -5,
+        "elevation": 0,
+        "offshore": 1,
+        "in_project_points": 0
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -71.8661345,
+              41.29678749999999
+            ],
+            [
+              -71.85798650000001,
+              41.29678749999999
+            ],
+            [
+              -71.85798650000001,
+              41.2990095
+            ],
+            [
+              -71.8661345,
+              41.2990095
+            ],
+            [
+              -71.8661345,
+              41.29678749999999
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "gid": 104,
+        "latitude": 41.25743865966797,
+        "longitude": -71.853515625,
+        "country": "None",
+        "state": "None",
+        "county": "None",
+        "timezone": -5,
+        "elevation": 0,
+        "offshore": 1,
+        "in_project_points": 0
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -71.85798650000001,
+              41.255789
+            ],
+            [
+              -71.8498535,
+              41.255789
+            ],
+            [
+              -71.8498535,
+              41.2580185
+            ],
+            [
+              -71.85798650000001,
+              41.2580185
+            ],
+            [
+              -71.85798650000001,
+              41.255789
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "gid": 105,
+        "latitude": 41.27517318725586,
+        "longitude": -71.84619140625,
+        "country": "None",
+        "state": "None",
+        "county": "None",
+        "timezone": -5,
+        "elevation": 0,
+        "offshore": 1,
+        "in_project_points": 0
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -71.8498535,
+              41.273519500000006
+            ],
+            [
+              -71.8440855,
+              41.273519500000006
+            ],
+            [
+              -71.8440855,
+              41.275747
+            ],
+            [
+              -71.8498535,
+              41.275747
+            ],
+            [
+              -71.8498535,
+              41.273519500000006
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "gid": 106,
+        "latitude": 41.292903900146484,
+        "longitude": -71.83883666992188,
+        "country": "None",
+        "state": "None",
+        "county": "None",
+        "timezone": -5,
+        "elevation": 0,
+        "offshore": 1,
+        "in_project_points": 0
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -71.8404085,
+              41.291244500000005
+            ],
+            [
+              -71.8380585,
+              41.291244500000005
+            ],
+            [
+              -71.8380585,
+              41.293478
+            ],
+            [
+              -71.8404085,
+              41.293478
+            ],
+            [
+              -71.8404085,
+              41.291244500000005
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "gid": 107,
+        "latitude": 41.31064224243164,
+        "longitude": -71.83148193359375,
+        "country": "None",
+        "state": "None",
+        "county": "None",
+        "timezone": -5,
+        "elevation": 0,
+        "offshore": 1,
+        "in_project_points": 0
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -71.83438100000001,
+              41.308973
+            ],
+            [
+              -71.83071899999999,
+              41.308973
+            ],
+            [
+              -71.83071899999999,
+              41.311214500000006
+            ],
+            [
+              -71.83438100000001,
+              41.311214500000006
+            ],
+            [
+              -71.83438100000001,
+              41.308973
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "gid": 108,
+        "latitude": 41.23418045043945,
+        "longitude": -71.8372802734375,
+        "country": "None",
+        "state": "None",
+        "county": "None",
+        "timezone": -5,
+        "elevation": 0,
+        "offshore": 1,
+        "in_project_points": 0
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -71.8380585,
+              41.231983
+            ],
+            [
+              -71.83438100000001,
+              41.231983
+            ],
+            [
+              -71.83438100000001,
+              41.2347545
+            ],
+            [
+              -71.8380585,
+              41.2347545
+            ],
+            [
+              -71.8380585,
+              41.231983
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "gid": 109,
+        "latitude": 41.25191879272461,
+        "longitude": -71.8299560546875,
+        "country": "None",
+        "state": "None",
+        "county": "None",
+        "timezone": -5,
+        "elevation": 0,
+        "offshore": 1,
+        "in_project_points": 0
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -71.83071899999999,
+              41.249718
+            ],
+            [
+              -71.8262785,
+              41.249718
+            ],
+            [
+              -71.8262785,
+              41.252491
+            ],
+            [
+              -71.83071899999999,
+              41.252491
+            ],
+            [
+              -71.83071899999999,
+              41.249718
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "gid": 110,
+        "latitude": 41.26966094970703,
+        "longitude": -71.82260131835938,
+        "country": "None",
+        "state": "None",
+        "county": "None",
+        "timezone": -5,
+        "elevation": 0,
+        "offshore": 1,
+        "in_project_points": 0
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -71.8262785,
+              41.267454
+            ],
+            [
+              -71.81892400000001,
+              41.267454
+            ],
+            [
+              -71.81892400000001,
+              41.2702235
+            ],
+            [
+              -71.8262785,
+              41.2702235
+            ],
+            [
+              -71.8262785,
+              41.267454
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "gid": 111,
+        "latitude": 41.28738021850586,
+        "longitude": -71.81524658203125,
+        "country": "None",
+        "state": "None",
+        "county": "None",
+        "timezone": -5,
+        "elevation": 0,
+        "offshore": 1,
+        "in_project_points": 0
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -71.81892400000001,
+              41.285177000000004
+            ],
+            [
+              -71.814484,
+              41.285177000000004
+            ],
+            [
+              -71.814484,
+              41.287944499999995
+            ],
+            [
+              -71.81892400000001,
+              41.287944499999995
+            ],
+            [
+              -71.81892400000001,
+              41.285177000000004
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "gid": 112,
+        "latitude": 41.30512619018555,
+        "longitude": -71.80789184570312,
+        "country": "None",
+        "state": "None",
+        "county": "None",
+        "timezone": -5,
+        "elevation": 0,
+        "offshore": 1,
+        "in_project_points": 0
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -71.8108065,
+              41.304531
+            ],
+            [
+              -71.8071135,
+              41.304531
+            ],
+            [
+              -71.8071135,
+              41.305683
+            ],
+            [
+              -71.8108065,
+              41.305683
+            ],
+            [
+              -71.8108065,
+              41.304531
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "gid": 113,
+        "latitude": 41.32285690307617,
+        "longitude": -71.800537109375,
+        "country": "None",
+        "state": "None",
+        "county": "None",
+        "timezone": -5,
+        "elevation": 0,
+        "offshore": 1,
+        "in_project_points": 0
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -71.802536,
+              41.3222715
+            ],
+            [
+              -71.8003995,
+              41.3222715
+            ],
+            [
+              -71.8003995,
+              41.3234175
+            ],
+            [
+              -71.802536,
+              41.3234175
+            ],
+            [
+              -71.802536,
+              41.3222715
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "gid": 114,
+        "latitude": 41.22865295410156,
+        "longitude": -71.813720703125,
+        "country": "None",
+        "state": "None",
+        "county": "None",
+        "timezone": -5,
+        "elevation": 0,
+        "offshore": 1,
+        "in_project_points": 0
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -71.814484,
+              41.226445999999996
+            ],
+            [
+              -71.8108065,
+              41.226445999999996
+            ],
+            [
+              -71.8108065,
+              41.2292195
+            ],
+            [
+              -71.814484,
+              41.2292195
+            ],
+            [
+              -71.814484,
+              41.226445999999996
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "gid": 115,
+        "latitude": 41.246395111083984,
+        "longitude": -71.80633544921875,
+        "country": "None",
+        "state": "None",
+        "county": "None",
+        "timezone": -5,
+        "elevation": 0,
+        "offshore": 1,
+        "in_project_points": 0
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -71.8071135,
+              41.2441825
+            ],
+            [
+              -71.805435,
+              41.2441825
+            ],
+            [
+              -71.805435,
+              41.246956
+            ],
+            [
+              -71.8071135,
+              41.246956
+            ],
+            [
+              -71.8071135,
+              41.2441825
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "gid": 116,
+        "latitude": 41.26412582397461,
+        "longitude": -71.79901123046875,
+        "country": "None",
+        "state": "None",
+        "county": "None",
+        "timezone": -5,
+        "elevation": 0,
+        "offshore": 1,
+        "in_project_points": 0
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -71.79963649999999,
+              41.261905999999996
+            ],
+            [
+              -71.798874,
+              41.261905999999996
+            ],
+            [
+              -71.798874,
+              41.264686499999996
+            ],
+            [
+              -71.79963649999999,
+              41.264686499999996
+            ],
+            [
+              -71.79963649999999,
+              41.261905999999996
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "gid": 117,
+        "latitude": 41.281864166259766,
+        "longitude": -71.7916259765625,
+        "country": "None",
+        "state": "None",
+        "county": "None",
+        "timezone": -5,
+        "elevation": 0,
+        "offshore": 1,
+        "in_project_points": 0
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -71.79186999999999,
+              41.281276500000004
+            ],
+            [
+              -71.791519,
+              41.281276500000004
+            ],
+            [
+              -71.791519,
+              41.282419000000004
+            ],
+            [
+              -71.79186999999999,
+              41.282419000000004
+            ],
+            [
+              -71.79186999999999,
+              41.281276500000004
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "gid": 118,
+        "latitude": 41.29959487915039,
+        "longitude": -71.7843017578125,
+        "country": "None",
+        "state": "None",
+        "county": "None",
+        "timezone": -5,
+        "elevation": 0,
+        "offshore": 1,
+        "in_project_points": 0
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -71.7843935,
+              41.2990095
+            ],
+            [
+              -71.784195,
+              41.2990095
+            ],
+            [
+              -71.784195,
+              41.30014799999999
+            ],
+            [
+              -71.7843935,
+              41.30014799999999
+            ],
+            [
+              -71.7843935,
+              41.2990095
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "gid": 119,
+        "latitude": 41.31732940673828,
+        "longitude": -71.77691650390625,
+        "country": "None",
+        "state": "None",
+        "county": "None",
+        "timezone": -5,
+        "elevation": 0,
+        "offshore": 1,
+        "in_project_points": 0
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -71.776993,
+              41.3150975
+            ],
+            [
+              -71.77684049999999,
+              41.3150975
+            ],
+            [
+              -71.77684049999999,
+              41.3178785
+            ],
+            [
+              -71.776993,
+              41.3178785
+            ],
+            [
+              -71.776993,
+              41.3150975
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "gid": 120,
+        "latitude": 41.20539855957031,
+        "longitude": -71.7974853515625,
+        "country": "None",
+        "state": "None",
+        "county": "None",
+        "timezone": -5,
+        "elevation": 0,
+        "offshore": 1,
+        "in_project_points": 0
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -71.798111,
+              41.2031825
+            ],
+            [
+              -71.79736299999999,
+              41.2031825
+            ],
+            [
+              -71.79736299999999,
+              41.2059575
+            ],
+            [
+              -71.798111,
+              41.2059575
+            ],
+            [
+              -71.798111,
+              41.2031825
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "gid": 121,
+        "latitude": 41.22312927246094,
+        "longitude": -71.79013061523438,
+        "country": "None",
+        "state": "None",
+        "county": "None",
+        "timezone": -5,
+        "elevation": 0,
+        "offshore": 1,
+        "in_project_points": 0
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -71.7902375,
+              41.220907
+            ],
+            [
+              -71.790024,
+              41.220907
+            ],
+            [
+              -71.790024,
+              41.223684
+            ],
+            [
+              -71.7902375,
+              41.223684
+            ],
+            [
+              -71.7902375,
+              41.220907
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "gid": 122,
+        "latitude": 41.24087142944336,
+        "longitude": -71.78277587890625,
+        "country": "None",
+        "state": "None",
+        "county": "None",
+        "timezone": -5,
+        "elevation": 0,
+        "offshore": 1,
+        "in_project_points": 0
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -71.78286750000001,
+              41.238643499999995
+            ],
+            [
+              -71.7826845,
+              41.238643499999995
+            ],
+            [
+              -71.7826845,
+              41.241420500000004
+            ],
+            [
+              -71.78286750000001,
+              41.241420500000004
+            ],
+            [
+              -71.78286750000001,
+              41.238643499999995
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "gid": 123,
+        "latitude": 41.25859832763672,
+        "longitude": -71.77542114257812,
+        "country": "None",
+        "state": "None",
+        "county": "None",
+        "timezone": -5,
+        "elevation": 0,
+        "offshore": 1,
+        "in_project_points": 0
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -71.7754975,
+              41.2580185
+            ],
+            [
+              -71.77534499999999,
+              41.2580185
+            ],
+            [
+              -71.77534499999999,
+              41.259142
+            ],
+            [
+              -71.7754975,
+              41.259142
+            ],
+            [
+              -71.7754975,
+              41.2580185
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "gid": 124,
+        "latitude": 41.27632141113281,
+        "longitude": -71.76803588867188,
+        "country": "None",
+        "state": "None",
+        "county": "None",
+        "timezone": -5,
+        "elevation": 0,
+        "offshore": 1,
+        "in_project_points": 0
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -71.768097,
+              41.275747
+            ],
+            [
+              -71.767395,
+              41.275747
+            ],
+            [
+              -71.767395,
+              41.2768705
+            ],
+            [
+              -71.768097,
+              41.2768705
+            ],
+            [
+              -71.768097,
+              41.275747
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "gid": 125,
+        "latitude": 41.29405212402344,
+        "longitude": -71.76068115234375,
+        "country": "None",
+        "state": "None",
+        "county": "None",
+        "timezone": -5,
+        "elevation": 0,
+        "offshore": 1,
+        "in_project_points": 0
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -71.7607115,
+              41.293478
+            ],
+            [
+              -71.7599945,
+              41.293478
+            ],
+            [
+              -71.7599945,
+              41.2946015
+            ],
+            [
+              -71.7607115,
+              41.2946015
+            ],
+            [
+              -71.7607115,
+              41.293478
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "gid": 126,
+        "latitude": 41.31178665161133,
+        "longitude": -71.7532958984375,
+        "country": "None",
+        "state": "None",
+        "county": "None",
+        "timezone": -5,
+        "elevation": 0,
+        "offshore": 1,
+        "in_project_points": 0
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -71.753311,
+              41.311214500000006
+            ],
+            [
+              -71.752579,
+              41.311214500000006
+            ],
+            [
+              -71.752579,
+              41.3123265
+            ],
+            [
+              -71.753311,
+              41.3123265
+            ],
+            [
+              -71.753311,
+              41.311214500000006
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "gid": 127,
+        "latitude": 41.16440200805664,
+        "longitude": -71.78860473632812,
+        "country": "None",
+        "state": "None",
+        "county": "None",
+        "timezone": -5,
+        "elevation": 0,
+        "offshore": 1,
+        "in_project_points": 0
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -71.7888185,
+              41.1616385
+            ],
+            [
+              -71.7880555,
+              41.1616385
+            ],
+            [
+              -71.7880555,
+              41.164957
+            ],
+            [
+              -71.7888185,
+              41.164957
+            ],
+            [
+              -71.7888185,
+              41.1616385
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "gid": 128,
+        "latitude": 41.182132720947266,
+        "longitude": -71.78125,
+        "country": "None",
+        "state": "None",
+        "county": "None",
+        "timezone": -5,
+        "elevation": 0,
+        "offshore": 1,
+        "in_project_points": 0
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -71.78143299999999,
+              41.179369
+            ],
+            [
+              -71.78067,
+              41.179369
+            ],
+            [
+              -71.78067,
+              41.18269
+            ],
+            [
+              -71.78143299999999,
+              41.18269
+            ],
+            [
+              -71.78143299999999,
+              41.179369
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "gid": 129,
+        "latitude": 41.19987106323242,
+        "longitude": -71.77392578125,
+        "country": "None",
+        "state": "None",
+        "county": "None",
+        "timezone": -5,
+        "elevation": 0,
+        "offshore": 1,
+        "in_project_points": 0
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -71.774048,
+              41.1971015
+            ],
+            [
+              -71.7733005,
+              41.1971015
+            ],
+            [
+              -71.7733005,
+              41.2004185
+            ],
+            [
+              -71.774048,
+              41.2004185
+            ],
+            [
+              -71.774048,
+              41.1971015
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "gid": 130,
+        "latitude": 41.217594146728516,
+        "longitude": -71.76654052734375,
+        "country": "None",
+        "state": "None",
+        "county": "None",
+        "timezone": -5,
+        "elevation": 0,
+        "offshore": 1,
+        "in_project_points": 0
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -71.7666475,
+              41.2148245
+            ],
+            [
+              -71.7659,
+              41.2148245
+            ],
+            [
+              -71.7659,
+              41.2181395
+            ],
+            [
+              -71.7666475,
+              41.2181395
+            ],
+            [
+              -71.7666475,
+              41.2148245
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "gid": 131,
+        "latitude": 41.235328674316406,
+        "longitude": -71.75918579101562,
+        "country": "None",
+        "state": "None",
+        "county": "None",
+        "timezone": -5,
+        "elevation": 0,
+        "offshore": 1,
+        "in_project_points": 0
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -71.759247,
+              41.2347545
+            ],
+            [
+              -71.758499,
+              41.2347545
+            ],
+            [
+              -71.758499,
+              41.2358725
+            ],
+            [
+              -71.759247,
+              41.2358725
+            ],
+            [
+              -71.759247,
+              41.2347545
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "gid": 132,
+        "latitude": 41.2530632019043,
+        "longitude": -71.7518310546875,
+        "country": "None",
+        "state": "None",
+        "county": "None",
+        "timezone": -5,
+        "elevation": 0,
+        "offshore": 1,
+        "in_project_points": 0
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -71.7518465,
+              41.252491
+            ],
+            [
+              -71.7510985,
+              41.252491
+            ],
+            [
+              -71.7510985,
+              41.253601
+            ],
+            [
+              -71.7518465,
+              41.253601
+            ],
+            [
+              -71.7518465,
+              41.252491
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "gid": 133,
+        "latitude": 41.27078628540039,
+        "longitude": -71.74444580078125,
+        "country": "None",
+        "state": "None",
+        "county": "None",
+        "timezone": -5,
+        "elevation": 0,
+        "offshore": 1,
+        "in_project_points": 0
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -71.74517850000001,
+              41.2702235
+            ],
+            [
+              -71.74443049999999,
+              41.2702235
+            ],
+            [
+              -71.74443049999999,
+              41.271326
+            ],
+            [
+              -71.74517850000001,
+              41.271326
+            ],
+            [
+              -71.74517850000001,
+              41.2702235
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "gid": 134,
+        "latitude": 41.288509368896484,
+        "longitude": -71.73709106445312,
+        "country": "None",
+        "state": "None",
+        "county": "None",
+        "timezone": -5,
+        "elevation": 0,
+        "offshore": 1,
+        "in_project_points": 0
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -71.73777749999999,
+              41.287944499999995
+            ],
+            [
+              -71.73703,
+              41.287944499999995
+            ],
+            [
+              -71.73703,
+              41.289047
+            ],
+            [
+              -71.73777749999999,
+              41.289047
+            ],
+            [
+              -71.73777749999999,
+              41.287944499999995
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "gid": 135,
+        "latitude": 41.30624008178711,
+        "longitude": -71.72970581054688,
+        "country": "None",
+        "state": "None",
+        "county": "None",
+        "timezone": -5,
+        "elevation": 0,
+        "offshore": 1,
+        "in_project_points": 0
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -71.730347,
+              41.305683
+            ],
+            [
+              -71.729599,
+              41.305683
+            ],
+            [
+              -71.729599,
+              41.306772
+            ],
+            [
+              -71.730347,
+              41.306772
+            ],
+            [
+              -71.730347,
+              41.305683
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "gid": 136,
+        "latitude": 41.323978424072266,
+        "longitude": -71.72232055664062,
+        "country": "None",
+        "state": "None",
+        "county": "None",
+        "timezone": -5,
+        "elevation": 0,
+        "offshore": 1,
+        "in_project_points": 0
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -71.722916,
+              41.3234175
+            ],
+            [
+              -71.7221835,
+              41.3234175
+            ],
+            [
+              -71.7221835,
+              41.3245065
+            ],
+            [
+              -71.722916,
+              41.3245065
+            ],
+            [
+              -71.722916,
+              41.3234175
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "gid": 137,
+        "latitude": 41.08795928955078,
+        "longitude": -71.79443359375,
+        "country": "None",
+        "state": "None",
+        "county": "None",
+        "timezone": -5,
+        "elevation": 0,
+        "offshore": 1,
+        "in_project_points": 0
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -71.7958375,
+              41.0851935
+            ],
+            [
+              -71.794037,
+              41.0851935
+            ],
+            [
+              -71.794037,
+              41.0912875
+            ],
+            [
+              -71.7958375,
+              41.0912875
+            ],
+            [
+              -71.7958375,
+              41.0851935
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "gid": 138,
+        "latitude": 41.10569381713867,
+        "longitude": -71.787109375,
+        "country": "None",
+        "state": "None",
+        "county": "None",
+        "timezone": -5,
+        "elevation": 0,
+        "offshore": 1,
+        "in_project_points": 0
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -71.7873075,
+              41.102926499999995
+            ],
+            [
+              -71.7866515,
+              41.102926499999995
+            ],
+            [
+              -71.7866515,
+              41.109018500000005
+            ],
+            [
+              -71.7873075,
+              41.109018500000005
+            ],
+            [
+              -71.7873075,
+              41.102926499999995
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "gid": 139,
+        "latitude": 41.1234130859375,
+        "longitude": -71.77975463867188,
+        "country": "None",
+        "state": "None",
+        "county": "None",
+        "timezone": -5,
+        "elevation": 0,
+        "offshore": 1,
+        "in_project_points": 0
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -71.7799225,
+              41.1206495
+            ],
+            [
+              -71.77925149999999,
+              41.1206495
+            ],
+            [
+              -71.77925149999999,
+              41.1267395
+            ],
+            [
+              -71.7799225,
+              41.1267395
+            ],
+            [
+              -71.7799225,
+              41.1206495
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "gid": 140,
+        "latitude": 41.14114761352539,
+        "longitude": -71.77239990234375,
+        "country": "None",
+        "state": "None",
+        "county": "None",
+        "timezone": -5,
+        "elevation": 0,
+        "offshore": 1,
+        "in_project_points": 0
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -71.7725375,
+              41.1383785
+            ],
+            [
+              -71.77178950000001,
+              41.1383785
+            ],
+            [
+              -71.77178950000001,
+              41.144474
+            ],
+            [
+              -71.7725375,
+              41.144474
+            ],
+            [
+              -71.7725375,
+              41.1383785
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "gid": 141,
+        "latitude": 41.15887451171875,
+        "longitude": -71.76507568359375,
+        "country": "None",
+        "state": "None",
+        "county": "None",
+        "timezone": -5,
+        "elevation": 0,
+        "offshore": 1,
+        "in_project_points": 0
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -71.76516749999999,
+              41.156107000000006
+            ],
+            [
+              -71.7644045,
+              41.156107000000006
+            ],
+            [
+              -71.7644045,
+              41.1616385
+            ],
+            [
+              -71.76516749999999,
+              41.1616385
+            ],
+            [
+              -71.76516749999999,
+              41.156107000000006
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "gid": 142,
+        "latitude": 41.176605224609375,
+        "longitude": -71.7576904296875,
+        "country": "None",
+        "state": "None",
+        "county": "None",
+        "timezone": -5,
+        "elevation": 0,
+        "offshore": 1,
+        "in_project_points": 0
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -71.757751,
+              41.1738335
+            ],
+            [
+              -71.7570035,
+              41.1738335
+            ],
+            [
+              -71.7570035,
+              41.179369
+            ],
+            [
+              -71.757751,
+              41.179369
+            ],
+            [
+              -71.757751,
+              41.1738335
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "gid": 143,
+        "latitude": 41.194332122802734,
+        "longitude": -71.7503662109375,
+        "country": "None",
+        "state": "None",
+        "county": "None",
+        "timezone": -5,
+        "elevation": 0,
+        "offshore": 1,
+        "in_project_points": 0
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -71.7510985,
+              41.1915605
+            ],
+            [
+              -71.7496335,
+              41.1915605
+            ],
+            [
+              -71.7496335,
+              41.1971015
+            ],
+            [
+              -71.7510985,
+              41.1971015
+            ],
+            [
+              -71.7510985,
+              41.1915605
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "gid": 144,
+        "latitude": 41.21205520629883,
+        "longitude": -71.74298095703125,
+        "country": "None",
+        "state": "None",
+        "county": "None",
+        "timezone": -5,
+        "elevation": 0,
+        "offshore": 1,
+        "in_project_points": 0
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -71.743698,
+              41.2092855
+            ],
+            [
+              -71.7429505,
+              41.2092855
+            ],
+            [
+              -71.7429505,
+              41.2148245
+            ],
+            [
+              -71.743698,
+              41.2148245
+            ],
+            [
+              -71.743698,
+              41.2092855
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "gid": 145,
+        "latitude": 41.22978591918945,
+        "longitude": -71.73562622070312,
+        "country": "None",
+        "state": "None",
+        "county": "None",
+        "timezone": -5,
+        "elevation": 0,
+        "offshore": 1,
+        "in_project_points": 0
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -71.7362975,
+              41.2292195
+            ],
+            [
+              -71.73554999999999,
+              41.2292195
+            ],
+            [
+              -71.73554999999999,
+              41.231983
+            ],
+            [
+              -71.7362975,
+              41.231983
+            ],
+            [
+              -71.7362975,
+              41.2292195
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "gid": 146,
+        "latitude": 41.24751663208008,
+        "longitude": -71.72824096679688,
+        "country": "None",
+        "state": "None",
+        "county": "None",
+        "timezone": -5,
+        "elevation": 0,
+        "offshore": 1,
+        "in_project_points": 0
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -71.7288665,
+              41.246956
+            ],
+            [
+              -71.728134,
+              41.246956
+            ],
+            [
+              -71.728134,
+              41.249718
+            ],
+            [
+              -71.7288665,
+              41.249718
+            ],
+            [
+              -71.7288665,
+              41.246956
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "gid": 147,
+        "latitude": 41.2652473449707,
+        "longitude": -71.72088623046875,
+        "country": "None",
+        "state": "None",
+        "county": "None",
+        "timezone": -5,
+        "elevation": 0,
+        "offshore": 1,
+        "in_project_points": 0
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -71.72146599999999,
+              41.264686499999996
+            ],
+            [
+              -71.7207335,
+              41.264686499999996
+            ],
+            [
+              -71.7207335,
+              41.267454
+            ],
+            [
+              -71.72146599999999,
+              41.267454
+            ],
+            [
+              -71.72146599999999,
+              41.264686499999996
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "gid": 148,
+        "latitude": 41.28297424316406,
+        "longitude": -71.7135009765625,
+        "country": "None",
+        "state": "None",
+        "county": "None",
+        "timezone": -5,
+        "elevation": 0,
+        "offshore": 1,
+        "in_project_points": 0
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -71.7140505,
+              41.282419000000004
+            ],
+            [
+              -71.71331799999999,
+              41.282419000000004
+            ],
+            [
+              -71.71331799999999,
+              41.285177000000004
+            ],
+            [
+              -71.7140505,
+              41.285177000000004
+            ],
+            [
+              -71.7140505,
+              41.282419000000004
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "gid": 149,
+        "latitude": 41.30070114135742,
+        "longitude": -71.70611572265625,
+        "country": "None",
+        "state": "None",
+        "county": "None",
+        "timezone": -5,
+        "elevation": 0,
+        "offshore": 1,
+        "in_project_points": 0
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -71.70661949999999,
+              41.30014799999999
+            ],
+            [
+              -71.70588699999999,
+              41.30014799999999
+            ],
+            [
+              -71.70588699999999,
+              41.3023185
+            ],
+            [
+              -71.70661949999999,
+              41.3023185
+            ],
+            [
+              -71.70661949999999,
+              41.30014799999999
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "gid": 150,
+        "latitude": 41.31842803955078,
+        "longitude": -71.69873046875,
+        "country": "None",
+        "state": "None",
+        "county": "None",
+        "timezone": -5,
+        "elevation": 0,
+        "offshore": 1,
+        "in_project_points": 0
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -71.69918799999999,
+              41.3178785
+            ],
+            [
+              -71.6984555,
+              41.3178785
+            ],
+            [
+              -71.6984555,
+              41.320057
+            ],
+            [
+              -71.69918799999999,
+              41.320057
+            ],
+            [
+              -71.69918799999999,
+              41.3178785
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "gid": 151,
+        "latitude": 41.33614730834961,
+        "longitude": -71.69131469726562,
+        "country": "None",
+        "state": "None",
+        "county": "None",
+        "timezone": -5,
+        "elevation": 0,
+        "offshore": 1,
+        "in_project_points": 0
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -71.6933135,
+              41.33337
+            ],
+            [
+              -71.691025,
+              41.33337
+            ],
+            [
+              -71.691025,
+              41.3394505
+            ],
+            [
+              -71.6933135,
+              41.3394505
+            ],
+            [
+              -71.6933135,
+              41.33337
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "gid": 152,
+        "latitude": 41.01152420043945,
+        "longitude": -71.80026245117188,
+        "country": "None",
+        "state": "None",
+        "county": "None",
+        "timezone": -5,
+        "elevation": 0,
+        "offshore": 1,
+        "in_project_points": 0
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -71.8003995,
+              41.0087585
+            ],
+            [
+              -71.79963649999999,
+              41.0087585
+            ],
+            [
+              -71.79963649999999,
+              41.017622
+            ],
+            [
+              -71.8003995,
+              41.017622
+            ],
+            [
+              -71.8003995,
+              41.0087585
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "gid": 153,
+        "latitude": 41.02925491333008,
+        "longitude": -71.79290771484375,
+        "country": "None",
+        "state": "None",
+        "county": "None",
+        "timezone": -5,
+        "elevation": 0,
+        "offshore": 1,
+        "in_project_points": 0
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -71.793274,
+              41.0264875
+            ],
+            [
+              -71.79251099999999,
+              41.0264875
+            ],
+            [
+              -71.79251099999999,
+              41.035351
+            ],
+            [
+              -71.793274,
+              41.035351
+            ],
+            [
+              -71.793274,
+              41.0264875
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "gid": 154,
+        "latitude": 41.04697799682617,
+        "longitude": -71.78558349609375,
+        "country": "None",
+        "state": "None",
+        "county": "None",
+        "timezone": -5,
+        "elevation": 0,
+        "offshore": 1,
+        "in_project_points": 0
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -71.7857815,
+              41.0442125
+            ],
+            [
+              -71.78512549999999,
+              41.0442125
+            ],
+            [
+              -71.78512549999999,
+              41.053074
+            ],
+            [
+              -71.7857815,
+              41.053074
+            ],
+            [
+              -71.7857815,
+              41.0442125
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "gid": 155,
+        "latitude": 41.064701080322266,
+        "longitude": -71.77825927734375,
+        "country": "None",
+        "state": "None",
+        "county": "None",
+        "timezone": -5,
+        "elevation": 0,
+        "offshore": 1,
+        "in_project_points": 0
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -71.7784115,
+              41.061935500000004
+            ],
+            [
+              -71.7777405,
+              41.061935500000004
+            ],
+            [
+              -71.7777405,
+              41.070799
+            ],
+            [
+              -71.7784115,
+              41.070799
+            ],
+            [
+              -71.7784115,
+              41.061935500000004
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "gid": 156,
+        "latitude": 41.082427978515625,
+        "longitude": -71.77093505859375,
+        "country": "None",
+        "state": "None",
+        "county": "None",
+        "timezone": -5,
+        "elevation": 0,
+        "offshore": 1,
+        "in_project_points": 0
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -71.771057,
+              41.0796625
+            ],
+            [
+              -71.770355,
+              41.0796625
+            ],
+            [
+              -71.770355,
+              41.0851935
+            ],
+            [
+              -71.771057,
+              41.0851935
+            ],
+            [
+              -71.771057,
+              41.0796625
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "gid": 157,
+        "latitude": 41.10015869140625,
+        "longitude": -71.76358032226562,
+        "country": "None",
+        "state": "None",
+        "county": "None",
+        "timezone": -5,
+        "elevation": 0,
+        "offshore": 1,
+        "in_project_points": 0
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -71.7636565,
+              41.097387499999996
+            ],
+            [
+              -71.7629545,
+              41.097387499999996
+            ],
+            [
+              -71.7629545,
+              41.102926499999995
+            ],
+            [
+              -71.7636565,
+              41.102926499999995
+            ],
+            [
+              -71.7636565,
+              41.097387499999996
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "gid": 158,
+        "latitude": 41.11788558959961,
+        "longitude": -71.7562255859375,
+        "country": "None",
+        "state": "None",
+        "county": "None",
+        "timezone": -5,
+        "elevation": 0,
+        "offshore": 1,
+        "in_project_points": 0
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -71.7562715,
+              41.115114500000004
+            ],
+            [
+              -71.755539,
+              41.115114500000004
+            ],
+            [
+              -71.755539,
+              41.1206495
+            ],
+            [
+              -71.7562715,
+              41.1206495
+            ],
+            [
+              -71.7562715,
+              41.115114500000004
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "gid": 159,
+        "latitude": 41.1356086730957,
+        "longitude": -71.74887084960938,
+        "country": "None",
+        "state": "None",
+        "county": "None",
+        "timezone": -5,
+        "elevation": 0,
+        "offshore": 1,
+        "in_project_points": 0
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -71.748886,
+              41.1328375
+            ],
+            [
+              -71.7481385,
+              41.1328375
+            ],
+            [
+              -71.7481385,
+              41.1383785
+            ],
+            [
+              -71.748886,
+              41.1383785
+            ],
+            [
+              -71.748886,
+              41.1328375
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "gid": 160,
+        "latitude": 41.15333938598633,
+        "longitude": -71.74151611328125,
+        "country": "None",
+        "state": "None",
+        "county": "None",
+        "timezone": -5,
+        "elevation": 0,
+        "offshore": 1,
+        "in_project_points": 0
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -71.74221800000001,
+              41.1505695
+            ],
+            [
+              -71.74148550000001,
+              41.1505695
+            ],
+            [
+              -71.74148550000001,
+              41.156107000000006
+            ],
+            [
+              -71.74221800000001,
+              41.156107000000006
+            ],
+            [
+              -71.74221800000001,
+              41.1505695
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "gid": 161,
+        "latitude": 41.17106246948242,
+        "longitude": -71.73416137695312,
+        "country": "None",
+        "state": "None",
+        "county": "None",
+        "timezone": -5,
+        "elevation": 0,
+        "offshore": 1,
+        "in_project_points": 0
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -71.73481749999999,
+              41.168287
+            ],
+            [
+              -71.734085,
+              41.168287
+            ],
+            [
+              -71.734085,
+              41.1738335
+            ],
+            [
+              -71.73481749999999,
+              41.1738335
+            ],
+            [
+              -71.73481749999999,
+              41.168287
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "gid": 162,
+        "latitude": 41.18878936767578,
+        "longitude": -71.726806640625,
+        "country": "None",
+        "state": "None",
+        "county": "None",
+        "timezone": -5,
+        "elevation": 0,
+        "offshore": 1,
+        "in_project_points": 0
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -71.727417,
+              41.186018000000004
+            ],
+            [
+              -71.7266845,
+              41.186018000000004
+            ],
+            [
+              -71.7266845,
+              41.1915605
+            ],
+            [
+              -71.727417,
+              41.1915605
+            ],
+            [
+              -71.727417,
+              41.186018000000004
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "gid": 163,
+        "latitude": 41.20651626586914,
+        "longitude": -71.71942138671875,
+        "country": "None",
+        "state": "None",
+        "county": "None",
+        "timezone": -5,
+        "elevation": 0,
+        "offshore": 1,
+        "in_project_points": 0
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -71.720001,
+              41.2059575
+            ],
+            [
+              -71.7192685,
+              41.2059575
+            ],
+            [
+              -71.7192685,
+              41.2092855
+            ],
+            [
+              -71.720001,
+              41.2092855
+            ],
+            [
+              -71.720001,
+              41.2059575
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "gid": 164,
+        "latitude": 41.224239349365234,
+        "longitude": -71.7120361328125,
+        "country": "None",
+        "state": "None",
+        "county": "None",
+        "timezone": -5,
+        "elevation": 0,
+        "offshore": 1,
+        "in_project_points": 0
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -71.71258549999999,
+              41.223684
+            ],
+            [
+              -71.71185299999999,
+              41.223684
+            ],
+            [
+              -71.71185299999999,
+              41.226445999999996
+            ],
+            [
+              -71.71258549999999,
+              41.226445999999996
+            ],
+            [
+              -71.71258549999999,
+              41.223684
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "gid": 165,
+        "latitude": 41.24197006225586,
+        "longitude": -71.70465087890625,
+        "country": "None",
+        "state": "None",
+        "county": "None",
+        "timezone": -5,
+        "elevation": 0,
+        "offshore": 1,
+        "in_project_points": 0
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -71.70515449999999,
+              41.241420500000004
+            ],
+            [
+              -71.7044375,
+              41.241420500000004
+            ],
+            [
+              -71.7044375,
+              41.2441825
+            ],
+            [
+              -71.70515449999999,
+              41.2441825
+            ],
+            [
+              -71.70515449999999,
+              41.241420500000004
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "gid": 166,
+        "latitude": 41.25968551635742,
+        "longitude": -71.69729614257812,
+        "country": "None",
+        "state": "None",
+        "county": "None",
+        "timezone": -5,
+        "elevation": 0,
+        "offshore": 1,
+        "in_project_points": 0
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -71.6977385,
+              41.259142
+            ],
+            [
+              -71.6970215,
+              41.259142
+            ],
+            [
+              -71.6970215,
+              41.261905999999996
+            ],
+            [
+              -71.6977385,
+              41.261905999999996
+            ],
+            [
+              -71.6977385,
+              41.259142
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "gid": 167,
+        "latitude": 41.27742004394531,
+        "longitude": -71.68988037109375,
+        "country": "None",
+        "state": "None",
+        "county": "None",
+        "timezone": -5,
+        "elevation": 0,
+        "offshore": 1,
+        "in_project_points": 0
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -71.6903075,
+              41.2768705
+            ],
+            [
+              -71.68959050000001,
+              41.2768705
+            ],
+            [
+              -71.68959050000001,
+              41.2790545
+            ],
+            [
+              -71.6903075,
+              41.2790545
+            ],
+            [
+              -71.6903075,
+              41.2768705
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "gid": 168,
+        "latitude": 41.29515075683594,
+        "longitude": -71.6824951171875,
+        "country": "None",
+        "state": "None",
+        "county": "None",
+        "timezone": -5,
+        "elevation": 0,
+        "offshore": 1,
+        "in_project_points": 0
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -71.68287649999999,
+              41.2946015
+            ],
+            [
+              -71.68215950000001,
+              41.2946015
+            ],
+            [
+              -71.68215950000001,
+              41.29678749999999
+            ],
+            [
+              -71.68287649999999,
+              41.29678749999999
+            ],
+            [
+              -71.68287649999999,
+              41.2946015
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "gid": 169,
+        "latitude": 41.3128662109375,
+        "longitude": -71.67510986328125,
+        "country": "None",
+        "state": "None",
+        "county": "None",
+        "timezone": -5,
+        "elevation": 0,
+        "offshore": 1,
+        "in_project_points": 0
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -71.6754455,
+              41.3123265
+            ],
+            [
+              -71.6747285,
+              41.3123265
+            ],
+            [
+              -71.6747285,
+              41.3150975
+            ],
+            [
+              -71.6754455,
+              41.3150975
+            ],
+            [
+              -71.6754455,
+              41.3123265
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "gid": 170,
+        "latitude": 41.33059310913086,
+        "longitude": -71.667724609375,
+        "country": "None",
+        "state": "None",
+        "county": "None",
+        "timezone": -5,
+        "elevation": 0,
+        "offshore": 1,
+        "in_project_points": 0
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -71.670334,
+              41.327814000000004
+            ],
+            [
+              -71.6672975,
+              41.327814000000004
+            ],
+            [
+              -71.6672975,
+              41.33337
+            ],
+            [
+              -71.670334,
+              41.33337
+            ],
+            [
+              -71.670334,
+              41.327814000000004
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "gid": 171,
+        "latitude": 41.348323822021484,
+        "longitude": -71.66030883789062,
+        "country": "None",
+        "state": "None",
+        "county": "None",
+        "timezone": -5,
+        "elevation": 0,
+        "offshore": 1,
+        "in_project_points": 0
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -71.6628875,
+              41.345539
+            ],
+            [
+              -71.659851,
+              41.345539
+            ],
+            [
+              -71.659851,
+              41.3793545
+            ],
+            [
+              -71.6628875,
+              41.3793545
+            ],
+            [
+              -71.6628875,
+              41.345539
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "gid": 172,
+        "latitude": 40.952816009521484,
+        "longitude": -71.79873657226562,
+        "country": "None",
+        "state": "None",
+        "county": "None",
+        "timezone": -5,
+        "elevation": 0,
+        "offshore": 1,
+        "in_project_points": 0
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -71.798874,
+              40.9500505
+            ],
+            [
+              -71.798111,
+              40.9500505
+            ],
+            [
+              -71.798111,
+              40.9616815
+            ],
+            [
+              -71.798874,
+              40.9616815
+            ],
+            [
+              -71.798874,
+              40.9500505
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "gid": 173,
+        "latitude": 40.97054672241211,
+        "longitude": -71.79141235351562,
+        "country": "None",
+        "state": "None",
+        "county": "None",
+        "timezone": -5,
+        "elevation": 0,
+        "offshore": 1,
+        "in_project_points": 0
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -71.791519,
+              40.9616815
+            ],
+            [
+              -71.791,
+              40.9616815
+            ],
+            [
+              -71.791,
+              40.9794045
+            ],
+            [
+              -71.791519,
+              40.9794045
+            ],
+            [
+              -71.791519,
+              40.9616815
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "gid": 174,
+        "latitude": 40.98826217651367,
+        "longitude": -71.78408813476562,
+        "country": "None",
+        "state": "None",
+        "county": "None",
+        "timezone": -5,
+        "elevation": 0,
+        "offshore": 1,
+        "in_project_points": 0
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -71.784195,
+              40.9794045
+            ],
+            [
+              -71.783615,
+              40.9794045
+            ],
+            [
+              -71.783615,
+              40.9971275
+            ],
+            [
+              -71.784195,
+              40.9971275
+            ],
+            [
+              -71.784195,
+              40.9794045
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "gid": 175,
+        "latitude": 41.0059928894043,
+        "longitude": -71.77676391601562,
+        "country": "None",
+        "state": "None",
+        "county": "None",
+        "timezone": -5,
+        "elevation": 0,
+        "offshore": 1,
+        "in_project_points": 0
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -71.77684049999999,
+              40.9971275
+            ],
+            [
+              -71.77623,
+              40.9971275
+            ],
+            [
+              -71.77623,
+              41.0087585
+            ],
+            [
+              -71.77684049999999,
+              41.0087585
+            ],
+            [
+              -71.77684049999999,
+              40.9971275
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "gid": 176,
+        "latitude": 41.023719787597656,
+        "longitude": -71.76943969726562,
+        "country": "None",
+        "state": "None",
+        "county": "None",
+        "timezone": -5,
+        "elevation": 0,
+        "offshore": 1,
+        "in_project_points": 0
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -71.7695465,
+              41.017622
+            ],
+            [
+              -71.768845,
+              41.017622
+            ],
+            [
+              -71.768845,
+              41.0264875
+            ],
+            [
+              -71.7695465,
+              41.0264875
+            ],
+            [
+              -71.7695465,
+              41.017622
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "gid": 177,
+        "latitude": 41.041446685791016,
+        "longitude": -71.7620849609375,
+        "country": "None",
+        "state": "None",
+        "county": "None",
+        "timezone": -5,
+        "elevation": 0,
+        "offshore": 1,
+        "in_project_points": 0
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -71.76216149999999,
+              41.035351
+            ],
+            [
+              -71.761444,
+              41.035351
+            ],
+            [
+              -71.761444,
+              41.0442125
+            ],
+            [
+              -71.76216149999999,
+              41.0442125
+            ],
+            [
+              -71.76216149999999,
+              41.035351
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "gid": 178,
+        "latitude": 41.05916976928711,
+        "longitude": -71.7547607421875,
+        "country": "None",
+        "state": "None",
+        "county": "None",
+        "timezone": -5,
+        "elevation": 0,
+        "offshore": 1,
+        "in_project_points": 0
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -71.75479150000001,
+              41.053074
+            ],
+            [
+              -71.754059,
+              41.053074
+            ],
+            [
+              -71.754059,
+              41.061935500000004
+            ],
+            [
+              -71.75479150000001,
+              41.061935500000004
+            ],
+            [
+              -71.75479150000001,
+              41.053074
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "gid": 179,
+        "latitude": 41.07689666748047,
+        "longitude": -71.74740600585938,
+        "country": "None",
+        "state": "None",
+        "county": "None",
+        "timezone": -5,
+        "elevation": 0,
+        "offshore": 1,
+        "in_project_points": 0
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -71.7481385,
+              41.070799
+            ],
+            [
+              -71.7466585,
+              41.070799
+            ],
+            [
+              -71.7466585,
+              41.0796625
+            ],
+            [
+              -71.7481385,
+              41.0796625
+            ],
+            [
+              -71.7481385,
+              41.070799
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "gid": 180,
+        "latitude": 41.0946159362793,
+        "longitude": -71.74005126953125,
+        "country": "None",
+        "state": "None",
+        "county": "None",
+        "timezone": -5,
+        "elevation": 0,
+        "offshore": 1,
+        "in_project_points": 0
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -71.740753,
+              41.0912875
+            ],
+            [
+              -71.7400205,
+              41.0912875
+            ],
+            [
+              -71.7400205,
+              41.097387499999996
+            ],
+            [
+              -71.740753,
+              41.097387499999996
+            ],
+            [
+              -71.740753,
+              41.0912875
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "gid": 181,
+        "latitude": 41.112342834472656,
+        "longitude": -71.73269653320312,
+        "country": "None",
+        "state": "None",
+        "county": "None",
+        "timezone": -5,
+        "elevation": 0,
+        "offshore": 1,
+        "in_project_points": 0
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -71.733353,
+              41.109018500000005
+            ],
+            [
+              -71.7326205,
+              41.109018500000005
+            ],
+            [
+              -71.7326205,
+              41.115114500000004
+            ],
+            [
+              -71.733353,
+              41.115114500000004
+            ],
+            [
+              -71.733353,
+              41.109018500000005
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "gid": 182,
+        "latitude": 41.13006591796875,
+        "longitude": -71.725341796875,
+        "country": "None",
+        "state": "None",
+        "county": "None",
+        "timezone": -5,
+        "elevation": 0,
+        "offshore": 1,
+        "in_project_points": 0
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -71.725952,
+              41.1267395
+            ],
+            [
+              -71.72522000000001,
+              41.1267395
+            ],
+            [
+              -71.72522000000001,
+              41.1328375
+            ],
+            [
+              -71.725952,
+              41.1328375
+            ],
+            [
+              -71.725952,
+              41.1267395
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "gid": 183,
+        "latitude": 41.14780044555664,
+        "longitude": -71.71798706054688,
+        "country": "None",
+        "state": "None",
+        "county": "None",
+        "timezone": -5,
+        "elevation": 0,
+        "offshore": 1,
+        "in_project_points": 0
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -71.71855149999999,
+              41.144474
+            ],
+            [
+              -71.71781899999999,
+              41.144474
+            ],
+            [
+              -71.71781899999999,
+              41.1505695
+            ],
+            [
+              -71.71855149999999,
+              41.1505695
+            ],
+            [
+              -71.71855149999999,
+              41.144474
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "gid": 184,
+        "latitude": 41.16551208496094,
+        "longitude": -71.71063232421875,
+        "country": "None",
+        "state": "None",
+        "county": "None",
+        "timezone": -5,
+        "elevation": 0,
+        "offshore": 1,
+        "in_project_points": 0
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -71.711151,
+              41.164957
+            ],
+            [
+              -71.7104185,
+              41.164957
+            ],
+            [
+              -71.7104185,
+              41.168287
+            ],
+            [
+              -71.711151,
+              41.168287
+            ],
+            [
+              -71.711151,
+              41.164957
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "gid": 185,
+        "latitude": 41.18324661254883,
+        "longitude": -71.7032470703125,
+        "country": "None",
+        "state": "None",
+        "county": "None",
+        "timezone": -5,
+        "elevation": 0,
+        "offshore": 1,
+        "in_project_points": 0
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -71.7037355,
+              41.18269
+            ],
+            [
+              -71.703003,
+              41.18269
+            ],
+            [
+              -71.703003,
+              41.186018000000004
+            ],
+            [
+              -71.7037355,
+              41.186018000000004
+            ],
+            [
+              -71.7037355,
+              41.18269
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "gid": 186,
+        "latitude": 41.200965881347656,
+        "longitude": -71.69586181640625,
+        "country": "None",
+        "state": "None",
+        "county": "None",
+        "timezone": -5,
+        "elevation": 0,
+        "offshore": 1,
+        "in_project_points": 0
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -71.6963045,
+              41.2004185
+            ],
+            [
+              -71.695587,
+              41.2004185
+            ],
+            [
+              -71.695587,
+              41.2031825
+            ],
+            [
+              -71.6963045,
+              41.2031825
+            ],
+            [
+              -71.6963045,
+              41.2004185
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "gid": 187,
+        "latitude": 41.218685150146484,
+        "longitude": -71.6884765625,
+        "country": "None",
+        "state": "None",
+        "county": "None",
+        "timezone": -5,
+        "elevation": 0,
+        "offshore": 1,
+        "in_project_points": 0
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -71.688889,
+              41.2181395
+            ],
+            [
+              -71.68817150000001,
+              41.2181395
+            ],
+            [
+              -71.68817150000001,
+              41.220907
+            ],
+            [
+              -71.688889,
+              41.220907
+            ],
+            [
+              -71.688889,
+              41.2181395
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "gid": 188,
+        "latitude": 41.23641586303711,
+        "longitude": -71.68109130859375,
+        "country": "None",
+        "state": "None",
+        "county": "None",
+        "timezone": -5,
+        "elevation": 0,
+        "offshore": 1,
+        "in_project_points": 0
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -71.6814575,
+              41.2358725
+            ],
+            [
+              -71.6807555,
+              41.2358725
+            ],
+            [
+              -71.6807555,
+              41.238643499999995
+            ],
+            [
+              -71.6814575,
+              41.238643499999995
+            ],
+            [
+              -71.6814575,
+              41.2358725
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "gid": 189,
+        "latitude": 41.2541389465332,
+        "longitude": -71.6737060546875,
+        "country": "None",
+        "state": "None",
+        "county": "None",
+        "timezone": -5,
+        "elevation": 0,
+        "offshore": 1,
+        "in_project_points": 0
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -71.6740265,
+              41.253601
+            ],
+            [
+              -71.6733245,
+              41.253601
+            ],
+            [
+              -71.6733245,
+              41.255789
+            ],
+            [
+              -71.6740265,
+              41.255789
+            ],
+            [
+              -71.6740265,
+              41.253601
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "gid": 190,
+        "latitude": 41.27186584472656,
+        "longitude": -71.66632080078125,
+        "country": "None",
+        "state": "None",
+        "county": "None",
+        "timezone": -5,
+        "elevation": 0,
+        "offshore": 1,
+        "in_project_points": 0
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -71.6665955,
+              41.271326
+            ],
+            [
+              -71.6658935,
+              41.271326
+            ],
+            [
+              -71.6658935,
+              41.273519500000006
+            ],
+            [
+              -71.6665955,
+              41.273519500000006
+            ],
+            [
+              -71.6665955,
+              41.271326
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "gid": 191,
+        "latitude": 41.28958511352539,
+        "longitude": -71.658935546875,
+        "country": "None",
+        "state": "None",
+        "county": "None",
+        "timezone": -5,
+        "elevation": 0,
+        "offshore": 1,
+        "in_project_points": 0
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -71.6591645,
+              41.289047
+            ],
+            [
+              -71.658463,
+              41.289047
+            ],
+            [
+              -71.658463,
+              41.291244500000005
+            ],
+            [
+              -71.6591645,
+              41.291244500000005
+            ],
+            [
+              -71.6591645,
+              41.289047
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "gid": 192,
+        "latitude": 41.30730438232422,
+        "longitude": -71.65151977539062,
+        "country": "None",
+        "state": "None",
+        "county": "None",
+        "timezone": -5,
+        "elevation": 0,
+        "offshore": 1,
+        "in_project_points": 0
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -71.6517185,
+              41.306772
+            ],
+            [
+              -71.6510165,
+              41.306772
+            ],
+            [
+              -71.6510165,
+              41.308973
+            ],
+            [
+              -71.6517185,
+              41.308973
+            ],
+            [
+              -71.6517185,
+              41.306772
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "gid": 193,
+        "latitude": 41.325035095214844,
+        "longitude": -71.64410400390625,
+        "country": "None",
+        "state": "None",
+        "county": "None",
+        "timezone": -5,
+        "elevation": 0,
+        "offshore": 1,
+        "in_project_points": 0
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -71.6442565,
+              41.3245065
+            ],
+            [
+              -71.6435545,
+              41.3245065
+            ],
+            [
+              -71.6435545,
+              41.327814000000004
+            ],
+            [
+              -71.6442565,
+              41.327814000000004
+            ],
+            [
+              -71.6442565,
+              41.3245065
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "gid": 194,
+        "latitude": 41.34275436401367,
+        "longitude": -71.63668823242188,
+        "country": "None",
+        "state": "None",
+        "county": "None",
+        "timezone": -5,
+        "elevation": 0,
+        "offshore": 1,
+        "in_project_points": 0
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -71.6398465,
+              41.3394505
+            ],
+            [
+              -71.6361085,
+              41.3394505
+            ],
+            [
+              -71.6361085,
+              41.345539
+            ],
+            [
+              -71.6398465,
+              41.345539
+            ],
+            [
+              -71.6398465,
+              41.3394505
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "gid": 195,
+        "latitude": 40.87639236450195,
+        "longitude": -71.80453491210938,
+        "country": "None",
+        "state": "None",
+        "county": "None",
+        "timezone": -5,
+        "elevation": 0,
+        "offshore": 1,
+        "in_project_points": 0
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -71.805435,
+              40.867528500000006
+            ],
+            [
+              -71.802536,
+              40.867528500000006
+            ],
+            [
+              -71.802536,
+              40.8852555
+            ],
+            [
+              -71.805435,
+              40.8852555
+            ],
+            [
+              -71.805435,
+              40.867528500000006
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "gid": 196,
+        "latitude": 40.89411926269531,
+        "longitude": -71.7972412109375,
+        "country": "None",
+        "state": "None",
+        "county": "None",
+        "timezone": -5,
+        "elevation": 0,
+        "offshore": 1,
+        "in_project_points": 0
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -71.79736299999999,
+              40.8852555
+            ],
+            [
+              -71.7958375,
+              40.8852555
+            ],
+            [
+              -71.7958375,
+              40.902979
+            ],
+            [
+              -71.79736299999999,
+              40.902979
+            ],
+            [
+              -71.79736299999999,
+              40.8852555
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "gid": 197,
+        "latitude": 40.91183853149414,
+        "longitude": -71.7899169921875,
+        "country": "None",
+        "state": "None",
+        "county": "None",
+        "timezone": -5,
+        "elevation": 0,
+        "offshore": 1,
+        "in_project_points": 0
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -71.790024,
+              40.902979
+            ],
+            [
+              -71.78947450000001,
+              40.902979
+            ],
+            [
+              -71.78947450000001,
+              40.920700499999995
+            ],
+            [
+              -71.790024,
+              40.920700499999995
+            ],
+            [
+              -71.790024,
+              40.902979
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "gid": 198,
+        "latitude": 40.929561614990234,
+        "longitude": -71.7825927734375,
+        "country": "None",
+        "state": "None",
+        "county": "None",
+        "timezone": -5,
+        "elevation": 0,
+        "offshore": 1,
+        "in_project_points": 0
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -71.7826845,
+              40.920700499999995
+            ],
+            [
+              -71.7821045,
+              40.920700499999995
+            ],
+            [
+              -71.7821045,
+              40.9384235
+            ],
+            [
+              -71.7826845,
+              40.9384235
+            ],
+            [
+              -71.7826845,
+              40.920700499999995
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "gid": 199,
+        "latitude": 40.94728469848633,
+        "longitude": -71.7752685546875,
+        "country": "None",
+        "state": "None",
+        "county": "None",
+        "timezone": -5,
+        "elevation": 0,
+        "offshore": 1,
+        "in_project_points": 0
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -71.77534499999999,
+              40.9384235
+            ],
+            [
+              -71.7747195,
+              40.9384235
+            ],
+            [
+              -71.7747195,
+              40.9500505
+            ],
+            [
+              -71.77534499999999,
+              40.9500505
+            ],
+            [
+              -71.77534499999999,
+              40.9384235
+            ]
+          ]
+        ]
+      }
+    }
+  ]
+}

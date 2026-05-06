@@ -1,0 +1,2605 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "gid": 0,
+        "config": "default",
+        "latitude": 41.96363830566406,
+        "longitude": -71.79364013671875,
+        "country": "United States",
+        "state": "RI",
+        "county": "Providence",
+        "timezone": -5,
+        "elevation": 202,
+        "offshore": 0,
+        "reV_tech": "windpower",
+        "cf_mean": 0.35164570808410645,
+        "system_capacity_kw": 1620.0,
+        "annual_energy_mwh": 4990.27490234375
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.79364013671875,
+          41.96363830566406
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "gid": 1,
+        "config": "default",
+        "latitude": 41.981380462646484,
+        "longitude": -71.78619384765625,
+        "country": "United States",
+        "state": "RI",
+        "county": "Providence",
+        "timezone": -5,
+        "elevation": 178,
+        "offshore": 0,
+        "reV_tech": "windpower",
+        "cf_mean": 0.357205867767334,
+        "system_capacity_kw": 1620.0,
+        "annual_energy_mwh": 5069.18017578125
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.78619384765625,
+          41.981380462646484
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "gid": 2,
+        "config": "default",
+        "latitude": 41.9991340637207,
+        "longitude": -71.77874755859375,
+        "country": "United States",
+        "state": "RI",
+        "county": "Providence",
+        "timezone": -5,
+        "elevation": 174,
+        "offshore": 0,
+        "reV_tech": "windpower",
+        "cf_mean": 0.36392128467559814,
+        "system_capacity_kw": 1620.0,
+        "annual_energy_mwh": 5164.47998046875
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.77874755859375,
+          41.9991340637207
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "gid": 3,
+        "config": "default",
+        "latitude": 41.90486526489258,
+        "longitude": -71.7921142578125,
+        "country": "United States",
+        "state": "RI",
+        "county": "Providence",
+        "timezone": -5,
+        "elevation": 195,
+        "offshore": 0,
+        "reV_tech": "windpower",
+        "cf_mean": 0.35881370306015015,
+        "system_capacity_kw": 1620.0,
+        "annual_energy_mwh": 5091.9970703125
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.7921142578125,
+          41.90486526489258
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "gid": 4,
+        "config": "default",
+        "latitude": 41.922607421875,
+        "longitude": -71.78466796875,
+        "country": "United States",
+        "state": "RI",
+        "county": "Providence",
+        "timezone": -5,
+        "elevation": 201,
+        "offshore": 0,
+        "reV_tech": "windpower",
+        "cf_mean": 0.35892245173454285,
+        "system_capacity_kw": 1620.0,
+        "annual_energy_mwh": 5093.5400390625
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.78466796875,
+          41.922607421875
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "gid": 5,
+        "config": "default",
+        "latitude": 41.94035339355469,
+        "longitude": -71.7772216796875,
+        "country": "United States",
+        "state": "RI",
+        "county": "Providence",
+        "timezone": -5,
+        "elevation": 170,
+        "offshore": 0,
+        "reV_tech": "windpower",
+        "cf_mean": 0.3760620653629303,
+        "system_capacity_kw": 1620.0,
+        "annual_energy_mwh": 5336.77197265625
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.7772216796875,
+          41.94035339355469
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "gid": 6,
+        "config": "default",
+        "latitude": 41.95810317993164,
+        "longitude": -71.769775390625,
+        "country": "United States",
+        "state": "RI",
+        "county": "Providence",
+        "timezone": -5,
+        "elevation": 187,
+        "offshore": 0,
+        "reV_tech": "windpower",
+        "cf_mean": 0.38693979382514954,
+        "system_capacity_kw": 1620.0,
+        "annual_energy_mwh": 5491.14013671875
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.769775390625,
+          41.95810317993164
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "gid": 7,
+        "config": "default",
+        "latitude": 41.97584915161133,
+        "longitude": -71.7623291015625,
+        "country": "United States",
+        "state": "RI",
+        "county": "Providence",
+        "timezone": -5,
+        "elevation": 208,
+        "offshore": 0,
+        "reV_tech": "windpower",
+        "cf_mean": 0.3846215307712555,
+        "system_capacity_kw": 1620.0,
+        "annual_energy_mwh": 5458.2412109375
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.7623291015625,
+          41.97584915161133
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "gid": 8,
+        "config": "default",
+        "latitude": 41.99358367919922,
+        "longitude": -71.75485229492188,
+        "country": "United States",
+        "state": "RI",
+        "county": "Providence",
+        "timezone": -5,
+        "elevation": 180,
+        "offshore": 0,
+        "reV_tech": "windpower",
+        "cf_mean": 0.38554108142852783,
+        "system_capacity_kw": 1620.0,
+        "annual_energy_mwh": 5471.29052734375
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.75485229492188,
+          41.99358367919922
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "gid": 9,
+        "config": "default",
+        "latitude": 41.84608459472656,
+        "longitude": -71.79058837890625,
+        "country": "United States",
+        "state": "RI",
+        "county": "Providence",
+        "timezone": -5,
+        "elevation": 220,
+        "offshore": 0,
+        "reV_tech": "windpower",
+        "cf_mean": 0.3981921076774597,
+        "system_capacity_kw": 1620.0,
+        "annual_energy_mwh": 5650.82421875
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.79058837890625,
+          41.84608459472656
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "gid": 10,
+        "config": "default",
+        "latitude": 41.86383056640625,
+        "longitude": -71.78314208984375,
+        "country": "United States",
+        "state": "RI",
+        "county": "Providence",
+        "timezone": -5,
+        "elevation": 226,
+        "offshore": 0,
+        "reV_tech": "windpower",
+        "cf_mean": 0.3978678584098816,
+        "system_capacity_kw": 1620.0,
+        "annual_energy_mwh": 5646.22265625
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.78314208984375,
+          41.86383056640625
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "gid": 11,
+        "config": "default",
+        "latitude": 41.88158416748047,
+        "longitude": -71.77569580078125,
+        "country": "United States",
+        "state": "RI",
+        "county": "Providence",
+        "timezone": -5,
+        "elevation": 197,
+        "offshore": 0,
+        "reV_tech": "windpower",
+        "cf_mean": 0.3988969027996063,
+        "system_capacity_kw": 1620.0,
+        "annual_energy_mwh": 5660.826171875
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.77569580078125,
+          41.88158416748047
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "gid": 12,
+        "config": "default",
+        "latitude": 41.899330139160156,
+        "longitude": -71.76824951171875,
+        "country": "United States",
+        "state": "RI",
+        "county": "Providence",
+        "timezone": -5,
+        "elevation": 230,
+        "offshore": 0,
+        "reV_tech": "windpower",
+        "cf_mean": 0.3946676552295685,
+        "system_capacity_kw": 1620.0,
+        "annual_energy_mwh": 5600.8076171875
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.76824951171875,
+          41.899330139160156
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "gid": 13,
+        "config": "default",
+        "latitude": 41.91707229614258,
+        "longitude": -71.76080322265625,
+        "country": "United States",
+        "state": "RI",
+        "county": "Providence",
+        "timezone": -5,
+        "elevation": 229,
+        "offshore": 0,
+        "reV_tech": "windpower",
+        "cf_mean": 0.3886065185070038,
+        "system_capacity_kw": 1620.0,
+        "annual_energy_mwh": 5514.79248046875
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.76080322265625,
+          41.91707229614258
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "gid": 14,
+        "config": "default",
+        "latitude": 41.9348030090332,
+        "longitude": -71.75335693359375,
+        "country": "United States",
+        "state": "RI",
+        "county": "Providence",
+        "timezone": -5,
+        "elevation": 194,
+        "offshore": 0,
+        "reV_tech": "windpower",
+        "cf_mean": 0.39406293630599976,
+        "system_capacity_kw": 1620.0,
+        "annual_energy_mwh": 5592.22607421875
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.75335693359375,
+          41.9348030090332
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "gid": 15,
+        "config": "default",
+        "latitude": 41.95256042480469,
+        "longitude": -71.74591064453125,
+        "country": "United States",
+        "state": "RI",
+        "county": "Providence",
+        "timezone": -5,
+        "elevation": 206,
+        "offshore": 0,
+        "reV_tech": "windpower",
+        "cf_mean": 0.39103156328201294,
+        "system_capacity_kw": 1620.0,
+        "annual_energy_mwh": 5549.20703125
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.74591064453125,
+          41.95256042480469
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "gid": 16,
+        "config": "default",
+        "latitude": 41.970298767089844,
+        "longitude": -71.73846435546875,
+        "country": "United States",
+        "state": "RI",
+        "county": "Providence",
+        "timezone": -5,
+        "elevation": 183,
+        "offshore": 0,
+        "reV_tech": "windpower",
+        "cf_mean": 0.3764381408691406,
+        "system_capacity_kw": 1620.0,
+        "annual_energy_mwh": 5342.10888671875
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.73846435546875,
+          41.970298767089844
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "gid": 17,
+        "config": "default",
+        "latitude": 41.98804473876953,
+        "longitude": -71.73098754882812,
+        "country": "United States",
+        "state": "RI",
+        "county": "Providence",
+        "timezone": -5,
+        "elevation": 143,
+        "offshore": 0,
+        "reV_tech": "windpower",
+        "cf_mean": 0.3767394721508026,
+        "system_capacity_kw": 1620.0,
+        "annual_energy_mwh": 5346.384765625
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.73098754882812,
+          41.98804473876953
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "gid": 18,
+        "config": "default",
+        "latitude": 42.005794525146484,
+        "longitude": -71.7235107421875,
+        "country": "United States",
+        "state": "RI",
+        "county": "Providence",
+        "timezone": -5,
+        "elevation": 194,
+        "offshore": 0,
+        "reV_tech": "windpower",
+        "cf_mean": 0.3758126199245453,
+        "system_capacity_kw": 1620.0,
+        "annual_energy_mwh": 5333.232421875
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.7235107421875,
+          42.005794525146484
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "gid": 19,
+        "config": "default",
+        "latitude": 41.787315368652344,
+        "longitude": -71.78903198242188,
+        "country": "United States",
+        "state": "RI",
+        "county": "Providence",
+        "timezone": -5,
+        "elevation": 183,
+        "offshore": 0,
+        "reV_tech": "windpower",
+        "cf_mean": 0.3931353688240051,
+        "system_capacity_kw": 1620.0,
+        "annual_energy_mwh": 5579.0625
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.78903198242188,
+          41.787315368652344
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "gid": 20,
+        "config": "default",
+        "latitude": 41.80507278442383,
+        "longitude": -71.7816162109375,
+        "country": "United States",
+        "state": "RI",
+        "county": "Providence",
+        "timezone": -5,
+        "elevation": 157,
+        "offshore": 0,
+        "reV_tech": "windpower",
+        "cf_mean": 0.40376976132392883,
+        "system_capacity_kw": 1620.0,
+        "annual_energy_mwh": 5729.9775390625
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.7816162109375,
+          41.80507278442383
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "gid": 21,
+        "config": "default",
+        "latitude": 41.82280731201172,
+        "longitude": -71.774169921875,
+        "country": "United States",
+        "state": "RI",
+        "county": "Providence",
+        "timezone": -5,
+        "elevation": 197,
+        "offshore": 0,
+        "reV_tech": "windpower",
+        "cf_mean": 0.4095969498157501,
+        "system_capacity_kw": 1620.0,
+        "annual_energy_mwh": 5812.671875
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.774169921875,
+          41.82280731201172
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "gid": 22,
+        "config": "default",
+        "latitude": 41.84054946899414,
+        "longitude": -71.76675415039062,
+        "country": "United States",
+        "state": "RI",
+        "county": "Providence",
+        "timezone": -5,
+        "elevation": 204,
+        "offshore": 0,
+        "reV_tech": "windpower",
+        "cf_mean": 0.4093609154224396,
+        "system_capacity_kw": 1620.0,
+        "annual_energy_mwh": 5809.322265625
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.76675415039062,
+          41.84054946899414
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "gid": 23,
+        "config": "default",
+        "latitude": 41.85829162597656,
+        "longitude": -71.75930786132812,
+        "country": "United States",
+        "state": "RI",
+        "county": "Providence",
+        "timezone": -5,
+        "elevation": 225,
+        "offshore": 0,
+        "reV_tech": "windpower",
+        "cf_mean": 0.40945297479629517,
+        "system_capacity_kw": 1620.0,
+        "annual_energy_mwh": 5810.62939453125
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.75930786132812,
+          41.85829162597656
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "gid": 24,
+        "config": "default",
+        "latitude": 41.87603759765625,
+        "longitude": -71.75186157226562,
+        "country": "United States",
+        "state": "RI",
+        "county": "Providence",
+        "timezone": -5,
+        "elevation": 210,
+        "offshore": 0,
+        "reV_tech": "windpower",
+        "cf_mean": 0.4124223589897156,
+        "system_capacity_kw": 1620.0,
+        "annual_energy_mwh": 5852.76806640625
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.75186157226562,
+          41.87603759765625
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "gid": 25,
+        "config": "default",
+        "latitude": 41.893775939941406,
+        "longitude": -71.74441528320312,
+        "country": "United States",
+        "state": "RI",
+        "county": "Providence",
+        "timezone": -5,
+        "elevation": 224,
+        "offshore": 0,
+        "reV_tech": "windpower",
+        "cf_mean": 0.4096086323261261,
+        "system_capacity_kw": 1620.0,
+        "annual_energy_mwh": 5812.837890625
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.74441528320312,
+          41.893775939941406
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "gid": 26,
+        "config": "default",
+        "latitude": 41.911521911621094,
+        "longitude": -71.73696899414062,
+        "country": "United States",
+        "state": "RI",
+        "county": "Providence",
+        "timezone": -5,
+        "elevation": 206,
+        "offshore": 0,
+        "reV_tech": "windpower",
+        "cf_mean": 0.3977138102054596,
+        "system_capacity_kw": 1620.0,
+        "annual_energy_mwh": 5644.03662109375
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.73696899414062,
+          41.911521911621094
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "gid": 27,
+        "config": "default",
+        "latitude": 41.92927169799805,
+        "longitude": -71.7294921875,
+        "country": "United States",
+        "state": "RI",
+        "county": "Providence",
+        "timezone": -5,
+        "elevation": 234,
+        "offshore": 0,
+        "reV_tech": "windpower",
+        "cf_mean": 0.3881821632385254,
+        "system_capacity_kw": 1620.0,
+        "annual_energy_mwh": 5508.7705078125
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.7294921875,
+          41.92927169799805
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "gid": 28,
+        "config": "default",
+        "latitude": 41.94700622558594,
+        "longitude": -71.7220458984375,
+        "country": "United States",
+        "state": "RI",
+        "county": "Providence",
+        "timezone": -5,
+        "elevation": 203,
+        "offshore": 0,
+        "reV_tech": "windpower",
+        "cf_mean": 0.3742372393608093,
+        "system_capacity_kw": 1620.0,
+        "annual_energy_mwh": 5310.87548828125
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.7220458984375,
+          41.94700622558594
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "gid": 29,
+        "config": "default",
+        "latitude": 41.964752197265625,
+        "longitude": -71.714599609375,
+        "country": "United States",
+        "state": "RI",
+        "county": "Providence",
+        "timezone": -5,
+        "elevation": 163,
+        "offshore": 0,
+        "reV_tech": "windpower",
+        "cf_mean": 0.3552926778793335,
+        "system_capacity_kw": 1620.0,
+        "annual_energy_mwh": 5042.029296875
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.714599609375,
+          41.964752197265625
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "gid": 30,
+        "config": "default",
+        "latitude": 41.98249435424805,
+        "longitude": -71.70712280273438,
+        "country": "United States",
+        "state": "RI",
+        "county": "Providence",
+        "timezone": -5,
+        "elevation": 162,
+        "offshore": 0,
+        "reV_tech": "windpower",
+        "cf_mean": 0.3528726398944855,
+        "system_capacity_kw": 1620.0,
+        "annual_energy_mwh": 5007.6865234375
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.70712280273438,
+          41.98249435424805
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "gid": 31,
+        "config": "default",
+        "latitude": 42.00023651123047,
+        "longitude": -71.69964599609375,
+        "country": "United States",
+        "state": "RI",
+        "county": "Providence",
+        "timezone": -5,
+        "elevation": 135,
+        "offshore": 0,
+        "reV_tech": "windpower",
+        "cf_mean": 0.3540191352367401,
+        "system_capacity_kw": 1620.0,
+        "annual_energy_mwh": 5023.9560546875
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.69964599609375,
+          42.00023651123047
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "gid": 32,
+        "config": "default",
+        "latitude": 41.728553771972656,
+        "longitude": -71.78750610351562,
+        "country": "United States",
+        "state": "RI",
+        "county": "Providence",
+        "timezone": -5,
+        "elevation": 172,
+        "offshore": 0,
+        "reV_tech": "windpower",
+        "cf_mean": 0.3658641576766968,
+        "system_capacity_kw": 1620.0,
+        "annual_energy_mwh": 5192.05126953125
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.78750610351562,
+          41.728553771972656
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "gid": 33,
+        "config": "default",
+        "latitude": 41.74630355834961,
+        "longitude": -71.78009033203125,
+        "country": "United States",
+        "state": "RI",
+        "county": "Providence",
+        "timezone": -5,
+        "elevation": 171,
+        "offshore": 0,
+        "reV_tech": "windpower",
+        "cf_mean": 0.37101784348487854,
+        "system_capacity_kw": 1620.0,
+        "annual_energy_mwh": 5265.1884765625
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.78009033203125,
+          41.74630355834961
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "gid": 34,
+        "config": "default",
+        "latitude": 41.76404571533203,
+        "longitude": -71.77267456054688,
+        "country": "United States",
+        "state": "RI",
+        "county": "Providence",
+        "timezone": -5,
+        "elevation": 176,
+        "offshore": 0,
+        "reV_tech": "windpower",
+        "cf_mean": 0.37593507766723633,
+        "system_capacity_kw": 1620.0,
+        "annual_energy_mwh": 5334.97021484375
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.77267456054688,
+          41.76404571533203
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "gid": 35,
+        "config": "default",
+        "latitude": 41.78178405761719,
+        "longitude": -71.7652587890625,
+        "country": "United States",
+        "state": "RI",
+        "county": "Providence",
+        "timezone": -5,
+        "elevation": 172,
+        "offshore": 0,
+        "reV_tech": "windpower",
+        "cf_mean": 0.38653483986854553,
+        "system_capacity_kw": 1620.0,
+        "annual_energy_mwh": 5485.3935546875
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.7652587890625,
+          41.78178405761719
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "gid": 36,
+        "config": "default",
+        "latitude": 41.799530029296875,
+        "longitude": -71.7578125,
+        "country": "United States",
+        "state": "RI",
+        "county": "Providence",
+        "timezone": -5,
+        "elevation": 195,
+        "offshore": 0,
+        "reV_tech": "windpower",
+        "cf_mean": 0.39696136116981506,
+        "system_capacity_kw": 1620.0,
+        "annual_energy_mwh": 5633.35791015625
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.7578125,
+          41.799530029296875
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "gid": 37,
+        "config": "default",
+        "latitude": 41.817264556884766,
+        "longitude": -71.7503662109375,
+        "country": "United States",
+        "state": "RI",
+        "county": "Providence",
+        "timezone": -5,
+        "elevation": 193,
+        "offshore": 0,
+        "reV_tech": "windpower",
+        "cf_mean": 0.39421823620796204,
+        "system_capacity_kw": 1620.0,
+        "annual_energy_mwh": 5594.43017578125
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.7503662109375,
+          41.817264556884766
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "gid": 38,
+        "config": "default",
+        "latitude": 41.83501052856445,
+        "longitude": -71.742919921875,
+        "country": "United States",
+        "state": "RI",
+        "county": "Providence",
+        "timezone": -5,
+        "elevation": 181,
+        "offshore": 0,
+        "reV_tech": "windpower",
+        "cf_mean": 0.3897528350353241,
+        "system_capacity_kw": 1620.0,
+        "annual_energy_mwh": 5531.060546875
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.742919921875,
+          41.83501052856445
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "gid": 39,
+        "config": "default",
+        "latitude": 41.85274124145508,
+        "longitude": -71.7354736328125,
+        "country": "United States",
+        "state": "RI",
+        "county": "Providence",
+        "timezone": -5,
+        "elevation": 168,
+        "offshore": 0,
+        "reV_tech": "windpower",
+        "cf_mean": 0.39618220925331116,
+        "system_capacity_kw": 1620.0,
+        "annual_energy_mwh": 5622.30078125
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.7354736328125,
+          41.85274124145508
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "gid": 40,
+        "config": "default",
+        "latitude": 41.87049102783203,
+        "longitude": -71.72802734375,
+        "country": "United States",
+        "state": "RI",
+        "county": "Providence",
+        "timezone": -5,
+        "elevation": 212,
+        "offshore": 0,
+        "reV_tech": "windpower",
+        "cf_mean": 0.40270230174064636,
+        "system_capacity_kw": 1620.0,
+        "annual_energy_mwh": 5714.8291015625
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.72802734375,
+          41.87049102783203
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "gid": 41,
+        "config": "default",
+        "latitude": 41.88822937011719,
+        "longitude": -71.7205810546875,
+        "country": "United States",
+        "state": "RI",
+        "county": "Providence",
+        "timezone": -5,
+        "elevation": 199,
+        "offshore": 0,
+        "reV_tech": "windpower",
+        "cf_mean": 0.3979361653327942,
+        "system_capacity_kw": 1620.0,
+        "annual_energy_mwh": 5647.19189453125
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.7205810546875,
+          41.88822937011719
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "gid": 42,
+        "config": "default",
+        "latitude": 41.905975341796875,
+        "longitude": -71.713134765625,
+        "country": "United States",
+        "state": "RI",
+        "county": "Providence",
+        "timezone": -5,
+        "elevation": 200,
+        "offshore": 0,
+        "reV_tech": "windpower",
+        "cf_mean": 0.3835527300834656,
+        "system_capacity_kw": 1620.0,
+        "annual_energy_mwh": 5443.07373046875
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.713134765625,
+          41.905975341796875
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "gid": 43,
+        "config": "default",
+        "latitude": 41.923709869384766,
+        "longitude": -71.70565795898438,
+        "country": "United States",
+        "state": "RI",
+        "county": "Providence",
+        "timezone": -5,
+        "elevation": 164,
+        "offshore": 0,
+        "reV_tech": "windpower",
+        "cf_mean": 0.36936521530151367,
+        "system_capacity_kw": 1620.0,
+        "annual_energy_mwh": 5241.7353515625
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.70565795898438,
+          41.923709869384766
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "gid": 44,
+        "config": "default",
+        "latitude": 41.94145584106445,
+        "longitude": -71.69818115234375,
+        "country": "United States",
+        "state": "RI",
+        "county": "Providence",
+        "timezone": -5,
+        "elevation": 172,
+        "offshore": 0,
+        "reV_tech": "windpower",
+        "cf_mean": 0.35701894760131836,
+        "system_capacity_kw": 1620.0,
+        "annual_energy_mwh": 5066.52685546875
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.69818115234375,
+          41.94145584106445
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "gid": 45,
+        "config": "default",
+        "latitude": 41.95919418334961,
+        "longitude": -71.69073486328125,
+        "country": "United States",
+        "state": "RI",
+        "county": "Providence",
+        "timezone": -5,
+        "elevation": 149,
+        "offshore": 0,
+        "reV_tech": "windpower",
+        "cf_mean": 0.34232011437416077,
+        "system_capacity_kw": 1620.0,
+        "annual_energy_mwh": 4857.93359375
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.69073486328125,
+          41.95919418334961
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "gid": 46,
+        "config": "default",
+        "latitude": 41.97693634033203,
+        "longitude": -71.68325805664062,
+        "country": "United States",
+        "state": "RI",
+        "county": "Providence",
+        "timezone": -5,
+        "elevation": 131,
+        "offshore": 0,
+        "reV_tech": "windpower",
+        "cf_mean": 0.33678367733955383,
+        "system_capacity_kw": 1620.0,
+        "annual_energy_mwh": 4779.3642578125
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.68325805664062,
+          41.97693634033203
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "gid": 47,
+        "config": "default",
+        "latitude": 41.99467086791992,
+        "longitude": -71.67578125,
+        "country": "United States",
+        "state": "RI",
+        "county": "Providence",
+        "timezone": -5,
+        "elevation": 112,
+        "offshore": 0,
+        "reV_tech": "windpower",
+        "cf_mean": 0.34721046686172485,
+        "system_capacity_kw": 1620.0,
+        "annual_energy_mwh": 4927.3330078125
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.67578125,
+          41.99467086791992
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "gid": 48,
+        "config": "default",
+        "latitude": 41.669795989990234,
+        "longitude": -71.78598022460938,
+        "country": "United States",
+        "state": "RI",
+        "county": "Kent",
+        "timezone": -5,
+        "elevation": 117,
+        "offshore": 0,
+        "reV_tech": "windpower",
+        "cf_mean": 0.35605180263519287,
+        "system_capacity_kw": 1620.0,
+        "annual_energy_mwh": 5052.8017578125
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.78598022460938,
+          41.669795989990234
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "gid": 49,
+        "config": "default",
+        "latitude": 41.68754196166992,
+        "longitude": -71.778564453125,
+        "country": "United States",
+        "state": "RI",
+        "county": "Kent",
+        "timezone": -5,
+        "elevation": 133,
+        "offshore": 0,
+        "reV_tech": "windpower",
+        "cf_mean": 0.34497886896133423,
+        "system_capacity_kw": 1620.0,
+        "annual_energy_mwh": 4895.66455078125
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.778564453125,
+          41.68754196166992
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "gid": 50,
+        "config": "default",
+        "latitude": 41.70528030395508,
+        "longitude": -71.77117919921875,
+        "country": "United States",
+        "state": "RI",
+        "county": "Kent",
+        "timezone": -5,
+        "elevation": 115,
+        "offshore": 0,
+        "reV_tech": "windpower",
+        "cf_mean": 0.34791573882102966,
+        "system_capacity_kw": 1620.0,
+        "annual_energy_mwh": 4937.34130859375
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.77117919921875,
+          41.70528030395508
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "gid": 51,
+        "config": "default",
+        "latitude": 41.7230224609375,
+        "longitude": -71.76373291015625,
+        "country": "United States",
+        "state": "RI",
+        "county": "Kent",
+        "timezone": -5,
+        "elevation": 145,
+        "offshore": 0,
+        "reV_tech": "windpower",
+        "cf_mean": 0.35889384150505066,
+        "system_capacity_kw": 1620.0,
+        "annual_energy_mwh": 5093.13427734375
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.76373291015625,
+          41.7230224609375
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "gid": 52,
+        "config": "default",
+        "latitude": 41.740760803222656,
+        "longitude": -71.75631713867188,
+        "country": "United States",
+        "state": "RI",
+        "county": "Providence",
+        "timezone": -5,
+        "elevation": 150,
+        "offshore": 0,
+        "reV_tech": "windpower",
+        "cf_mean": 0.3646675944328308,
+        "system_capacity_kw": 1620.0,
+        "annual_energy_mwh": 5175.0703125
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.75631713867188,
+          41.740760803222656
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "gid": 53,
+        "config": "default",
+        "latitude": 41.75850296020508,
+        "longitude": -71.7489013671875,
+        "country": "United States",
+        "state": "RI",
+        "county": "Providence",
+        "timezone": -5,
+        "elevation": 154,
+        "offshore": 0,
+        "reV_tech": "windpower",
+        "cf_mean": 0.38076967000961304,
+        "system_capacity_kw": 1620.0,
+        "annual_energy_mwh": 5403.57861328125
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.7489013671875,
+          41.75850296020508
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "gid": 54,
+        "config": "default",
+        "latitude": 41.776241302490234,
+        "longitude": -71.741455078125,
+        "country": "United States",
+        "state": "RI",
+        "county": "Providence",
+        "timezone": -5,
+        "elevation": 166,
+        "offshore": 0,
+        "reV_tech": "windpower",
+        "cf_mean": 0.3899182379245758,
+        "system_capacity_kw": 1620.0,
+        "annual_energy_mwh": 5533.40771484375
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.741455078125,
+          41.776241302490234
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "gid": 55,
+        "config": "default",
+        "latitude": 41.79397964477539,
+        "longitude": -71.7340087890625,
+        "country": "United States",
+        "state": "RI",
+        "county": "Providence",
+        "timezone": -5,
+        "elevation": 203,
+        "offshore": 0,
+        "reV_tech": "windpower",
+        "cf_mean": 0.3838610351085663,
+        "system_capacity_kw": 1620.0,
+        "annual_energy_mwh": 5447.44873046875
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.7340087890625,
+          41.79397964477539
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "gid": 56,
+        "config": "default",
+        "latitude": 41.81172180175781,
+        "longitude": -71.7265625,
+        "country": "United States",
+        "state": "RI",
+        "county": "Providence",
+        "timezone": -5,
+        "elevation": 161,
+        "offshore": 0,
+        "reV_tech": "windpower",
+        "cf_mean": 0.36085233092308044,
+        "system_capacity_kw": 1620.0,
+        "annual_energy_mwh": 5120.927734375
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.7265625,
+          41.81172180175781
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "gid": 57,
+        "config": "default",
+        "latitude": 41.82946014404297,
+        "longitude": -71.7191162109375,
+        "country": "United States",
+        "state": "RI",
+        "county": "Providence",
+        "timezone": -5,
+        "elevation": 151,
+        "offshore": 0,
+        "reV_tech": "windpower",
+        "cf_mean": 0.34617429971694946,
+        "system_capacity_kw": 1620.0,
+        "annual_energy_mwh": 4912.62841796875
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.7191162109375,
+          41.82946014404297
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "gid": 58,
+        "config": "default",
+        "latitude": 41.84720230102539,
+        "longitude": -71.711669921875,
+        "country": "United States",
+        "state": "RI",
+        "county": "Providence",
+        "timezone": -5,
+        "elevation": 123,
+        "offshore": 0,
+        "reV_tech": "windpower",
+        "cf_mean": 0.36366260051727295,
+        "system_capacity_kw": 1620.0,
+        "annual_energy_mwh": 5160.80908203125
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.711669921875,
+          41.84720230102539
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "gid": 59,
+        "config": "default",
+        "latitude": 41.86494064331055,
+        "longitude": -71.7042236328125,
+        "country": "United States",
+        "state": "RI",
+        "county": "Providence",
+        "timezone": -5,
+        "elevation": 173,
+        "offshore": 0,
+        "reV_tech": "windpower",
+        "cf_mean": 0.38290196657180786,
+        "system_capacity_kw": 1620.0,
+        "annual_energy_mwh": 5433.83837890625
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.7042236328125,
+          41.86494064331055
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "gid": 60,
+        "config": "default",
+        "latitude": 41.8826789855957,
+        "longitude": -71.69674682617188,
+        "country": "United States",
+        "state": "RI",
+        "county": "Providence",
+        "timezone": -5,
+        "elevation": 170,
+        "offshore": 0,
+        "reV_tech": "windpower",
+        "cf_mean": 0.380411833524704,
+        "system_capacity_kw": 1620.0,
+        "annual_energy_mwh": 5398.5
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.69674682617188,
+          41.8826789855957
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "gid": 61,
+        "config": "default",
+        "latitude": 41.90042495727539,
+        "longitude": -71.68930053710938,
+        "country": "United States",
+        "state": "RI",
+        "county": "Providence",
+        "timezone": -5,
+        "elevation": 150,
+        "offshore": 0,
+        "reV_tech": "windpower",
+        "cf_mean": 0.3676603436470032,
+        "system_capacity_kw": 1620.0,
+        "annual_energy_mwh": 5217.54150390625
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.68930053710938,
+          41.90042495727539
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "gid": 62,
+        "config": "default",
+        "latitude": 41.91815948486328,
+        "longitude": -71.68182373046875,
+        "country": "United States",
+        "state": "RI",
+        "county": "Providence",
+        "timezone": -5,
+        "elevation": 147,
+        "offshore": 0,
+        "reV_tech": "windpower",
+        "cf_mean": 0.35500743985176086,
+        "system_capacity_kw": 1620.0,
+        "annual_energy_mwh": 5037.9814453125
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.68182373046875,
+          41.91815948486328
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "gid": 63,
+        "config": "default",
+        "latitude": 41.9359016418457,
+        "longitude": -71.67434692382812,
+        "country": "United States",
+        "state": "RI",
+        "county": "Providence",
+        "timezone": -5,
+        "elevation": 161,
+        "offshore": 0,
+        "reV_tech": "windpower",
+        "cf_mean": 0.343709260225296,
+        "system_capacity_kw": 1620.0,
+        "annual_energy_mwh": 4877.64697265625
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.67434692382812,
+          41.9359016418457
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "gid": 64,
+        "config": "default",
+        "latitude": 41.953636169433594,
+        "longitude": -71.6668701171875,
+        "country": "United States",
+        "state": "RI",
+        "county": "Providence",
+        "timezone": -5,
+        "elevation": 149,
+        "offshore": 0,
+        "reV_tech": "windpower",
+        "cf_mean": 0.3329181373119354,
+        "system_capacity_kw": 1620.0,
+        "annual_energy_mwh": 4724.5078125
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.6668701171875,
+          41.953636169433594
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "gid": 65,
+        "config": "default",
+        "latitude": 41.971370697021484,
+        "longitude": -71.65939331054688,
+        "country": "United States",
+        "state": "RI",
+        "county": "Providence",
+        "timezone": -5,
+        "elevation": 127,
+        "offshore": 0,
+        "reV_tech": "windpower",
+        "cf_mean": 0.33077487349510193,
+        "system_capacity_kw": 1620.0,
+        "annual_energy_mwh": 4694.09228515625
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.65939331054688,
+          41.971370697021484
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "gid": 66,
+        "config": "default",
+        "latitude": 41.98910903930664,
+        "longitude": -71.65191650390625,
+        "country": "United States",
+        "state": "RI",
+        "county": "Providence",
+        "timezone": -5,
+        "elevation": 129,
+        "offshore": 0,
+        "reV_tech": "windpower",
+        "cf_mean": 0.34625405073165894,
+        "system_capacity_kw": 1620.0,
+        "annual_energy_mwh": 4913.7607421875
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.65191650390625,
+          41.98910903930664
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "gid": 67,
+        "config": "default",
+        "latitude": 42.00685119628906,
+        "longitude": -71.6444091796875,
+        "country": "United States",
+        "state": "RI",
+        "county": "Providence",
+        "timezone": -5,
+        "elevation": 133,
+        "offshore": 0,
+        "reV_tech": "windpower",
+        "cf_mean": 0.3582122027873993,
+        "system_capacity_kw": 1620.0,
+        "annual_energy_mwh": 5083.4609375
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.6444091796875,
+          42.00685119628906
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "gid": 68,
+        "config": "default",
+        "latitude": 41.61103820800781,
+        "longitude": -71.78448486328125,
+        "country": "United States",
+        "state": "RI",
+        "county": "Kent",
+        "timezone": -5,
+        "elevation": 151,
+        "offshore": 0,
+        "reV_tech": "windpower",
+        "cf_mean": 0.374154269695282,
+        "system_capacity_kw": 1620.0,
+        "annual_energy_mwh": 5309.69873046875
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.78448486328125,
+          41.61103820800781
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "gid": 69,
+        "config": "default",
+        "latitude": 41.62879180908203,
+        "longitude": -71.77706909179688,
+        "country": "United States",
+        "state": "RI",
+        "county": "Kent",
+        "timezone": -5,
+        "elevation": 132,
+        "offshore": 0,
+        "reV_tech": "windpower",
+        "cf_mean": 0.356953889131546,
+        "system_capacity_kw": 1620.0,
+        "annual_energy_mwh": 5065.60400390625
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.77706909179688,
+          41.62879180908203
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "gid": 70,
+        "config": "default",
+        "latitude": 41.64651870727539,
+        "longitude": -71.7696533203125,
+        "country": "United States",
+        "state": "RI",
+        "county": "Kent",
+        "timezone": -5,
+        "elevation": 118,
+        "offshore": 0,
+        "reV_tech": "windpower",
+        "cf_mean": 0.35546091198921204,
+        "system_capacity_kw": 1620.0,
+        "annual_energy_mwh": 5044.4169921875
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.7696533203125,
+          41.64651870727539
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "gid": 71,
+        "config": "default",
+        "latitude": 41.66425704956055,
+        "longitude": -71.76223754882812,
+        "country": "United States",
+        "state": "RI",
+        "county": "Kent",
+        "timezone": -5,
+        "elevation": 117,
+        "offshore": 0,
+        "reV_tech": "windpower",
+        "cf_mean": 0.362819105386734,
+        "system_capacity_kw": 1620.0,
+        "annual_energy_mwh": 5148.83837890625
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.76223754882812,
+          41.66425704956055
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "gid": 72,
+        "config": "default",
+        "latitude": 41.68199920654297,
+        "longitude": -71.75482177734375,
+        "country": "United States",
+        "state": "RI",
+        "county": "Kent",
+        "timezone": -5,
+        "elevation": 144,
+        "offshore": 0,
+        "reV_tech": "windpower",
+        "cf_mean": 0.3645067512989044,
+        "system_capacity_kw": 1620.0,
+        "annual_energy_mwh": 5172.7880859375
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.75482177734375,
+          41.68199920654297
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "gid": 73,
+        "config": "default",
+        "latitude": 41.699737548828125,
+        "longitude": -71.74740600585938,
+        "country": "United States",
+        "state": "RI",
+        "county": "Kent",
+        "timezone": -5,
+        "elevation": 160,
+        "offshore": 0,
+        "reV_tech": "windpower",
+        "cf_mean": 0.36916396021842957,
+        "system_capacity_kw": 1620.0,
+        "annual_energy_mwh": 5238.87939453125
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.74740600585938,
+          41.699737548828125
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "gid": 74,
+        "config": "default",
+        "latitude": 41.717472076416016,
+        "longitude": -71.739990234375,
+        "country": "United States",
+        "state": "RI",
+        "county": "Kent",
+        "timezone": -5,
+        "elevation": 142,
+        "offshore": 0,
+        "reV_tech": "windpower",
+        "cf_mean": 0.37671688199043274,
+        "system_capacity_kw": 1620.0,
+        "annual_energy_mwh": 5346.06494140625
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.739990234375,
+          41.717472076416016
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "gid": 75,
+        "config": "default",
+        "latitude": 41.73521423339844,
+        "longitude": -71.7325439453125,
+        "country": "United States",
+        "state": "RI",
+        "county": "Providence",
+        "timezone": -5,
+        "elevation": 160,
+        "offshore": 0,
+        "reV_tech": "windpower",
+        "cf_mean": 0.38207030296325684,
+        "system_capacity_kw": 1620.0,
+        "annual_energy_mwh": 5422.03662109375
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.7325439453125,
+          41.73521423339844
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "gid": 76,
+        "config": "default",
+        "latitude": 41.75295639038086,
+        "longitude": -71.72509765625,
+        "country": "United States",
+        "state": "RI",
+        "county": "Providence",
+        "timezone": -5,
+        "elevation": 165,
+        "offshore": 0,
+        "reV_tech": "windpower",
+        "cf_mean": 0.39687350392341614,
+        "system_capacity_kw": 1620.0,
+        "annual_energy_mwh": 5632.11083984375
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.72509765625,
+          41.75295639038086
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "gid": 77,
+        "config": "default",
+        "latitude": 41.77069091796875,
+        "longitude": -71.7176513671875,
+        "country": "United States",
+        "state": "RI",
+        "county": "Providence",
+        "timezone": -5,
+        "elevation": 195,
+        "offshore": 0,
+        "reV_tech": "windpower",
+        "cf_mean": 0.39350467920303345,
+        "system_capacity_kw": 1620.0,
+        "annual_energy_mwh": 5584.30419921875
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.7176513671875,
+          41.77069091796875
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "gid": 78,
+        "config": "default",
+        "latitude": 41.78843688964844,
+        "longitude": -71.710205078125,
+        "country": "United States",
+        "state": "RI",
+        "county": "Providence",
+        "timezone": -5,
+        "elevation": 202,
+        "offshore": 0,
+        "reV_tech": "windpower",
+        "cf_mean": 0.3694634437561035,
+        "system_capacity_kw": 1620.0,
+        "annual_energy_mwh": 5243.12939453125
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.710205078125,
+          41.78843688964844
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "gid": 79,
+        "config": "default",
+        "latitude": 41.80616760253906,
+        "longitude": -71.7027587890625,
+        "country": "United States",
+        "state": "RI",
+        "county": "Providence",
+        "timezone": -5,
+        "elevation": 150,
+        "offshore": 0,
+        "reV_tech": "windpower",
+        "cf_mean": 0.34048065543174744,
+        "system_capacity_kw": 1620.0,
+        "annual_energy_mwh": 4831.8291015625
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.7027587890625,
+          41.80616760253906
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "gid": 80,
+        "config": "default",
+        "latitude": 41.82391357421875,
+        "longitude": -71.6953125,
+        "country": "United States",
+        "state": "RI",
+        "county": "Providence",
+        "timezone": -5,
+        "elevation": 145,
+        "offshore": 0,
+        "reV_tech": "windpower",
+        "cf_mean": 0.3375457525253296,
+        "system_capacity_kw": 1620.0,
+        "annual_energy_mwh": 4790.17919921875
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.6953125,
+          41.82391357421875
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "gid": 81,
+        "config": "default",
+        "latitude": 41.841644287109375,
+        "longitude": -71.6878662109375,
+        "country": "United States",
+        "state": "RI",
+        "county": "Providence",
+        "timezone": -5,
+        "elevation": 134,
+        "offshore": 0,
+        "reV_tech": "windpower",
+        "cf_mean": 0.3662753105163574,
+        "system_capacity_kw": 1620.0,
+        "annual_energy_mwh": 5197.88671875
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.6878662109375,
+          41.841644287109375
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "gid": 82,
+        "config": "default",
+        "latitude": 41.8593864440918,
+        "longitude": -71.680419921875,
+        "country": "United States",
+        "state": "RI",
+        "county": "Providence",
+        "timezone": -5,
+        "elevation": 155,
+        "offshore": 0,
+        "reV_tech": "windpower",
+        "cf_mean": 0.38753828406333923,
+        "system_capacity_kw": 1620.0,
+        "annual_energy_mwh": 5499.6328125
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.680419921875,
+          41.8593864440918
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "gid": 83,
+        "config": "default",
+        "latitude": 41.87711715698242,
+        "longitude": -71.67294311523438,
+        "country": "United States",
+        "state": "RI",
+        "county": "Providence",
+        "timezone": -5,
+        "elevation": 188,
+        "offshore": 0,
+        "reV_tech": "windpower",
+        "cf_mean": 0.38367781043052673,
+        "system_capacity_kw": 1620.0,
+        "annual_energy_mwh": 5444.8486328125
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.67294311523438,
+          41.87711715698242
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "gid": 84,
+        "config": "default",
+        "latitude": 41.89485549926758,
+        "longitude": -71.66546630859375,
+        "country": "United States",
+        "state": "RI",
+        "county": "Providence",
+        "timezone": -5,
+        "elevation": 176,
+        "offshore": 0,
+        "reV_tech": "windpower",
+        "cf_mean": 0.3712743818759918,
+        "system_capacity_kw": 1620.0,
+        "annual_energy_mwh": 5268.8291015625
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.66546630859375,
+          41.89485549926758
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "gid": 85,
+        "config": "default",
+        "latitude": 41.91259765625,
+        "longitude": -71.65798950195312,
+        "country": "United States",
+        "state": "RI",
+        "county": "Providence",
+        "timezone": -5,
+        "elevation": 174,
+        "offshore": 0,
+        "reV_tech": "windpower",
+        "cf_mean": 0.35706573724746704,
+        "system_capacity_kw": 1620.0,
+        "annual_energy_mwh": 5067.19091796875
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.65798950195312,
+          41.91259765625
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "gid": 86,
+        "config": "default",
+        "latitude": 41.93033218383789,
+        "longitude": -71.6505126953125,
+        "country": "United States",
+        "state": "RI",
+        "county": "Providence",
+        "timezone": -5,
+        "elevation": 146,
+        "offshore": 0,
+        "reV_tech": "windpower",
+        "cf_mean": 0.34171754121780396,
+        "system_capacity_kw": 1620.0,
+        "annual_energy_mwh": 4849.3818359375
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.6505126953125,
+          41.93033218383789
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "gid": 87,
+        "config": "default",
+        "latitude": 41.94806671142578,
+        "longitude": -71.64300537109375,
+        "country": "United States",
+        "state": "RI",
+        "county": "Providence",
+        "timezone": -5,
+        "elevation": 141,
+        "offshore": 0,
+        "reV_tech": "windpower",
+        "cf_mean": 0.3297293782234192,
+        "system_capacity_kw": 1620.0,
+        "annual_energy_mwh": 4679.255859375
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.64300537109375,
+          41.94806671142578
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "gid": 88,
+        "config": "default",
+        "latitude": 41.9658088684082,
+        "longitude": -71.63552856445312,
+        "country": "United States",
+        "state": "RI",
+        "county": "Providence",
+        "timezone": -5,
+        "elevation": 104,
+        "offshore": 0,
+        "reV_tech": "windpower",
+        "cf_mean": 0.32343634963035583,
+        "system_capacity_kw": 1620.0,
+        "annual_energy_mwh": 4589.94970703125
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.63552856445312,
+          41.9658088684082
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "gid": 89,
+        "config": "default",
+        "latitude": 41.983543395996094,
+        "longitude": -71.6280517578125,
+        "country": "United States",
+        "state": "RI",
+        "county": "Providence",
+        "timezone": -5,
+        "elevation": 102,
+        "offshore": 0,
+        "reV_tech": "windpower",
+        "cf_mean": 0.32514938712120056,
+        "system_capacity_kw": 1620.0,
+        "annual_energy_mwh": 4614.259765625
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.6280517578125,
+          41.983543395996094
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "gid": 90,
+        "config": "default",
+        "latitude": 42.001277923583984,
+        "longitude": -71.62054443359375,
+        "country": "United States",
+        "state": "RI",
+        "county": "Providence",
+        "timezone": -5,
+        "elevation": 94,
+        "offshore": 0,
+        "reV_tech": "windpower",
+        "cf_mean": 0.3265022039413452,
+        "system_capacity_kw": 1620.0,
+        "annual_energy_mwh": 4633.45849609375
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.62054443359375,
+          42.001277923583984
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "gid": 91,
+        "config": "default",
+        "latitude": 41.30393600463867,
+        "longitude": -71.88604736328125,
+        "country": "None",
+        "state": "None",
+        "county": "None",
+        "timezone": -5,
+        "elevation": 0,
+        "offshore": 1,
+        "reV_tech": "windpower",
+        "cf_mean": 0.4502812325954437,
+        "system_capacity_kw": 1620.0,
+        "annual_energy_mwh": 6390.03076171875
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.88604736328125,
+          41.30393600463867
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "gid": 92,
+        "config": "default",
+        "latitude": 41.321685791015625,
+        "longitude": -71.87872314453125,
+        "country": "None",
+        "state": "None",
+        "county": "None",
+        "timezone": -5,
+        "elevation": 0,
+        "offshore": 1,
+        "reV_tech": "windpower",
+        "cf_mean": 0.43694740533828735,
+        "system_capacity_kw": 1620.0,
+        "annual_energy_mwh": 6200.80810546875
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.87872314453125,
+          41.321685791015625
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "gid": 93,
+        "config": "default",
+        "latitude": 41.41038513183594,
+        "longitude": -71.84197998046875,
+        "country": "United States",
+        "state": "CT",
+        "county": "New London",
+        "timezone": -5,
+        "elevation": 46,
+        "offshore": 0,
+        "reV_tech": "windpower",
+        "cf_mean": 0.36819028854370117,
+        "system_capacity_kw": 1620.0,
+        "annual_energy_mwh": 5225.06201171875
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.84197998046875,
+          41.41038513183594
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "gid": 94,
+        "config": "default",
+        "latitude": 41.534549713134766,
+        "longitude": -71.79034423828125,
+        "country": "United States",
+        "state": "RI",
+        "county": "Washington",
+        "timezone": -5,
+        "elevation": 130,
+        "offshore": 0,
+        "reV_tech": "windpower",
+        "cf_mean": 0.40443798899650574,
+        "system_capacity_kw": 1620.0,
+        "annual_energy_mwh": 5739.4599609375
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.79034423828125,
+          41.534549713134766
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "gid": 95,
+        "config": "default",
+        "latitude": 41.552284240722656,
+        "longitude": -71.782958984375,
+        "country": "United States",
+        "state": "RI",
+        "county": "Washington",
+        "timezone": -5,
+        "elevation": 138,
+        "offshore": 0,
+        "reV_tech": "windpower",
+        "cf_mean": 0.39411869645118713,
+        "system_capacity_kw": 1620.0,
+        "annual_energy_mwh": 5593.017578125
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.782958984375,
+          41.552284240722656
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "gid": 96,
+        "config": "default",
+        "latitude": 41.57002639770508,
+        "longitude": -71.77557373046875,
+        "country": "United States",
+        "state": "RI",
+        "county": "Washington",
+        "timezone": -5,
+        "elevation": 134,
+        "offshore": 0,
+        "reV_tech": "windpower",
+        "cf_mean": 0.3806222379207611,
+        "system_capacity_kw": 1620.0,
+        "annual_energy_mwh": 5401.486328125
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.77557373046875,
+          41.57002639770508
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "gid": 97,
+        "config": "default",
+        "latitude": 41.5877685546875,
+        "longitude": -71.76815795898438,
+        "country": "United States",
+        "state": "RI",
+        "county": "Washington",
+        "timezone": -5,
+        "elevation": 128,
+        "offshore": 0,
+        "reV_tech": "windpower",
+        "cf_mean": 0.3753030002117157,
+        "system_capacity_kw": 1620.0,
+        "annual_energy_mwh": 5326.0
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.76815795898438,
+          41.5877685546875
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "gid": 98,
+        "config": "default",
+        "latitude": 41.60550308227539,
+        "longitude": -71.7607421875,
+        "country": "United States",
+        "state": "RI",
+        "county": "Kent",
+        "timezone": -5,
+        "elevation": 122,
+        "offshore": 0,
+        "reV_tech": "windpower",
+        "cf_mean": 0.3674528896808624,
+        "system_capacity_kw": 1620.0,
+        "annual_energy_mwh": 5214.59765625
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.7607421875,
+          41.60550308227539
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "gid": 99,
+        "config": "default",
+        "latitude": 41.62324523925781,
+        "longitude": -71.75332641601562,
+        "country": "United States",
+        "state": "RI",
+        "county": "Kent",
+        "timezone": -5,
+        "elevation": 146,
+        "offshore": 0,
+        "reV_tech": "windpower",
+        "cf_mean": 0.35102397203445435,
+        "system_capacity_kw": 1620.0,
+        "annual_energy_mwh": 4981.451171875
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.75332641601562,
+          41.62324523925781
+        ]
+      }
+    }
+  ]
+}

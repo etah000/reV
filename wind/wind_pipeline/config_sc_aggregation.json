@@ -1,0 +1,19 @@
+{
+  "log_directory": "./logs/",
+  "execution_control": {
+    "option": "local",
+    "max_workers": 1
+  },
+  "excl_fpath": "./ri_exclusions_local.h5",
+  "tm_dset": "techmap_wtk_ri_100_local",
+  "res_fpath": "../../tests/data/wtk/ri_100_wtk_2012.h5",
+  "excl_dict": null,
+  "gen_fpath": "PIPELINE",
+  "cf_dset": "cf_mean",
+  "lcoe_dset": null,
+  "recalc_lcoe": false,
+  "res_class_dset": "cf_mean",
+  "res_class_bins": [0.0, 0.3, 1.0],
+  "resolution": 64,
+  "power_density": 3.0
+}

@@ -1,0 +1,3745 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "sc_gid": 1,
+        "latitude": 41.99292076811808,
+        "longitude": -71.80788736558492,
+        "country": "United States",
+        "state": "RI",
+        "county": "Providence",
+        "elevation_m": 189.8,
+        "timezone": -5,
+        "sc_point_gid": 1,
+        "sc_row_ind": 0,
+        "sc_col_ind": 1,
+        "res_gids": "[2, 1, 0, 7, 6]",
+        "gen_gids": "[2, 1, 0, 7, 6]",
+        "gid_counts": "[1414.0, 1605.0, 1031.0, 23.0, 23.0]",
+        "n_gids": 4096,
+        "offshore": 0,
+        "capacity_factor_ac": 0.35844547,
+        "capacity_factor_dc": null,
+        "lcoe_site_usd_per_mwh": null,
+        "resource": 0.35844547,
+        "losses_wakes_pct": null,
+        "area_developable_sq_km": 33.1776,
+        "capacity_ac_mw": 99.5328,
+        "capacity_dc_mw": null,
+        "multiplier_cc_eos": 1,
+        "multiplier_cc_regional": 1,
+        "annual_energy_site_mwh": 312531.22811425774,
+        "cost_site_cc_usd_per_ac_mw": null,
+        "cost_base_cc_usd_per_ac_mw": null,
+        "cost_site_foc_usd_per_ac_mw": null,
+        "cost_base_foc_usd_per_ac_mw": null,
+        "cost_site_voc_usd_per_ac_mwh": null,
+        "cost_base_voc_usd_per_ac_mwh": null,
+        "fixed_charge_rate": null,
+        "res_class": 1,
+        "zone_id": 1,
+        "trans_gid": 43300,
+        "trans_type": "TransLine",
+        "dist_spur_km": 11.298656541112187,
+        "dist_export_km": null,
+        "dist_reinforcement_km": null,
+        "cost_spur_usd_per_mw_ac": null,
+        "cost_poi_usd_per_mw_ac": null,
+        "cost_export_usd_per_mw_ac": null,
+        "cost_reinforcement_usd_per_mw_ac": null,
+        "cost_total_trans_usd_per_mw_ac": 11498.656,
+        "lcot_usd_per_mwh": 0.35155326,
+        "lcoe_all_in_usd_per_mwh": null,
+        "latitude_poi": null,
+        "longitude_poi": null,
+        "latitude_reinforcement_poi": null,
+        "longitude_reinforcement_poi": null,
+        "developable_ratio": 1.0
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -71.8400195,
+              41.967237999999995
+            ],
+            [
+              -71.771909,
+              41.967237999999995
+            ],
+            [
+              -71.771909,
+              42.019096000000005
+            ],
+            [
+              -71.8400195,
+              42.019096000000005
+            ],
+            [
+              -71.8400195,
+              41.967237999999995
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "sc_gid": 2,
+        "latitude": 41.993086159675855,
+        "longitude": -71.73837273978268,
+        "country": "United States",
+        "state": "RI",
+        "county": "Providence",
+        "elevation_m": 172.9,
+        "timezone": -5,
+        "sc_point_gid": 2,
+        "sc_row_ind": 0,
+        "sc_col_ind": 2,
+        "res_gids": "[2, 8, 18, 31, 17, 30, 7, 16, 29, 6]",
+        "gen_gids": "[2, 8, 18, 31, 17, 30, 7, 16, 29, 6]",
+        "gid_counts": "[286.0, 895.0, 806.0, 207.0, 535.0, 350.0, 466.0, 353.0, 187.0, 11.0]",
+        "n_gids": 4096,
+        "offshore": 0,
+        "capacity_factor_ac": 0.37431666,
+        "capacity_factor_dc": null,
+        "lcoe_site_usd_per_mwh": null,
+        "resource": 0.37431666,
+        "losses_wakes_pct": null,
+        "area_developable_sq_km": 33.1776,
+        "capacity_ac_mw": 99.5328,
+        "capacity_dc_mw": null,
+        "multiplier_cc_eos": 1,
+        "multiplier_cc_regional": 1,
+        "annual_energy_site_mwh": 326369.4410698242,
+        "cost_site_cc_usd_per_ac_mw": null,
+        "cost_base_cc_usd_per_ac_mw": null,
+        "cost_site_foc_usd_per_ac_mw": null,
+        "cost_base_foc_usd_per_ac_mw": null,
+        "cost_site_voc_usd_per_ac_mwh": null,
+        "cost_base_voc_usd_per_ac_mwh": null,
+        "fixed_charge_rate": null,
+        "res_class": 1,
+        "zone_id": 1,
+        "trans_gid": 43300,
+        "trans_type": "TransLine",
+        "dist_spur_km": 5.6966070623743725,
+        "dist_export_km": null,
+        "dist_reinforcement_km": null,
+        "cost_spur_usd_per_mw_ac": null,
+        "cost_poi_usd_per_mw_ac": null,
+        "cost_export_usd_per_mw_ac": null,
+        "cost_reinforcement_usd_per_mw_ac": null,
+        "cost_total_trans_usd_per_mw_ac": 5896.607,
+        "lcot_usd_per_mwh": 0.17263553,
+        "lcoe_all_in_usd_per_mwh": null,
+        "latitude_poi": null,
+        "longitude_poi": null,
+        "latitude_reinforcement_poi": null,
+        "longitude_reinforcement_poi": null,
+        "developable_ratio": 1.0
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -71.771909,
+              41.967237999999995
+            ],
+            [
+              -71.7028635,
+              41.967237999999995
+            ],
+            [
+              -71.7028635,
+              42.019096000000005
+            ],
+            [
+              -71.771909,
+              42.019096000000005
+            ],
+            [
+              -71.771909,
+              41.967237999999995
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "sc_gid": 3,
+        "latitude": 41.99320945764307,
+        "longitude": -71.66885760530704,
+        "country": "United States",
+        "state": "RI",
+        "county": "Providence",
+        "elevation_m": 131.54545454545453,
+        "timezone": -5,
+        "sc_point_gid": 3,
+        "sc_row_ind": 0,
+        "sc_col_ind": 3,
+        "res_gids": "[31, 47, 67, 66, 89, 30, 46, 65, 88, 45, 29]",
+        "gen_gids": "[31, 47, 67, 66, 89, 30, 46, 65, 88, 45, 29]",
+        "gid_counts": "[595.0, 876.0, 700.0, 536.0, 121.0, 179.0, 506.0, 381.0, 143.0, 52.0, 7.0]",
+        "n_gids": 4096,
+        "offshore": 0,
+        "capacity_factor_ac": 0.3458551,
+        "capacity_factor_dc": null,
+        "lcoe_site_usd_per_mwh": null,
+        "resource": 0.3458551,
+        "losses_wakes_pct": null,
+        "area_developable_sq_km": 33.1776,
+        "capacity_ac_mw": 99.5328,
+        "capacity_dc_mw": null,
+        "multiplier_cc_eos": 1,
+        "multiplier_cc_regional": 1,
+        "annual_energy_site_mwh": 301553.5848178711,
+        "cost_site_cc_usd_per_ac_mw": null,
+        "cost_base_cc_usd_per_ac_mw": null,
+        "cost_site_foc_usd_per_ac_mw": null,
+        "cost_base_foc_usd_per_ac_mw": null,
+        "cost_site_voc_usd_per_ac_mwh": null,
+        "cost_base_voc_usd_per_ac_mwh": null,
+        "fixed_charge_rate": null,
+        "res_class": 1,
+        "zone_id": 1,
+        "trans_gid": 43300,
+        "trans_type": "TransLine",
+        "dist_spur_km": 1.8968116835632276,
+        "dist_export_km": null,
+        "dist_reinforcement_km": null,
+        "cost_spur_usd_per_mw_ac": null,
+        "cost_poi_usd_per_mw_ac": null,
+        "cost_export_usd_per_mw_ac": null,
+        "cost_reinforcement_usd_per_mw_ac": null,
+        "cost_total_trans_usd_per_mw_ac": 2096.8118,
+        "lcot_usd_per_mwh": 0.066440426,
+        "lcoe_all_in_usd_per_mwh": null,
+        "latitude_poi": null,
+        "longitude_poi": null,
+        "latitude_reinforcement_poi": null,
+        "longitude_reinforcement_poi": null,
+        "developable_ratio": 1.0
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -71.7028635,
+              41.967237999999995
+            ],
+            [
+              -71.633747,
+              41.967237999999995
+            ],
+            [
+              -71.633747,
+              42.019096000000005
+            ],
+            [
+              -71.7028635,
+              42.019096000000005
+            ],
+            [
+              -71.7028635,
+              41.967237999999995
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "sc_gid": 4,
+        "latitude": 41.993290661277086,
+        "longitude": -71.59934211049521,
+        "country": "United States",
+        "state": "RI",
+        "county": "Providence",
+        "elevation_m": 108.25,
+        "timezone": -5,
+        "sc_point_gid": 4,
+        "sc_row_ind": 0,
+        "sc_col_ind": 4,
+        "res_gids": "[67, 90, 89, 88]",
+        "gen_gids": "[67, 90, 89, 88]",
+        "gid_counts": "[65.0, 2886.0, 1053.0, 92.0]",
+        "n_gids": 4096,
+        "offshore": 0,
+        "capacity_factor_ac": 0.3265888,
+        "capacity_factor_dc": null,
+        "lcoe_site_usd_per_mwh": null,
+        "resource": 0.3265888,
+        "losses_wakes_pct": null,
+        "area_developable_sq_km": 33.1776,
+        "capacity_ac_mw": 99.5328,
+        "capacity_dc_mw": null,
+        "multiplier_cc_eos": 1,
+        "multiplier_cc_regional": 1,
+        "annual_energy_site_mwh": 284755.17623730464,
+        "cost_site_cc_usd_per_ac_mw": null,
+        "cost_base_cc_usd_per_ac_mw": null,
+        "cost_site_foc_usd_per_ac_mw": null,
+        "cost_base_foc_usd_per_ac_mw": null,
+        "cost_site_voc_usd_per_ac_mwh": null,
+        "cost_base_voc_usd_per_ac_mwh": null,
+        "fixed_charge_rate": null,
+        "res_class": 1,
+        "zone_id": 1,
+        "trans_gid": 43300,
+        "trans_type": "TransLine",
+        "dist_spur_km": 4.277394957477117,
+        "dist_export_km": null,
+        "dist_reinforcement_km": null,
+        "cost_spur_usd_per_mw_ac": null,
+        "cost_poi_usd_per_mw_ac": null,
+        "cost_export_usd_per_mw_ac": null,
+        "cost_reinforcement_usd_per_mw_ac": null,
+        "cost_total_trans_usd_per_mw_ac": 4477.395,
+        "lcot_usd_per_mwh": 0.15024196,
+        "lcoe_all_in_usd_per_mwh": null,
+        "latitude_poi": null,
+        "longitude_poi": null,
+        "latitude_reinforcement_poi": null,
+        "longitude_reinforcement_poi": null,
+        "developable_ratio": 1.0
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -71.633747,
+              41.967237999999995
+            ],
+            [
+              -71.5644975,
+              41.967237999999995
+            ],
+            [
+              -71.5644975,
+              42.019096000000005
+            ],
+            [
+              -71.633747,
+              42.019096000000005
+            ],
+            [
+              -71.633747,
+              41.967237999999995
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "sc_gid": 5,
+        "latitude": 41.99332977008879,
+        "longitude": -71.52982640368927,
+        "country": "United States",
+        "state": "RI",
+        "county": "Providence",
+        "elevation_m": 94.0,
+        "timezone": -5,
+        "sc_point_gid": 5,
+        "sc_row_ind": 0,
+        "sc_col_ind": 5,
+        "res_gids": "[90]",
+        "gen_gids": "[90]",
+        "gid_counts": "[781.0]",
+        "n_gids": 781,
+        "offshore": 0,
+        "capacity_factor_ac": 0.32650226,
+        "capacity_factor_dc": null,
+        "lcoe_site_usd_per_mwh": null,
+        "resource": 0.32650226,
+        "losses_wakes_pct": null,
+        "area_developable_sq_km": 6.326099999999999,
+        "capacity_ac_mw": 18.978299999999997,
+        "capacity_dc_mw": null,
+        "multiplier_cc_eos": 1,
+        "multiplier_cc_regional": 1,
+        "annual_energy_site_mwh": 54280.971276312586,
+        "cost_site_cc_usd_per_ac_mw": null,
+        "cost_base_cc_usd_per_ac_mw": null,
+        "cost_site_foc_usd_per_ac_mw": null,
+        "cost_base_foc_usd_per_ac_mw": null,
+        "cost_site_voc_usd_per_ac_mwh": null,
+        "cost_base_voc_usd_per_ac_mwh": null,
+        "fixed_charge_rate": null,
+        "res_class": 1,
+        "zone_id": 1,
+        "trans_gid": 43300,
+        "trans_type": "TransLine",
+        "dist_spur_km": 6.488316028362223,
+        "dist_export_km": null,
+        "dist_reinforcement_km": null,
+        "cost_spur_usd_per_mw_ac": null,
+        "cost_poi_usd_per_mw_ac": null,
+        "cost_export_usd_per_mw_ac": null,
+        "cost_reinforcement_usd_per_mw_ac": null,
+        "cost_total_trans_usd_per_mw_ac": 6688.316,
+        "lcot_usd_per_mwh": 0.22449036,
+        "lcoe_all_in_usd_per_mwh": null,
+        "latitude_poi": null,
+        "longitude_poi": null,
+        "latitude_reinforcement_poi": null,
+        "longitude_reinforcement_poi": null,
+        "developable_ratio": 0.190673828125
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -71.5644975,
+              41.967237999999995
+            ],
+            [
+              -71.4951305,
+              41.967237999999995
+            ],
+            [
+              -71.4951305,
+              42.019096000000005
+            ],
+            [
+              -71.5644975,
+              42.019096000000005
+            ],
+            [
+              -71.5644975,
+              41.967237999999995
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "sc_gid": 7,
+        "latitude": 41.9410632428119,
+        "longitude": -71.8076377748881,
+        "country": "United States",
+        "state": "RI",
+        "county": "Providence",
+        "elevation_m": 197.33333333333337,
+        "timezone": -5,
+        "sc_point_gid": 17,
+        "sc_row_ind": 1,
+        "sc_col_ind": 1,
+        "res_gids": "[0, 6, 5, 4, 3, 13]",
+        "gen_gids": "[0, 6, 5, 4, 3, 13]",
+        "gid_counts": "[1873.0, 164.0, 470.0, 991.0, 596.0, 2.0]",
+        "n_gids": 4096,
+        "offshore": 0,
+        "capacity_factor_ac": 0.35868216,
+        "capacity_factor_dc": null,
+        "lcoe_site_usd_per_mwh": null,
+        "resource": 0.35868216,
+        "losses_wakes_pct": null,
+        "area_developable_sq_km": 33.1776,
+        "capacity_ac_mw": 99.5328,
+        "capacity_dc_mw": null,
+        "multiplier_cc_eos": 1,
+        "multiplier_cc_regional": 1,
+        "annual_energy_site_mwh": 312737.5998984375,
+        "cost_site_cc_usd_per_ac_mw": null,
+        "cost_base_cc_usd_per_ac_mw": null,
+        "cost_site_foc_usd_per_ac_mw": null,
+        "cost_base_foc_usd_per_ac_mw": null,
+        "cost_site_voc_usd_per_ac_mwh": null,
+        "cost_base_voc_usd_per_ac_mwh": null,
+        "fixed_charge_rate": null,
+        "res_class": 1,
+        "zone_id": 1,
+        "trans_gid": 43300,
+        "trans_type": "TransLine",
+        "dist_spur_km": 13.50022942838052,
+        "dist_export_km": null,
+        "dist_reinforcement_km": null,
+        "cost_spur_usd_per_mw_ac": null,
+        "cost_poi_usd_per_mw_ac": null,
+        "cost_export_usd_per_mw_ac": null,
+        "cost_reinforcement_usd_per_mw_ac": null,
+        "cost_total_trans_usd_per_mw_ac": 13700.2295,
+        "lcot_usd_per_mwh": 0.4185865,
+        "lcoe_all_in_usd_per_mwh": null,
+        "latitude_poi": null,
+        "longitude_poi": null,
+        "latitude_reinforcement_poi": null,
+        "longitude_reinforcement_poi": null,
+        "developable_ratio": 1.0
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -71.8400195,
+              41.915359499999994
+            ],
+            [
+              -71.771909,
+              41.915359499999994
+            ],
+            [
+              -71.771909,
+              41.967237999999995
+            ],
+            [
+              -71.8400195,
+              41.967237999999995
+            ],
+            [
+              -71.8400195,
+              41.915359499999994
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "sc_gid": 8,
+        "latitude": 41.94122833556561,
+        "longitude": -71.73817950003621,
+        "country": "United States",
+        "state": "RI",
+        "county": "Providence",
+        "elevation_m": 191.8125,
+        "timezone": -5,
+        "sc_point_gid": 18,
+        "sc_row_ind": 1,
+        "sc_col_ind": 2,
+        "res_gids": "[6, 7, 16, 29, 15, 28, 45, 44, 5, 14, 27, 43, 13, 4, 26, 42]",
+        "gen_gids": "[6, 7, 16, 29, 15, 28, 45, 44, 5, 14, 27, 43, 13, 4, 26, 42]",
+        "gid_counts": "[330.0, 38.0, 174.0, 324.0, 525.0, 528.0, 2.0, 141.0, 160.0, 529.0, 529.0, 307.0, 315.0, 9.0, 157.0, 28.0]",
+        "n_gids": 4096,
+        "offshore": 0,
+        "capacity_factor_ac": 0.38159877,
+        "capacity_factor_dc": null,
+        "lcoe_site_usd_per_mwh": null,
+        "resource": 0.38159877,
+        "losses_wakes_pct": null,
+        "area_developable_sq_km": 33.1776,
+        "capacity_ac_mw": 99.5328,
+        "capacity_dc_mw": null,
+        "multiplier_cc_eos": 1,
+        "multiplier_cc_regional": 1,
+        "annual_energy_site_mwh": 332718.7644580078,
+        "cost_site_cc_usd_per_ac_mw": null,
+        "cost_base_cc_usd_per_ac_mw": null,
+        "cost_site_foc_usd_per_ac_mw": null,
+        "cost_base_foc_usd_per_ac_mw": null,
+        "cost_site_voc_usd_per_ac_mwh": null,
+        "cost_base_voc_usd_per_ac_mwh": null,
+        "fixed_charge_rate": null,
+        "res_class": 1,
+        "zone_id": 1,
+        "trans_gid": 43300,
+        "trans_type": "TransLine",
+        "dist_spur_km": 9.329945713024683,
+        "dist_export_km": null,
+        "dist_reinforcement_km": null,
+        "cost_spur_usd_per_mw_ac": null,
+        "cost_poi_usd_per_mw_ac": null,
+        "cost_export_usd_per_mw_ac": null,
+        "cost_reinforcement_usd_per_mw_ac": null,
+        "cost_total_trans_usd_per_mw_ac": 9529.945,
+        "lcot_usd_per_mwh": 0.27368474,
+        "lcoe_all_in_usd_per_mwh": null,
+        "latitude_poi": null,
+        "longitude_poi": null,
+        "latitude_reinforcement_poi": null,
+        "longitude_reinforcement_poi": null,
+        "developable_ratio": 1.0
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -71.771909,
+              41.915359499999994
+            ],
+            [
+              -71.7028635,
+              41.915359499999994
+            ],
+            [
+              -71.7028635,
+              41.967237999999995
+            ],
+            [
+              -71.771909,
+              41.967237999999995
+            ],
+            [
+              -71.771909,
+              41.915359499999994
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "sc_gid": 9,
+        "latitude": 41.941351410776015,
+        "longitude": -71.66872071805969,
+        "country": "United States",
+        "state": "RI",
+        "county": "Providence",
+        "elevation_m": 148.30769230769232,
+        "timezone": -5,
+        "sc_point_gid": 19,
+        "sc_row_ind": 1,
+        "sc_col_ind": 3,
+        "res_gids": "[29, 45, 46, 65, 88, 64, 87, 44, 63, 86, 43, 62, 85]",
+        "gen_gids": "[29, 45, 46, 65, 88, 64, 87, 44, 63, 86, 43, 62, 85]",
+        "gid_counts": "[10.0, 475.0, 24.0, 148.0, 157.0, 529.0, 479.0, 388.0, 529.0, 649.0, 177.0, 343.0, 188.0]",
+        "n_gids": 4096,
+        "offshore": 0,
+        "capacity_factor_ac": 0.34287596,
+        "capacity_factor_dc": null,
+        "lcoe_site_usd_per_mwh": null,
+        "resource": 0.34287596,
+        "losses_wakes_pct": null,
+        "area_developable_sq_km": 33.1776,
+        "capacity_ac_mw": 99.5328,
+        "capacity_dc_mw": null,
+        "multiplier_cc_eos": 1,
+        "multiplier_cc_regional": 1,
+        "annual_energy_site_mwh": 298956.0599296875,
+        "cost_site_cc_usd_per_ac_mw": null,
+        "cost_base_cc_usd_per_ac_mw": null,
+        "cost_site_foc_usd_per_ac_mw": null,
+        "cost_base_foc_usd_per_ac_mw": null,
+        "cost_site_voc_usd_per_ac_mwh": null,
+        "cost_base_voc_usd_per_ac_mwh": null,
+        "fixed_charge_rate": null,
+        "res_class": 1,
+        "zone_id": 1,
+        "trans_gid": 43300,
+        "trans_type": "TransLine",
+        "dist_spur_km": 7.628528662055091,
+        "dist_export_km": null,
+        "dist_reinforcement_km": null,
+        "cost_spur_usd_per_mw_ac": null,
+        "cost_poi_usd_per_mw_ac": null,
+        "cost_export_usd_per_mw_ac": null,
+        "cost_reinforcement_usd_per_mw_ac": null,
+        "cost_total_trans_usd_per_mw_ac": 7828.529,
+        "lcot_usd_per_mwh": 0.2502132,
+        "lcoe_all_in_usd_per_mwh": null,
+        "latitude_poi": null,
+        "longitude_poi": null,
+        "latitude_reinforcement_poi": null,
+        "longitude_reinforcement_poi": null,
+        "developable_ratio": 1.0
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -71.7028635,
+              41.915359499999994
+            ],
+            [
+              -71.633747,
+              41.915359499999994
+            ],
+            [
+              -71.633747,
+              41.967237999999995
+            ],
+            [
+              -71.7028635,
+              41.967237999999995
+            ],
+            [
+              -71.7028635,
+              41.915359499999994
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "sc_gid": 10,
+        "latitude": 41.941432467702654,
+        "longitude": -71.59926157684407,
+        "country": "United States",
+        "state": "RI",
+        "county": "Providence",
+        "elevation_m": 123.25,
+        "timezone": -5,
+        "sc_point_gid": 20,
+        "sc_row_ind": 1,
+        "sc_col_ind": 4,
+        "res_gids": "[88, 89, 87, 86]",
+        "gen_gids": "[88, 89, 87, 86]",
+        "gid_counts": "[1427.0, 591.0, 1323.0, 449.0]",
+        "n_gids": 3790,
+        "offshore": 0,
+        "capacity_factor_ac": 0.328066,
+        "capacity_factor_dc": null,
+        "lcoe_site_usd_per_mwh": null,
+        "resource": 0.328066,
+        "losses_wakes_pct": null,
+        "area_developable_sq_km": 30.699,
+        "capacity_ac_mw": 92.097,
+        "capacity_dc_mw": null,
+        "multiplier_cc_eos": 1,
+        "multiplier_cc_regional": 1,
+        "annual_energy_site_mwh": 264673.7080246496,
+        "cost_site_cc_usd_per_ac_mw": null,
+        "cost_base_cc_usd_per_ac_mw": null,
+        "cost_site_foc_usd_per_ac_mw": null,
+        "cost_base_foc_usd_per_ac_mw": null,
+        "cost_site_voc_usd_per_ac_mwh": null,
+        "cost_base_voc_usd_per_ac_mwh": null,
+        "fixed_charge_rate": null,
+        "res_class": 1,
+        "zone_id": 1,
+        "trans_gid": 43300,
+        "trans_type": "TransLine",
+        "dist_spur_km": 9.217632318570733,
+        "dist_export_km": null,
+        "dist_reinforcement_km": null,
+        "cost_spur_usd_per_mw_ac": null,
+        "cost_poi_usd_per_mw_ac": null,
+        "cost_export_usd_per_mw_ac": null,
+        "cost_reinforcement_usd_per_mw_ac": null,
+        "cost_total_trans_usd_per_mw_ac": 9417.632,
+        "lcot_usd_per_mwh": 0.31459194,
+        "lcoe_all_in_usd_per_mwh": null,
+        "latitude_poi": null,
+        "longitude_poi": null,
+        "latitude_reinforcement_poi": null,
+        "longitude_reinforcement_poi": null,
+        "developable_ratio": 0.9252929687500001
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -71.633747,
+              41.915359499999994
+            ],
+            [
+              -71.5644975,
+              41.915359499999994
+            ],
+            [
+              -71.5644975,
+              41.967237999999995
+            ],
+            [
+              -71.633747,
+              41.967237999999995
+            ],
+            [
+              -71.633747,
+              41.915359499999994
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "sc_gid": 11,
+        "latitude": 41.94147150585789,
+        "longitude": -71.52980222427983,
+        "country": "United States",
+        "state": "RI",
+        "county": "Providence",
+        "elevation_m": 98.0,
+        "timezone": -5,
+        "sc_point_gid": 21,
+        "sc_row_ind": 1,
+        "sc_col_ind": 5,
+        "res_gids": "[90, 89]",
+        "gen_gids": "[90, 89]",
+        "gid_counts": "[11.0, 53.0]",
+        "n_gids": 64,
+        "offshore": 0,
+        "capacity_factor_ac": 0.3253819,
+        "capacity_factor_dc": null,
+        "lcoe_site_usd_per_mwh": null,
+        "resource": 0.3253819,
+        "losses_wakes_pct": null,
+        "area_developable_sq_km": 0.5184,
+        "capacity_ac_mw": 1.5552,
+        "capacity_dc_mw": null,
+        "multiplier_cc_eos": 1,
+        "multiplier_cc_regional": 1,
+        "annual_energy_site_mwh": 4432.857300453185,
+        "cost_site_cc_usd_per_ac_mw": null,
+        "cost_base_cc_usd_per_ac_mw": null,
+        "cost_site_foc_usd_per_ac_mw": null,
+        "cost_base_foc_usd_per_ac_mw": null,
+        "cost_site_voc_usd_per_ac_mwh": null,
+        "cost_base_voc_usd_per_ac_mwh": null,
+        "fixed_charge_rate": null,
+        "res_class": 1,
+        "zone_id": 1,
+        "trans_gid": 43300,
+        "trans_type": "TransLine",
+        "dist_spur_km": 12.04393662230592,
+        "dist_export_km": null,
+        "dist_reinforcement_km": null,
+        "cost_spur_usd_per_mw_ac": null,
+        "cost_poi_usd_per_mw_ac": null,
+        "cost_export_usd_per_mw_ac": null,
+        "cost_reinforcement_usd_per_mw_ac": null,
+        "cost_total_trans_usd_per_mw_ac": 12243.937,
+        "lcot_usd_per_mwh": 0.41237736,
+        "lcoe_all_in_usd_per_mwh": null,
+        "latitude_poi": null,
+        "longitude_poi": null,
+        "latitude_reinforcement_poi": null,
+        "longitude_reinforcement_poi": null,
+        "developable_ratio": 0.015625
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -71.5644975,
+              41.915359499999994
+            ],
+            [
+              -71.4951305,
+              41.915359499999994
+            ],
+            [
+              -71.4951305,
+              41.967237999999995
+            ],
+            [
+              -71.5644975,
+              41.967237999999995
+            ],
+            [
+              -71.5644975,
+              41.915359499999994
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "sc_gid": 13,
+        "latitude": 41.889205246260715,
+        "longitude": -71.80738883919618,
+        "country": "United States",
+        "state": "RI",
+        "county": "Providence",
+        "elevation_m": 214.0,
+        "timezone": -5,
+        "sc_point_gid": 33,
+        "sc_row_ind": 2,
+        "sc_col_ind": 1,
+        "res_gids": "[3, 4, 13, 12, 11, 10, 9]",
+        "gen_gids": "[3, 4, 13, 12, 11, 10, 9]",
+        "gid_counts": "[2375.0, 63.0, 5.0, 159.0, 441.0, 770.0, 283.0]",
+        "n_gids": 4096,
+        "offshore": 0,
+        "capacity_factor_ac": 0.37462157,
+        "capacity_factor_dc": null,
+        "lcoe_site_usd_per_mwh": null,
+        "resource": 0.37462157,
+        "losses_wakes_pct": null,
+        "area_developable_sq_km": 33.1776,
+        "capacity_ac_mw": 99.5328,
+        "capacity_dc_mw": null,
+        "multiplier_cc_eos": 1,
+        "multiplier_cc_regional": 1,
+        "annual_energy_site_mwh": 326635.29220605467,
+        "cost_site_cc_usd_per_ac_mw": null,
+        "cost_base_cc_usd_per_ac_mw": null,
+        "cost_site_foc_usd_per_ac_mw": null,
+        "cost_base_foc_usd_per_ac_mw": null,
+        "cost_site_voc_usd_per_ac_mwh": null,
+        "cost_base_voc_usd_per_ac_mwh": null,
+        "fixed_charge_rate": null,
+        "res_class": 1,
+        "zone_id": 1,
+        "trans_gid": 43300,
+        "trans_type": "TransLine",
+        "dist_spur_km": 17.412857885899594,
+        "dist_export_km": null,
+        "dist_reinforcement_km": null,
+        "cost_spur_usd_per_mw_ac": null,
+        "cost_poi_usd_per_mw_ac": null,
+        "cost_export_usd_per_mw_ac": null,
+        "cost_reinforcement_usd_per_mw_ac": null,
+        "cost_total_trans_usd_per_mw_ac": 17612.857,
+        "lcot_usd_per_mwh": 0.5152336,
+        "lcoe_all_in_usd_per_mwh": null,
+        "latitude_poi": null,
+        "longitude_poi": null,
+        "latitude_reinforcement_poi": null,
+        "longitude_reinforcement_poi": null,
+        "developable_ratio": 1.0
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -71.8400195,
+              41.863481
+            ],
+            [
+              -71.771909,
+              41.863481
+            ],
+            [
+              -71.771909,
+              41.915359499999994
+            ],
+            [
+              -71.8400195,
+              41.915359499999994
+            ],
+            [
+              -71.8400195,
+              41.863481
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "sc_gid": 14,
+        "latitude": 41.88937004068889,
+        "longitude": -71.73798676741552,
+        "country": "United States",
+        "state": "RI",
+        "county": "Providence",
+        "elevation_m": 202.2,
+        "timezone": -5,
+        "sc_point_gid": 34,
+        "sc_row_ind": 2,
+        "sc_col_ind": 2,
+        "res_gids": "[13, 26, 42, 43, 12, 25, 41, 60, 11, 24, 40, 59, 23, 10, 39]",
+        "gen_gids": "[13, 26, 42, 43, 12, 25, 41, 60, 11, 24, 40, 59, 23, 10, 39]",
+        "gid_counts": "[207.0, 372.0, 460.0, 13.0, 370.0, 529.0, 528.0, 108.0, 191.0, 529.0, 457.0, 184.0, 118.0, 18.0, 12.0]",
+        "n_gids": 4096,
+        "offshore": 0,
+        "capacity_factor_ac": 0.3985871,
+        "capacity_factor_dc": null,
+        "lcoe_site_usd_per_mwh": null,
+        "resource": 0.3985871,
+        "losses_wakes_pct": null,
+        "area_developable_sq_km": 33.1776,
+        "capacity_ac_mw": 99.5328,
+        "capacity_dc_mw": null,
+        "multiplier_cc_eos": 1,
+        "multiplier_cc_regional": 1,
+        "annual_energy_site_mwh": 347531.0200136719,
+        "cost_site_cc_usd_per_ac_mw": null,
+        "cost_base_cc_usd_per_ac_mw": null,
+        "cost_site_foc_usd_per_ac_mw": null,
+        "cost_base_foc_usd_per_ac_mw": null,
+        "cost_site_voc_usd_per_ac_mwh": null,
+        "cost_base_voc_usd_per_ac_mwh": null,
+        "fixed_charge_rate": null,
+        "res_class": 1,
+        "zone_id": 1,
+        "trans_gid": 43300,
+        "trans_type": "TransLine",
+        "dist_spur_km": 14.422181254706707,
+        "dist_export_km": null,
+        "dist_reinforcement_km": null,
+        "cost_spur_usd_per_mw_ac": null,
+        "cost_poi_usd_per_mw_ac": null,
+        "cost_export_usd_per_mw_ac": null,
+        "cost_reinforcement_usd_per_mw_ac": null,
+        "cost_total_trans_usd_per_mw_ac": 14622.182,
+        "lcot_usd_per_mwh": 0.4020278,
+        "lcoe_all_in_usd_per_mwh": null,
+        "latitude_poi": null,
+        "longitude_poi": null,
+        "latitude_reinforcement_poi": null,
+        "longitude_reinforcement_poi": null,
+        "developable_ratio": 1.0
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -71.771909,
+              41.863481
+            ],
+            [
+              -71.7028635,
+              41.863481
+            ],
+            [
+              -71.7028635,
+              41.915359499999994
+            ],
+            [
+              -71.771909,
+              41.915359499999994
+            ],
+            [
+              -71.771909,
+              41.863481
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "sc_gid": 15,
+        "latitude": 41.88949289349921,
+        "longitude": -71.66858419005217,
+        "country": "United States",
+        "state": "RI",
+        "county": "Providence",
+        "elevation_m": 167.54545454545453,
+        "timezone": -5,
+        "sc_point_gid": 35,
+        "sc_row_ind": 2,
+        "sc_col_ind": 3,
+        "res_gids": "[43, 62, 85, 86, 61, 42, 84, 60, 83, 59, 82]",
+        "gen_gids": "[43, 62, 85, 86, 61, 42, 84, 60, 83, 59, 82]",
+        "gid_counts": "[33.0, 186.0, 648.0, 9.0, 529.0, 39.0, 1015.0, 420.0, 951.0, 121.0, 145.0]",
+        "n_gids": 4096,
+        "offshore": 0,
+        "capacity_factor_ac": 0.37259367,
+        "capacity_factor_dc": null,
+        "lcoe_site_usd_per_mwh": null,
+        "resource": 0.37259367,
+        "losses_wakes_pct": null,
+        "area_developable_sq_km": 33.1776,
+        "capacity_ac_mw": 99.5328,
+        "capacity_dc_mw": null,
+        "multiplier_cc_eos": 1,
+        "multiplier_cc_regional": 1,
+        "annual_energy_site_mwh": 324867.152184082,
+        "cost_site_cc_usd_per_ac_mw": null,
+        "cost_base_cc_usd_per_ac_mw": null,
+        "cost_site_foc_usd_per_ac_mw": null,
+        "cost_base_foc_usd_per_ac_mw": null,
+        "cost_site_voc_usd_per_ac_mwh": null,
+        "cost_base_voc_usd_per_ac_mwh": null,
+        "fixed_charge_rate": null,
+        "res_class": 1,
+        "zone_id": 1,
+        "trans_gid": 43300,
+        "trans_type": "TransLine",
+        "dist_spur_km": 13.384538642905175,
+        "dist_export_km": null,
+        "dist_reinforcement_km": null,
+        "cost_spur_usd_per_mw_ac": null,
+        "cost_poi_usd_per_mw_ac": null,
+        "cost_export_usd_per_mw_ac": null,
+        "cost_reinforcement_usd_per_mw_ac": null,
+        "cost_total_trans_usd_per_mw_ac": 13584.539,
+        "lcot_usd_per_mwh": 0.39955497,
+        "lcoe_all_in_usd_per_mwh": null,
+        "latitude_poi": null,
+        "longitude_poi": null,
+        "latitude_reinforcement_poi": null,
+        "longitude_reinforcement_poi": null,
+        "developable_ratio": 1.0
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -71.7028635,
+              41.863481
+            ],
+            [
+              -71.633747,
+              41.863481
+            ],
+            [
+              -71.633747,
+              41.915359499999994
+            ],
+            [
+              -71.7028635,
+              41.915359499999994
+            ],
+            [
+              -71.7028635,
+              41.863481
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "sc_gid": 16,
+        "latitude": 41.889573803953425,
+        "longitude": -71.59918125454206,
+        "country": "United States",
+        "state": "RI",
+        "county": "Providence",
+        "elevation_m": 165.0,
+        "timezone": -5,
+        "sc_point_gid": 36,
+        "sc_row_ind": 2,
+        "sc_col_ind": 4,
+        "res_gids": "[86, 87, 85, 84, 83]",
+        "gen_gids": "[86, 87, 85, 84, 83]",
+        "gid_counts": "[711.0, 25.0, 984.0, 762.0, 75.0]",
+        "n_gids": 2557,
+        "offshore": 0,
+        "capacity_factor_ac": 0.35754555,
+        "capacity_factor_dc": null,
+        "lcoe_site_usd_per_mwh": null,
+        "resource": 0.35754555,
+        "losses_wakes_pct": null,
+        "area_developable_sq_km": 20.7117,
+        "capacity_ac_mw": 62.1351,
+        "capacity_dc_mw": null,
+        "multiplier_cc_eos": 1,
+        "multiplier_cc_regional": 1,
+        "annual_energy_site_mwh": 194613.28821776176,
+        "cost_site_cc_usd_per_ac_mw": null,
+        "cost_base_cc_usd_per_ac_mw": null,
+        "cost_site_foc_usd_per_ac_mw": null,
+        "cost_base_foc_usd_per_ac_mw": null,
+        "cost_site_voc_usd_per_ac_mwh": null,
+        "cost_base_voc_usd_per_ac_mwh": null,
+        "fixed_charge_rate": null,
+        "res_class": 1,
+        "zone_id": 1,
+        "trans_gid": 43300,
+        "trans_type": "TransLine",
+        "dist_spur_km": 14.696756235616972,
+        "dist_export_km": null,
+        "dist_reinforcement_km": null,
+        "cost_spur_usd_per_mw_ac": null,
+        "cost_poi_usd_per_mw_ac": null,
+        "cost_export_usd_per_mw_ac": null,
+        "cost_reinforcement_usd_per_mw_ac": null,
+        "cost_total_trans_usd_per_mw_ac": 14896.756,
+        "lcot_usd_per_mwh": 0.4565911,
+        "lcoe_all_in_usd_per_mwh": null,
+        "latitude_poi": null,
+        "longitude_poi": null,
+        "latitude_reinforcement_poi": null,
+        "longitude_reinforcement_poi": null,
+        "developable_ratio": 0.624267578125
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -71.633747,
+              41.863481
+            ],
+            [
+              -71.5644975,
+              41.863481
+            ],
+            [
+              -71.5644975,
+              41.915359499999994
+            ],
+            [
+              -71.633747,
+              41.915359499999994
+            ],
+            [
+              -71.633747,
+              41.863481
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "sc_gid": 18,
+        "latitude": 41.83734677855495,
+        "longitude": -71.80714055651758,
+        "country": "United States",
+        "state": "RI",
+        "county": "Providence",
+        "elevation_m": 197.83333333333337,
+        "timezone": -5,
+        "sc_point_gid": 49,
+        "sc_row_ind": 3,
+        "sc_col_ind": 1,
+        "res_gids": "[9, 10, 22, 21, 20, 19]",
+        "gen_gids": "[9, 10, 22, 21, 20, 19]",
+        "gid_counts": "[2780.0, 268.0, 128.0, 410.0, 440.0, 70.0]",
+        "n_gids": 4096,
+        "offshore": 0,
+        "capacity_factor_ac": 0.40017426,
+        "capacity_factor_dc": null,
+        "lcoe_site_usd_per_mwh": null,
+        "resource": 0.40017426,
+        "losses_wakes_pct": null,
+        "area_developable_sq_km": 33.1776,
+        "capacity_ac_mw": 99.5328,
+        "capacity_dc_mw": null,
+        "multiplier_cc_eos": 1,
+        "multiplier_cc_regional": 1,
+        "annual_energy_site_mwh": 348914.8698925781,
+        "cost_site_cc_usd_per_ac_mw": null,
+        "cost_base_cc_usd_per_ac_mw": null,
+        "cost_site_foc_usd_per_ac_mw": null,
+        "cost_base_foc_usd_per_ac_mw": null,
+        "cost_site_voc_usd_per_ac_mwh": null,
+        "cost_base_voc_usd_per_ac_mwh": null,
+        "fixed_charge_rate": null,
+        "res_class": 1,
+        "zone_id": 1,
+        "trans_gid": 43300,
+        "trans_type": "TransLine",
+        "dist_spur_km": 22.14754873661865,
+        "dist_export_km": null,
+        "dist_reinforcement_km": null,
+        "cost_spur_usd_per_mw_ac": null,
+        "cost_poi_usd_per_mw_ac": null,
+        "cost_export_usd_per_mw_ac": null,
+        "cost_reinforcement_usd_per_mw_ac": null,
+        "cost_total_trans_usd_per_mw_ac": 22347.549,
+        "lcot_usd_per_mwh": 0.611995,
+        "lcoe_all_in_usd_per_mwh": null,
+        "latitude_poi": null,
+        "longitude_poi": null,
+        "latitude_reinforcement_poi": null,
+        "longitude_reinforcement_poi": null,
+        "developable_ratio": 1.0
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -71.8400195,
+              41.811622
+            ],
+            [
+              -71.771909,
+              41.811622
+            ],
+            [
+              -71.771909,
+              41.863481
+            ],
+            [
+              -71.8400195,
+              41.863481
+            ],
+            [
+              -71.8400195,
+              41.811622
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "sc_gid": 19,
+        "latitude": 41.83751127513446,
+        "longitude": -71.73779454037867,
+        "country": "United States",
+        "state": "RI",
+        "county": "Providence",
+        "elevation_m": 180.26666666666668,
+        "timezone": -5,
+        "sc_point_gid": 50,
+        "sc_row_ind": 3,
+        "sc_col_ind": 2,
+        "res_gids": "[10, 23, 39, 40, 59, 58, 22, 38, 57, 80, 21, 37, 56, 79, 36]",
+        "gen_gids": "[10, 23, 39, 40, 59, 58, 22, 38, 57, 80, 21, 37, 56, 79, 36]",
+        "gid_counts": "[8.0, 411.0, 517.0, 72.0, 104.0, 463.0, 400.0, 529.0, 529.0, 79.0, 217.0, 426.0, 266.0, 73.0, 2.0]",
+        "n_gids": 4096,
+        "offshore": 0,
+        "capacity_factor_ac": 0.38370547,
+        "capacity_factor_dc": null,
+        "lcoe_site_usd_per_mwh": null,
+        "resource": 0.38370547,
+        "losses_wakes_pct": null,
+        "area_developable_sq_km": 33.1776,
+        "capacity_ac_mw": 99.5328,
+        "capacity_dc_mw": null,
+        "multiplier_cc_eos": 1,
+        "multiplier_cc_regional": 1,
+        "annual_energy_site_mwh": 334555.6084584961,
+        "cost_site_cc_usd_per_ac_mw": null,
+        "cost_base_cc_usd_per_ac_mw": null,
+        "cost_site_foc_usd_per_ac_mw": null,
+        "cost_base_foc_usd_per_ac_mw": null,
+        "cost_site_voc_usd_per_ac_mwh": null,
+        "cost_base_voc_usd_per_ac_mwh": null,
+        "fixed_charge_rate": null,
+        "res_class": 1,
+        "zone_id": 1,
+        "trans_gid": 43300,
+        "trans_type": "TransLine",
+        "dist_spur_km": 19.882293817111975,
+        "dist_export_km": null,
+        "dist_reinforcement_km": null,
+        "cost_spur_usd_per_mw_ac": null,
+        "cost_poi_usd_per_mw_ac": null,
+        "cost_export_usd_per_mw_ac": null,
+        "cost_reinforcement_usd_per_mw_ac": null,
+        "cost_total_trans_usd_per_mw_ac": 20082.293,
+        "lcot_usd_per_mwh": 0.5735647,
+        "lcoe_all_in_usd_per_mwh": null,
+        "latitude_poi": null,
+        "longitude_poi": null,
+        "latitude_reinforcement_poi": null,
+        "longitude_reinforcement_poi": null,
+        "developable_ratio": 1.0
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -71.771909,
+              41.811622
+            ],
+            [
+              -71.7028635,
+              41.811622
+            ],
+            [
+              -71.7028635,
+              41.863481
+            ],
+            [
+              -71.771909,
+              41.863481
+            ],
+            [
+              -71.771909,
+              41.811622
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "sc_gid": 20,
+        "latitude": 41.83763390590019,
+        "longitude": -71.66844802019223,
+        "country": "United States",
+        "state": "RI",
+        "county": "Providence",
+        "elevation_m": 152.57142857142858,
+        "timezone": -5,
+        "sc_point_gid": 51,
+        "sc_row_ind": 3,
+        "sc_col_ind": 3,
+        "res_gids": "[59, 82, 83, 81, 58, 80, 79]",
+        "gen_gids": "[59, 82, 83, 81, 58, 80, 79]",
+        "gid_counts": "[119.0, 1225.0, 243.0, 1534.0, 66.0, 875.0, 34.0]",
+        "n_gids": 4096,
+        "offshore": 0,
+        "capacity_factor_ac": 0.3677565,
+        "capacity_factor_dc": null,
+        "lcoe_site_usd_per_mwh": null,
+        "resource": 0.3677565,
+        "losses_wakes_pct": null,
+        "area_developable_sq_km": 33.1776,
+        "capacity_ac_mw": 99.5328,
+        "capacity_dc_mw": null,
+        "multiplier_cc_eos": 1,
+        "multiplier_cc_regional": 1,
+        "annual_energy_site_mwh": 320649.5750097656,
+        "cost_site_cc_usd_per_ac_mw": null,
+        "cost_base_cc_usd_per_ac_mw": null,
+        "cost_site_foc_usd_per_ac_mw": null,
+        "cost_base_foc_usd_per_ac_mw": null,
+        "cost_site_voc_usd_per_ac_mwh": null,
+        "cost_base_voc_usd_per_ac_mwh": null,
+        "fixed_charge_rate": null,
+        "res_class": 1,
+        "zone_id": 1,
+        "trans_gid": 43300,
+        "trans_type": "TransLine",
+        "dist_spur_km": 19.14294047344296,
+        "dist_export_km": null,
+        "dist_reinforcement_km": null,
+        "cost_spur_usd_per_mw_ac": null,
+        "cost_poi_usd_per_mw_ac": null,
+        "cost_export_usd_per_mw_ac": null,
+        "cost_reinforcement_usd_per_mw_ac": null,
+        "cost_total_trans_usd_per_mw_ac": 19342.941,
+        "lcot_usd_per_mwh": 0.5764071,
+        "lcoe_all_in_usd_per_mwh": null,
+        "latitude_poi": null,
+        "longitude_poi": null,
+        "latitude_reinforcement_poi": null,
+        "longitude_reinforcement_poi": null,
+        "developable_ratio": 1.0
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -71.7028635,
+              41.811622
+            ],
+            [
+              -71.633747,
+              41.811622
+            ],
+            [
+              -71.633747,
+              41.863481
+            ],
+            [
+              -71.7028635,
+              41.863481
+            ],
+            [
+              -71.7028635,
+              41.811622
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "sc_gid": 21,
+        "latitude": 41.83771467011613,
+        "longitude": -71.59910114294652,
+        "country": "United States",
+        "state": "RI",
+        "county": "Providence",
+        "elevation_m": 163.25,
+        "timezone": -5,
+        "sc_point_gid": 52,
+        "sc_row_ind": 3,
+        "sc_col_ind": 4,
+        "res_gids": "[83, 84, 82, 81]",
+        "gen_gids": "[83, 84, 82, 81]",
+        "gid_counts": "[552.0, 44.0, 446.0, 219.0]",
+        "n_gids": 1261,
+        "offshore": 0,
+        "capacity_factor_ac": 0.38158807,
+        "capacity_factor_dc": null,
+        "lcoe_site_usd_per_mwh": null,
+        "resource": 0.38158807,
+        "losses_wakes_pct": null,
+        "area_developable_sq_km": 10.2141,
+        "capacity_ac_mw": 30.6423,
+        "capacity_dc_mw": null,
+        "multiplier_cc_eos": 1,
+        "multiplier_cc_regional": 1,
+        "annual_energy_site_mwh": 102428.36881345832,
+        "cost_site_cc_usd_per_ac_mw": null,
+        "cost_base_cc_usd_per_ac_mw": null,
+        "cost_site_foc_usd_per_ac_mw": null,
+        "cost_base_foc_usd_per_ac_mw": null,
+        "cost_site_voc_usd_per_ac_mwh": null,
+        "cost_base_voc_usd_per_ac_mwh": null,
+        "fixed_charge_rate": null,
+        "res_class": 1,
+        "zone_id": 1,
+        "trans_gid": 43300,
+        "trans_type": "TransLine",
+        "dist_spur_km": 20.09859703213933,
+        "dist_export_km": null,
+        "dist_reinforcement_km": null,
+        "cost_spur_usd_per_mw_ac": null,
+        "cost_poi_usd_per_mw_ac": null,
+        "cost_export_usd_per_mw_ac": null,
+        "cost_reinforcement_usd_per_mw_ac": null,
+        "cost_total_trans_usd_per_mw_ac": 20298.598,
+        "lcot_usd_per_mwh": 0.58295953,
+        "lcoe_all_in_usd_per_mwh": null,
+        "latitude_poi": null,
+        "longitude_poi": null,
+        "latitude_reinforcement_poi": null,
+        "longitude_reinforcement_poi": null,
+        "developable_ratio": 0.307861328125
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -71.633747,
+              41.811622
+            ],
+            [
+              -71.5644975,
+              41.811622
+            ],
+            [
+              -71.5644975,
+              41.863481
+            ],
+            [
+              -71.633747,
+              41.863481
+            ],
+            [
+              -71.633747,
+              41.811622
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "sc_gid": 23,
+        "latitude": 41.78548783978656,
+        "longitude": -71.8068929248695,
+        "country": "United States",
+        "state": "RI",
+        "county": "Providence",
+        "elevation_m": 171.8,
+        "timezone": -5,
+        "sc_point_gid": 65,
+        "sc_row_ind": 4,
+        "sc_col_ind": 1,
+        "res_gids": "[19, 20, 35, 34, 33]",
+        "gen_gids": "[19, 20, 35, 34, 33]",
+        "gid_counts": "[3014.0, 579.0, 98.0, 327.0, 78.0]",
+        "n_gids": 4096,
+        "offshore": 0,
+        "capacity_factor_ac": 0.39268637,
+        "capacity_factor_dc": null,
+        "lcoe_site_usd_per_mwh": null,
+        "resource": 0.39268637,
+        "losses_wakes_pct": null,
+        "area_developable_sq_km": 33.1776,
+        "capacity_ac_mw": 99.5328,
+        "capacity_dc_mw": null,
+        "multiplier_cc_eos": 1,
+        "multiplier_cc_regional": 1,
+        "annual_energy_site_mwh": 342386.1210234375,
+        "cost_site_cc_usd_per_ac_mw": null,
+        "cost_base_cc_usd_per_ac_mw": null,
+        "cost_site_foc_usd_per_ac_mw": null,
+        "cost_base_foc_usd_per_ac_mw": null,
+        "cost_site_voc_usd_per_ac_mwh": null,
+        "cost_base_voc_usd_per_ac_mwh": null,
+        "fixed_charge_rate": null,
+        "res_class": 1,
+        "zone_id": 1,
+        "trans_gid": 43300,
+        "trans_type": "TransLine",
+        "dist_spur_km": 27.279572586057668,
+        "dist_export_km": null,
+        "dist_reinforcement_km": null,
+        "cost_spur_usd_per_mw_ac": null,
+        "cost_poi_usd_per_mw_ac": null,
+        "cost_export_usd_per_mw_ac": null,
+        "cost_reinforcement_usd_per_mw_ac": null,
+        "cost_total_trans_usd_per_mw_ac": 27479.572,
+        "lcot_usd_per_mwh": 0.76688683,
+        "lcoe_all_in_usd_per_mwh": null,
+        "latitude_poi": null,
+        "longitude_poi": null,
+        "latitude_reinforcement_poi": null,
+        "longitude_reinforcement_poi": null,
+        "developable_ratio": 1.0
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -71.8400195,
+              41.759735
+            ],
+            [
+              -71.771909,
+              41.759735
+            ],
+            [
+              -71.771909,
+              41.811622
+            ],
+            [
+              -71.8400195,
+              41.811622
+            ],
+            [
+              -71.8400195,
+              41.759735
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "sc_gid": 24,
+        "latitude": 41.78565203899262,
+        "longitude": -71.7376028173905,
+        "country": "United States",
+        "state": "RI",
+        "county": "Providence",
+        "elevation_m": 177.57142857142858,
+        "timezone": -5,
+        "sc_point_gid": 66,
+        "sc_row_ind": 4,
+        "sc_col_ind": 2,
+        "res_gids": "[20, 21, 36, 37, 56, 79, 55, 78, 35, 54, 77, 34, 53, 76]",
+        "gen_gids": "[20, 21, 36, 37, 56, 79, 55, 78, 35, 54, 77, 34, 53, 76]",
+        "gid_counts": "[49.0, 7.0, 528.0, 104.0, 262.0, 184.0, 528.0, 435.0, 429.0, 525.0, 571.0, 167.0, 230.0, 77.0]",
+        "n_gids": 4096,
+        "offshore": 0,
+        "capacity_factor_ac": 0.38329405,
+        "capacity_factor_dc": null,
+        "lcoe_site_usd_per_mwh": null,
+        "resource": 0.38329405,
+        "losses_wakes_pct": null,
+        "area_developable_sq_km": 33.1776,
+        "capacity_ac_mw": 99.5328,
+        "capacity_dc_mw": null,
+        "multiplier_cc_eos": 1,
+        "multiplier_cc_regional": 1,
+        "annual_energy_site_mwh": 334196.8874208984,
+        "cost_site_cc_usd_per_ac_mw": null,
+        "cost_base_cc_usd_per_ac_mw": null,
+        "cost_site_foc_usd_per_ac_mw": null,
+        "cost_base_foc_usd_per_ac_mw": null,
+        "cost_site_voc_usd_per_ac_mwh": null,
+        "cost_base_voc_usd_per_ac_mwh": null,
+        "fixed_charge_rate": null,
+        "res_class": 1,
+        "zone_id": 1,
+        "trans_gid": 43300,
+        "trans_type": "TransLine",
+        "dist_spur_km": 25.47482625783855,
+        "dist_export_km": null,
+        "dist_reinforcement_km": null,
+        "cost_spur_usd_per_mw_ac": null,
+        "cost_poi_usd_per_mw_ac": null,
+        "cost_export_usd_per_mw_ac": null,
+        "cost_reinforcement_usd_per_mw_ac": null,
+        "cost_total_trans_usd_per_mw_ac": 25674.826,
+        "lcot_usd_per_mwh": 0.73407865,
+        "lcoe_all_in_usd_per_mwh": null,
+        "latitude_poi": null,
+        "longitude_poi": null,
+        "latitude_reinforcement_poi": null,
+        "longitude_reinforcement_poi": null,
+        "developable_ratio": 1.0
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -71.771909,
+              41.759735
+            ],
+            [
+              -71.7028635,
+              41.759735
+            ],
+            [
+              -71.7028635,
+              41.811622
+            ],
+            [
+              -71.771909,
+              41.811622
+            ],
+            [
+              -71.771909,
+              41.759735
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "sc_gid": 25,
+        "latitude": 41.785774448068054,
+        "longitude": -71.66831220739236,
+        "country": "United States",
+        "state": "RI",
+        "county": "Providence",
+        "elevation_m": 165.2,
+        "timezone": -5,
+        "sc_point_gid": 67,
+        "sc_row_ind": 4,
+        "sc_col_ind": 3,
+        "res_gids": "[79, 80, 81, 78, 77]",
+        "gen_gids": "[79, 80, 81, 78, 77]",
+        "gid_counts": "[1530.0, 773.0, 15.0, 1289.0, 310.0]",
+        "n_gids": 3917,
+        "offshore": 0,
+        "capacity_factor_ac": 0.35373428,
+        "capacity_factor_dc": null,
+        "lcoe_site_usd_per_mwh": null,
+        "resource": 0.35373428,
+        "losses_wakes_pct": null,
+        "area_developable_sq_km": 31.7277,
+        "capacity_ac_mw": 95.1831,
+        "capacity_dc_mw": null,
+        "multiplier_cc_eos": 1,
+        "multiplier_cc_regional": 1,
+        "annual_energy_site_mwh": 294945.04590512713,
+        "cost_site_cc_usd_per_ac_mw": null,
+        "cost_base_cc_usd_per_ac_mw": null,
+        "cost_site_foc_usd_per_ac_mw": null,
+        "cost_base_foc_usd_per_ac_mw": null,
+        "cost_site_voc_usd_per_ac_mwh": null,
+        "cost_base_voc_usd_per_ac_mwh": null,
+        "fixed_charge_rate": null,
+        "res_class": 1,
+        "zone_id": 1,
+        "trans_gid": 43300,
+        "trans_type": "TransLine",
+        "dist_spur_km": 24.902074921718263,
+        "dist_export_km": null,
+        "dist_reinforcement_km": null,
+        "cost_spur_usd_per_mw_ac": null,
+        "cost_poi_usd_per_mw_ac": null,
+        "cost_export_usd_per_mw_ac": null,
+        "cost_reinforcement_usd_per_mw_ac": null,
+        "cost_total_trans_usd_per_mw_ac": 25102.074,
+        "lcot_usd_per_mwh": 0.77767754,
+        "lcoe_all_in_usd_per_mwh": null,
+        "latitude_poi": null,
+        "longitude_poi": null,
+        "latitude_reinforcement_poi": null,
+        "longitude_reinforcement_poi": null,
+        "developable_ratio": 0.956298828125
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -71.7028635,
+              41.759735
+            ],
+            [
+              -71.633747,
+              41.759735
+            ],
+            [
+              -71.633747,
+              41.811622
+            ],
+            [
+              -71.7028635,
+              41.811622
+            ],
+            [
+              -71.7028635,
+              41.759735
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "sc_gid": 26,
+        "latitude": 41.785855066279034,
+        "longitude": -71.59902124141767,
+        "country": "United States",
+        "state": "RI",
+        "county": "Providence",
+        "elevation_m": 139.5,
+        "timezone": -5,
+        "sc_point_gid": 68,
+        "sc_row_ind": 4,
+        "sc_col_ind": 4,
+        "res_gids": "[81, 80]",
+        "gen_gids": "[81, 80]",
+        "gid_counts": "[52.0, 94.0]",
+        "n_gids": 146,
+        "offshore": 0,
+        "capacity_factor_ac": 0.3477782,
+        "capacity_factor_dc": null,
+        "lcoe_site_usd_per_mwh": null,
+        "resource": 0.3477782,
+        "losses_wakes_pct": null,
+        "area_developable_sq_km": 1.1826,
+        "capacity_ac_mw": 3.5477999999999996,
+        "capacity_dc_mw": null,
+        "multiplier_cc_eos": 1,
+        "multiplier_cc_regional": 1,
+        "annual_energy_site_mwh": 10808.504116415976,
+        "cost_site_cc_usd_per_ac_mw": null,
+        "cost_base_cc_usd_per_ac_mw": null,
+        "cost_site_foc_usd_per_ac_mw": null,
+        "cost_base_foc_usd_per_ac_mw": null,
+        "cost_site_voc_usd_per_ac_mwh": null,
+        "cost_base_voc_usd_per_ac_mwh": null,
+        "fixed_charge_rate": null,
+        "res_class": 1,
+        "zone_id": 1,
+        "trans_gid": 43412,
+        "trans_type": "TransLine",
+        "dist_spur_km": 14.24808969974192,
+        "dist_export_km": null,
+        "dist_reinforcement_km": null,
+        "cost_spur_usd_per_mw_ac": null,
+        "cost_poi_usd_per_mw_ac": null,
+        "cost_export_usd_per_mw_ac": null,
+        "cost_reinforcement_usd_per_mw_ac": null,
+        "cost_total_trans_usd_per_mw_ac": 14448.09,
+        "lcot_usd_per_mwh": 0.45527646,
+        "lcoe_all_in_usd_per_mwh": null,
+        "latitude_poi": null,
+        "longitude_poi": null,
+        "latitude_reinforcement_poi": null,
+        "longitude_reinforcement_poi": null,
+        "developable_ratio": 0.03564453125000001
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -71.633747,
+              41.759735
+            ],
+            [
+              -71.5644975,
+              41.759735
+            ],
+            [
+              -71.5644975,
+              41.811622
+            ],
+            [
+              -71.633747,
+              41.811622
+            ],
+            [
+              -71.633747,
+              41.759735
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "sc_gid": 28,
+        "latitude": 41.73362843004905,
+        "longitude": -71.80664594227787,
+        "country": "United States",
+        "state": "RI",
+        "county": "Providence",
+        "elevation_m": 160.33333333333334,
+        "timezone": -5,
+        "sc_point_gid": 81,
+        "sc_row_ind": 5,
+        "sc_col_ind": 1,
+        "res_gids": "[19, 33, 34, 32, 51, 50]",
+        "gen_gids": "[19, 33, 34, 32, 51, 50]",
+        "gid_counts": "[52.0, 914.0, 53.0, 2857.0, 71.0, 149.0]",
+        "n_gids": 4096,
+        "offshore": 0,
+        "capacity_factor_ac": 0.36671698,
+        "capacity_factor_dc": null,
+        "lcoe_site_usd_per_mwh": null,
+        "resource": 0.36671698,
+        "losses_wakes_pct": null,
+        "area_developable_sq_km": 33.1776,
+        "capacity_ac_mw": 99.5328,
+        "capacity_dc_mw": null,
+        "multiplier_cc_eos": 1,
+        "multiplier_cc_regional": 1,
+        "annual_energy_site_mwh": 319743.2229785156,
+        "cost_site_cc_usd_per_ac_mw": null,
+        "cost_base_cc_usd_per_ac_mw": null,
+        "cost_site_foc_usd_per_ac_mw": null,
+        "cost_base_foc_usd_per_ac_mw": null,
+        "cost_site_voc_usd_per_ac_mwh": null,
+        "cost_base_voc_usd_per_ac_mwh": null,
+        "fixed_charge_rate": null,
+        "res_class": 1,
+        "zone_id": 1,
+        "trans_gid": 43300,
+        "trans_type": "TransLine",
+        "dist_spur_km": 32.62194224852045,
+        "dist_export_km": null,
+        "dist_reinforcement_km": null,
+        "cost_spur_usd_per_mw_ac": null,
+        "cost_poi_usd_per_mw_ac": null,
+        "cost_export_usd_per_mw_ac": null,
+        "cost_reinforcement_usd_per_mw_ac": null,
+        "cost_total_trans_usd_per_mw_ac": 32821.94,
+        "lcot_usd_per_mwh": 0.98084503,
+        "lcoe_all_in_usd_per_mwh": null,
+        "latitude_poi": null,
+        "longitude_poi": null,
+        "latitude_reinforcement_poi": null,
+        "longitude_reinforcement_poi": null,
+        "developable_ratio": 1.0
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -71.8400195,
+              41.707848
+            ],
+            [
+              -71.771909,
+              41.707848
+            ],
+            [
+              -71.771909,
+              41.759735
+            ],
+            [
+              -71.8400195,
+              41.759735
+            ],
+            [
+              -71.8400195,
+              41.707848
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "sc_gid": 29,
+        "latitude": 41.73379233235522,
+        "longitude": -71.73741159692256,
+        "country": "United States",
+        "state": "RI",
+        "county": "Providence",
+        "elevation_m": 157.54545454545453,
+        "timezone": -5,
+        "sc_point_gid": 82,
+        "sc_row_ind": 5,
+        "sc_col_ind": 2,
+        "res_gids": "[34, 53, 76, 77, 33, 52, 75, 51, 74, 50, 73]",
+        "gen_gids": "[34, 53, 76, 77, 33, 52, 75, 51, 74, 50, 73]",
+        "gid_counts": "[86.0, 297.0, 718.0, 45.0, 75.0, 526.0, 974.0, 457.0, 782.0, 85.0, 51.0]",
+        "n_gids": 4096,
+        "offshore": 0,
+        "capacity_factor_ac": 0.37765312,
+        "capacity_factor_dc": null,
+        "lcoe_site_usd_per_mwh": null,
+        "resource": 0.37765312,
+        "losses_wakes_pct": null,
+        "area_developable_sq_km": 33.1776,
+        "capacity_ac_mw": 99.5328,
+        "capacity_dc_mw": null,
+        "multiplier_cc_eos": 1,
+        "multiplier_cc_regional": 1,
+        "annual_energy_site_mwh": 329278.52446875,
+        "cost_site_cc_usd_per_ac_mw": null,
+        "cost_base_cc_usd_per_ac_mw": null,
+        "cost_site_foc_usd_per_ac_mw": null,
+        "cost_base_foc_usd_per_ac_mw": null,
+        "cost_site_voc_usd_per_ac_mwh": null,
+        "cost_base_voc_usd_per_ac_mwh": null,
+        "fixed_charge_rate": null,
+        "res_class": 1,
+        "zone_id": 1,
+        "trans_gid": 43300,
+        "trans_type": "TransLine",
+        "dist_spur_km": 31.12848869532344,
+        "dist_export_km": null,
+        "dist_reinforcement_km": null,
+        "cost_spur_usd_per_mw_ac": null,
+        "cost_poi_usd_per_mw_ac": null,
+        "cost_export_usd_per_mw_ac": null,
+        "cost_reinforcement_usd_per_mw_ac": null,
+        "cost_total_trans_usd_per_mw_ac": 31328.488,
+        "lcot_usd_per_mwh": 0.9091038,
+        "lcoe_all_in_usd_per_mwh": null,
+        "latitude_poi": null,
+        "longitude_poi": null,
+        "latitude_reinforcement_poi": null,
+        "longitude_reinforcement_poi": null,
+        "developable_ratio": 1.0
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -71.771909,
+              41.707848
+            ],
+            [
+              -71.7028635,
+              41.707848
+            ],
+            [
+              -71.7028635,
+              41.759735
+            ],
+            [
+              -71.771909,
+              41.759735
+            ],
+            [
+              -71.771909,
+              41.707848
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "sc_gid": 30,
+        "latitude": 41.73391452009341,
+        "longitude": -71.66817675056983,
+        "country": "United States",
+        "state": "RI",
+        "county": "Providence",
+        "elevation_m": 172.8,
+        "timezone": -5,
+        "sc_point_gid": 83,
+        "sc_row_ind": 5,
+        "sc_col_ind": 3,
+        "res_gids": "[77, 78, 76, 75, 74]",
+        "gen_gids": "[77, 78, 76, 75, 74]",
+        "gid_counts": "[898.0, 96.0, 1029.0, 717.0, 26.0]",
+        "n_gids": 2766,
+        "offshore": 0,
+        "capacity_factor_ac": 0.3908017,
+        "capacity_factor_dc": null,
+        "lcoe_site_usd_per_mwh": null,
+        "resource": 0.3908017,
+        "losses_wakes_pct": null,
+        "area_developable_sq_km": 22.4046,
+        "capacity_ac_mw": 67.21379999999999,
+        "capacity_dc_mw": null,
+        "multiplier_cc_eos": 1,
+        "multiplier_cc_regional": 1,
+        "annual_energy_site_mwh": 230101.26038272833,
+        "cost_site_cc_usd_per_ac_mw": null,
+        "cost_base_cc_usd_per_ac_mw": null,
+        "cost_site_foc_usd_per_ac_mw": null,
+        "cost_base_foc_usd_per_ac_mw": null,
+        "cost_site_voc_usd_per_ac_mwh": null,
+        "cost_base_voc_usd_per_ac_mwh": null,
+        "fixed_charge_rate": null,
+        "res_class": 1,
+        "zone_id": 1,
+        "trans_gid": 43412,
+        "trans_type": "TransLine",
+        "dist_spur_km": 16.35421026480815,
+        "dist_export_km": null,
+        "dist_reinforcement_km": null,
+        "cost_spur_usd_per_mw_ac": null,
+        "cost_poi_usd_per_mw_ac": null,
+        "cost_export_usd_per_mw_ac": null,
+        "cost_reinforcement_usd_per_mw_ac": null,
+        "cost_total_trans_usd_per_mw_ac": 16554.21,
+        "lcot_usd_per_mwh": 0.46421498,
+        "lcoe_all_in_usd_per_mwh": null,
+        "latitude_poi": null,
+        "longitude_poi": null,
+        "latitude_reinforcement_poi": null,
+        "longitude_reinforcement_poi": null,
+        "developable_ratio": 0.67529296875
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -71.7028635,
+              41.707848
+            ],
+            [
+              -71.633747,
+              41.707848
+            ],
+            [
+              -71.633747,
+              41.759735
+            ],
+            [
+              -71.7028635,
+              41.759735
+            ],
+            [
+              -71.7028635,
+              41.707848
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "sc_gid": 32,
+        "latitude": 41.68176856097755,
+        "longitude": -71.80639960683192,
+        "country": "United States",
+        "state": "RI",
+        "county": "Kent",
+        "elevation_m": 128.66666666666666,
+        "timezone": -5,
+        "sc_point_gid": 97,
+        "sc_row_ind": 6,
+        "sc_col_ind": 1,
+        "res_gids": "[32, 50, 49, 48, 71, 70]",
+        "gen_gids": "[32, 50, 49, 48, 71, 70]",
+        "gid_counts": "[365.0, 205.0, 965.0, 2492.0, 45.0, 24.0]",
+        "n_gids": 4096,
+        "offshore": 0,
+        "capacity_factor_ac": 0.35398117,
+        "capacity_factor_dc": null,
+        "lcoe_site_usd_per_mwh": null,
+        "resource": 0.35398117,
+        "losses_wakes_pct": null,
+        "area_developable_sq_km": 33.1776,
+        "capacity_ac_mw": 99.5328,
+        "capacity_dc_mw": null,
+        "multiplier_cc_eos": 1,
+        "multiplier_cc_regional": 1,
+        "annual_energy_site_mwh": 308638.7735493164,
+        "cost_site_cc_usd_per_ac_mw": null,
+        "cost_base_cc_usd_per_ac_mw": null,
+        "cost_site_foc_usd_per_ac_mw": null,
+        "cost_base_foc_usd_per_ac_mw": null,
+        "cost_site_voc_usd_per_ac_mwh": null,
+        "cost_base_voc_usd_per_ac_mwh": null,
+        "fixed_charge_rate": null,
+        "res_class": 1,
+        "zone_id": 1,
+        "trans_gid": 43300,
+        "trans_type": "TransLine",
+        "dist_spur_km": 38.08624452219416,
+        "dist_export_km": null,
+        "dist_reinforcement_km": null,
+        "cost_spur_usd_per_mw_ac": null,
+        "cost_poi_usd_per_mw_ac": null,
+        "cost_export_usd_per_mw_ac": null,
+        "cost_reinforcement_usd_per_mw_ac": null,
+        "cost_total_trans_usd_per_mw_ac": 38286.246,
+        "lcot_usd_per_mwh": 1.185304,
+        "lcoe_all_in_usd_per_mwh": null,
+        "latitude_poi": null,
+        "longitude_poi": null,
+        "latitude_reinforcement_poi": null,
+        "longitude_reinforcement_poi": null,
+        "developable_ratio": 1.0
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -71.8400195,
+              41.655988
+            ],
+            [
+              -71.771909,
+              41.655988
+            ],
+            [
+              -71.771909,
+              41.707848
+            ],
+            [
+              -71.8400195,
+              41.707848
+            ],
+            [
+              -71.8400195,
+              41.655988
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "sc_gid": 33,
+        "latitude": 41.68193216685586,
+        "longitude": -71.7372208774955,
+        "country": "United States",
+        "state": "RI",
+        "county": "Kent",
+        "elevation_m": 132.71428571428572,
+        "timezone": -5,
+        "sc_point_gid": 98,
+        "sc_row_ind": 6,
+        "sc_col_ind": 2,
+        "res_gids": "[50, 73, 74, 49, 72, 71, 70]",
+        "gen_gids": "[50, 73, 74, 49, 72, 71, 70]",
+        "gid_counts": "[196.0, 1008.0, 369.0, 102.0, 634.0, 439.0, 4.0]",
+        "n_gids": 2752,
+        "offshore": 0,
+        "capacity_factor_ac": 0.365662,
+        "capacity_factor_dc": null,
+        "lcoe_site_usd_per_mwh": null,
+        "resource": 0.365662,
+        "losses_wakes_pct": null,
+        "area_developable_sq_km": 22.2912,
+        "capacity_ac_mw": 66.8736,
+        "capacity_dc_mw": null,
+        "multiplier_cc_eos": 1,
+        "multiplier_cc_regional": 1,
+        "annual_energy_site_mwh": 214209.4616646652,
+        "cost_site_cc_usd_per_ac_mw": null,
+        "cost_base_cc_usd_per_ac_mw": null,
+        "cost_site_foc_usd_per_ac_mw": null,
+        "cost_base_foc_usd_per_ac_mw": null,
+        "cost_site_voc_usd_per_ac_mwh": null,
+        "cost_base_voc_usd_per_ac_mwh": null,
+        "fixed_charge_rate": null,
+        "res_class": 1,
+        "zone_id": 1,
+        "trans_gid": 43412,
+        "trans_type": "TransLine",
+        "dist_spur_km": 21.449619057360433,
+        "dist_export_km": null,
+        "dist_reinforcement_km": null,
+        "cost_spur_usd_per_mw_ac": null,
+        "cost_poi_usd_per_mw_ac": null,
+        "cost_export_usd_per_mw_ac": null,
+        "cost_reinforcement_usd_per_mw_ac": null,
+        "cost_total_trans_usd_per_mw_ac": 21649.62,
+        "lcot_usd_per_mwh": 0.6488399,
+        "lcoe_all_in_usd_per_mwh": null,
+        "latitude_poi": null,
+        "longitude_poi": null,
+        "latitude_reinforcement_poi": null,
+        "longitude_reinforcement_poi": null,
+        "developable_ratio": 0.671875
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -71.771909,
+              41.655988
+            ],
+            [
+              -71.7028635,
+              41.655988
+            ],
+            [
+              -71.7028635,
+              41.707848
+            ],
+            [
+              -71.771909,
+              41.707848
+            ],
+            [
+              -71.771909,
+              41.655988
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "sc_gid": 34,
+        "latitude": 41.68205413360868,
+        "longitude": -71.66804164867668,
+        "country": "United States",
+        "state": "RI",
+        "county": "Kent",
+        "elevation_m": 154.0,
+        "timezone": -5,
+        "sc_point_gid": 99,
+        "sc_row_ind": 6,
+        "sc_col_ind": 3,
+        "res_gids": "[74, 75, 73]",
+        "gen_gids": "[74, 75, 73]",
+        "gid_counts": "[538.0, 134.0, 10.0]",
+        "n_gids": 682,
+        "offshore": 0,
+        "capacity_factor_ac": 0.37765798,
+        "capacity_factor_dc": null,
+        "lcoe_site_usd_per_mwh": null,
+        "resource": 0.37765798,
+        "losses_wakes_pct": null,
+        "area_developable_sq_km": 5.5242,
+        "capacity_ac_mw": 16.572599999999998,
+        "capacity_dc_mw": null,
+        "multiplier_cc_eos": 1,
+        "multiplier_cc_regional": 1,
+        "annual_energy_site_mwh": 54826.865801025146,
+        "cost_site_cc_usd_per_ac_mw": null,
+        "cost_base_cc_usd_per_ac_mw": null,
+        "cost_site_foc_usd_per_ac_mw": null,
+        "cost_base_foc_usd_per_ac_mw": null,
+        "cost_site_voc_usd_per_ac_mwh": null,
+        "cost_base_voc_usd_per_ac_mwh": null,
+        "fixed_charge_rate": null,
+        "res_class": 1,
+        "zone_id": 1,
+        "trans_gid": 43412,
+        "trans_type": "TransLine",
+        "dist_spur_km": 15.690178817735925,
+        "dist_export_km": null,
+        "dist_reinforcement_km": null,
+        "cost_spur_usd_per_mw_ac": null,
+        "cost_poi_usd_per_mw_ac": null,
+        "cost_export_usd_per_mw_ac": null,
+        "cost_reinforcement_usd_per_mw_ac": null,
+        "cost_total_trans_usd_per_mw_ac": 15890.179,
+        "lcot_usd_per_mwh": 0.46110225,
+        "lcoe_all_in_usd_per_mwh": null,
+        "latitude_poi": null,
+        "longitude_poi": null,
+        "latitude_reinforcement_poi": null,
+        "longitude_reinforcement_poi": null,
+        "developable_ratio": 0.16650390625000003
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -71.7028635,
+              41.655988
+            ],
+            [
+              -71.633747,
+              41.655988
+            ],
+            [
+              -71.633747,
+              41.707848
+            ],
+            [
+              -71.7028635,
+              41.707848
+            ],
+            [
+              -71.7028635,
+              41.655988
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "sc_gid": 36,
+        "latitude": 41.629908233218366,
+        "longitude": -71.80615391657724,
+        "country": "United States",
+        "state": "RI",
+        "county": "Kent",
+        "elevation_m": 128.0,
+        "timezone": -5,
+        "sc_point_gid": 113,
+        "sc_row_ind": 7,
+        "sc_col_ind": 1,
+        "res_gids": "[48, 70, 69, 68, 98]",
+        "gen_gids": "[48, 70, 69, 68, 98]",
+        "gid_counts": "[812.0, 297.0, 936.0, 2040.0, 11.0]",
+        "n_gids": 4096,
+        "offshore": 0,
+        "capacity_factor_ac": 0.3652616,
+        "capacity_factor_dc": null,
+        "lcoe_site_usd_per_mwh": null,
+        "resource": 0.3652616,
+        "losses_wakes_pct": null,
+        "area_developable_sq_km": 33.1776,
+        "capacity_ac_mw": 99.5328,
+        "capacity_dc_mw": null,
+        "multiplier_cc_eos": 1,
+        "multiplier_cc_regional": 1,
+        "annual_energy_site_mwh": 318474.278165039,
+        "cost_site_cc_usd_per_ac_mw": null,
+        "cost_base_cc_usd_per_ac_mw": null,
+        "cost_site_foc_usd_per_ac_mw": null,
+        "cost_base_foc_usd_per_ac_mw": null,
+        "cost_site_voc_usd_per_ac_mwh": null,
+        "cost_base_voc_usd_per_ac_mwh": null,
+        "fixed_charge_rate": null,
+        "res_class": 1,
+        "zone_id": 1,
+        "trans_gid": 43412,
+        "trans_type": "TransLine",
+        "dist_spur_km": 27.858017406782672,
+        "dist_export_km": null,
+        "dist_reinforcement_km": null,
+        "cost_spur_usd_per_mw_ac": null,
+        "cost_poi_usd_per_mw_ac": null,
+        "cost_export_usd_per_mw_ac": null,
+        "cost_reinforcement_usd_per_mw_ac": null,
+        "cost_total_trans_usd_per_mw_ac": 28058.018,
+        "lcot_usd_per_mwh": 0.8418217,
+        "lcoe_all_in_usd_per_mwh": null,
+        "latitude_poi": null,
+        "longitude_poi": null,
+        "latitude_reinforcement_poi": null,
+        "longitude_reinforcement_poi": null,
+        "developable_ratio": 1.0
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -71.8400195,
+              41.604127500000004
+            ],
+            [
+              -71.771909,
+              41.604127500000004
+            ],
+            [
+              -71.771909,
+              41.655988
+            ],
+            [
+              -71.8400195,
+              41.655988
+            ],
+            [
+              -71.8400195,
+              41.604127500000004
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "sc_gid": 37,
+        "latitude": 41.63007154313918,
+        "longitude": -71.73703065759608,
+        "country": "United States",
+        "state": "RI",
+        "county": "Kent",
+        "elevation_m": 131.0,
+        "timezone": -5,
+        "sc_point_gid": 114,
+        "sc_row_ind": 7,
+        "sc_col_ind": 2,
+        "res_gids": "[70, 71, 69, 99, 98, 68]",
+        "gen_gids": "[70, 71, 69, 99, 98, 68]",
+        "gid_counts": "[308.0, 45.0, 133.0, 1257.0, 350.0, 1.0]",
+        "n_gids": 2094,
+        "offshore": 0,
+        "capacity_factor_ac": 0.35506377,
+        "capacity_factor_dc": null,
+        "lcoe_site_usd_per_mwh": null,
+        "resource": 0.35506377,
+        "losses_wakes_pct": null,
+        "area_developable_sq_km": 16.961399999999998,
+        "capacity_ac_mw": 50.88419999999999,
+        "capacity_dc_mw": null,
+        "multiplier_cc_eos": 1,
+        "multiplier_cc_regional": 1,
+        "annual_energy_site_mwh": 158268.10868087696,
+        "cost_site_cc_usd_per_ac_mw": null,
+        "cost_base_cc_usd_per_ac_mw": null,
+        "cost_site_foc_usd_per_ac_mw": null,
+        "cost_base_foc_usd_per_ac_mw": null,
+        "cost_site_voc_usd_per_ac_mwh": null,
+        "cost_base_voc_usd_per_ac_mwh": null,
+        "fixed_charge_rate": null,
+        "res_class": 1,
+        "zone_id": 1,
+        "trans_gid": 43412,
+        "trans_type": "TransLine",
+        "dist_spur_km": 22.260294612250593,
+        "dist_export_km": null,
+        "dist_reinforcement_km": null,
+        "cost_spur_usd_per_mw_ac": null,
+        "cost_poi_usd_per_mw_ac": null,
+        "cost_export_usd_per_mw_ac": null,
+        "cost_reinforcement_usd_per_mw_ac": null,
+        "cost_total_trans_usd_per_mw_ac": 22460.295,
+        "lcot_usd_per_mwh": 0.6932282,
+        "lcoe_all_in_usd_per_mwh": null,
+        "latitude_poi": null,
+        "longitude_poi": null,
+        "latitude_reinforcement_poi": null,
+        "longitude_reinforcement_poi": null,
+        "developable_ratio": 0.51123046875
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -71.771909,
+              41.604127500000004
+            ],
+            [
+              -71.7028635,
+              41.604127500000004
+            ],
+            [
+              -71.7028635,
+              41.655988
+            ],
+            [
+              -71.771909,
+              41.655988
+            ],
+            [
+              -71.771909,
+              41.604127500000004
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "sc_gid": 38,
+        "latitude": 41.630193289257306,
+        "longitude": -71.66790690064093,
+        "country": "United States",
+        "state": "RI",
+        "county": "Kent",
+        "elevation_m": 146.0,
+        "timezone": -5,
+        "sc_point_gid": 115,
+        "sc_row_ind": 7,
+        "sc_col_ind": 3,
+        "res_gids": "[99]",
+        "gen_gids": "[99]",
+        "gid_counts": "[91.0]",
+        "n_gids": 91,
+        "offshore": 0,
+        "capacity_factor_ac": 0.35102394,
+        "capacity_factor_dc": null,
+        "lcoe_site_usd_per_mwh": null,
+        "resource": 0.35102394,
+        "losses_wakes_pct": null,
+        "area_developable_sq_km": 0.7371,
+        "capacity_ac_mw": 2.2113,
+        "capacity_dc_mw": null,
+        "multiplier_cc_eos": 1,
+        "multiplier_cc_regional": 1,
+        "annual_energy_site_mwh": 6799.680572691321,
+        "cost_site_cc_usd_per_ac_mw": null,
+        "cost_base_cc_usd_per_ac_mw": null,
+        "cost_site_foc_usd_per_ac_mw": null,
+        "cost_base_foc_usd_per_ac_mw": null,
+        "cost_site_voc_usd_per_ac_mwh": null,
+        "cost_base_voc_usd_per_ac_mwh": null,
+        "fixed_charge_rate": null,
+        "res_class": 1,
+        "zone_id": 1,
+        "trans_gid": 43412,
+        "trans_type": "TransLine",
+        "dist_spur_km": 16.772810401435628,
+        "dist_export_km": null,
+        "dist_reinforcement_km": null,
+        "cost_spur_usd_per_mw_ac": null,
+        "cost_poi_usd_per_mw_ac": null,
+        "cost_export_usd_per_mw_ac": null,
+        "cost_reinforcement_usd_per_mw_ac": null,
+        "cost_total_trans_usd_per_mw_ac": 16972.81,
+        "lcot_usd_per_mwh": 0.5298881,
+        "lcoe_all_in_usd_per_mwh": null,
+        "latitude_poi": null,
+        "longitude_poi": null,
+        "latitude_reinforcement_poi": null,
+        "longitude_reinforcement_poi": null,
+        "developable_ratio": 0.022216796875
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -71.7028635,
+              41.604127500000004
+            ],
+            [
+              -71.633747,
+              41.604127500000004
+            ],
+            [
+              -71.633747,
+              41.655988
+            ],
+            [
+              -71.7028635,
+              41.655988
+            ],
+            [
+              -71.7028635,
+              41.604127500000004
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "sc_gid": 40,
+        "latitude": 41.57804741114992,
+        "longitude": -71.8059088693964,
+        "country": "United States",
+        "state": "RI",
+        "county": "Washington",
+        "elevation_m": 133.83333333333334,
+        "timezone": -5,
+        "sc_point_gid": 129,
+        "sc_row_ind": 8,
+        "sc_col_ind": 1,
+        "res_gids": "[68, 98, 97, 96, 95, 94]",
+        "gen_gids": "[68, 98, 97, 96, 95, 94]",
+        "gid_counts": "[1351.0, 11.0, 290.0, 909.0, 1277.0, 258.0]",
+        "n_gids": 4096,
+        "offshore": 0,
+        "capacity_factor_ac": 0.3837848,
+        "capacity_factor_dc": null,
+        "lcoe_site_usd_per_mwh": null,
+        "resource": 0.3837848,
+        "losses_wakes_pct": null,
+        "area_developable_sq_km": 33.1776,
+        "capacity_ac_mw": 99.5328,
+        "capacity_dc_mw": null,
+        "multiplier_cc_eos": 1,
+        "multiplier_cc_regional": 1,
+        "annual_energy_site_mwh": 334624.78016455076,
+        "cost_site_cc_usd_per_ac_mw": null,
+        "cost_base_cc_usd_per_ac_mw": null,
+        "cost_site_foc_usd_per_ac_mw": null,
+        "cost_base_foc_usd_per_ac_mw": null,
+        "cost_site_voc_usd_per_ac_mwh": null,
+        "cost_base_voc_usd_per_ac_mwh": null,
+        "fixed_charge_rate": null,
+        "res_class": 1,
+        "zone_id": 1,
+        "trans_gid": 43412,
+        "trans_type": "TransLine",
+        "dist_spur_km": 29.611378164872885,
+        "dist_export_km": null,
+        "dist_reinforcement_km": null,
+        "cost_spur_usd_per_mw_ac": null,
+        "cost_poi_usd_per_mw_ac": null,
+        "cost_export_usd_per_mw_ac": null,
+        "cost_reinforcement_usd_per_mw_ac": null,
+        "cost_total_trans_usd_per_mw_ac": 29811.379,
+        "lcot_usd_per_mwh": 0.8512584,
+        "lcoe_all_in_usd_per_mwh": null,
+        "latitude_poi": null,
+        "longitude_poi": null,
+        "latitude_reinforcement_poi": null,
+        "longitude_reinforcement_poi": null,
+        "developable_ratio": 1.0
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -71.8400195,
+              41.552232000000004
+            ],
+            [
+              -71.771909,
+              41.552232000000004
+            ],
+            [
+              -71.771909,
+              41.604127500000004
+            ],
+            [
+              -71.8400195,
+              41.604127500000004
+            ],
+            [
+              -71.8400195,
+              41.552232000000004
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "sc_gid": 41,
+        "latitude": 41.57821042558179,
+        "longitude": -71.73684093558495,
+        "country": "United States",
+        "state": "RI",
+        "county": "Washington",
+        "elevation_m": 133.6,
+        "timezone": -5,
+        "sc_point_gid": 130,
+        "sc_row_ind": 8,
+        "sc_col_ind": 2,
+        "res_gids": "[98, 99, 97, 96, 95]",
+        "gen_gids": "[98, 99, 97, 96, 95]",
+        "gid_counts": "[1285.0, 219.0, 1620.0, 909.0, 44.0]",
+        "n_gids": 4077,
+        "offshore": 0,
+        "capacity_factor_ac": 0.37291363,
+        "capacity_factor_dc": null,
+        "lcoe_site_usd_per_mwh": null,
+        "resource": 0.37291363,
+        "losses_wakes_pct": null,
+        "area_developable_sq_km": 33.0237,
+        "capacity_ac_mw": 99.0711,
+        "capacity_dc_mw": null,
+        "multiplier_cc_eos": 1,
+        "multiplier_cc_regional": 1,
+        "annual_energy_site_mwh": 323637.8794878298,
+        "cost_site_cc_usd_per_ac_mw": null,
+        "cost_base_cc_usd_per_ac_mw": null,
+        "cost_site_foc_usd_per_ac_mw": null,
+        "cost_base_foc_usd_per_ac_mw": null,
+        "cost_site_voc_usd_per_ac_mwh": null,
+        "cost_base_voc_usd_per_ac_mwh": null,
+        "fixed_charge_rate": null,
+        "res_class": 1,
+        "zone_id": 1,
+        "trans_gid": 43412,
+        "trans_type": "TransLine",
+        "dist_spur_km": 24.418953687877284,
+        "dist_export_km": null,
+        "dist_reinforcement_km": null,
+        "cost_spur_usd_per_mw_ac": null,
+        "cost_poi_usd_per_mw_ac": null,
+        "cost_export_usd_per_mw_ac": null,
+        "cost_reinforcement_usd_per_mw_ac": null,
+        "cost_total_trans_usd_per_mw_ac": 24618.953,
+        "lcot_usd_per_mwh": 0.7234832,
+        "lcoe_all_in_usd_per_mwh": null,
+        "latitude_poi": null,
+        "longitude_poi": null,
+        "latitude_reinforcement_poi": null,
+        "longitude_reinforcement_poi": null,
+        "developable_ratio": 0.995361328125
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -71.771909,
+              41.552232000000004
+            ],
+            [
+              -71.7028635,
+              41.552232000000004
+            ],
+            [
+              -71.7028635,
+              41.604127500000004
+            ],
+            [
+              -71.771909,
+              41.604127500000004
+            ],
+            [
+              -71.771909,
+              41.552232000000004
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "sc_gid": 42,
+        "latitude": 41.57833195141455,
+        "longitude": -71.66777250530131,
+        "country": "United States",
+        "state": "RI",
+        "county": "Kent",
+        "elevation_m": 132.0,
+        "timezone": -5,
+        "sc_point_gid": 131,
+        "sc_row_ind": 8,
+        "sc_col_ind": 3,
+        "res_gids": "[99, 98, 97]",
+        "gen_gids": "[99, 98, 97]",
+        "gid_counts": "[258.0, 169.0, 18.0]",
+        "n_gids": 445,
+        "offshore": 0,
+        "capacity_factor_ac": 0.35824534,
+        "capacity_factor_dc": null,
+        "lcoe_site_usd_per_mwh": null,
+        "resource": 0.35824534,
+        "losses_wakes_pct": null,
+        "area_developable_sq_km": 3.6045,
+        "capacity_ac_mw": 10.8135,
+        "capacity_dc_mw": null,
+        "multiplier_cc_eos": 1,
+        "multiplier_cc_regional": 1,
+        "annual_energy_site_mwh": 33935.24150195539,
+        "cost_site_cc_usd_per_ac_mw": null,
+        "cost_base_cc_usd_per_ac_mw": null,
+        "cost_site_foc_usd_per_ac_mw": null,
+        "cost_base_foc_usd_per_ac_mw": null,
+        "cost_site_voc_usd_per_ac_mwh": null,
+        "cost_base_voc_usd_per_ac_mwh": null,
+        "fixed_charge_rate": null,
+        "res_class": 1,
+        "zone_id": 1,
+        "trans_gid": 43412,
+        "trans_type": "TransLine",
+        "dist_spur_km": 19.54716735869969,
+        "dist_export_km": null,
+        "dist_reinforcement_km": null,
+        "cost_spur_usd_per_mw_ac": null,
+        "cost_poi_usd_per_mw_ac": null,
+        "cost_export_usd_per_mw_ac": null,
+        "cost_reinforcement_usd_per_mw_ac": null,
+        "cost_total_trans_usd_per_mw_ac": 19747.168,
+        "lcot_usd_per_mwh": 0.60407573,
+        "lcoe_all_in_usd_per_mwh": null,
+        "latitude_poi": null,
+        "longitude_poi": null,
+        "latitude_reinforcement_poi": null,
+        "longitude_reinforcement_poi": null,
+        "developable_ratio": 0.108642578125
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -71.7028635,
+              41.552232000000004
+            ],
+            [
+              -71.633747,
+              41.552232000000004
+            ],
+            [
+              -71.633747,
+              41.604127500000004
+            ],
+            [
+              -71.7028635,
+              41.604127500000004
+            ],
+            [
+              -71.7028635,
+              41.552232000000004
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "sc_gid": 44,
+        "latitude": 41.52618611850151,
+        "longitude": -71.80566446346187,
+        "country": "United States",
+        "state": "RI",
+        "county": "Washington",
+        "elevation_m": 134.0,
+        "timezone": -5,
+        "sc_point_gid": 145,
+        "sc_row_ind": 9,
+        "sc_col_ind": 1,
+        "res_gids": "[94, 95]",
+        "gen_gids": "[94, 95]",
+        "gid_counts": "[3780.0, 316.0]",
+        "n_gids": 4096,
+        "offshore": 0,
+        "capacity_factor_ac": 0.40364188,
+        "capacity_factor_dc": null,
+        "lcoe_site_usd_per_mwh": null,
+        "resource": 0.40364188,
+        "losses_wakes_pct": null,
+        "area_developable_sq_km": 33.1776,
+        "capacity_ac_mw": 99.5328,
+        "capacity_dc_mw": null,
+        "multiplier_cc_eos": 1,
+        "multiplier_cc_regional": 1,
+        "annual_energy_site_mwh": 351938.31267480465,
+        "cost_site_cc_usd_per_ac_mw": null,
+        "cost_base_cc_usd_per_ac_mw": null,
+        "cost_site_foc_usd_per_ac_mw": null,
+        "cost_base_foc_usd_per_ac_mw": null,
+        "cost_site_voc_usd_per_ac_mwh": null,
+        "cost_base_voc_usd_per_ac_mwh": null,
+        "fixed_charge_rate": null,
+        "res_class": 1,
+        "zone_id": 1,
+        "trans_gid": 43412,
+        "trans_type": "TransLine",
+        "dist_spur_km": 32.31026415800946,
+        "dist_export_km": null,
+        "dist_reinforcement_km": null,
+        "cost_spur_usd_per_mw_ac": null,
+        "cost_poi_usd_per_mw_ac": null,
+        "cost_export_usd_per_mw_ac": null,
+        "cost_reinforcement_usd_per_mw_ac": null,
+        "cost_total_trans_usd_per_mw_ac": 32510.264,
+        "lcot_usd_per_mwh": 0.88265586,
+        "lcoe_all_in_usd_per_mwh": null,
+        "latitude_poi": null,
+        "longitude_poi": null,
+        "latitude_reinforcement_poi": null,
+        "longitude_reinforcement_poi": null,
+        "developable_ratio": 1.0
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -71.8400195,
+              41.5003365
+            ],
+            [
+              -71.771909,
+              41.5003365
+            ],
+            [
+              -71.771909,
+              41.552232000000004
+            ],
+            [
+              -71.8400195,
+              41.552232000000004
+            ],
+            [
+              -71.8400195,
+              41.5003365
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "sc_gid": 45,
+        "latitude": 41.52634883791154,
+        "longitude": -71.73665171004714,
+        "country": "United States",
+        "state": "RI",
+        "county": "Washington",
+        "elevation_m": 132.5,
+        "timezone": -5,
+        "sc_point_gid": 146,
+        "sc_row_ind": 9,
+        "sc_col_ind": 2,
+        "res_gids": "[95, 96, 97, 94]",
+        "gen_gids": "[95, 96, 97, 94]",
+        "gid_counts": "[1239.0, 547.0, 1.0, 1441.0]",
+        "n_gids": 3228,
+        "offshore": 0,
+        "capacity_factor_ac": 0.39643246,
+        "capacity_factor_dc": null,
+        "lcoe_site_usd_per_mwh": null,
+        "resource": 0.39643246,
+        "losses_wakes_pct": null,
+        "area_developable_sq_km": 26.1468,
+        "capacity_ac_mw": 78.4404,
+        "capacity_dc_mw": null,
+        "multiplier_cc_eos": 1,
+        "multiplier_cc_regional": 1,
+        "annual_energy_site_mwh": 272403.76919834805,
+        "cost_site_cc_usd_per_ac_mw": null,
+        "cost_base_cc_usd_per_ac_mw": null,
+        "cost_site_foc_usd_per_ac_mw": null,
+        "cost_base_foc_usd_per_ac_mw": null,
+        "cost_site_voc_usd_per_ac_mwh": null,
+        "cost_base_voc_usd_per_ac_mwh": null,
+        "fixed_charge_rate": null,
+        "res_class": 1,
+        "zone_id": 1,
+        "trans_gid": 43412,
+        "trans_type": "TransLine",
+        "dist_spur_km": 27.629780171907612,
+        "dist_export_km": null,
+        "dist_reinforcement_km": null,
+        "cost_spur_usd_per_mw_ac": null,
+        "cost_poi_usd_per_mw_ac": null,
+        "cost_export_usd_per_mw_ac": null,
+        "cost_reinforcement_usd_per_mw_ac": null,
+        "cost_total_trans_usd_per_mw_ac": 27829.78,
+        "lcot_usd_per_mwh": 0.7693212,
+        "lcoe_all_in_usd_per_mwh": null,
+        "latitude_poi": null,
+        "longitude_poi": null,
+        "latitude_reinforcement_poi": null,
+        "longitude_reinforcement_poi": null,
+        "developable_ratio": 0.7880859375
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -71.771909,
+              41.5003365
+            ],
+            [
+              -71.7028635,
+              41.5003365
+            ],
+            [
+              -71.7028635,
+              41.552232000000004
+            ],
+            [
+              -71.771909,
+              41.552232000000004
+            ],
+            [
+              -71.771909,
+              41.5003365
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "sc_gid": 47,
+        "latitude": 41.4743243553743,
+        "longitude": -71.80542069684245,
+        "country": "United States",
+        "state": "CT",
+        "county": "New London",
+        "elevation_m": 88.0,
+        "timezone": -5,
+        "sc_point_gid": 161,
+        "sc_row_ind": 10,
+        "sc_col_ind": 1,
+        "res_gids": "[94, 93]",
+        "gen_gids": "[94, 93]",
+        "gid_counts": "[2403.0, 1395.0]",
+        "n_gids": 3798,
+        "offshore": 0,
+        "capacity_factor_ac": 0.39112428,
+        "capacity_factor_dc": null,
+        "lcoe_site_usd_per_mwh": null,
+        "resource": 0.39112428,
+        "losses_wakes_pct": null,
+        "area_developable_sq_km": 30.7638,
+        "capacity_ac_mw": 92.2914,
+        "capacity_dc_mw": null,
+        "multiplier_cc_eos": 1,
+        "multiplier_cc_regional": 1,
+        "annual_energy_site_mwh": 316213.2872379062,
+        "cost_site_cc_usd_per_ac_mw": null,
+        "cost_base_cc_usd_per_ac_mw": null,
+        "cost_site_foc_usd_per_ac_mw": null,
+        "cost_base_foc_usd_per_ac_mw": null,
+        "cost_site_voc_usd_per_ac_mwh": null,
+        "cost_base_voc_usd_per_ac_mwh": null,
+        "fixed_charge_rate": null,
+        "res_class": 1,
+        "zone_id": 1,
+        "trans_gid": 43412,
+        "trans_type": "TransLine",
+        "dist_spur_km": 35.741117683255546,
+        "dist_export_km": null,
+        "dist_reinforcement_km": null,
+        "cost_spur_usd_per_mw_ac": null,
+        "cost_poi_usd_per_mw_ac": null,
+        "cost_export_usd_per_mw_ac": null,
+        "cost_reinforcement_usd_per_mw_ac": null,
+        "cost_total_trans_usd_per_mw_ac": 35941.117,
+        "lcot_usd_per_mwh": 1.0070335,
+        "lcoe_all_in_usd_per_mwh": null,
+        "latitude_poi": null,
+        "longitude_poi": null,
+        "latitude_reinforcement_poi": null,
+        "longitude_reinforcement_poi": null,
+        "developable_ratio": 0.92724609375
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -71.8400195,
+              41.448383
+            ],
+            [
+              -71.771909,
+              41.448383
+            ],
+            [
+              -71.771909,
+              41.5003365
+            ],
+            [
+              -71.8400195,
+              41.5003365
+            ],
+            [
+              -71.8400195,
+              41.448383
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "sc_gid": 48,
+        "latitude": 41.474486780227934,
+        "longitude": -71.73646297948743,
+        "country": "United States",
+        "state": "RI",
+        "county": "Washington",
+        "elevation_m": 130.0,
+        "timezone": -5,
+        "sc_point_gid": 162,
+        "sc_row_ind": 10,
+        "sc_col_ind": 2,
+        "res_gids": "[94]",
+        "gen_gids": "[94]",
+        "gid_counts": "[1087.0]",
+        "n_gids": 1087,
+        "offshore": 0,
+        "capacity_factor_ac": 0.404438,
+        "capacity_factor_dc": null,
+        "lcoe_site_usd_per_mwh": null,
+        "resource": 0.404438,
+        "losses_wakes_pct": null,
+        "area_developable_sq_km": 8.804699999999999,
+        "capacity_ac_mw": 26.4141,
+        "capacity_dc_mw": null,
+        "multiplier_cc_eos": 1,
+        "multiplier_cc_regional": 1,
+        "annual_energy_site_mwh": 93581.9016499368,
+        "cost_site_cc_usd_per_ac_mw": null,
+        "cost_base_cc_usd_per_ac_mw": null,
+        "cost_site_foc_usd_per_ac_mw": null,
+        "cost_base_foc_usd_per_ac_mw": null,
+        "cost_site_voc_usd_per_ac_mwh": null,
+        "cost_base_voc_usd_per_ac_mwh": null,
+        "fixed_charge_rate": null,
+        "res_class": 1,
+        "zone_id": 1,
+        "trans_gid": 43412,
+        "trans_type": "TransLine",
+        "dist_spur_km": 31.573391893110028,
+        "dist_export_km": null,
+        "dist_reinforcement_km": null,
+        "cost_spur_usd_per_mw_ac": null,
+        "cost_poi_usd_per_mw_ac": null,
+        "cost_export_usd_per_mw_ac": null,
+        "cost_reinforcement_usd_per_mw_ac": null,
+        "cost_total_trans_usd_per_mw_ac": 31773.393,
+        "lcot_usd_per_mwh": 0.86095166,
+        "lcoe_all_in_usd_per_mwh": null,
+        "latitude_poi": null,
+        "longitude_poi": null,
+        "latitude_reinforcement_poi": null,
+        "longitude_reinforcement_poi": null,
+        "developable_ratio": 0.265380859375
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -71.771909,
+              41.448383
+            ],
+            [
+              -71.7028635,
+              41.448383
+            ],
+            [
+              -71.7028635,
+              41.5003365
+            ],
+            [
+              -71.771909,
+              41.5003365
+            ],
+            [
+              -71.771909,
+              41.448383
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "sc_gid": 49,
+        "latitude": 41.42225872837379,
+        "longitude": -71.87407975733701,
+        "country": "United States",
+        "state": "CT",
+        "county": "New London",
+        "elevation_m": 46.0,
+        "timezone": -5,
+        "sc_point_gid": 176,
+        "sc_row_ind": 11,
+        "sc_col_ind": 0,
+        "res_gids": "[93]",
+        "gen_gids": "[93]",
+        "gid_counts": "[4054.0]",
+        "n_gids": 4054,
+        "offshore": 0,
+        "capacity_factor_ac": 0.3681903,
+        "capacity_factor_dc": null,
+        "lcoe_site_usd_per_mwh": null,
+        "resource": 0.3681903,
+        "losses_wakes_pct": null,
+        "area_developable_sq_km": 32.837399999999995,
+        "capacity_ac_mw": 98.51219999999998,
+        "capacity_dc_mw": null,
+        "multiplier_cc_eos": 1,
+        "multiplier_cc_regional": 1,
+        "annual_energy_site_mwh": 317736.0216053352,
+        "cost_site_cc_usd_per_ac_mw": null,
+        "cost_base_cc_usd_per_ac_mw": null,
+        "cost_site_foc_usd_per_ac_mw": null,
+        "cost_base_foc_usd_per_ac_mw": null,
+        "cost_site_voc_usd_per_ac_mwh": null,
+        "cost_base_voc_usd_per_ac_mwh": null,
+        "fixed_charge_rate": null,
+        "res_class": 1,
+        "zone_id": 1,
+        "trans_gid": 43412,
+        "trans_type": "TransLine",
+        "dist_spur_km": 43.86524791278607,
+        "dist_export_km": null,
+        "dist_reinforcement_km": null,
+        "cost_spur_usd_per_mw_ac": null,
+        "cost_poi_usd_per_mw_ac": null,
+        "cost_export_usd_per_mw_ac": null,
+        "cost_reinforcement_usd_per_mw_ac": null,
+        "cost_total_trans_usd_per_mw_ac": 44065.246,
+        "lcot_usd_per_mwh": 1.3115686,
+        "lcoe_all_in_usd_per_mwh": null,
+        "latitude_poi": null,
+        "longitude_poi": null,
+        "latitude_reinforcement_poi": null,
+        "longitude_reinforcement_poi": null,
+        "developable_ratio": 0.9897460937499999
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -71.90725049999999,
+              41.396429
+            ],
+            [
+              -71.8400195,
+              41.396429
+            ],
+            [
+              -71.8400195,
+              41.448383
+            ],
+            [
+              -71.90725049999999,
+              41.448383
+            ],
+            [
+              -71.90725049999999,
+              41.396429
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "sc_gid": 50,
+        "latitude": 41.42246212187088,
+        "longitude": -71.80517756761535,
+        "country": "United States",
+        "state": "CT",
+        "county": "New London",
+        "elevation_m": 46.0,
+        "timezone": -5,
+        "sc_point_gid": 177,
+        "sc_row_ind": 11,
+        "sc_col_ind": 1,
+        "res_gids": "[93]",
+        "gen_gids": "[93]",
+        "gid_counts": "[3936.0]",
+        "n_gids": 3936,
+        "offshore": 0,
+        "capacity_factor_ac": 0.36819026,
+        "capacity_factor_dc": null,
+        "lcoe_site_usd_per_mwh": null,
+        "resource": 0.36819026,
+        "losses_wakes_pct": null,
+        "area_developable_sq_km": 31.8816,
+        "capacity_ac_mw": 95.6448,
+        "capacity_dc_mw": null,
+        "multiplier_cc_eos": 1,
+        "multiplier_cc_regional": 1,
+        "annual_energy_site_mwh": 308487.63685518265,
+        "cost_site_cc_usd_per_ac_mw": null,
+        "cost_base_cc_usd_per_ac_mw": null,
+        "cost_site_foc_usd_per_ac_mw": null,
+        "cost_base_foc_usd_per_ac_mw": null,
+        "cost_site_voc_usd_per_ac_mwh": null,
+        "cost_base_voc_usd_per_ac_mwh": null,
+        "fixed_charge_rate": null,
+        "res_class": 1,
+        "zone_id": 1,
+        "trans_gid": 43412,
+        "trans_type": "TransLine",
+        "dist_spur_km": 39.71469106875978,
+        "dist_export_km": null,
+        "dist_reinforcement_km": null,
+        "cost_spur_usd_per_mw_ac": null,
+        "cost_poi_usd_per_mw_ac": null,
+        "cost_export_usd_per_mw_ac": null,
+        "cost_reinforcement_usd_per_mw_ac": null,
+        "cost_total_trans_usd_per_mw_ac": 39914.69,
+        "lcot_usd_per_mwh": 1.1880305,
+        "lcoe_all_in_usd_per_mwh": null,
+        "latitude_poi": null,
+        "longitude_poi": null,
+        "latitude_reinforcement_poi": null,
+        "longitude_reinforcement_poi": null,
+        "developable_ratio": 0.9609375
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -71.8400195,
+              41.396429
+            ],
+            [
+              -71.771909,
+              41.396429
+            ],
+            [
+              -71.771909,
+              41.448383
+            ],
+            [
+              -71.8400195,
+              41.448383
+            ],
+            [
+              -71.8400195,
+              41.396429
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "sc_gid": 51,
+        "latitude": 41.370396392956266,
+        "longitude": -71.87378251680786,
+        "country": "United States",
+        "state": "CT",
+        "county": "New London",
+        "elevation_m": 23.0,
+        "timezone": -5,
+        "sc_point_gid": 192,
+        "sc_row_ind": 12,
+        "sc_col_ind": 0,
+        "res_gids": "[93, 92]",
+        "gen_gids": "[93, 92]",
+        "gid_counts": "[1943.0, 2022.0]",
+        "n_gids": 3965,
+        "offshore": 0,
+        "capacity_factor_ac": 0.40325382,
+        "capacity_factor_dc": null,
+        "lcoe_site_usd_per_mwh": null,
+        "resource": 0.40325382,
+        "losses_wakes_pct": null,
+        "area_developable_sq_km": 32.116499999999995,
+        "capacity_ac_mw": 96.34949999999998,
+        "capacity_dc_mw": null,
+        "multiplier_cc_eos": 1,
+        "multiplier_cc_regional": 1,
+        "annual_energy_site_mwh": 340354.945397492,
+        "cost_site_cc_usd_per_ac_mw": null,
+        "cost_base_cc_usd_per_ac_mw": null,
+        "cost_site_foc_usd_per_ac_mw": null,
+        "cost_base_foc_usd_per_ac_mw": null,
+        "cost_site_voc_usd_per_ac_mwh": null,
+        "cost_base_voc_usd_per_ac_mwh": null,
+        "fixed_charge_rate": null,
+        "res_class": 1,
+        "zone_id": 1,
+        "trans_gid": 43412,
+        "trans_type": "TransLine",
+        "dist_spur_km": 47.8575389885398,
+        "dist_export_km": null,
+        "dist_reinforcement_km": null,
+        "cost_spur_usd_per_mw_ac": null,
+        "cost_poi_usd_per_mw_ac": null,
+        "cost_export_usd_per_mw_ac": null,
+        "cost_reinforcement_usd_per_mw_ac": null,
+        "cost_total_trans_usd_per_mw_ac": 48057.54,
+        "lcot_usd_per_mwh": 1.3060211,
+        "lcoe_all_in_usd_per_mwh": null,
+        "latitude_poi": null,
+        "longitude_poi": null,
+        "latitude_reinforcement_poi": null,
+        "longitude_reinforcement_poi": null,
+        "developable_ratio": 0.9680175781249999
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -71.90725049999999,
+              41.344516
+            ],
+            [
+              -71.8400195,
+              41.344516
+            ],
+            [
+              -71.8400195,
+              41.396429
+            ],
+            [
+              -71.90725049999999,
+              41.396429
+            ],
+            [
+              -71.90725049999999,
+              41.344516
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "sc_gid": 52,
+        "latitude": 41.37059941809544,
+        "longitude": -71.80493507386623,
+        "country": "United States",
+        "state": "CT",
+        "county": "New London",
+        "elevation_m": 46.0,
+        "timezone": -5,
+        "sc_point_gid": 193,
+        "sc_row_ind": 12,
+        "sc_col_ind": 1,
+        "res_gids": "[93]",
+        "gen_gids": "[93]",
+        "gid_counts": "[1726.0]",
+        "n_gids": 1726,
+        "offshore": 0,
+        "capacity_factor_ac": 0.3681903,
+        "capacity_factor_dc": null,
+        "lcoe_site_usd_per_mwh": null,
+        "resource": 0.3681903,
+        "losses_wakes_pct": null,
+        "area_developable_sq_km": 13.9806,
+        "capacity_ac_mw": 41.9418,
+        "capacity_dc_mw": null,
+        "multiplier_cc_eos": 1,
+        "multiplier_cc_regional": 1,
+        "annual_energy_site_mwh": 135276.8557698097,
+        "cost_site_cc_usd_per_ac_mw": null,
+        "cost_base_cc_usd_per_ac_mw": null,
+        "cost_site_foc_usd_per_ac_mw": null,
+        "cost_base_foc_usd_per_ac_mw": null,
+        "cost_site_voc_usd_per_ac_mwh": null,
+        "cost_base_voc_usd_per_ac_mwh": null,
+        "fixed_charge_rate": null,
+        "res_class": 1,
+        "zone_id": 1,
+        "trans_gid": 43412,
+        "trans_type": "TransLine",
+        "dist_spur_km": 44.08447289325873,
+        "dist_export_km": null,
+        "dist_reinforcement_km": null,
+        "cost_spur_usd_per_mw_ac": null,
+        "cost_poi_usd_per_mw_ac": null,
+        "cost_export_usd_per_mw_ac": null,
+        "cost_reinforcement_usd_per_mw_ac": null,
+        "cost_total_trans_usd_per_mw_ac": 44284.473,
+        "lcot_usd_per_mwh": 1.3180938,
+        "lcoe_all_in_usd_per_mwh": null,
+        "latitude_poi": null,
+        "longitude_poi": null,
+        "latitude_reinforcement_poi": null,
+        "longitude_reinforcement_poi": null,
+        "developable_ratio": 0.42138671875000006
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -71.8400195,
+              41.344516
+            ],
+            [
+              -71.771909,
+              41.344516
+            ],
+            [
+              -71.771909,
+              41.396429
+            ],
+            [
+              -71.8400195,
+              41.396429
+            ],
+            [
+              -71.8400195,
+              41.344516
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "sc_gid": 53,
+        "latitude": 41.31853358679447,
+        "longitude": -71.87348605288278,
+        "country": null,
+        "state": null,
+        "county": null,
+        "elevation_m": 0.0,
+        "timezone": -5,
+        "sc_point_gid": 208,
+        "sc_row_ind": 13,
+        "sc_col_ind": 0,
+        "res_gids": "[92, 91]",
+        "gen_gids": "[92, 91]",
+        "gid_counts": "[1853.0, 918.0]",
+        "n_gids": 2771,
+        "offshore": 1,
+        "capacity_factor_ac": 0.44136477,
+        "capacity_factor_dc": null,
+        "lcoe_site_usd_per_mwh": null,
+        "resource": 0.44136477,
+        "losses_wakes_pct": null,
+        "area_developable_sq_km": 22.4451,
+        "capacity_ac_mw": 67.3353,
+        "capacity_dc_mw": null,
+        "multiplier_cc_eos": 1,
+        "multiplier_cc_regional": 1,
+        "annual_energy_site_mwh": 260342.19691841697,
+        "cost_site_cc_usd_per_ac_mw": null,
+        "cost_base_cc_usd_per_ac_mw": null,
+        "cost_site_foc_usd_per_ac_mw": null,
+        "cost_base_foc_usd_per_ac_mw": null,
+        "cost_site_voc_usd_per_ac_mwh": null,
+        "cost_base_voc_usd_per_ac_mwh": null,
+        "fixed_charge_rate": null,
+        "res_class": 1,
+        "zone_id": 1,
+        "trans_gid": 43412,
+        "trans_type": "TransLine",
+        "dist_spur_km": 52.1812511519203,
+        "dist_export_km": null,
+        "dist_reinforcement_km": null,
+        "cost_spur_usd_per_mw_ac": null,
+        "cost_poi_usd_per_mw_ac": null,
+        "cost_export_usd_per_mw_ac": null,
+        "cost_reinforcement_usd_per_mw_ac": null,
+        "cost_total_trans_usd_per_mw_ac": 52381.25,
+        "lcot_usd_per_mwh": 1.3006048,
+        "lcoe_all_in_usd_per_mwh": null,
+        "latitude_poi": null,
+        "longitude_poi": null,
+        "latitude_reinforcement_poi": null,
+        "longitude_reinforcement_poi": null,
+        "developable_ratio": 0.676513671875
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -71.90725049999999,
+              41.292602
+            ],
+            [
+              -71.8400195,
+              41.292602
+            ],
+            [
+              -71.8400195,
+              41.344516
+            ],
+            [
+              -71.90725049999999,
+              41.344516
+            ],
+            [
+              -71.90725049999999,
+              41.292602
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "sc_gid": 54,
+        "latitude": 41.26667030999763,
+        "longitude": -71.8731903632357,
+        "country": null,
+        "state": null,
+        "county": null,
+        "elevation_m": 0.0,
+        "timezone": -5,
+        "sc_point_gid": 224,
+        "sc_row_ind": 14,
+        "sc_col_ind": 0,
+        "res_gids": "[91]",
+        "gen_gids": "[91]",
+        "gid_counts": "[361.0]",
+        "n_gids": 361,
+        "offshore": 1,
+        "capacity_factor_ac": 0.4502812,
+        "capacity_factor_dc": null,
+        "lcoe_site_usd_per_mwh": null,
+        "resource": 0.4502812,
+        "losses_wakes_pct": null,
+        "area_developable_sq_km": 2.9240999999999997,
+        "capacity_ac_mw": 8.7723,
+        "capacity_dc_mw": null,
+        "multiplier_cc_eos": 1,
+        "multiplier_cc_regional": 1,
+        "annual_energy_site_mwh": 34602.01572649598,
+        "cost_site_cc_usd_per_ac_mw": null,
+        "cost_base_cc_usd_per_ac_mw": null,
+        "cost_site_foc_usd_per_ac_mw": null,
+        "cost_base_foc_usd_per_ac_mw": null,
+        "cost_site_voc_usd_per_ac_mwh": null,
+        "cost_base_voc_usd_per_ac_mwh": null,
+        "fixed_charge_rate": null,
+        "res_class": 1,
+        "zone_id": 1,
+        "trans_gid": 43412,
+        "trans_type": "TransLine",
+        "dist_spur_km": 56.76069745581598,
+        "dist_export_km": null,
+        "dist_reinforcement_km": null,
+        "cost_spur_usd_per_mw_ac": null,
+        "cost_poi_usd_per_mw_ac": null,
+        "cost_export_usd_per_mw_ac": null,
+        "cost_reinforcement_usd_per_mw_ac": null,
+        "cost_total_trans_usd_per_mw_ac": 56960.7,
+        "lcot_usd_per_mwh": 1.3863044,
+        "lcoe_all_in_usd_per_mwh": null,
+        "latitude_poi": null,
+        "longitude_poi": null,
+        "latitude_reinforcement_poi": null,
+        "longitude_reinforcement_poi": null,
+        "developable_ratio": 0.088134765625
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -71.90725049999999,
+              41.24073799999999
+            ],
+            [
+              -71.8400195,
+              41.24073799999999
+            ],
+            [
+              -71.8400195,
+              41.292602
+            ],
+            [
+              -71.90725049999999,
+              41.292602
+            ],
+            [
+              -71.90725049999999,
+              41.24073799999999
+            ]
+          ]
+        ]
+      }
+    }
+  ]
+}

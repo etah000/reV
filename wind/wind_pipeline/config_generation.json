@@ -1,0 +1,24 @@
+{
+  "analysis_years": [2012],
+  "log_directory": "./logs/",
+  "execution_control": {
+    "option": "local",
+    "max_workers": 2,
+    "sites_per_worker": 5
+  },
+  "log_level": "INFO",
+  "output_request": [
+    "cf_mean",
+    "capital_cost",
+    "fixed_operating_cost",
+    "variable_operating_cost",
+    "system_capacity",
+    "fixed_charge_rate"
+  ],
+  "project_points": "./project_points.csv",
+  "resource_file": "../../tests/data/wtk/ri_100_wtk_{}.h5",
+  "sam_files": {
+    "default": "../../tests/data/SAM/wind_gen_standard_losses_0.json"
+  },
+  "technology": "windpower"
+}

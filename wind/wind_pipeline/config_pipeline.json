@@ -1,0 +1,11 @@
+{
+  "logging": {
+    "log_file": null,
+    "log_level": "INFO"
+  },
+  "pipeline": [
+    {"generation": "./config_generation.json"},
+    {"supply-curve-aggregation": "./config_sc_aggregation.json"},
+    {"supply-curve": "./config_supply_curve.json"}
+  ]
+}

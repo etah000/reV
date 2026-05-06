@@ -1,0 +1,25 @@
+{
+  "figures": [
+    "resource_project_points_map.png",
+    "top5_generation_profiles.png",
+    "exclusion_overlay_map.png",
+    "supply_curve.png"
+  ],
+  "qgis_layers": [
+    "qgis_layers/resource_grid.geojson",
+    "qgis_layers/project_points.geojson",
+    "qgis_layers/supply_curve_cells.geojson",
+    "qgis_layers/supply_curve_cells.csv"
+  ],
+  "top5_gids": [
+    21,
+    24,
+    25,
+    91,
+    92
+  ],
+  "notes": [
+    "The current pipeline config sets excl_dict to null, so the exclusion overlay is a techmap availability footprint plus aggregated developable ratio.",
+    "Top-5 generation profiles are produced by a minimal rerun for those five gids using reV Gen with gen_profile output."
+  ]
+}
