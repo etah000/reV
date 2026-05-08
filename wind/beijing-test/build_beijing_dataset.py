@@ -100,10 +100,10 @@ def step_project_points(site_meta, output_dir: Path):
 
 
 def step_exclusions(site_meta, resource_h5: Path, output_dir: Path,
-                    overwrite: bool) -> Path:
+                    overwrite: bool, osm_pbf: str | None = None) -> Path:
     from exclusions_techmap import build_exclusions_and_techmap
     return build_exclusions_and_techmap(
-        site_meta, resource_h5, output_dir, overwrite=overwrite,
+        site_meta, resource_h5, output_dir, osm_pbf=osm_pbf, overwrite=overwrite,
     )
 
 
@@ -168,6 +168,13 @@ def main(argv=None):
                         help="Use only the first 10 sites for a quick test run.")
     parser.add_argument("--overwrite",  action="store_true",
                         help="Overwrite existing output files.")
+    parser.add_argument(
+        "--osm-pbf", default="/Users/frank/opensource/test-data/beijing/beijing-260416.osm.pbf",
+        help=(
+            "OSM PBF path used to synthesize exclusions (default uses local "
+            "Beijing test-data file)."
+        ),
+    )
     args = parser.parse_args(argv)
 
     geojson    = Path(args.geojson)
@@ -225,7 +232,15 @@ def main(argv=None):
 
     # ── Step 5: exclusions + techmap ──────────────────────────────────────────
     print("\n─── Step 5/6: Exclusions + techmap ───")
-    excl_h5 = step_exclusions(site_meta, resource_h5, output_dir, args.overwrite)
+    if args.osm_pbf:
+        print(f"  OSM PBF    : {args.osm_pbf}")
+    excl_h5 = step_exclusions(
+        site_meta,
+        resource_h5,
+        output_dir,
+        args.overwrite,
+        osm_pbf=args.osm_pbf,
+    )
 
     # ── Step 6: reV configs ───────────────────────────────────────────────────
     print("\n─── Step 6/6: reV configuration files ───")

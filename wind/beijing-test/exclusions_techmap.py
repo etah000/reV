@@ -1,18 +1,25 @@
 """
 exclusions_techmap.py
 =====================
-Step 5 – Build a minimal reV-compatible exclusions HDF5 and techmap dataset.
+Step 5 – Build a reV-compatible exclusions HDF5 and techmap dataset.
 
-For the Beijing smoke-test / Phase-A pipeline we create a *placeholder*
-exclusion layer (all cells included, i.e. no area excluded) and a techmap
-that maps every exclusion-raster pixel to its nearest resource-file gid.
+The default path is OSM-driven exclusions synthesized from a Beijing .osm.pbf
+file. Excluded areas are inferred from common siting constraints:
+
+- built-up landuse polygons (residential/commercial/industrial/...)
+- water/wetland polygons
+- protected-area polygons
+- buffered transport corridors (highway/railway/aeroway)
+
+When no OSM file is provided (or no valid features are found), the module
+falls back to a placeholder exclusion layer where all cells are included.
 
 The raster is aligned to the same WGS-84 bounding box as the site grid,
 at a configurable pixel resolution (default 500 m, matching WTK techmap
 conventions – each resource cell covers ~4 pixels per side for a 2 km grid).
 
-Replacing this module with real exclusion data (slope rasters, protected
-areas, etc.) only requires swapping out ``build_exclusion_layer()``.
+You can still replace this logic with project-specific exclusion rasters by
+customizing ``build_exclusion_layer()``.
 
 HDF5 output schema
 ------------------
@@ -27,20 +34,36 @@ HDF5 output schema
 
 from __future__ import annotations
 
+import warnings
 from pathlib import Path
 from typing import Optional
 
 import h5py
 import numpy as np
 import pandas as pd
+from pyproj import Transformer
 from scipy.spatial import cKDTree
+from shapely import contains_xy, make_valid, unary_union
 
 
 # ─── Defaults ─────────────────────────────────────────────────────────────────
 DEFAULT_PIXEL_M = 500        # exclusion raster pixel size in metres
-DEFAULT_EXCL_KEY = "beijing_placeholder"
+DEFAULT_EXCL_KEY = "beijing_osm_exclusions"
 DEFAULT_TM_KEY = "techmap_beijing"
 UTM50N_EPSG = "EPSG:32650"
+
+DEFAULT_OSM_POLYGON_LAYERS = {
+    "landuse": {"residential", "industrial", "commercial", "retail", "construction"},
+    "natural": {"water", "wetland"},
+    "boundary": {"protected_area"},
+}
+
+DEFAULT_BUFFER_M = {
+    "major_highway": 120.0,
+    "minor_highway": 45.0,
+    "railway": 80.0,
+    "aeroway": 150.0,
+}
 
 
 # ─── Grid helpers ─────────────────────────────────────────────────────────────
@@ -49,27 +72,26 @@ def _build_pixel_grid(
     site_meta: pd.DataFrame,
     pixel_m: float,
     padding_m: float = 4_000,
-) -> tuple[np.ndarray, np.ndarray]:
+) -> tuple[np.ndarray, np.ndarray, np.ndarray, np.ndarray]:
     """
     Build a regular pixel grid in WGS-84 that covers all sites with padding.
 
-    Uses an equirectangular approximation (fine for ~300 km study areas).
+    Grid construction and distance calculations are done in UTM-50N metres,
+    then transformed back to latitude/longitude for HDF5 output.
 
     Returns
     -------
-    lat_grid, lon_grid : 2D float64 arrays of shape (rows, cols)
+    lat_grid, lon_grid, x_grid, y_grid : 2D float64 arrays of shape (rows, cols)
     """
-    import geopandas as gpd
-    from shapely.geometry import Point
+    lonlat_to_utm = Transformer.from_crs("EPSG:4326", UTM50N_EPSG, always_xy=True)
+    utm_to_lonlat = Transformer.from_crs(UTM50N_EPSG, "EPSG:4326", always_xy=True)
 
-    # Convert to UTM for equal-area raster construction
-    gdf = gpd.GeoDataFrame(
-        site_meta,
-        geometry=gpd.points_from_xy(site_meta["longitude"], site_meta["latitude"]),
-        crs="EPSG:4326",
-    ).to_crs(UTM50N_EPSG)
+    site_lons = site_meta["longitude"].to_numpy(dtype=float)
+    site_lats = site_meta["latitude"].to_numpy(dtype=float)
+    site_x, site_y = lonlat_to_utm.transform(site_lons, site_lats)
 
-    minx, miny, maxx, maxy = gdf.total_bounds
+    minx, miny = float(np.min(site_x)), float(np.min(site_y))
+    maxx, maxy = float(np.max(site_x)), float(np.max(site_y))
     minx -= padding_m
     miny -= padding_m
     maxx += padding_m
@@ -77,18 +99,12 @@ def _build_pixel_grid(
 
     xs = np.arange(minx + pixel_m / 2, maxx, pixel_m)
     ys = np.arange(miny + pixel_m / 2, maxy, pixel_m)
-    xx, yy = np.meshgrid(xs, ys)  # (rows, cols)
+    xx, yy = np.meshgrid(xs, ys)
 
-    # Back-project to WGS-84
-    rows, cols = xx.shape
-    flat_pts = gpd.GeoDataFrame(
-        geometry=[Point(x, y) for x, y in zip(xx.ravel(), yy.ravel())],
-        crs=UTM50N_EPSG,
-    ).to_crs("EPSG:4326")
-
-    lons = np.array([pt.x for pt in flat_pts.geometry]).reshape(rows, cols)
-    lats = np.array([pt.y for pt in flat_pts.geometry]).reshape(rows, cols)
-    return lats.astype(np.float64), lons.astype(np.float64)
+    flat_lons, flat_lats = utm_to_lonlat.transform(xx.ravel(), yy.ravel())
+    lons = np.asarray(flat_lons, dtype=np.float64).reshape(xx.shape)
+    lats = np.asarray(flat_lats, dtype=np.float64).reshape(xx.shape)
+    return lats, lons, xx.astype(np.float64), yy.astype(np.float64)
 
 
 # ─── Exclusion layer builder ──────────────────────────────────────────────────
@@ -96,6 +112,9 @@ def _build_pixel_grid(
 def build_exclusion_layer(
     lat_grid: np.ndarray,
     lon_grid: np.ndarray,
+    x_grid: np.ndarray,
+    y_grid: np.ndarray,
+    osm_pbf: Optional[str | Path] = None,
 ) -> np.ndarray:
     """
     Build a uint8 exclusion raster of shape (1, rows, cols).
@@ -104,58 +123,163 @@ def build_exclusion_layer(
       0   – fully excluded
       100 – fully included
 
-    This placeholder marks ALL pixels as fully included (100).
-    Replace with real logic (slope mask, land-use mask, etc.) as needed.
+    If *osm_pbf* is not provided or no valid features are found, this
+    function falls back to the previous placeholder behavior (all included).
     """
+    import geopandas as gpd
+
     rows, cols = lat_grid.shape
     excl = np.full((1, rows, cols), 100, dtype=np.uint8)
+
+    if osm_pbf is None:
+        return excl
+
+    osm_pbf = Path(osm_pbf)
+    if not osm_pbf.exists():
+        warnings.warn(
+            f"OSM PBF not found: {osm_pbf}; using placeholder exclusions.",
+            stacklevel=3,
+        )
+        return excl
+
+    bbox = (
+        float(np.min(lon_grid)),
+        float(np.min(lat_grid)),
+        float(np.max(lon_grid)),
+        float(np.max(lat_grid)),
+    )
+
+    polygon_cols = ["landuse", "natural", "water", "boundary", "aeroway", "geometry"]
+    line_cols = ["highway", "railway", "aeroway", "geometry"]
+
+    try:
+        polys = gpd.read_file(
+            str(osm_pbf),
+            layer="multipolygons",
+            bbox=bbox,
+            columns=polygon_cols,
+            engine="pyogrio",
+        )
+        lines = gpd.read_file(
+            str(osm_pbf),
+            layer="lines",
+            bbox=bbox,
+            columns=line_cols,
+            engine="pyogrio",
+        )
+    except Exception as exc:
+        warnings.warn(
+            f"Failed to read OSM PBF ({exc}); using placeholder exclusions.",
+            stacklevel=3,
+        )
+        return excl
+
+    geoms = []
+
+    if not polys.empty:
+        # Built-up / water / protected areas are excluded by default.
+        landuse = polys.get("landuse", pd.Series(index=polys.index, dtype=object)).fillna("")
+        natural = polys.get("natural", pd.Series(index=polys.index, dtype=object)).fillna("")
+        water = polys.get("water", pd.Series(index=polys.index, dtype=object)).fillna("")
+        boundary = polys.get("boundary", pd.Series(index=polys.index, dtype=object)).fillna("")
+        aeroway = polys.get("aeroway", pd.Series(index=polys.index, dtype=object)).fillna("")
+
+        poly_mask = (
+            landuse.isin(DEFAULT_OSM_POLYGON_LAYERS["landuse"])
+            | natural.isin(DEFAULT_OSM_POLYGON_LAYERS["natural"])
+            | water.ne("")
+            | boundary.isin(DEFAULT_OSM_POLYGON_LAYERS["boundary"])
+            | aeroway.ne("")
+        )
+        selected_polys = polys.loc[poly_mask]
+        if not selected_polys.empty:
+            selected_polys = selected_polys.to_crs(UTM50N_EPSG)
+            geoms.extend([g for g in selected_polys.geometry if g is not None and not g.is_empty])
+
+    if not lines.empty:
+        lines = lines.to_crs(UTM50N_EPSG)
+        highway = lines.get("highway", pd.Series(index=lines.index, dtype=object)).fillna("")
+        railway = lines.get("railway", pd.Series(index=lines.index, dtype=object)).fillna("")
+        aeroway = lines.get("aeroway", pd.Series(index=lines.index, dtype=object)).fillna("")
+
+        major_hwy = lines.loc[highway.isin({"motorway", "trunk", "primary"})]
+        minor_hwy = lines.loc[highway.ne("") & ~highway.isin({"motorway", "trunk", "primary"})]
+        rail = lines.loc[railway.ne("")]
+        air = lines.loc[aeroway.ne("")]
+
+        for subset, dist in (
+            (major_hwy, DEFAULT_BUFFER_M["major_highway"]),
+            (minor_hwy, DEFAULT_BUFFER_M["minor_highway"]),
+            (rail, DEFAULT_BUFFER_M["railway"]),
+            (air, DEFAULT_BUFFER_M["aeroway"]),
+        ):
+            if not subset.empty:
+                geoms.extend([g for g in subset.geometry.buffer(dist) if g is not None and not g.is_empty])
+
+    if not geoms:
+        warnings.warn(
+            "No OSM features matched exclusion rules; using placeholder exclusions.",
+            stacklevel=3,
+        )
+        return excl
+
+    exclusion_geom = make_valid(unary_union(geoms))
+    if exclusion_geom.is_empty:
+        return excl
+
+    excluded = contains_xy(exclusion_geom, x_grid.ravel(), y_grid.ravel())
+    excl.reshape(-1)[excluded] = 0
     return excl
 
 
 def build_techmap(
-    lat_grid: np.ndarray,
-    lon_grid: np.ndarray,
+    x_grid: np.ndarray,
+    y_grid: np.ndarray,
     site_meta: pd.DataFrame,
-    distance_threshold_deg: float = 0.05,
+    distance_threshold_m: float = 6_000.0,
 ) -> tuple[np.ndarray, float]:
     """
     Build a techmap (int32) of shape (rows, cols) mapping each raster pixel
     to its nearest resource gid.
 
-    Pixels farther than *distance_threshold_deg* from all sites are set to -1.
+    Pixels farther than *distance_threshold_m* from all sites are set to -1.
 
     Parameters
     ----------
-    lat_grid, lon_grid : 2D arrays
+    x_grid, y_grid : 2D arrays in UTM metres
     site_meta : DataFrame with latitude, longitude, gid columns
-    distance_threshold_deg : float
-        Pixels beyond this great-circle distance (degrees ≈ km / 111) from
-        the nearest site get gid = -1.  Default 0.05° ≈ 5.5 km.
+    distance_threshold_m : float
+        Pixels beyond this distance in metres from the nearest site get gid
+        = -1. Default 6000 m.
 
     Returns
     -------
     techmap : int32 (rows, cols)
     actual_threshold : float  (stored as HDF5 attribute)
     """
-    rows, cols = lat_grid.shape
+    lonlat_to_utm = Transformer.from_crs("EPSG:4326", UTM50N_EPSG, always_xy=True)
 
-    site_lats = site_meta["latitude"].values
-    site_lons = site_meta["longitude"].values
+    rows, cols = x_grid.shape
+
+    site_lons = site_meta["longitude"].to_numpy(dtype=float)
+    site_lats = site_meta["latitude"].to_numpy(dtype=float)
+    site_x, site_y = lonlat_to_utm.transform(site_lons, site_lats)
     gids = site_meta["gid"].values if "gid" in site_meta.columns else np.arange(len(site_meta))
 
-    # Build KD-tree in (lat, lon) space
-    tree = cKDTree(np.column_stack([site_lats, site_lons]))
+    # Build KD-tree in UTM metres for better distance behavior.
+    tree = cKDTree(np.column_stack([site_x, site_y]))
 
-    pixel_coords = np.column_stack([lat_grid.ravel(), lon_grid.ravel()])
+    pixel_coords = np.column_stack([x_grid.ravel(), y_grid.ravel()])
     dists, idxs = tree.query(pixel_coords, workers=-1)
 
     techmap = gids[idxs].astype(np.int32)
-    techmap[dists > distance_threshold_deg] = -1
+    techmap[dists > distance_threshold_m] = -1
 
     techmap = techmap.reshape(rows, cols)
 
     # Compute a representative threshold for the attrs (mean nearest-site dist)
-    actual_threshold = float(np.median(dists[dists < distance_threshold_deg]))
+    near = dists[dists < distance_threshold_m]
+    actual_threshold = float(np.median(near)) if len(near) else distance_threshold_m
     return techmap, actual_threshold
 
 
@@ -211,6 +335,7 @@ def build_exclusions_and_techmap(
     site_meta: pd.DataFrame,
     resource_fpath: str | Path,
     output_dir: str | Path,
+    osm_pbf: Optional[str | Path] = None,
     pixel_m: float = DEFAULT_PIXEL_M,
     excl_key: str = DEFAULT_EXCL_KEY,
     tm_key: str = DEFAULT_TM_KEY,
@@ -226,6 +351,8 @@ def build_exclusions_and_techmap(
         Path to the wind resource HDF5 (stored in techmap attrs).
     output_dir : path-like
         Directory for the output ``beijing_exclusions.h5`` file.
+    osm_pbf : path-like, optional
+        OSM .pbf used to synthesize exclusions from polygons/lines.
     pixel_m : float
         Exclusion raster pixel size in metres.
     excl_key : str
@@ -240,9 +367,9 @@ def build_exclusions_and_techmap(
     """
     output_path = Path(output_dir) / "beijing_exclusions.h5"
 
-    lat_grid, lon_grid = _build_pixel_grid(site_meta, pixel_m)
-    excl_layer = build_exclusion_layer(lat_grid, lon_grid)
-    techmap, dist_thresh = build_techmap(lat_grid, lon_grid, site_meta)
+    lat_grid, lon_grid, x_grid, y_grid = _build_pixel_grid(site_meta, pixel_m)
+    excl_layer = build_exclusion_layer(lat_grid, lon_grid, x_grid, y_grid, osm_pbf=osm_pbf)
+    techmap, dist_thresh = build_techmap(x_grid, y_grid, site_meta)
 
     write_exclusions_h5(
         output_path,
@@ -268,6 +395,8 @@ if __name__ == "__main__":
     parser.add_argument("site_meta_csv",   help="CSV from grid_generation.py")
     parser.add_argument("resource_h5",     help="Wind resource HDF5 path")
     parser.add_argument("--output-dir",    default="./output")
+    parser.add_argument("--osm-pbf",       default=None,
+                        help="Optional OSM .pbf file used to synthesize exclusions.")
     parser.add_argument("--pixel-m",       type=float, default=500)
     parser.add_argument("--excl-key",      default=DEFAULT_EXCL_KEY)
     parser.add_argument("--tm-key",        default=DEFAULT_TM_KEY)
@@ -277,5 +406,5 @@ if __name__ == "__main__":
     meta = pd.read_csv(args.site_meta_csv)
     build_exclusions_and_techmap(
         meta, args.resource_h5, args.output_dir,
-        args.pixel_m, args.excl_key, args.tm_key, args.overwrite,
+        args.osm_pbf, args.pixel_m, args.excl_key, args.tm_key, args.overwrite,
     )
