@@ -373,7 +373,7 @@ def era5_adapter(
     wind_shear_alpha: float = 0.14,
 ) -> dict[str, np.ndarray]:
     """
-    Phase-B: load ERA5 NetCDF file(s) and interpolate to site locations.
+    Phase-B: load ERA5 NetCDF4/GRIB file(s) and interpolate to site locations.
 
     Delegates to :mod:`era5_adapter`; see that module for full documentation.
     The return dict has exactly the same keys as ``synthesize_all()``.
@@ -381,7 +381,7 @@ def era5_adapter(
     Parameters
     ----------
     era5_nc_path : str, Path, or list
-        Path(s) to ERA5 NetCDF file(s) or a glob pattern.
+        Path(s) to ERA5 NetCDF4/GRIB file(s) or a glob pattern.
     site_meta : DataFrame
         Must contain ``latitude``, ``longitude``, ``elevation``.
     year : int

@@ -156,7 +156,7 @@ def main(argv=None):
     parser.add_argument(
         "--era5", default=None, metavar="PATH",
         help=(
-            "(Phase-B) Path to ERA5 NetCDF file(s). "
+            "(Phase-B) Path to ERA5 NetCDF4/GRIB file(s). "
             "Accepts a single file, a glob pattern, or multiple paths "
             "separated by spaces (quote the pattern). "
             "When omitted, Phase-A statistical synthesis is used."

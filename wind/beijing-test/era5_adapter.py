@@ -1,13 +1,13 @@
 """
 era5_adapter.py
 ===============
-Phase-B – Load ERA5 reanalysis NetCDF file(s) and produce per-site hourly
-meteorological arrays in exactly the same format returned by
+Phase-B – Load ERA5 reanalysis NetCDF4/GRIB file(s) and produce per-site
+hourly meteorological arrays in exactly the same format returned by
 ``synthetic_met.synthesize_all()``.
 
 Supported ERA5 layouts
 -----------------------
-1. **Single combined file** – one NetCDF containing all variables.
+1. **Single combined file** – one NetCDF4/GRIB containing all variables.
 2. **Per-variable files** – separate files, e.g.::
 
        era5_u100_2012.nc
@@ -42,12 +42,14 @@ used to map the ERA5 lat/lon grid to the irregular site locations.  ERA5 grids
 are assumed to be regular in WGS-84.
 
 Dependencies: xarray, scipy, numpy, pandas
-Install: pip install xarray scipy netcdf4
+Install (NetCDF4): pip install xarray scipy netcdf4
+Install (GRIB):    pip install xarray scipy cfgrib
 """
 
 from __future__ import annotations
 
 import warnings
+from glob import glob
 from pathlib import Path
 from typing import Union
 
@@ -88,7 +90,7 @@ def open_era5(
     paths: Union[str, Path, list],
 ) -> "xr.Dataset":
     """
-    Open one or more ERA5 NetCDF files as a single xarray Dataset.
+    Open one or more ERA5 NetCDF4/GRIB files as a single xarray Dataset.
 
     Parameters
     ----------
@@ -101,18 +103,54 @@ def open_era5(
     """
     import xarray as xr
 
-    if isinstance(paths, (str, Path)):
-        p = str(paths)
-        if "*" in p or "?" in p:
-            ds = xr.open_mfdataset(p, combine="by_coords", engine="netcdf4")
+    def _to_file_list(inp: Union[str, Path, list]) -> list[str]:
+        if isinstance(inp, (str, Path)):
+            p = str(inp)
+            if any(ch in p for ch in "*?[]"):
+                return sorted(glob(p))
+            return [p]
+
+        out = []
+        for item in inp:
+            p = str(item)
+            if any(ch in p for ch in "*?[]"):
+                out.extend(sorted(glob(p)))
+            else:
+                out.append(p)
+        return out
+
+    def _engine_for_path(path: str) -> str:
+        suffix = Path(path).suffix.lower()
+        if suffix in {".grib", ".grb", ".grib2"}:
+            return "cfgrib"
+        return "netcdf4"
+
+    def _open_single(path: str) -> "xr.Dataset":
+        return xr.open_dataset(path, engine=_engine_for_path(path))
+
+    files = _to_file_list(paths)
+    if not files:
+        raise FileNotFoundError(f"No ERA5 files matched: {paths}")
+
+    by_engine: dict[str, list[str]] = {}
+    for fp in files:
+        by_engine.setdefault(_engine_for_path(fp), []).append(fp)
+
+    opened = []
+    for engine, engine_files in by_engine.items():
+        if len(engine_files) == 1:
+            opened.append(_open_single(engine_files[0]))
+        elif engine == "netcdf4":
+            opened.append(xr.open_mfdataset(engine_files, combine="by_coords", engine="netcdf4"))
         else:
-            ds = xr.open_dataset(str(paths), engine="netcdf4")
-    else:
-        paths = [str(p) for p in paths]
-        if len(paths) == 1:
-            ds = xr.open_dataset(paths[0], engine="netcdf4")
-        else:
-            ds = xr.open_mfdataset(paths, combine="by_coords", engine="netcdf4")
+            # cfgrib multi-file open_mfdataset can be brittle across monthly files;
+            # open one-by-one then combine by coordinates.
+            opened.extend(_open_single(fp) for fp in engine_files)
+
+    if len(opened) == 1:
+        return opened[0]
+
+    ds = xr.combine_by_coords(opened, combine_attrs="override")
     return ds
 
 
@@ -350,7 +388,8 @@ def era5_adapter(
     verbose: bool = True,
 ) -> dict[str, np.ndarray]:
     """
-    Load ERA5 NetCDF data and return per-site hourly meteorological arrays.
+    Load ERA5 NetCDF4/GRIB data and return per-site hourly meteorological
+    arrays.
 
     This function is a drop-in replacement for ``synthetic_met.synthesize_all()``;
     it returns a dict with exactly the same keys.
@@ -358,8 +397,9 @@ def era5_adapter(
     Parameters
     ----------
     era5_path : str, Path, or list
-        Path(s) to ERA5 NetCDF file(s).  Supports single file, list of files,
-        or a glob pattern string (e.g. ``"era5_*.nc"``).
+        Path(s) to ERA5 NetCDF4 or GRIB file(s). Supports single file, list of
+        files, or a glob pattern string (e.g. ``"era5_*.nc"`` or
+        ``"era5_*.grib"``).
     site_meta : DataFrame
         Must contain ``latitude``, ``longitude``, ``elevation``.
     year : int
