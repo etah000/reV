@@ -153,20 +153,29 @@ def build_exclusion_layer(
     line_cols = ["highway", "railway", "aeroway", "geometry"]
 
     try:
-        polys = gpd.read_file(
-            str(osm_pbf),
-            layer="multipolygons",
-            bbox=bbox,
-            columns=polygon_cols,
-            engine="pyogrio",
-        )
-        lines = gpd.read_file(
-            str(osm_pbf),
-            layer="lines",
-            bbox=bbox,
-            columns=line_cols,
-            engine="pyogrio",
-        )
+        # Some OSM extracts contain occasional unclosed polygon rings.
+        # GDAL/pyogrio can still read them, but emits a noisy RuntimeWarning.
+        # We silence only this known warning and clean geometries downstream.
+        with warnings.catch_warnings():
+            warnings.filterwarnings(
+                "ignore",
+                message=r"Non closed ring detected.*",
+                category=RuntimeWarning,
+            )
+            polys = gpd.read_file(
+                str(osm_pbf),
+                layer="multipolygons",
+                bbox=bbox,
+                columns=polygon_cols,
+                engine="pyogrio",
+            )
+            lines = gpd.read_file(
+                str(osm_pbf),
+                layer="lines",
+                bbox=bbox,
+                columns=line_cols,
+                engine="pyogrio",
+            )
     except Exception as exc:
         warnings.warn(
             f"Failed to read OSM PBF ({exc}); using placeholder exclusions.",
@@ -175,6 +184,19 @@ def build_exclusion_layer(
         return excl
 
     geoms = []
+
+    def _clean_geom_list(geom_iterable):
+        cleaned = []
+        for g in geom_iterable:
+            if g is None or g.is_empty:
+                continue
+            try:
+                g2 = make_valid(g)
+            except Exception:
+                continue
+            if g2 is not None and not g2.is_empty:
+                cleaned.append(g2)
+        return cleaned
 
     if not polys.empty:
         # Built-up / water / protected areas are excluded by default.
@@ -194,7 +216,7 @@ def build_exclusion_layer(
         selected_polys = polys.loc[poly_mask]
         if not selected_polys.empty:
             selected_polys = selected_polys.to_crs(UTM50N_EPSG)
-            geoms.extend([g for g in selected_polys.geometry if g is not None and not g.is_empty])
+            geoms.extend(_clean_geom_list(selected_polys.geometry))
 
     if not lines.empty:
         lines = lines.to_crs(UTM50N_EPSG)
@@ -214,7 +236,7 @@ def build_exclusion_layer(
             (air, DEFAULT_BUFFER_M["aeroway"]),
         ):
             if not subset.empty:
-                geoms.extend([g for g in subset.geometry.buffer(dist) if g is not None and not g.is_empty])
+                geoms.extend(_clean_geom_list(subset.geometry.buffer(dist)))
 
     if not geoms:
         warnings.warn(

@@ -8,7 +8,8 @@ Outputs (under <output_dir>/viz):
   - exclusions_points
   - supply_curve_points
 - fig_12_grid_resource_map.png
-- fig_11_top5_monthly_energy_line.png
+- fig_11_top5_daily_energy_line.png
+- fig_11_top5_weekly_energy_line.png
 - fig_11_top5_annual_energy_bar.png
 - fig_13_exclusions_overlay_map.png
 - fig_supply_curve.png
@@ -27,6 +28,8 @@ import numpy as np
 import pandas as pd
 from shapely.geometry import Point
 
+from output_layout import make_layout, resolve_existing
+
 
 HOURS_PER_YEAR = 8760
 
@@ -44,8 +47,8 @@ def _structured_to_df(arr: np.ndarray) -> pd.DataFrame:
 
 def _load_generation_site_table(output_dir: Path) -> pd.DataFrame:
     """Build site-level table with gid, cf_mean, system_capacity, annual_energy_mwh."""
-    gen_h5 = output_dir / "output_era5_generation_2022.h5"
-    project_points = pd.read_csv(output_dir / "project_points.csv")
+    gen_h5 = resolve_existing(output_dir, "data/output_era5_generation_2022.h5", "output_era5_generation_2022.h5")
+    project_points = pd.read_csv(resolve_existing(output_dir, "data/project_points.csv", "project_points.csv"))
 
     with h5py.File(gen_h5, "r") as f:
         cf_mean = np.asarray(f["cf_mean"])
@@ -96,13 +99,13 @@ def _load_resource_index_map(resource_h5: Path) -> tuple[pd.DatetimeIndex, dict[
     return pd.DatetimeIndex(time_index), gid_to_idx, windspeed
 
 
-def _build_top5_monthly_energy(
+def _build_top5_hourly_energy(
     top5: pd.DataFrame,
     time_index: pd.DatetimeIndex,
     gid_to_idx: dict[int, int],
     windspeed: np.ndarray,
 ) -> pd.DataFrame:
-    """Distribute each top site's annual energy by hourly windspeed^3 and aggregate monthly."""
+    """Distribute each top site's annual energy by hourly windspeed^3."""
     rows = []
     for _, r in top5.iterrows():
         gid = int(r["gid"])
@@ -124,14 +127,30 @@ def _build_top5_monthly_energy(
             "gid": gid,
             "energy_mwh": hourly_mwh,
         })
-        df["month"] = df["time"].dt.month
-        monthly = df.groupby(["gid", "month"], as_index=False)["energy_mwh"].sum()
-        rows.append(monthly)
+        rows.append(df)
 
     if not rows:
-        return pd.DataFrame(columns=["gid", "month", "energy_mwh"])
+        return pd.DataFrame(columns=["gid", "time", "energy_mwh"])
 
     return pd.concat(rows, ignore_index=True)
+
+
+def _aggregate_top5_energy(hourly: pd.DataFrame, freq: str) -> pd.DataFrame:
+    """Aggregate top-5 hourly energy to daily/weekly timescale for readable plots."""
+    if hourly.empty:
+        return pd.DataFrame(columns=["gid", "time", "energy_mwh"])
+
+    out = hourly.copy()
+    out["time"] = pd.to_datetime(out["time"], utc=True)
+    out = (
+        out.set_index("time")
+        .groupby("gid")["energy_mwh"]
+        .resample(freq)
+        .sum()
+        .reset_index()
+        .sort_values(["gid", "time"])
+    )
+    return out
 
 
 def _build_exclusions_points(excl_h5: Path) -> gpd.GeoDataFrame:
@@ -164,12 +183,15 @@ def _build_exclusions_points(excl_h5: Path) -> gpd.GeoDataFrame:
 
 def make_visuals(output_dir: Path) -> Path:
     output_dir = output_dir.resolve()
-    viz_dir = output_dir / "viz"
-    viz_dir.mkdir(parents=True, exist_ok=True)
+    layout = make_layout(output_dir)
+    image_dir = layout.images
+    data_dir = layout.data
 
-    site_meta = pd.read_csv(output_dir / "site_meta.csv")
-    grid = gpd.read_file(output_dir / "grid_cells.geojson")
-    supply_curve = pd.read_csv(output_dir / "output_era5_supply-curve.csv")
+    site_meta = pd.read_csv(resolve_existing(output_dir, "data/site_meta.csv", "site_meta.csv"))
+    grid = gpd.read_file(resolve_existing(output_dir, "data/grid_cells.geojson", "grid_cells.geojson"))
+    supply_curve = pd.read_csv(
+        resolve_existing(output_dir, "data/output_era5_supply-curve.csv", "output_era5_supply-curve.csv")
+    )
 
     site_table = _load_generation_site_table(output_dir)
 
@@ -177,7 +199,7 @@ def make_visuals(output_dir: Path) -> Path:
     grid_enriched = grid.merge(site_table, on="gid", how="left")
 
     # Write QGIS layers to a single GeoPackage for easy loading.
-    gpkg = viz_dir / "qgis_layers.gpkg"
+    gpkg = data_dir / "qgis_layers.gpkg"
     if gpkg.exists():
         gpkg.unlink()
     grid_enriched.to_file(gpkg, layer="grid_resource", driver="GPKG")
@@ -190,7 +212,7 @@ def make_visuals(output_dir: Path) -> Path:
     )
     top5_gdf.to_file(gpkg, layer="top5_points", driver="GPKG")
 
-    excl_gdf = _build_exclusions_points(output_dir / "beijing_exclusions.h5")
+    excl_gdf = _build_exclusions_points(resolve_existing(output_dir, "data/beijing_exclusions.h5", "beijing_exclusions.h5"))
     excl_gdf.to_file(gpkg, layer="exclusions_points", driver="GPKG")
 
     sc_points = gpd.GeoDataFrame(
@@ -216,25 +238,41 @@ def make_visuals(output_dir: Path) -> Path:
     ax.set_title("Beijing wind grid (project points joined with computed annual energy)")
     ax.set_axis_off()
     fig.tight_layout()
-    fig.savefig(viz_dir / "fig_12_grid_resource_map.png")
+    fig.savefig(image_dir / "fig_12_grid_resource_map.png")
     plt.close(fig)
 
-    # Figure 11-like: top5 monthly energy line + bar charts.
-    time_index, gid_to_idx, windspeed = _load_resource_index_map(output_dir / "beijing_wind_resource_2022.h5")
-    monthly = _build_top5_monthly_energy(top5, time_index, gid_to_idx, windspeed)
+    # Figure 11-like: top5 smoothed line (daily/weekly) + annual bar chart.
+    time_index, gid_to_idx, windspeed = _load_resource_index_map(
+        resolve_existing(output_dir, "data/beijing_wind_resource_2022.h5", "beijing_wind_resource_2022.h5")
+    )
+    hourly = _build_top5_hourly_energy(top5, time_index, gid_to_idx, windspeed)
+    daily = _aggregate_top5_energy(hourly, "D")
+    weekly = _aggregate_top5_energy(hourly, "W-MON")
 
     fig, ax = plt.subplots(figsize=(10, 5), dpi=150)
-    for gid, grp in monthly.groupby("gid"):
-        grp = grp.sort_values("month")
-        ax.plot(grp["month"], grp["energy_mwh"], marker="o", label=f"gid={gid}")
-    ax.set_xticks(range(1, 13))
-    ax.set_xlabel("Month")
+    for gid, grp in daily.groupby("gid"):
+        grp = grp.sort_values("time")
+        ax.plot(grp["time"], grp["energy_mwh"], linewidth=1.2, label=f"gid={gid}")
+    ax.set_xlabel("Time (daily)")
     ax.set_ylabel("Energy (MWh)")
-    ax.set_title("Top-5 sites monthly energy profile")
+    ax.set_title("Top-5 sites daily energy profile")
     ax.grid(alpha=0.3)
     ax.legend(ncol=2, fontsize=8)
     fig.tight_layout()
-    fig.savefig(viz_dir / "fig_11_top5_monthly_energy_line.png")
+    fig.savefig(image_dir / "fig_11_top5_daily_energy_line.png")
+    plt.close(fig)
+
+    fig, ax = plt.subplots(figsize=(10, 5), dpi=150)
+    for gid, grp in weekly.groupby("gid"):
+        grp = grp.sort_values("time")
+        ax.plot(grp["time"], grp["energy_mwh"], linewidth=1.6, marker="o", markersize=2.5, label=f"gid={gid}")
+    ax.set_xlabel("Time (weekly)")
+    ax.set_ylabel("Energy (MWh)")
+    ax.set_title("Top-5 sites weekly energy profile")
+    ax.grid(alpha=0.3)
+    ax.legend(ncol=2, fontsize=8)
+    fig.tight_layout()
+    fig.savefig(image_dir / "fig_11_top5_weekly_energy_line.png")
     plt.close(fig)
 
     fig, ax = plt.subplots(figsize=(8, 5), dpi=150)
@@ -244,7 +282,7 @@ def make_visuals(output_dir: Path) -> Path:
     ax.set_ylabel("gid")
     ax.set_title("Top-5 sites annual energy")
     fig.tight_layout()
-    fig.savefig(viz_dir / "fig_11_top5_annual_energy_bar.png")
+    fig.savefig(image_dir / "fig_11_top5_annual_energy_bar.png")
     plt.close(fig)
 
     # Figure 13-like: exclusions overlay on grid map.
@@ -269,31 +307,48 @@ def make_visuals(output_dir: Path) -> Path:
     ax.set_axis_off()
     ax.legend(loc="lower left")
     fig.tight_layout()
-    fig.savefig(viz_dir / "fig_13_exclusions_overlay_map.png")
+    fig.savefig(image_dir / "fig_13_exclusions_overlay_map.png")
     plt.close(fig)
 
     # Final supply curve plot.
-    sc = supply_curve.dropna(subset=["lcoe_all_in_usd_per_mwh", "capacity_ac_mw"]).copy()
-    sc = sc.sort_values("lcoe_all_in_usd_per_mwh", ascending=True)
+    sc = supply_curve.copy()
+    lcoe_all_in = pd.to_numeric(sc.get("lcoe_all_in_usd_per_mwh"), errors="coerce")
+    lcoe_site = pd.to_numeric(sc.get("lcoe_site_usd_per_mwh"), errors="coerce")
+    lcot = pd.to_numeric(sc.get("lcot_usd_per_mwh"), errors="coerce")
+
+    # Fallback chain: all-in -> (site + transmission) -> transmission only.
+    sc["lcoe_plot_usd_per_mwh"] = lcoe_all_in
+    sc["lcoe_plot_usd_per_mwh"] = sc["lcoe_plot_usd_per_mwh"].fillna(lcoe_site + lcot)
+    sc["lcoe_plot_usd_per_mwh"] = sc["lcoe_plot_usd_per_mwh"].fillna(lcot)
+
+    sc["capacity_ac_mw"] = pd.to_numeric(sc.get("capacity_ac_mw"), errors="coerce")
+    sc = sc.dropna(subset=["lcoe_plot_usd_per_mwh", "capacity_ac_mw"]).copy()
+    sc = sc[sc["capacity_ac_mw"] > 0]
+    sc = sc.sort_values("lcoe_plot_usd_per_mwh", ascending=True)
     sc["cum_capacity_mw"] = sc["capacity_ac_mw"].cumsum()
 
     fig, ax = plt.subplots(figsize=(9, 5), dpi=150)
-    ax.step(sc["cum_capacity_mw"], sc["lcoe_all_in_usd_per_mwh"], where="post", color="#264653", linewidth=1.8)
+    if sc.empty:
+        ax.text(0.5, 0.5, "No valid supply-curve points", ha="center", va="center", transform=ax.transAxes)
+    else:
+        ax.step(sc["cum_capacity_mw"], sc["lcoe_plot_usd_per_mwh"], where="post", color="#264653", linewidth=1.8)
     ax.set_xlabel("Cumulative capacity (MW)")
-    ax.set_ylabel("LCOE all-in (USD/MWh)")
+    ax.set_ylabel("LCOE / cost metric (USD/MWh)")
     ax.set_title("Supply curve")
     ax.grid(alpha=0.3)
     fig.tight_layout()
-    fig.savefig(viz_dir / "fig_supply_curve.png")
+    fig.savefig(image_dir / "fig_supply_curve.png")
     plt.close(fig)
 
     top5[["gid", "latitude", "longitude", "cf_mean", "system_capacity_kw", "annual_energy_mwh"]].to_csv(
-        viz_dir / "top5_points_summary.csv", index=False
+        data_dir / "top5_points_summary.csv", index=False
     )
 
-    print(f"Created visualization package under: {viz_dir}")
+    print(f"Created visualization package under: {output_dir}")
+    print(f"Images directory: {image_dir}")
+    print(f"Data directory: {data_dir}")
     print(f"GeoPackage: {gpkg}")
-    return viz_dir
+    return image_dir
 
 
 def parse_args() -> argparse.Namespace:

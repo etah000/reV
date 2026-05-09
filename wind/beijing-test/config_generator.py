@@ -18,6 +18,8 @@ from __future__ import annotations
 import json
 from pathlib import Path
 
+from output_layout import make_layout
+
 
 # ─── Helpers ──────────────────────────────────────────────────────────────────
 
@@ -46,6 +48,7 @@ def build_generation_config(
     analysis_years: list[int] | None = None,
     max_workers: int = 2,
     sites_per_worker: int = 50,
+    log_directory: str = "./logs/",
 ) -> dict:
     """
     Build the reV generation config dict.
@@ -59,7 +62,7 @@ def build_generation_config(
 
     return {
         "analysis_years": analysis_years,
-        "log_directory": "./logs/",
+        "log_directory": log_directory,
         "execution_control": {
             "option": "local",
             "max_workers": max_workers,
@@ -92,6 +95,8 @@ def build_sc_aggregation_config(
     excl_area_km2: float = 0.25,
     resolution: int = 4,
     power_density: float = 3.0,
+    recalc_lcoe: bool = True,
+    log_directory: str = "./logs/",
 ) -> dict:
     """
     Build the supply-curve aggregation config dict.
@@ -101,7 +106,7 @@ def build_sc_aggregation_config(
     matching our resource grid exactly.
     """
     return {
-        "log_directory": "./logs/",
+        "log_directory": log_directory,
         "execution_control": {
             "option": "local",
             "max_workers": 1,
@@ -114,7 +119,7 @@ def build_sc_aggregation_config(
         "gen_fpath": "PIPELINE",
         "cf_dset": "cf_mean",
         "lcoe_dset": None,
-        "recalc_lcoe": False,
+        "recalc_lcoe": recalc_lcoe,
         "res_class_dset": "cf_mean",
         "res_class_bins": [0.0, 0.3, 1.0],
         "resolution": resolution,
@@ -126,10 +131,11 @@ def build_supply_curve_config(
     output_dir: Path,
     trans_table_csv: Path,
     fixed_charge_rate: float = 0.096,
+    log_directory: str = "./logs/",
 ) -> dict:
     """Build the supply-curve LCOE / transmission config dict."""
     return {
-        "log_directory": "./logs/",
+        "log_directory": log_directory,
         "execution_control": {
             "option": "local",
             "max_workers": 1,
@@ -171,6 +177,11 @@ def build_sam_wind_config(output_path: Path) -> Path:
     sam_cfg = {
         "wind_turbine_hub_ht": 100,
         "wind_turbine_rotor_diameter": 90,
+        # Required by PySAM windpower precheck when shear cannot be inferred
+        # from multi-height wind resource inputs.
+        "wind_resource_shear": 0.14,
+        # Required by newer PySAM windpower precheck.
+        "wind_resource_turbulence_coeff": 0.1,
         "wind_turbine_powercurve_windspeeds": [
             0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15,
             16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30
@@ -182,6 +193,8 @@ def build_sam_wind_config(output_path: Path) -> Path:
         ],
         "wind_farm_losses_percent": 8.0,
         "wind_farm_wake_model": 0,
+        "wind_farm_xCoordinates": [0],
+        "wind_farm_yCoordinates": [0],
         "system_capacity": 2000,
         "fixed_charge_rate": 0.096,
         "capital_cost": 1300,
@@ -279,6 +292,9 @@ def generate_all_configs(
     site_meta: "pd.DataFrame | None" = None,
     tm_key: str = "techmap_beijing",
     analysis_years: list[int] | None = None,
+    recalc_lcoe: bool = True,
+    config_dir: str | Path | None = None,
+    data_dir: str | Path | None = None,
 ) -> dict[str, Path]:
     """
     Write all reV config files to *output_dir*.
@@ -300,13 +316,22 @@ def generate_all_configs(
     """
     import pandas as pd
 
-    output_dir = Path(output_dir)
+    layout = make_layout(output_dir)
+    output_dir = layout.root
+    config_dir = Path(config_dir) if config_dir is not None else layout.configs
+    data_dir = Path(data_dir) if data_dir is not None else layout.data
+
     resource_h5 = Path(resource_h5)
     project_points_csv = Path(project_points_csv)
     exclusions_h5 = Path(exclusions_h5)
 
-    sam_json = output_dir / "sam_wind_default.json"
-    trans_csv = output_dir / "beijing_transmission_table.csv"
+    config_dir.mkdir(parents=True, exist_ok=True)
+    data_dir.mkdir(parents=True, exist_ok=True)
+
+    sam_json = config_dir / "sam_wind_default.json"
+    trans_csv = data_dir / "beijing_transmission_table.csv"
+
+    rel_logs = _rel(layout.logs, config_dir)
 
     build_sam_wind_config(sam_json)
 
@@ -319,20 +344,23 @@ def generate_all_configs(
         )
 
     gen_cfg = build_generation_config(
-        output_dir, resource_h5, project_points_csv, sam_json,
+        config_dir, resource_h5, project_points_csv, sam_json,
         analysis_years=analysis_years or [2012],
+        log_directory=rel_logs,
     )
     agg_cfg = build_sc_aggregation_config(
-        output_dir, resource_h5, exclusions_h5, tm_key=tm_key,
+        config_dir, resource_h5, exclusions_h5, tm_key=tm_key,
+        recalc_lcoe=recalc_lcoe,
+        log_directory=rel_logs,
     )
-    sc_cfg = build_supply_curve_config(output_dir, trans_csv)
-    pipe_cfg = build_pipeline_config(output_dir)
+    sc_cfg = build_supply_curve_config(config_dir, trans_csv, log_directory=rel_logs)
+    pipe_cfg = build_pipeline_config(config_dir)
 
     paths = {}
-    _dump(gen_cfg,  output_dir / "config_generation.json");      paths["generation"]    = output_dir / "config_generation.json"
-    _dump(agg_cfg,  output_dir / "config_sc_aggregation.json");  paths["sc_aggregation"] = output_dir / "config_sc_aggregation.json"
-    _dump(sc_cfg,   output_dir / "config_supply_curve.json");    paths["supply_curve"]  = output_dir / "config_supply_curve.json"
-    _dump(pipe_cfg, output_dir / "config_pipeline.json");        paths["pipeline"]      = output_dir / "config_pipeline.json"
+    _dump(gen_cfg,  config_dir / "config_generation.json");      paths["generation"]    = config_dir / "config_generation.json"
+    _dump(agg_cfg,  config_dir / "config_sc_aggregation.json");  paths["sc_aggregation"] = config_dir / "config_sc_aggregation.json"
+    _dump(sc_cfg,   config_dir / "config_supply_curve.json");    paths["supply_curve"]  = config_dir / "config_supply_curve.json"
+    _dump(pipe_cfg, config_dir / "config_pipeline.json");        paths["pipeline"]      = config_dir / "config_pipeline.json"
 
     return paths
 
@@ -352,6 +380,12 @@ if __name__ == "__main__":
     parser.add_argument("exclusions_h5")
     parser.add_argument("--site-meta-csv", default=None)
     parser.add_argument("--tm-key", default="techmap_beijing")
+    parser.add_argument("--no-recalc-lcoe", action="store_true",
+                        help="Disable LCOE recalculation in SC aggregation config.")
+    parser.add_argument("--config-dir", default=None,
+                        help="Optional config output directory (default: <output_dir>/configs).")
+    parser.add_argument("--data-dir", default=None,
+                        help="Optional data output directory (default: <output_dir>/data).")
     args = parser.parse_args()
 
     meta = pd.read_csv(args.site_meta_csv) if args.site_meta_csv else None
@@ -362,4 +396,7 @@ if __name__ == "__main__":
         args.exclusions_h5,
         site_meta=meta,
         tm_key=args.tm_key,
+        recalc_lcoe=(not args.no_recalc_lcoe),
+        config_dir=args.config_dir,
+        data_dir=args.data_dir,
     )

@@ -5,17 +5,56 @@
 - Phase-A（合成气象场）— 统计方法生成的合成风速/风向/温度/气压，用于快速开发与回归测试。
 - Phase-B（ERA5 再分析）— 通过 ERA5 NetCDF4/GRIB 插值到站点，生成与 Phase-A 相同的 reV/rex 资源 HDF5 格式。
 
-**目录（部分）**
+**脚本总览（输入 / 输出 / 功能）**
 
-- `grid_generation.py` — 按 GeoJSON 边界生成 2 km × 2 km 网格与站点元数据（`site_meta.csv`）。
-- `synthetic_met.py` — Phase-A 合成气象数据生成器（并在 ERA5 模式下委托到 `era5_adapter.py`）。
-- `era5_adapter.py` — Phase-B：读取 ERA5 NetCDF4/GRIB，空间插值并生成 4 个 reV 变量时间序列。
-- `resource_writer.py` — 将元数据与时序写入 reV/rex 兼容的 HDF5，并校验结构与物理范围。
-- `project_points.py` — 生成 `project_points.csv` 供 reV 生成模块使用。
-- `exclusions_techmap.py` — 基于 OSM PBF 合成 exclusions（并生成 techmap，KD-tree 映射）。
-- `config_generator.py` — 生成 reV 所需的 JSON 配置文件与 SAM 风机配置、输电表。
-- `download_era5.py` — 使用 CDS API 下载 ERA5 数据的辅助脚本（需配置 `~/.cdsapirc`）。
-- `build_beijing_dataset.py` — 顶层 CLI，按步骤执行全部流程（网格→气象→写 HDF5→project_points→exclusions→配置）。
+- `build_beijing_dataset.py`
+  - 输入：`beijing.geojson`，可选 `--era5`（NetCDF/GRIB），可选 `--osm-pbf`
+  - 输出：`output_xxx/data/*`、`output_xxx/configs/*`、`output_xxx/logs/*`
+  - 功能：端到端构建数据集（网格→气象→资源文件→project points→exclusions→configs）
+- `grid_generation.py`
+  - 输入：边界 GeoJSON
+  - 输出：`data/grid_cells.geojson`、`data/site_meta.csv`
+  - 功能：按 2km x 2km 规则网格生成站点主索引
+- `synthetic_met.py`
+  - 输入：`site_meta.csv`、年份、机舱高度
+  - 输出：4 类气象时序（风速/风向/温度/气压）
+  - 功能：Phase-A 合成气象生成
+- `era5_adapter.py`
+  - 输入：ERA5 NetCDF/GRIB、`site_meta`
+  - 输出：与 Phase-A 相同结构的 4 类气象时序
+  - 功能：Phase-B ERA5 适配与空间插值
+- `resource_writer.py`
+  - 输入：站点元数据 + 气象时序
+  - 输出：`data/beijing_wind_resource_YYYY.h5`
+  - 功能：写入并校验 reV/rex 兼容资源文件
+- `project_points.py`
+  - 输入：`site_meta.csv`
+  - 输出：`data/project_points.csv`
+  - 功能：生成 reV generation 入口点表
+- `exclusions_techmap.py`
+  - 输入：`site_meta.csv`、资源文件、可选 OSM PBF
+  - 输出：`data/beijing_exclusions.h5`
+  - 功能：生成 exclusions + techmap（已内置对 OSM 非闭合 ring 的稳健处理）
+- `config_generator.py`
+  - 输入：资源文件、project points、exclusions、site_meta
+  - 输出：`configs/config_*.json`、`configs/sam_wind_default.json`、`data/beijing_transmission_table.csv`
+  - 功能：生成 reV pipeline 配置（默认方案 A：`recalc_lcoe=true`）
+- `verify_scheme_a.py`
+  - 输入：`configs/config_sc_aggregation.json`、`configs/config_supply_curve.json`
+  - 输出：`data/scheme_a_verification.json`
+  - 功能：直接调用 reV API 验证 `lcoe_site`/`lcoe_all_in` 非空
+- `plot_output_era5_qgis.py`
+  - 输入：`data/*.h5`、`data/*.csv`、`data/*.geojson`
+  - 输出：`images/fig_*.png`、`data/qgis_layers.gpkg`
+  - 功能：生成 QGIS 与汇报图件
+- `qgis_verify.py`
+  - 输入：边界 GeoJSON + 网格 GeoJSON
+  - 输出：验证日志
+  - 功能：PyQGIS 图层加载与完整性核查
+- `download_era5.py`
+  - 输入：年份、区域 bbox、CDS 凭据
+  - 输出：ERA5 下载文件
+  - 功能：下载 Phase-B 原始数据
 
 ## 快速开始（示例）
 
@@ -36,6 +75,20 @@ python build_beijing_dataset.py \
   --seed 42 \
   --overwrite
 ```
+
+构建完成后使用：
+
+```bash
+cd output_era5
+reV pipeline -c configs/config_pipeline.json --monitor
+```
+
+## 输出目录结构（新）
+
+- `output_era5/data/`：数据类产物（HDF5/CSV/GeoJSON/GPKG）
+- `output_era5/configs/`：reV 配置与 SAM 配置
+- `output_era5/images/`：图示输出（fig_*.png）
+- `output_era5/logs/`：reV 与构建日志
 
 3. 使用 ERA5（Phase-B）：先下载 ERA5 NetCDF4 或 GRIB（见下文），然后：
 
@@ -86,10 +139,10 @@ python build_beijing_dataset.py \
 
 ## 输出文件（示例）
 
-- `output/beijing_wind_resource_2012.h5` — reV/rex 兼容资源 HDF5（`meta`, `time_index`, `windspeed_100m`, `winddirection_100m`, `temperature_100m`, `pressure_100m`）。
-- `output/project_points.csv` — reV 项目点清单。
-- `output/beijing_exclusions.h5` — 占位排除栅格与 techmap。
-- `output/config_*.json`、`output/sam_wind_default.json` — reV 配置与 SAM 风机设置。
+- `output/data/beijing_wind_resource_2012.h5` — reV/rex 兼容资源 HDF5（`meta`, `time_index`, `windspeed_100m`, `winddirection_100m`, `temperature_100m`, `pressure_100m`）。
+- `output/data/project_points.csv` — reV 项目点清单。
+- `output/data/beijing_exclusions.h5` — 占位排除栅格与 techmap。
+- `output/configs/config_*.json`、`output/configs/sam_wind_default.json` — reV 配置与 SAM 风机设置。
 
 ## 已知事项与实现细节
 
@@ -151,7 +204,7 @@ python build_beijing_dataset.py \
 
 ### 最终产物
 
-- `beijing_wind_resource_YYYY.h5`
+- `data/beijing_wind_resource_YYYY.h5`
   - 生成脚本：`resource_writer.py`
   - 作用：reV/rex 标准资源文件，供 `reV-gen` 直接读取。
   - 结构原理：
@@ -159,12 +212,12 @@ python build_beijing_dataset.py \
     - `time_index`：全年小时索引（闰年 8784，平年 8760）。
     - `windspeed_100m/winddirection_100m/temperature_100m/pressure_100m`：`(time, site)` 二维数组。
 
-- `project_points.csv`
+- `data/project_points.csv`
   - 生成脚本：`project_points.py`
   - 作用：定义 `reV-gen` 需要计算的项目点与配置映射。
   - 原理：最小配置下通常为 `gid -> default`，用于 SAM 参数绑定。
 
-- `beijing_exclusions.h5`
+- `data/beijing_exclusions.h5`
   - 生成脚本：`exclusions_techmap.py`
   - 作用：供 `reV-supply-curve-aggregation` 使用的排除与映射文件。
   - 结构原理：
@@ -172,32 +225,32 @@ python build_beijing_dataset.py \
     - `beijing_osm_exclusions`（默认 key）：`(1, row, col)`，0=排除，100=可用。
     - `techmap_beijing`：每个像元映射到最近资源 `gid`，超阈值为 -1。
 
-- `beijing_transmission_table.csv`
+- `data/beijing_transmission_table.csv`
   - 生成脚本：`config_generator.py`
   - 作用：供 `reV-supply-curve` 计算并网成本。
   - 原理：提供供需节点、距离或成本参数的占位/示例传输表。
 
-- `sam_wind_default.json`
+- `configs/sam_wind_default.json`
   - 生成脚本：`config_generator.py`
   - 作用：SAM 风机与经济参数模板。
   - 原理：定义功率曲线、轮毂高度、系统容量与成本参数；由 `project_points.csv` 的 `config` 字段引用。
 
-- `config_generation.json`
+- `configs/config_generation.json`
   - 生成脚本：`config_generator.py`
   - 作用：`reV-gen` 配置。
   - 原理：绑定 `resource_file`、`project_points`、`sam_files`、输出请求和并行执行参数。
 
-- `config_sc_aggregation.json`
+- `configs/config_sc_aggregation.json`
   - 生成脚本：`config_generator.py`
   - 作用：`reV-supply-curve-aggregation` 配置。
   - 原理：绑定 `excl_fpath`、`tm_dset`、`res_fpath`，定义分辨率和资源分箱规则。
 
-- `config_supply_curve.json`
+- `configs/config_supply_curve.json`
   - 生成脚本：`config_generator.py`
   - 作用：`reV-supply-curve` 配置。
   - 原理：读取聚合结果与输电表，计算并网后供给曲线成本字段。
 
-- `config_pipeline.json`
+- `configs/config_pipeline.json`
   - 生成脚本：`config_generator.py`
   - 作用：一键串联 `reV-gen -> reV-supply-curve-aggregation -> reV-supply-curve`。
   - 原理：按顺序声明各模块配置文件，后续步骤可用 `PIPELINE` 引用前一步结果。

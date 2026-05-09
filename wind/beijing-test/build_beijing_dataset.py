@@ -29,17 +29,17 @@ Usage
         [--overwrite]
 
 After running, the output directory will contain:
-    beijing_wind_resource_2012.h5   – reV wind resource file
-    project_points.csv
-    beijing_exclusions.h5
-    site_meta.csv
-    grid_cells.geojson
-    sam_wind_default.json
-    beijing_transmission_table.csv
-    config_generation.json
-    config_sc_aggregation.json
-    config_supply_curve.json
-    config_pipeline.json
+    data/beijing_wind_resource_2012.h5   – reV wind resource file
+    data/project_points.csv
+    data/beijing_exclusions.h5
+    data/site_meta.csv
+    data/grid_cells.geojson
+    data/beijing_transmission_table.csv
+    configs/sam_wind_default.json
+    configs/config_generation.json
+    configs/config_sc_aggregation.json
+    configs/config_supply_curve.json
+    configs/config_pipeline.json
     logs/
 """
 
@@ -48,6 +48,8 @@ from __future__ import annotations
 import argparse
 import sys
 from pathlib import Path
+
+from output_layout import make_layout
 
 
 # ─── Pipeline steps ───────────────────────────────────────────────────────────
@@ -110,10 +112,13 @@ def step_exclusions(site_meta, resource_h5: Path, output_dir: Path,
 def step_configs(output_dir: Path, resource_h5: Path, pp_csv: Path,
                  excl_h5: Path, site_meta, year: int):
     from config_generator import generate_all_configs
+    layout = make_layout(output_dir)
     return generate_all_configs(
         output_dir, resource_h5, pp_csv, excl_h5,
         site_meta=site_meta,
         analysis_years=[year],
+        config_dir=layout.configs,
+        data_dir=layout.data,
     )
 
 
@@ -179,7 +184,7 @@ def main(argv=None):
 
     geojson    = Path(args.geojson)
     output_dir = Path(args.output)
-    output_dir.mkdir(parents=True, exist_ok=True)
+    layout = make_layout(output_dir)
 
     if not geojson.exists():
         print(f"[build] ERROR: GeoJSON not found: {geojson}", file=sys.stderr)
@@ -204,7 +209,7 @@ def main(argv=None):
 
     # ── Step 1: grid ──────────────────────────────────────────────────────────
     print("\n─── Step 1/6: Grid generation ───")
-    _, site_meta_full = step_grid(geojson, output_dir, args.cell_size)
+    _, site_meta_full = step_grid(geojson, layout.data, args.cell_size)
 
     # ── Step 2: meteorological data (Phase-A or Phase-B) ───────────────────────
     if args.era5:
@@ -221,14 +226,14 @@ def main(argv=None):
     # ── Step 3: resource HDF5 ─────────────────────────────────────────────────
     print("\n─── Step 3/6: Write & validate resource HDF5 ───")
     resource_h5 = step_write_resource(
-        output_dir, site_meta, met, args.year,
+        layout.data, site_meta, met, args.year,
         int(args.hub_height), args.overwrite,
     )
 
     # ── Step 4: project points ────────────────────────────────────────────────
     print("\n─── Step 4/6: Project points ───")
-    pp_csv = output_dir / "project_points.csv"
-    step_project_points(site_meta, output_dir)
+    pp_csv = layout.data / "project_points.csv"
+    step_project_points(site_meta, layout.data)
 
     # ── Step 5: exclusions + techmap ──────────────────────────────────────────
     print("\n─── Step 5/6: Exclusions + techmap ───")
@@ -237,19 +242,19 @@ def main(argv=None):
     excl_h5 = step_exclusions(
         site_meta,
         resource_h5,
-        output_dir,
+        layout.data,
         args.overwrite,
         osm_pbf=args.osm_pbf,
     )
 
     # ── Step 6: reV configs ───────────────────────────────────────────────────
     print("\n─── Step 6/6: reV configuration files ───")
-    step_configs(output_dir, resource_h5, pp_csv, excl_h5, site_meta, args.year)
+    step_configs(layout.root, resource_h5, pp_csv, excl_h5, site_meta, args.year)
 
     # ── Optional: QGIS verification ───────────────────────────────────────────
     if args.qgis:
         print("\n─── (Optional) PyQGIS verification ───")
-        step_qgis_verify(geojson, output_dir)
+        step_qgis_verify(geojson, layout.data)
 
     print(f"\n{'=' * 60}")
     print("  Build complete.")
@@ -258,7 +263,7 @@ def main(argv=None):
 
     print("Next steps:")
     print(f"  cd {output_dir.resolve()}")
-    print("  reV pipeline -c config_pipeline.json --monitor")
+    print("  reV pipeline -c configs/config_pipeline.json --monitor")
 
 
 if __name__ == "__main__":
