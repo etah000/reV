@@ -43,8 +43,8 @@ python build_beijing_dataset.py \
 python build_beijing_dataset.py \
   --geojson /Users/frank/opensource/test-data/beijing/beijing.geojson \
   --output ./output_era5 \
-  --year 2012 \
-  --era5 ./era5_data/beijing_era5_2012.nc \
+  --year 2022 \
+  --era5 /Users/frank/opensource/test-data/beijing/beijing-era5-2022.grib \
   --osm-pbf /Users/frank/opensource/test-data/beijing/beijing-260416.osm.pbf \
   --overwrite
 ```

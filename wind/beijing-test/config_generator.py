@@ -89,6 +89,7 @@ def build_sc_aggregation_config(
     exclusions_h5: Path,
     tm_key: str = "techmap_beijing",
     excl_dict: dict | None = None,
+    excl_area_km2: float = 0.25,
     resolution: int = 4,
     power_density: float = 3.0,
 ) -> dict:
@@ -108,6 +109,7 @@ def build_sc_aggregation_config(
         "excl_fpath": _rel(exclusions_h5, output_dir),
         "tm_dset": tm_key,
         "res_fpath": _rel(resource_h5, output_dir),
+        "excl_area": excl_area_km2,
         "excl_dict": excl_dict,
         "gen_fpath": "PIPELINE",
         "cf_dset": "cf_mean",
@@ -152,9 +154,9 @@ def build_pipeline_config(output_dir: Path) -> dict:
     return {
         "logging": {"log_level": "INFO"},
         "pipeline": [
-            {"reV-gen":          "./config_generation.json"},
-            {"reV-supply-curve-aggregation": "./config_sc_aggregation.json"},
-            {"reV-supply-curve": "./config_supply_curve.json"},
+            {"generation": "./config_generation.json"},
+            {"supply-curve-aggregation": "./config_sc_aggregation.json"},
+            {"supply-curve": "./config_supply_curve.json"},
         ],
     }
 
@@ -198,34 +200,72 @@ def build_sam_wind_config(output_path: Path) -> Path:
 def build_transmission_table(
     site_meta: "pd.DataFrame",
     output_path: Path,
+    exclusions_h5: Path,
+    pixel_resolution: int = 4,
 ) -> Path:
     """
-    Build a minimal transmission table CSV for the supply-curve step.
+    Build a deterministic synthetic transmission table for supply-curve.
 
-    Creates one synthetic substation per site as the tie-in point.
-    In production replace with real substation/transmission data.
+    The table is generated on the same coarse grid used by
+    supply-curve-aggregation (row/col indices at ``pixel_resolution``), so
+    merges remain stable across runs and data regenerations.
     """
-    import numpy as np
+    import h5py
     import pandas as pd
 
-    n = len(site_meta)
-    lats = site_meta["latitude"].values
-    lons = site_meta["longitude"].values
+    if len(site_meta) == 0:
+        raise ValueError("site_meta is empty; cannot build transmission table")
 
-    trans = pd.DataFrame({
-        "sc_point_gid": np.arange(n),
-        "trans_gid":    np.arange(n),
-        "trans_type":   "Substation",
-        "dist_mi":      np.random.default_rng(0).uniform(1, 50, n),
-        "latitude":     lats,
-        "longitude":    lons,
-        "ac_cap":       np.full(n, 500.0),
-        "reinforcement_cost_per_mw": np.full(n, 0.0),
-    })
+    with h5py.File(str(exclusions_h5), "r") as f:
+        lat_grid = f["latitude"][:]
+        lon_grid = f["longitude"][:]
+
+    rows, cols = lat_grid.shape
+    r = int(pixel_resolution)
+    if rows < r or cols < r:
+        raise ValueError(
+            f"Exclusions raster too small for resolution={r}: {rows}x{cols}"
+        )
+
+    n_row = rows // r
+    n_col = cols // r
+    records = []
+    gid = 0
+    for sc_row in range(n_row):
+        r0, r1 = sc_row * r, (sc_row + 1) * r
+        for sc_col in range(n_col):
+            c0, c1 = sc_col * r, (sc_col + 1) * r
+            lat = float(lat_grid[r0:r1, c0:c1].mean())
+            lon = float(lon_grid[r0:r1, c0:c1].mean())
+
+            # Deterministic pseudo-distance: smooth radial gradient from grid
+            # center in miles. This avoids random drift between runs.
+            dr = sc_row - (n_row - 1) / 2.0
+            dc = sc_col - (n_col - 1) / 2.0
+            dist_mi = float(2.0 + 0.2 * (dr**2 + dc**2) ** 0.5)
+
+            records.append({
+                "sc_point_gid": gid,
+                "sc_row_ind": sc_row,
+                "sc_col_ind": sc_col,
+                "trans_gid": gid,
+                "trans_type": "TransLine",
+                "dist_mi": dist_mi,
+                "latitude": lat,
+                "longitude": lon,
+                "ac_cap": 500.0,
+                "reinforcement_cost_per_mw": 0.0,
+            })
+            gid += 1
+
+    trans = pd.DataFrame.from_records(records)
 
     output_path.parent.mkdir(parents=True, exist_ok=True)
     trans.to_csv(str(output_path), index=False)
-    print(f"[config_generator] Transmission table ({n} rows) → {output_path}")
+    print(
+        "[config_generator] Transmission table "
+        f"({len(trans)} rows, {n_row}x{n_col} SC cells) → {output_path}"
+    )
     return output_path
 
 
@@ -271,7 +311,12 @@ def generate_all_configs(
     build_sam_wind_config(sam_json)
 
     if site_meta is not None:
-        build_transmission_table(site_meta, trans_csv)
+        build_transmission_table(
+            site_meta,
+            trans_csv,
+            exclusions_h5=exclusions_h5,
+            pixel_resolution=4,
+        )
 
     gen_cfg = build_generation_config(
         output_dir, resource_h5, project_points_csv, sam_json,
