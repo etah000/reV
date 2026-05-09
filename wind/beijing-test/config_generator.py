@@ -80,7 +80,7 @@ def build_generation_config(
         "project_points": _rel(project_points_csv, output_dir),
         "resource_file": _rel(resource_h5, output_dir),
         "sam_files": {
-            "default": _rel(sam_json, output_dir),
+            "default": str(Path(sam_json).resolve()),
         },
         "technology": "windpower",
     }

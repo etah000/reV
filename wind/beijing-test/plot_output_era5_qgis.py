@@ -47,7 +47,12 @@ def _structured_to_df(arr: np.ndarray) -> pd.DataFrame:
 
 def _load_generation_site_table(output_dir: Path) -> pd.DataFrame:
     """Build site-level table with gid, cf_mean, system_capacity, annual_energy_mwh."""
-    gen_h5 = resolve_existing(output_dir, "data/output_era5_generation_2022.h5", "output_era5_generation_2022.h5")
+    gen_h5 = resolve_existing(
+        output_dir,
+        "data/output_era5_generation_2022.h5",
+        "output_era5_generation_2022.h5",
+        "configs/configs_generation_2022.h5",
+    )
     project_points = pd.read_csv(resolve_existing(output_dir, "data/project_points.csv", "project_points.csv"))
 
     with h5py.File(gen_h5, "r") as f:
@@ -190,7 +195,12 @@ def make_visuals(output_dir: Path) -> Path:
     site_meta = pd.read_csv(resolve_existing(output_dir, "data/site_meta.csv", "site_meta.csv"))
     grid = gpd.read_file(resolve_existing(output_dir, "data/grid_cells.geojson", "grid_cells.geojson"))
     supply_curve = pd.read_csv(
-        resolve_existing(output_dir, "data/output_era5_supply-curve.csv", "output_era5_supply-curve.csv")
+        resolve_existing(
+            output_dir,
+            "data/output_era5_supply-curve.csv",
+            "output_era5_supply-curve.csv",
+            "configs/configs_supply-curve.csv",
+        )
     )
 
     site_table = _load_generation_site_table(output_dir)
